@@ -1,0 +1,19 @@
+# Credentials and environment. Never commit these.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+.netrc
+
+# Local tooling
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+dist/
+.cache/
