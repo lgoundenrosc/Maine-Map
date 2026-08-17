@@ -43,5 +43,7 @@ window.RoscData.sources = [
   { id: 'src-39', n: 39, title: 'SBIR Resource Center and FAST program pages', publisher: 'Central Maine Growth Council', date: '2026', locator: 'centralmaine.org', quality: 'primary' },
   { id: 'src-40', n: 40, title: 'Maine Small Business Development Centers contact listing', publisher: 'Secondary directory listing', date: '2026', locator: '207-780-4420', quality: 'secondary, confirm before use' },
   { id: 'src-41', n: 41, title: 'Maine Defense Industry Alliance founding and workforce materials', publisher: 'MDIA and BlueForge Alliance', date: '2025', locator: '', quality: 'primary' },
+  { id: 'src-43', n: 43, title: 'Rosc US SOCOM VC Landscape Map', publisher: 'Rosc Capital', date: '2026-06', locator: 'scremling.github.io/Rosc-US-SOCOM-Map/', quality: 'internal, first in series' },
+  { id: 'src-44', n: 44, title: 'Rosc US Space Force VC Landscape Map', publisher: 'Rosc Capital', date: '2026-05', locator: 'scremling.github.io/Rosc-US-Space-Force/', quality: 'internal, second in series' },
   { id: 'src-42', n: 42, title: 'Maine defense contractor and manufacturing counts', publisher: 'Commercial contract aggregator', date: '2026', locator: '', quality: 'low quality, flagged in the record that cites it' }
 ];

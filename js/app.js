@@ -571,7 +571,7 @@
         (i.confidenceNote ? ' <span style="font-size:11px;color:#64748b">' + U.esc(i.confidenceNote) + '</span>' : '') + '</td></tr>';
     }).join('');
 
-    var srcs = D.sources.map(function (s) {
+    var srcs = D.sources.slice().sort(function (a, b) { return a.n - b.n; }).map(function (s) {
       return '<li id="' + U.attr(s.id) + '"><span class="mono">' + s.n + '.</span> ' + U.esc(s.title) +
         '. <i>' + U.esc(s.publisher) + '</i>, ' + U.esc(s.date) +
         (s.locator ? '. <span class="mono">' + U.esc(s.locator) + '</span>' : '') +

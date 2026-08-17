@@ -22,7 +22,7 @@ window.RoscData.crossReference = {
       cluster: 'composites-am',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-22']
+      sourceIds: ['src-22', 'src-43']
     },
     {
       id: 'xr-02',
@@ -44,7 +44,7 @@ window.RoscData.crossReference = {
       cluster: 'maritime-autonomy',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-28']
+      sourceIds: ['src-28', 'src-43']
     },
     {
       id: 'xr-04',
@@ -55,7 +55,7 @@ window.RoscData.crossReference = {
       cluster: 'maritime-autonomy',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: []
+      sourceIds: ['src-43']
     },
     {
       id: 'xr-05',
@@ -66,7 +66,7 @@ window.RoscData.crossReference = {
       cluster: 'ugs',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-12']
+      sourceIds: ['src-12', 'src-43']
     },
     {
       id: 'xr-06',
@@ -77,7 +77,7 @@ window.RoscData.crossReference = {
       cluster: 'space-high-latitude',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-25']
+      sourceIds: ['src-25', 'src-44']
     },
     {
       id: 'xr-07',
@@ -88,7 +88,7 @@ window.RoscData.crossReference = {
       cluster: 'space-high-latitude',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: []
+      sourceIds: ['src-44']
     },
     {
       id: 'xr-08',
@@ -99,7 +99,7 @@ window.RoscData.crossReference = {
       cluster: 'space-high-latitude',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-34']
+      sourceIds: ['src-34', 'src-43']
     },
     {
       id: 'xr-09',
