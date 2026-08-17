@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Print stylesheet. These documents circulate as PDFs.
+   Collapses interactive controls, expands every accordion, forces page breaks
+   between top-level sections, and renders every tab panel in order.
+   ========================================================================== */
+
+@page {
+  size: letter portrait;
+  margin: 14mm 12mm 16mm;
+}
+
+@media print {
+  html, body { background: #fff !important; }
+  body { font-size: 10pt; line-height: 1.45; color: #111; }
+  .wrap { max-width: none; padding: 0; }
+
+  /* Interactive controls collapse away. */
+  .tabs,
+  .filter-bar,
+  .view-toggle,
+  .search-box,
+  .chev,
+  .screen-only,
+  .screen-only-hint,
+  .detail-panel { display: none !important; }
+
+  /* Every panel prints, in tab order, one section per page. */
+  .panel { display: block !important; break-before: page; page-break-before: always; }
+  .panel:first-of-type { break-before: auto; page-break-before: auto; }
+
+  /* Every accordion is open in print. */
+  .card-body { display: block !important; }
+  .card[hidden] { display: block !important; }
+  .card-head { cursor: default; }
+
+  .page-header {
+    background: var(--navy) !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-after: avoid;
+  }
+  .page-header h1 { font-size: 19pt; }
+  .page-header .sub { font-size: 8.5pt; }
+
+  /* Keep the ink. A greyscale print of this document is unreadable. */
+  .chip, .badge, .tile, .value-pill, .inset, .note-box, .highlight-box,
+  .explainer-box, .callout, .countdown, .stage-card, .stage-health,
+  .rail-marker, .node-badge, .header-badge, .ladder-step, .empty-state,
+  table.data th, .legend-cell, .warn-tag, .filter-chip {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .card, .stage-card, .callout, .note-box, .highlight-box, .explainer-box,
+  .thesis-card, .legend-cell {
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .fact-row, .channel-row, .stepped li, tr { break-inside: avoid; page-break-inside: avoid; }
+  .section-title { break-after: avoid; page-break-after: avoid; }
+
+  /* The chain has to fit the page width. Scale it rather than clip it. */
+  .chain-scroll { overflow: visible !important; }
+  /* zoom rather than transform, so the scaled diagram does not reserve its
+     unscaled height and leave half a blank page behind it. */
+  .chain { zoom: 0.52; }
+  .chain-rail { flex-basis: 84px; }
+  .rail-label { font-size: 8pt; }
+
+  /* Geographic view prints as a static SVG. */
+  .geo-wrap { grid-template-columns: 1fr; }
+  svg.maine { max-height: 165mm; }
+  .tbl-scroll { overflow: visible !important; border: 1px solid #ccc; }
+  table.data { min-width: 0 !important; font-size: 8.5pt; }
+  table.data th { font-size: 7.5pt; }
+
+  a { color: #111; text-decoration: none; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 7.5pt; color: #555; }
+
+  .running-header {
+    display: block !important;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 6pt;
+    font-size: 7pt;
+  }
+  .running-footer { display: block !important; font-size: 7pt; }
+  .print-only { display: block !important; }
+  .panel > .running-header { display: block !important; }
+}
+
+.print-only { display: none; }
