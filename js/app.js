@@ -244,17 +244,32 @@
       standfirst()
     ];
 
-    if (D.contents) {
-      var t = (D.contents.blocks || []).filter(function (b) { return b.type === 'table'; })[0];
-      if (t) {
-        nodes.push(el('details', { class: 'acc' }, [
-          el('summary', { text: 'Contents, reproduced from the source' }),
-          el('div', { class: 'acc-body' }, [
-            el('p', { class: 'table-caption', text: 'Navigation is built from the body headings. This table is the source Contents, rendered unchanged.' }),
-            R.table(t)
-          ])
-        ]));
-      }
+    if (D.contents && D.contents.length) {
+      nodes.push(el('details', { class: 'acc' }, [
+        el('summary', { text: 'Contents' }),
+        el('div', { class: 'acc-body' }, [
+          el('ol', { class: 'toc' }, D.contents.map(function (c) {
+            var kids = [
+              el('button', {
+                class: 'toclink', type: 'button',
+                onclick: function () { select(c.num, true); }
+              }, [
+                el('span', { class: 'tocnum', text: c.num }),
+                el('span', { text: c.title })
+              ])
+            ];
+            if (c.subsections.length) {
+              kids.push(el('ul', { class: 'tocsubs' }, c.subsections.map(function (sub) {
+                return el('li', null, [
+                  el('span', { class: 'tocnum', text: sub.num }),
+                  el('span', { text: sub.title })
+                ]);
+              })));
+            }
+            return el('li', null, kids);
+          }))
+        ])
+      ]));
     }
     return el('div', null, nodes);
   }

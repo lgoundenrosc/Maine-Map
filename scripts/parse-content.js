@@ -32,7 +32,7 @@ const EXPECTED = {
   tables: 15
 };
 
-const { LINKS, RENDER_EXCLUDE_SECTIONS, applyDeclared } = require('./build-config.js');
+const { LINKS, GEO_PINS, RENDER_EXCLUDE_SECTIONS, applyDeclared } = require('./build-config.js');
 
 /* ------------------------------------------------------------------ */
 /* Callout label to colour scheme. Brief section 4.3.                  */
@@ -359,26 +359,121 @@ function buildClusters(sections) {
  * checkable without reopening the markdown.
  */
 const PROSE_LOCATIONS = [
-  { name: 'Maine Technology Institute',              place: null,                sourceQuote: 'no location stated in the source' },
-  { name: 'UMaine Advanced Structures and Composites Center', place: 'Orono',    sourceQuote: 'section 7 table, Location column: Orono' },
-  { name: 'Bigelow Laboratory for Ocean Sciences',   place: 'East Boothbay',     sourceQuote: '5. Institution playbook: "East Boothbay. President, CEO and senior research scientist Deborah Bronk"' },
-  { name: 'Roux Institute at Northeastern',          place: 'Portland',          sourceQuote: '5. Institution playbook: "Portland. Launched 2020 with a $100 million founding gift."' },
-  { name: 'New England Ocean Cluster',               place: 'Portland',          sourceQuote: '5. Institution playbook: "Blue economy incubator on Portland’s working waterfront."' },
-  { name: 'Maine Maritime Academy',                  place: 'Castine',           sourceQuote: '5. Institution playbook: "Castine. Public college established 1941"' },
-  { name: 'Maine Venture Fund',                      place: 'Newport',           sourceQuote: '5. Institution playbook: "investing since 1997, based in Newport"' },
-  { name: 'Corsair Venture Partners',                place: 'Portland',          sourceQuote: '5. Institution playbook: "Early-stage venture capital firm based in Portland, Maine"' },
-  { name: 'Maine Defense Industry Alliance',         place: 'Sanford',           sourceQuote: '5. Institution playbook: "based at the York County Community College instructional site in Sanford"' },
-  { name: 'Loring Development Authority',            place: 'Limestone',         sourceQuote: '5. Institution playbook: "Limestone, Aroostook County. Former Loring AFB"' },
-  { name: 'Central Maine Growth Council',            place: 'Waterville',        sourceQuote: '5. Institution playbook: "Waterville is a Qualified Opportunity Zone."' },
-  { name: 'Compotech',                               place: 'Brewer',            sourceQuote: 'cluster 4.2: "Compotech (Brewer, $40 million in contracts 2017 to 2025..."' },
-  { name: 'Kenway Composites',                       place: 'Augusta',           sourceQuote: 'cluster 4.2: "Kenway Composites (Augusta)"' },
-  { name: 'Custom Composite Technologies',           place: 'Bath',              sourceQuote: 'cluster 4.2: "Custom Composite Technologies (Bath)"' },
-  { name: 'Advanced Infrastructure Technologies',    place: 'Brewer',            sourceQuote: 'cluster 4.2: "Advanced Infrastructure Technologies (Brewer)"' },
-  { name: 'HighByte',                                place: 'Portland',          sourceQuote: 'cluster 4.3: "HighByte (Portland, industrial DataOps)"' },
-  { name: 'Evergreen Additive',                      place: 'Brunswick Landing', sourceQuote: 'cluster 4.1: "Headquartered at TechPlace at Brunswick Landing"' },
-  { name: 'Pennington Mountain',                     place: 'Aroostook County',  sourceQuote: 'cluster 4.8: "Pennington Mountain, Aroostook County"' },
-  { name: 'Coast Guard Sector Northern New England', place: 'South Portland',    sourceQuote: 'cluster 4.9: "Coast Guard Sector Northern New England is already headquartered in South Portland."' }
+  { name: 'UMaine Advanced Structures and Composites Center', place: 'Orono',
+    ref: 'Section 7, test and evaluation infrastructure',
+    sourceQuote: 'section 7 table, Location column: Orono' },
+  { name: 'Bigelow Laboratory for Ocean Sciences', place: 'East Boothbay',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "East Boothbay. President, CEO and senior research scientist Deborah Bronk"' },
+  { name: 'Roux Institute at Northeastern', place: 'Portland',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "Portland. Launched 2020 with a $100 million founding gift."' },
+  { name: 'New England Ocean Cluster', place: 'Portland',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "Blue economy incubator on Portland\u2019s working waterfront."' },
+  { name: 'Maine Maritime Academy', place: 'Castine',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "Castine. Public college established 1941"' },
+  { name: 'Maine Venture Fund', place: 'Newport',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "investing since 1997, based in Newport"' },
+  { name: 'Corsair Venture Partners', place: 'Portland',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "Early-stage venture capital firm based in Portland, Maine"' },
+  { name: 'Maine Defense Industry Alliance', place: 'Sanford',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "based at the York County Community College instructional site in Sanford"' },
+  { name: 'Loring Development Authority', place: 'Limestone',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "Limestone, Aroostook County. Former Loring AFB"' },
+  { name: 'Central Maine Growth Council', place: 'Waterville',
+    ref: 'Section 5, institution playbook',
+    sourceQuote: '5. Institution playbook: "Waterville is a Qualified Opportunity Zone."' },
+
+  /* Named only in a cluster roster, so the summary is the roster entry itself,
+     quoted. Where the source says no more than the name and the town, the
+     panel falls back to the section reference. */
+  { name: 'Compotech', place: 'Brewer',
+    ref: 'Section 4, 4.2 Advanced composites, additive manufacturing, and forest-derived materials',
+    summary: 'Compotech (Brewer, $40 million in contracts 2017 to 2025 for the Expeditionary Shelter Protection System).',
+    sourceQuote: 'cluster 4.2 Who is there' },
+  { name: 'Kenway Composites', place: 'Augusta',
+    ref: 'Section 4, 4.2 Advanced composites, additive manufacturing, and forest-derived materials',
+    sourceQuote: 'cluster 4.2 Who is there: "Kenway Composites (Augusta)"' },
+  { name: 'Custom Composite Technologies', place: 'Bath',
+    ref: 'Section 4, 4.2 Advanced composites, additive manufacturing, and forest-derived materials',
+    sourceQuote: 'cluster 4.2 Who is there: "Custom Composite Technologies (Bath)"' },
+  { name: 'Advanced Infrastructure Technologies', place: 'Brewer',
+    ref: 'Section 4, 4.2 Advanced composites, additive manufacturing, and forest-derived materials',
+    sourceQuote: 'cluster 4.2 Who is there: "Advanced Infrastructure Technologies (Brewer)"' },
+  { name: 'HighByte', place: 'Portland',
+    ref: 'Section 4, 4.3 Shipyard sustainment and industrial AI',
+    summary: 'HighByte (Portland, industrial DataOps).',
+    sourceQuote: 'cluster 4.3 Who is there' },
+  { name: 'Evergreen Additive', place: 'Brunswick Landing',
+    ref: 'Section 4, 4.1 Maritime autonomy and undersea',
+    sourceQuote: 'cluster 4.1: "Headquartered at TechPlace at Brunswick Landing"' },
+  { name: 'Pennington Mountain', place: 'Aroostook County',
+    ref: 'Section 4, 4.8 Critical minerals and refractory metals',
+    summary: 'Pennington Mountain, Aroostook County, found through a 2021 USGS Earth MRI airborne survey and reported as the first hard-rock rare earth occurrence identified east of the Mississippi.',
+    sourceQuote: 'cluster 4.8 Upstream' },
+  { name: 'Coast Guard Sector Northern New England', place: 'South Portland',
+    ref: 'Section 4, 4.9 Ports and North Atlantic logistics',
+    summary: 'Coast Guard Sector Northern New England is already headquartered in South Portland.',
+    sourceQuote: 'cluster 4.9' }
 ].filter(x => x.place);
+
+/*
+ * The summary a reader sees when they click a point on the map. It is quoted
+ * from the source, never written here: a table's own description column, or
+ * the first sentences of the entity's entry. Trimmed to at most two sentences
+ * so the panel stays scannable, and the full entry is always a tab away.
+ */
+function runsToText(runs) {
+  return (runs || []).map(r => (r.t === 'marker' ? '[' + r.v + ']' : r.v)).join('');
+}
+
+/*
+ * Return a prefix of `text` ending at the `count`th sentence boundary, or the
+ * whole string if it has fewer. Always a true prefix of the input, so no words
+ * can be dropped: matching sentences and rejoining them silently swallowed
+ * "Launched Stardust 1" when the splitter mistook the decimal in "1.0" for a
+ * full stop.
+ *
+ * A boundary is a full stop, question mark or exclamation followed by
+ * whitespace and then something that can open a sentence. A period between
+ * digits, or one after a single capital letter, is not a boundary.
+ */
+function firstSentences(text, count) {
+  const str = String(text).trim();
+  let found = 0;
+  for (let i = 0; i < str.length; i++) {
+    if ('.!?'.indexOf(str[i]) < 0) continue;
+    const next = str[i + 1];
+    if (next !== undefined && !/\s/.test(next)) continue;          // 1.0, U.S.
+    if (str[i] === '.' && /[0-9]/.test(str[i - 1] || '') && /^\s*[0-9]/.test(str.slice(i + 1))) continue;
+    if (str[i] === '.' && /[A-Z]/.test(str[i - 1] || '') && !/[a-z]/.test(str[i - 2] || 'a')) continue;
+    const rest = str.slice(i + 1).replace(/^\s+/, '');
+    if (rest && !/^[A-Z0-9"'(\u201c]/.test(rest)) continue;
+    found++;
+    if (found >= count) return str.slice(0, i + 1);
+  }
+  return str;
+}
+
+function summaryFromBlocks(blocks) {
+  const para = (blocks || []).find(b => b.type === 'para');
+  return para ? firstSentences(runsToText(para.runs), 2) : '';
+}
+
+/* The description column of a table that also carries a Location column. */
+function describeIndex(headers) {
+  const what = headers.findIndex(h => /^what\b/i.test(h));
+  if (what >= 0) return what;
+  const loc = headers.findIndex(h => /^location$/i.test(h));
+  for (let i = headers.length - 1; i > 0; i--) if (i !== loc) return i;
+  return -1;
+}
 
 function resolvePlaces(locationString) {
   if (!locationString) return [];
@@ -403,9 +498,17 @@ function buildGeo(sections) {
   const geoNotes = [];
   const seen = new Set();
 
-  const add = (name, placeName, category, detail, sourceRef) => {
+  const pinFor = name => GEO_PINS.find(x => x.name === name);
+
+  const add = (name, placeName, category, detail, sourceRef, summary) => {
     const p = PLACES[placeName];
     if (!p) return;
+    /* A pinned entity plots only at its declared town. */
+    const pin = pinFor(name);
+    if (pin && pin.town !== placeName) {
+      geoNotes.push({ entity: name, ignoredPart: placeName, reason: 'pinned to ' + pin.town + ', ' + pin.reason });
+      return;
+    }
     const key = name + '|' + placeName;
     if (seen.has(key)) return;
     seen.add(key);
@@ -413,6 +516,7 @@ function buildGeo(sections) {
       name,
       town: placeName,
       category,
+      summary: summary || '',
       detail: detail || '',
       sourceRef: sourceRef || '',
       lat: p.lat,
@@ -431,10 +535,10 @@ function buildGeo(sections) {
   const anchors = [];
   s3.subsections.forEach(sub => {
     const meta = sub.blocks.find(b => b.type === 'meta');
-    if (meta) anchors.push({ title: sub.title, meta });
+    if (meta) anchors.push({ title: sub.title, meta, summary: summaryFromBlocks(sub.blocks) });
     sub.entries.forEach(e => {
       const m = e.blocks.find(b => b.type === 'meta');
-      if (m) anchors.push({ title: e.title, meta: m });
+      if (m) anchors.push({ title: e.title, meta: m, summary: summaryFromBlocks(e.blocks) });
     });
   });
   /*
@@ -456,7 +560,8 @@ function buildGeo(sections) {
     const places = [];
     locParts.forEach(p => resolvePlaces(p).forEach(x => { if (places.indexOf(x) < 0) places.push(x); }));
     if (!places.length) unresolved.push({ name: a.title, location: a.meta.parts.join(' · '), where: 'section 3 meta line' });
-    places.forEach(pl => add(a.title, pl, 'anchor', a.meta.parts.join(' · '), 'section 3, identity line'));
+    places.forEach(pl => add(a.title, pl, 'anchor', a.meta.parts.join(' · '),
+      'Section 3, anchor demand nodes', a.summary));
   });
 
   /* 2, 3, 4, 5. Any table carrying a Location column. */
@@ -473,20 +578,37 @@ function buildGeo(sections) {
     const li = b.headers.findIndex(h => /^location$/i.test(h));
     if (li < 0) return;
     handled.add(b.id);
-    const src = tableSources.find(t => t.sectionNum === s.num);
+    const di = describeIndex(b.headers);
     const category = s.num === '7' ? 'test' : s.num === '4' ? 'company' : 'institution';
-    const label = (sub ? (sub.num ? sub.num + ' ' : '') + sub.title : s.title);
+    const label = sub
+      ? 'Section ' + s.num + ', ' + (sub.num ? sub.num + ' ' : '') + sub.title
+      : 'Section ' + s.num + ', ' + s.title;
     b.rows.forEach(cells => {
       const name = cells[0].raw;
       const loc = cells[li].raw;
+      const summary = di >= 0 && cells[di] ? firstSentences(cells[di].raw, 2) : '';
       const places = resolvePlaces(loc);
       if (!places.length) unresolved.push({ name, location: loc, where: label });
-      places.forEach(pl => add(name, pl, category, loc, label + ', Location column'));
+      places.forEach(pl => add(name, pl, category, loc, label, summary));
     });
   });
 
-  /* 6. Prose locations, each with its source quote. */
-  PROSE_LOCATIONS.forEach(x => add(x.name, x.place, 'institution', x.place, x.sourceQuote));
+  /*
+   * 6. Prose locations. The summary comes from the entity's own entry
+   * wherever the document has one, so a click lands on what the document
+   * says about it rather than on a note about where the town name came from.
+   */
+  const entryByTitle = {};
+  sections.forEach(sec => {
+    const take = e => { if (!entryByTitle[e.title]) entryByTitle[e.title] = e; };
+    (sec.entries || []).forEach(take);
+    sec.subsections.forEach(sub => sub.entries.forEach(take));
+  });
+  PROSE_LOCATIONS.forEach(x => {
+    const entry = entryByTitle[x.name];
+    const summary = x.summary || (entry ? summaryFromBlocks(entry.blocks) : '');
+    add(x.name, x.place, 'institution', x.place, x.ref || x.sourceQuote, summary);
+  });
 
   const usedTowns = [...new Set(points.map(p => p.town))].sort();
   return {
@@ -579,7 +701,7 @@ function main() {
 
   /* Validation above ran against the full parse. Only now is the excluded
      set held back, so a source change still has to survive every check. */
-  const excludeNums = RENDER_EXCLUDE_SECTIONS.map(x => x.num);
+  const excludeNums = RENDER_EXCLUDE_SECTIONS.filter(x => x.num).map(x => x.num);
   const rendered = numbered.filter(s => excludeNums.indexOf(s.num) < 0);
   const withheld = numbered.filter(s => excludeNums.indexOf(s.num) >= 0);
 
@@ -656,7 +778,7 @@ function main() {
     declared: declared.counts,
     renumbered: renumbered,
     renderedCallouts: countIn(rendered, 'callout') + 1,   // the masthead block
-    renderedTables: countIn(rendered, 'table') + (contents ? countIn([contents], 'table') : 0),
+    renderedTables: countIn(rendered, 'table'),
     renderedSubsections: rendered.reduce((n, s) => n + s.subsections.length, 0),
     renderedEntries: countEntries(rendered),
     sectionsAll: numbered.length,
@@ -686,10 +808,24 @@ function main() {
   }
 
   fs.mkdirSync(OUT, { recursive: true });
+  /*
+   * Contents, generated from the rendered document rather than reproduced
+   * from the source table. The source Contents lists section 9, uses the old
+   * numbering, and disagrees with the body headings in five places, so
+   * reproducing it next to a renumbered document would be misleading. The
+   * brief already says navigation comes from the body headings.
+   */
+  const generatedContents = rendered.map(sec => ({
+    num: sec.num,
+    sourceNum: sec.sourceNum,
+    title: sec.title,
+    subsections: sec.subsections.map(sub => ({ num: sub.num, title: sub.title }))
+  }));
+
   const files = {
     'meta.json': meta,
     'tabs.json': tabs,
-    'contents.json': contents || null,
+    'contents.json': generatedContents,
     'sections.json': rendered,
     'chain.json': chain,
     'clusters.json': clusters,

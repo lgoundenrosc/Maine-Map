@@ -83,21 +83,25 @@ source = applyDeclared(source).text;
 
 /* Cut the withheld sections out of the comparison text. A section runs from
    its own H2 to the next H2. */
-const excludeNums = RENDER_EXCLUDE_SECTIONS.map(x => x.num);
+const excludeNums = RENDER_EXCLUDE_SECTIONS.filter(x => x.num).map(x => x.num);
+const excludeTitles = RENDER_EXCLUDE_SECTIONS.filter(x => x.title).map(x => x.title.toLowerCase());
 function dropSections(text) {
   const lines = text.split(/\r?\n/);
   const out = [];
   let skipping = false;
   for (const l of lines) {
-    const m = l.match(/^## (?:(\d+)\.)?\s*(.*)$/);
-    if (l.startsWith('## ')) skipping = !!(m && m[1] && excludeNums.indexOf(m[1]) >= 0);
+    if (l.startsWith('## ')) {
+      const m = l.match(/^## (?:(\d+)\.)?\s*(.*)$/);
+      const byNum = !!(m && m[1] && excludeNums.indexOf(m[1]) >= 0);
+      const byTitle = !!(m && !m[1] && excludeTitles.indexOf(m[2].trim().toLowerCase()) >= 0);
+      skipping = byNum || byTitle;
+    }
     if (!skipping) out.push(l);
   }
   return out.join('\n');
 }
 source = dropSections(source);
 
-const contents = read('contents.json');
 const sections = read('sections.json');
 
 /* The opening ROSC INTERNAL callout sits before any heading. */
@@ -106,7 +110,6 @@ const header = source.split(/\r?\n/).slice(0, 5).filter(l => l.trim()).join('\n'
 
 const out = [];
 out.push(header);
-if (contents) emitSection(contents, out);
 sections.forEach(s => emitSection(s, out));
 
 const rebuilt = normalise(out.join('\n'));

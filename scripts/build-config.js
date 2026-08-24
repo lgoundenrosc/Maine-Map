@@ -85,13 +85,30 @@ const LINKS = [
 ];
 
 /*
+ * Entities the source locates in more than one place, pinned to one town so
+ * the map carries a single dot for them. The other locations stay readable in
+ * the entity's own summary, which is quoted from the source.
+ */
+const GEO_PINS = [
+  {
+    name: 'The Elmet Group Co.',
+    town: 'Lewiston',
+    reason: 'source gives headquarters Portland and principal plant Lewiston, pinned to the plant'
+  }
+];
+
+/*
  * Parsed and validated as normal, then held back from the rendered document.
  * Section numbers are not resequenced. They are the document's own numbers
  * and its internal cross-references depend on them, so the tab strip skips
  * from 8 to 10 rather than renumbering the sections that follow.
  */
 const RENDER_EXCLUDE_SECTIONS = [
-  { num: '9', reason: 'constraints and gaps not needed at this time, per the document owner' }
+  { num: '9', reason: 'constraints and gaps not needed at this time, per the document owner' },
+  /* The source Contents block lists section 9, uses the pre-renumber
+     sequence, and disagrees with the body headings in five places. The
+     document's contents are generated from the rendered sections instead. */
+  { title: 'Contents', reason: 'contents generated from the rendered document instead' }
 ];
 
 /* Apply every declared rule to a markdown string. Shared so the parser and
@@ -119,4 +136,4 @@ function applyDeclared(text) {
   return { text, counts };
 }
 
-module.exports = { SUBSTITUTIONS, LINE_RULES, LINKS, RENDER_EXCLUDE_SECTIONS, applyDeclared };
+module.exports = { SUBSTITUTIONS, LINE_RULES, LINKS, GEO_PINS, RENDER_EXCLUDE_SECTIONS, applyDeclared };

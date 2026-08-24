@@ -72,7 +72,7 @@
     }
   ],
   "renderedCallouts": 42,
-  "renderedTables": 14,
+  "renderedTables": 13,
   "renderedSubsections": 23,
   "renderedEntries": 63,
   "sectionsAll": 12,
@@ -102,12 +102,12 @@
     {
       "name": "Greisen Aerospace",
       "location": "Maine",
-      "where": "4.5 Space and high-latitude"
+      "where": "Section 4, 4.5 Space and high-latitude"
     },
     {
       "name": "SoPoCo Works, Anchorspace, The Gem, Our Katahdin",
       "location": "statewide",
-      "where": "5.1 Shared space and coworking"
+      "where": "Section 5, 5.1 Shared space and coworking"
     }
   ],
   "expected": {

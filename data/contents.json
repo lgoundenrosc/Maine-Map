@@ -1,619 +1,165 @@
-{
-  "kind": "section",
-  "num": null,
-  "title": "Contents",
-  "heading": "Contents",
-  "id": "contents",
-  "blocks": [
-    {
-      "type": "table",
-      "id": "table-01",
-      "headers": [],
-      "rows": [
-        [
-          {
-            "raw": "1. Overview",
-            "runs": [
-              {
-                "t": "text",
-                "v": "1. Overview"
-              }
-            ]
-          },
-          {
-            "raw": "3",
-            "runs": [
-              {
-                "t": "text",
-                "v": "3"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "How to read this document",
-            "runs": [
-              {
-                "t": "text",
-                "v": "How to read this document"
-              }
-            ]
-          },
-          {
-            "raw": "3",
-            "runs": [
-              {
-                "t": "text",
-                "v": "3"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "A note on the state spending figure",
-            "runs": [
-              {
-                "t": "text",
-                "v": "A note on the state spending figure"
-              }
-            ]
-          },
-          {
-            "raw": "4",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "2. The formation chain",
-            "runs": [
-              {
-                "t": "text",
-                "v": "2. The formation chain"
-              }
-            ]
-          },
-          {
-            "raw": "5",
-            "runs": [
-              {
-                "t": "text",
-                "v": "5"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "3. Anchor demand nodes",
-            "runs": [
-              {
-                "t": "text",
-                "v": "3. Anchor demand nodes"
-              }
-            ]
-          },
-          {
-            "raw": "7",
-            "runs": [
-              {
-                "t": "text",
-                "v": "7"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "3.1 General Dynamics Bath Iron Works",
-            "runs": [
-              {
-                "t": "text",
-                "v": "3.1 General Dynamics Bath Iron Works"
-              }
-            ]
-          },
-          {
-            "raw": "7",
-            "runs": [
-              {
-                "t": "text",
-                "v": "7"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "3.2 Portsmouth Naval Shipyard",
-            "runs": [
-              {
-                "t": "text",
-                "v": "3.2 Portsmouth Naval Shipyard"
-              }
-            ]
-          },
-          {
-            "raw": "7",
-            "runs": [
-              {
-                "t": "text",
-                "v": "7"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "3.3 The second tier",
-            "runs": [
-              {
-                "t": "text",
-                "v": "3.3 The second tier"
-              }
-            ]
-          },
-          {
-            "raw": "9",
-            "runs": [
-              {
-                "t": "text",
-                "v": "9"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4. Capability clusters and white space",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4. Capability clusters and white space"
-              }
-            ]
-          },
-          {
-            "raw": "16",
-            "runs": [
-              {
-                "t": "text",
-                "v": "16"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.1 Maritime autonomy and undersea",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.1 Maritime autonomy and undersea"
-              }
-            ]
-          },
-          {
-            "raw": "16",
-            "runs": [
-              {
-                "t": "text",
-                "v": "16"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.2 Advanced composites, additive manufacturing, and forest-derived materials",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.2 Advanced composites, additive manufacturing, and forest-derived materials"
-              }
-            ]
-          },
-          {
-            "raw": "17",
-            "runs": [
-              {
-                "t": "text",
-                "v": "17"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.3 Shipyard sustainment and industrial AI",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.3 Shipyard sustainment and industrial AI"
-              }
-            ]
-          },
-          {
-            "raw": "18",
-            "runs": [
-              {
-                "t": "text",
-                "v": "18"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.4 Uncrewed ground systems",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.4 Uncrewed ground systems"
-              }
-            ]
-          },
-          {
-            "raw": "18",
-            "runs": [
-              {
-                "t": "text",
-                "v": "18"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.5 Space and high-latitude",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.5 Space and high-latitude"
-              }
-            ]
-          },
-          {
-            "raw": "18",
-            "runs": [
-              {
-                "t": "text",
-                "v": "18"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.6 Food, water, and biological supply chain security",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.6 Food, water, and biological supply chain security"
-              }
-            ]
-          },
-          {
-            "raw": "20",
-            "runs": [
-              {
-                "t": "text",
-                "v": "20"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.7 Cyber, secure communications, and dual-use software",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.7 Cyber, secure communications, and dual-use software"
-              }
-            ]
-          },
-          {
-            "raw": "22",
-            "runs": [
-              {
-                "t": "text",
-                "v": "22"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.8 Critical minerals and refractory metals",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.8 Critical minerals and refractory metals"
-              }
-            ]
-          },
-          {
-            "raw": "22",
-            "runs": [
-              {
-                "t": "text",
-                "v": "22"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "4.9 Ports and North Atlantic logistics",
-            "runs": [
-              {
-                "t": "text",
-                "v": "4.9 Ports and North Atlantic logistics"
-              }
-            ]
-          },
-          {
-            "raw": "24",
-            "runs": [
-              {
-                "t": "text",
-                "v": "24"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "5. Institution playbook",
-            "runs": [
-              {
-                "t": "text",
-                "v": "5. Institution playbook"
-              }
-            ]
-          },
-          {
-            "raw": "27",
-            "runs": [
-              {
-                "t": "text",
-                "v": "27"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "5.1 Ateklo and First Light Works",
-            "runs": [
-              {
-                "t": "text",
-                "v": "5.1 Ateklo and First Light Works"
-              }
-            ]
-          },
-          {
-            "raw": "33",
-            "runs": [
-              {
-                "t": "text",
-                "v": "33"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "5.2 Shared space and coworking",
-            "runs": [
-              {
-                "t": "text",
-                "v": "5.2 Shared space and coworking"
-              }
-            ]
-          },
-          {
-            "raw": "34",
-            "runs": [
-              {
-                "t": "text",
-                "v": "34"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "5.3 The colleges",
-            "runs": [
-              {
-                "t": "text",
-                "v": "5.3 The colleges"
-              }
-            ]
-          },
-          {
-            "raw": "35",
-            "runs": [
-              {
-                "t": "text",
-                "v": "35"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "5.4 The community college system",
-            "runs": [
-              {
-                "t": "text",
-                "v": "5.4 The community college system"
-              }
-            ]
-          },
-          {
-            "raw": "37",
-            "runs": [
-              {
-                "t": "text",
-                "v": "37"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "6. Capital stack and state instruments",
-            "runs": [
-              {
-                "t": "text",
-                "v": "6. Capital stack and state instruments"
-              }
-            ]
-          },
-          {
-            "raw": "38",
-            "runs": [
-              {
-                "t": "text",
-                "v": "38"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "7. Test and evaluation infrastructure",
-            "runs": [
-              {
-                "t": "text",
-                "v": "7. Test and evaluation infrastructure"
-              }
-            ]
-          },
-          {
-            "raw": "41",
-            "runs": [
-              {
-                "t": "text",
-                "v": "41"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "8. Engagement and routing",
-            "runs": [
-              {
-                "t": "text",
-                "v": "8. Engagement and routing"
-              }
-            ]
-          },
-          {
-            "raw": "44",
-            "runs": [
-              {
-                "t": "text",
-                "v": "44"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "9. Constraints and gaps",
-            "runs": [
-              {
-                "t": "text",
-                "v": "9. Constraints and gaps"
-              }
-            ]
-          },
-          {
-            "raw": "47",
-            "runs": [
-              {
-                "t": "text",
-                "v": "47"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "10. Key names",
-            "runs": [
-              {
-                "t": "text",
-                "v": "10. Key names"
-              }
-            ]
-          },
-          {
-            "raw": "51",
-            "runs": [
-              {
-                "t": "text",
-                "v": "51"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "11. Glossary",
-            "runs": [
-              {
-                "t": "text",
-                "v": "11. Glossary"
-              }
-            ]
-          },
-          {
-            "raw": "53",
-            "runs": [
-              {
-                "t": "text",
-                "v": "53"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "raw": "12. Sources",
-            "runs": [
-              {
-                "t": "text",
-                "v": "12. Sources"
-              }
-            ]
-          },
-          {
-            "raw": "56",
-            "runs": [
-              {
-                "t": "text",
-                "v": "56"
-              }
-            ]
-          }
-        ]
-      ],
-      "line": 9,
-      "headerless": true
-    }
-  ],
-  "subsections": []
-}
+[
+  {
+    "num": "1",
+    "sourceNum": "1",
+    "title": "Overview",
+    "subsections": []
+  },
+  {
+    "num": "2",
+    "sourceNum": "2",
+    "title": "The formation chain",
+    "subsections": []
+  },
+  {
+    "num": "3",
+    "sourceNum": "3",
+    "title": "Anchor demand nodes",
+    "subsections": [
+      {
+        "num": "3.1",
+        "title": "General Dynamics Bath Iron Works"
+      },
+      {
+        "num": "3.2",
+        "title": "Portsmouth Naval Shipyard"
+      },
+      {
+        "num": "3.3",
+        "title": "Other Major Players"
+      }
+    ]
+  },
+  {
+    "num": "4",
+    "sourceNum": "4",
+    "title": "Capability clusters and white space",
+    "subsections": [
+      {
+        "num": "4.1",
+        "title": "Maritime autonomy and undersea"
+      },
+      {
+        "num": "4.2",
+        "title": "Advanced composites, additive manufacturing, and forest-derived materials"
+      },
+      {
+        "num": "4.3",
+        "title": "Shipyard sustainment and industrial AI"
+      },
+      {
+        "num": "4.4",
+        "title": "Uncrewed ground systems"
+      },
+      {
+        "num": "4.5",
+        "title": "Space and high-latitude"
+      },
+      {
+        "num": "4.6",
+        "title": "Food, water, and biological supply chain security"
+      },
+      {
+        "num": "4.7",
+        "title": "Cyber, secure communications, and dual-use software"
+      },
+      {
+        "num": "4.8",
+        "title": "Critical minerals and refractory metals"
+      },
+      {
+        "num": "4.9",
+        "title": "Ports and North Atlantic logistics"
+      }
+    ]
+  },
+  {
+    "num": "5",
+    "sourceNum": "5",
+    "title": "Institution playbook",
+    "subsections": [
+      {
+        "num": "5.1",
+        "title": "Shared space and coworking"
+      },
+      {
+        "num": "5.2",
+        "title": "The colleges"
+      },
+      {
+        "num": "5.3",
+        "title": "The community college system"
+      },
+      {
+        "num": "5.4",
+        "title": "Also present with thinner records"
+      }
+    ]
+  },
+  {
+    "num": "6",
+    "sourceNum": "6",
+    "title": "Capital stack and state instruments",
+    "subsections": [
+      {
+        "num": "6.1",
+        "title": "Maine Seed Capital Tax Credit"
+      },
+      {
+        "num": "6.2",
+        "title": "Maine New Markets Capital Investment Program"
+      },
+      {
+        "num": "6.3",
+        "title": "The stack, end to end"
+      },
+      {
+        "num": "6.4",
+        "title": "Federal channels"
+      }
+    ]
+  },
+  {
+    "num": "7",
+    "sourceNum": "7",
+    "title": "Test and evaluation infrastructure",
+    "subsections": []
+  },
+  {
+    "num": "8",
+    "sourceNum": "8",
+    "title": "Engagement and routing",
+    "subsections": [
+      {
+        "num": "8.1",
+        "title": "Mechanics that shape a Maine investment"
+      },
+      {
+        "num": "8.2",
+        "title": "Routing to federal customers"
+      },
+      {
+        "num": "8.3",
+        "title": "Federal programs worth tracking"
+      }
+    ]
+  },
+  {
+    "num": "9",
+    "sourceNum": "10",
+    "title": "Key names",
+    "subsections": []
+  },
+  {
+    "num": "10",
+    "sourceNum": "11",
+    "title": "Glossary",
+    "subsections": []
+  },
+  {
+    "num": "11",
+    "sourceNum": "12",
+    "title": "Sources",
+    "subsections": []
+  }
+]

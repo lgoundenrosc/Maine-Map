@@ -28,6 +28,8 @@ proving that nothing outside that one file changed. These are declared today:
 | Four cross-references to section 9 removed | One whole row of the 8.1 mechanics table, two trimmed sentences, one dropped clause |
 | Contact strings removed from the openness lines | All 22 entries in section 5 keep the openness chip and lose the address |
 | One declared outbound link | "Maine builds what the nation sails and flies" links to firstlightworks.com |
+| The source Contents block is withheld | Contents are generated from the rendered sections instead |
+| The Elmet Group Co. is pinned to Lewiston | Source gives headquarters Portland and principal plant Lewiston, so the map carries one dot |
 
 What remains is resequenced so the rendered document runs 1 to 11 with no gap, and each section
 keeps its `sourceNum` alongside the number a reader sees. Old 10, 11 and 12 become 9, 10 and 11.
@@ -139,8 +141,17 @@ renders next to the map. County-level points, the one offshore point, and out-of
 labelled as such in the side panel. Out-of-state assets are listed and never drawn.
 
 Locations come from a Location column wherever the source has one. Where a location came from prose
-instead, the entry records the sentence it was read out of, and that sentence renders under the entity
-in the side panel.
+instead, the entry records the sentence it was read out of.
+
+Clicking a point opens the entity in the side panel with a one or two sentence summary, its
+coordinates, and the section the summary came from. Every summary is **quoted from the source**, never
+written here: a table's own description column, or the opening sentences of the entity's entry. Three
+entities carry no summary because the source says nothing about them beyond a name and a town, and
+those show the section reference alone.
+
+`firstSentences` returns a true prefix of the input rather than matching sentences and rejoining
+them. The rejoining version silently swallowed "Launched Stardust 1" when it read the decimal in
+"1.0" as a full stop, which is exactly the kind of quiet corruption rule 1 exists to prevent.
 
 A point-in-polygon check confirms every derived Maine town falls inside the outline, and a second
 check reports each coastal town's distance to the drawn coast. The outline is schematic but not a

@@ -347,6 +347,7 @@
           list.appendChild(el('li', null, [
             el('span', { class: 'nm', text: item.name }),
             el('span', { class: 'tw', text: t.town + '  ' + tags }),
+            item.summary ? el('p', { class: 'sum', text: item.summary }) : null,
             el('span', { class: 'src', text: item.sourceRef })
           ]));
         });
