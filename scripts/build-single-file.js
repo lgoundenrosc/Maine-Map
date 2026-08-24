@@ -48,3 +48,21 @@ fs.writeFileSync(OUT, html);
 
 console.log('Wrote ' + path.relative(ROOT, OUT));
 console.log('  ' + (Buffer.byteLength(html, 'utf8') / 1024).toFixed(0) + ' KB, no external references');
+
+/*
+ * A second variant for hosting as an Artifact, which supplies its own
+ * doctype, html, head and body. Same inlined content with the document
+ * skeleton and the meta tags removed.
+ */
+const bodyMatch = html.match(/<body>([\s\S]*)<\/body>/);
+const titleMatch = html.match(/<title>[\s\S]*?<\/title>/);
+const styles = html.match(/<style>[\s\S]*?<\/style>/g) || [];
+if (!bodyMatch || !titleMatch) {
+  console.error('Could not isolate the body for the hosted variant.');
+  process.exit(1);
+}
+const hosted = [titleMatch[0], ...styles, bodyMatch[1].trim(), ''].join('\n');
+const HOSTED = path.join(OUT_DIR, 'maine-map.artifact.html');
+fs.writeFileSync(HOSTED, hosted);
+console.log('Wrote ' + path.relative(ROOT, HOSTED));
+console.log('  ' + (Buffer.byteLength(hosted, 'utf8') / 1024).toFixed(0) + ' KB, no document skeleton');
