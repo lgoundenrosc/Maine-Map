@@ -8,11 +8,28 @@
     {
       "type": "table",
       "id": "table-01",
-      "headers": [
-        "1. Overview",
-        "3"
-      ],
+      "headers": [],
       "rows": [
+        [
+          {
+            "raw": "1. Overview",
+            "runs": [
+              {
+                "t": "text",
+                "v": "1. Overview"
+              }
+            ]
+          },
+          {
+            "raw": "3",
+            "runs": [
+              {
+                "t": "text",
+                "v": "3"
+              }
+            ]
+          }
+        ],
         [
           {
             "raw": "How to read this document",
@@ -594,7 +611,8 @@
           }
         ]
       ],
-      "line": 9
+      "line": 9,
+      "headerless": true
     }
   ],
   "subsections": []

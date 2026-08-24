@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maine Defense Innovation Ecosystem — VC Landscape Map</title>
+<title>Maine Defense Innovation Ecosystem · VC Landscape Map</title>
 <meta name="description" content="Rosc Capital internal VC landscape map of Maine's defense innovation ecosystem. Supply-side formation chain, capability clusters, capital instruments and verification gaps.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="./css/styles.css">
@@ -13,33 +13,20 @@
 <div class="wrap">
   <main id="app">
     <noscript>
-      <div style="background:#fdeeee;border:1px solid #f0c4c4;border-left:6px solid #b3261e;border-radius:6px;padding:16px;margin-bottom:14px">
+      <div style="background:#fdeded;border:1px solid #f2c9c7;border-left:6px solid #b3261e;border-radius:6px;padding:16px">
         <b>This document needs JavaScript.</b>
-        All content is bundled locally in the <code>data/</code> directory and nothing is fetched at
-        runtime, so enabling scripts does not send any request off this machine.
+        All content is bundled locally in <code>data/</code> and nothing is fetched at runtime, so
+        enabling scripts sends no request off this machine.
       </div>
     </noscript>
   </main>
 </div>
 
-<!-- Data layer. Loaded before the application. No content lives in components. -->
-<script src="./data/meta.js"></script>
-<script src="./data/sources.js"></script>
-<script src="./data/formationChain.js"></script>
-<script src="./data/anchorNodes.js"></script>
-<script src="./data/clusters.js"></script>
-<script src="./data/institutions.js"></script>
-<script src="./data/testAssets.js"></script>
-<script src="./data/capitalStack.js"></script>
-<script src="./data/companies.js"></script>
-<script src="./data/people.js"></script>
-<script src="./data/criticalContext.js"></script>
-<script src="./data/crossReference.js"></script>
-<script src="./data/gaps.js"></script>
-<script src="./data/glossary.js"></script>
+<!-- Generated from content/maine_map_content_v3.md by scripts/parse-content.js.
+     A classic script rather than a JSON fetch, so the document opens from disk. -->
+<script src="./data/bundle.js"></script>
 
-<!-- Application. -->
-<script src="./js/components.js"></script>
+<script src="./js/render.js"></script>
 <script src="./js/views.js"></script>
 <script src="./js/app.js"></script>
 </body>

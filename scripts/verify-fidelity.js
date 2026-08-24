@@ -43,7 +43,7 @@ function emitBlock(b, out) {
       b.paragraphs.forEach(p => out.push('> ' + fromRuns(p.runs)));
       break;
     case 'table':
-      out.push('| ' + b.headers.join(' | ') + ' |');
+      if (!b.headerless) out.push('| ' + b.headers.join(' | ') + ' |');
       b.rows.forEach(cells => out.push('| ' + cells.map(c => fromRuns(c.runs)).join(' | ') + ' |'));
       break;
     default:

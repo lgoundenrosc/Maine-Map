@@ -2,159 +2,129 @@
   "points": [
     {
       "name": "General Dynamics Bath Iron Works",
-      "town": "Brunswick Landing",
-      "category": "anchor",
-      "detail": "BIW , Bath, Maine , approximately 11 miles from Brunswick Landing",
-      "sourceRef": "section 3, identity line",
-      "lat": 43.891,
-      "lng": -69.939,
-      "precision": "approximate",
-      "countyLevel": false,
-      "outsideMaine": false
-    },
-    {
-      "name": "General Dynamics Bath Iron Works",
       "town": "Bath",
       "category": "anchor",
-      "detail": "BIW , Bath, Maine , approximately 11 miles from Brunswick Landing",
+      "detail": "BIW · Bath, Maine · approximately 11 miles from Brunswick Landing",
       "sourceRef": "section 3, identity line",
       "lat": 43.911,
       "lng": -69.813,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Portsmouth Naval Shipyard",
       "town": "Kittery",
       "category": "anchor",
-      "detail": "PNSY , Kittery, Maine , the shipyard is in Maine despite the name",
+      "detail": "PNSY · Kittery, Maine · the shipyard is in Maine despite the name",
       "sourceRef": "section 3, identity line",
       "lat": 43.089,
       "lng": -70.744,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
-    },
-    {
-      "name": "Navy SERE East and the Redington range",
-      "town": "Redington Township",
-      "category": "anchor",
-      "detail": "CENSECFOR Detachment Kittery , 12,500-acre Navy range, Redington Township, near Rangeley",
-      "sourceRef": "section 3, identity line",
-      "lat": 45.02,
-      "lng": -70.42,
-      "precision": "approximate",
-      "countyLevel": false,
-      "outsideMaine": false
-    },
-    {
-      "name": "Navy SERE East and the Redington range",
-      "town": "Rangeley",
-      "category": "anchor",
-      "detail": "CENSECFOR Detachment Kittery , 12,500-acre Navy range, Redington Township, near Rangeley",
-      "sourceRef": "section 3, identity line",
-      "lat": 44.966,
-      "lng": -70.644,
-      "precision": "approximate",
-      "countyLevel": false,
-      "outsideMaine": false
-    },
-    {
-      "name": "Navy SERE East and the Redington range",
-      "town": "Kittery",
-      "category": "anchor",
-      "detail": "CENSECFOR Detachment Kittery , 12,500-acre Navy range, Redington Township, near Rangeley",
-      "sourceRef": "section 3, identity line",
-      "lat": 43.089,
-      "lng": -70.744,
-      "precision": "approximate",
-      "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Howe & Howe Inc.",
       "town": "Waterboro",
       "category": "anchor",
-      "detail": "Textron Systems subsidiary , Waterboro, Maine",
+      "detail": "Textron Systems subsidiary · Waterboro, Maine",
       "sourceRef": "section 3, identity line",
       "lat": 43.536,
       "lng": -70.72,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Pratt & Whitney North Berwick Aero Systems",
       "town": "North Berwick",
       "category": "anchor",
-      "detail": "RTX business , North Berwick, Maine , the largest manufacturing facility under one roof in Maine",
+      "detail": "RTX business · North Berwick, Maine · the largest manufacturing facility under one roof in Maine",
       "sourceRef": "section 3, identity line",
       "lat": 43.304,
       "lng": -70.734,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
-    },
-    {
-      "name": "The Elmet Group Co.",
-      "town": "Lewiston",
-      "category": "anchor",
-      "detail": "NASDAQ: ELMT , headquarters Portland , principal plant Lewiston , full treatment in cluster 4.8",
-      "sourceRef": "section 3, identity line",
-      "lat": 44.101,
-      "lng": -70.215,
-      "precision": "approximate",
-      "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "The Elmet Group Co.",
       "town": "Portland",
       "category": "anchor",
-      "detail": "NASDAQ: ELMT , headquarters Portland , principal plant Lewiston , full treatment in cluster 4.8",
+      "detail": "NASDAQ: ELMT · headquarters Portland · principal plant Lewiston · full treatment in cluster 4.8",
       "sourceRef": "section 3, identity line",
       "lat": 43.659,
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
+    },
+    {
+      "name": "The Elmet Group Co.",
+      "town": "Lewiston",
+      "category": "anchor",
+      "detail": "NASDAQ: ELMT · headquarters Portland · principal plant Lewiston · full treatment in cluster 4.8",
+      "sourceRef": "section 3, identity line",
+      "lat": 44.101,
+      "lng": -70.215,
+      "precision": "approximate",
+      "countyLevel": false,
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Teledyne at Brunswick Landing",
       "town": "Brunswick Landing",
       "category": "anchor",
-      "detail": "Teledyne Technologies (NYSE: TDY) , Brunswick Landing , a sales office, not a plant",
+      "detail": "Teledyne Technologies (NYSE: TDY) · Brunswick Landing · a sales office, not a plant",
       "sourceRef": "section 3, identity line",
       "lat": 43.891,
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "General Dynamics Ordnance and Tactical Systems, Saco Operations",
       "town": "Saco",
       "category": "anchor",
-      "detail": "GD-OTS , Saco, Maine , arms manufacturing on this site since the early 1800s",
+      "detail": "GD-OTS · Saco, Maine · arms manufacturing on this site since the early 1800s",
       "sourceRef": "section 3, identity line",
       "lat": 43.501,
       "lng": -70.443,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "101st Air Refueling Wing",
       "town": "Bangor",
       "category": "anchor",
-      "detail": "Maine Air National Guard , Bangor Air National Guard Base , the MAINEiacs",
+      "detail": "Maine Air National Guard · Bangor Air National Guard Base · the MAINEiacs",
       "sourceRef": "section 3, identity line",
       "lat": 44.801,
       "lng": -68.778,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "bluShift Aerospace",
@@ -166,7 +136,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Teledyne",
@@ -178,7 +150,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Poseidon Aerospace",
@@ -190,7 +164,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Promin Aerospace",
@@ -202,7 +178,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Stratton Aviation",
@@ -214,7 +192,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Mallard Enterprises",
@@ -226,7 +206,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "New England Aviation Academy",
@@ -238,7 +220,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "VALT Enterprizes",
@@ -250,7 +234,9 @@
       "lng": -68.016,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Elmet Technologies",
@@ -262,7 +248,9 @@
       "lng": -70.215,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Jackson Laboratory",
@@ -274,7 +262,9 @@
       "lng": -68.204,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "MDI Biological Laboratory",
@@ -286,7 +276,9 @@
       "lng": -68.204,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "IDEXX",
@@ -298,7 +290,9 @@
       "lng": -70.371,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "TechPlace",
@@ -310,7 +304,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "SMCC MATEC",
@@ -322,7 +318,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "The Hus",
@@ -334,7 +332,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Think Tank Coworking",
@@ -346,7 +346,9 @@
       "lng": -70.453,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Think Tank Coworking",
@@ -358,7 +360,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Think Tank Coworking",
@@ -370,7 +374,9 @@
       "lng": -70.187,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Cloudport",
@@ -382,7 +388,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Factory 3, PelotonLabs, Engine Room",
@@ -394,7 +402,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Open Bench Project",
@@ -406,7 +416,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Fork Food Lab",
@@ -418,7 +430,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "75 Park, Lovely Ideas",
@@ -430,7 +444,9 @@
       "lng": -70.215,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Bangor Innovation Center, HQ Bangor",
@@ -442,7 +458,9 @@
       "lng": -68.778,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "UpStart Center for Entrepreneurship",
@@ -454,7 +472,9 @@
       "lng": -68.671,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Bowdoin College",
@@ -466,7 +486,9 @@
       "lng": -69.966,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Colby College",
@@ -478,7 +500,9 @@
       "lng": -69.632,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Bates College",
@@ -490,7 +514,9 @@
       "lng": -70.215,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "University of Southern Maine",
@@ -502,7 +528,9 @@
       "lng": -70.215,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "University of Southern Maine",
@@ -514,7 +542,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "University of Southern Maine",
@@ -526,7 +556,9 @@
       "lng": -70.444,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "University of New England",
@@ -538,7 +570,9 @@
       "lng": -70.453,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "University of New England",
@@ -550,7 +584,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "College of the Atlantic",
@@ -562,7 +598,9 @@
       "lng": -68.204,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Husson University and Thomas College",
@@ -574,7 +612,9 @@
       "lng": -69.632,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Husson University and Thomas College",
@@ -586,7 +626,9 @@
       "lng": -68.778,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "UMaine ASCC",
@@ -598,7 +640,9 @@
       "lng": -68.671,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Alfond W2 Ocean Engineering Laboratory",
@@ -610,7 +654,9 @@
       "lng": -68.671,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Elmet analytical laboratory",
@@ -622,7 +668,9 @@
       "lng": -70.215,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Brunswick Executive Airport",
@@ -634,7 +682,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Navy Redington range",
@@ -646,7 +696,9 @@
       "lng": -70.42,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Gulf of Maine littorals",
@@ -654,11 +706,13 @@
       "category": "test",
       "detail": "Coastal",
       "sourceRef": "Test and evaluation infrastructure, Location column",
-      "lat": 43.72,
-      "lng": -69.7,
+      "lat": 43.53,
+      "lng": -69.3,
       "precision": "approximate",
-      "countyLevel": true,
-      "outsideMaine": false
+      "countyLevel": false,
+      "offshore": true,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Loring runways",
@@ -670,7 +724,9 @@
       "lng": -67.826,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Portland International Marine Terminal",
@@ -682,7 +738,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Brunswick Landing microgrid",
@@ -694,7 +752,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Maine Space Corp SpaceTech Facility",
@@ -706,7 +766,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "MMA Maritime Industrial Workforce Training Center",
@@ -718,7 +780,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Maine Maritime Academy, Castine",
@@ -730,7 +794,9 @@
       "lng": -68.799,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "CRREL",
@@ -742,7 +808,9 @@
       "lng": -72.289,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": true
+      "offshore": false,
+      "outsideMaine": true,
+      "plotted": false
     },
     {
       "name": "UNH engineering and wave tanks",
@@ -754,7 +822,9 @@
       "lng": -70.926,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": true
+      "offshore": false,
+      "outsideMaine": true,
+      "plotted": false
     },
     {
       "name": "UMaine Advanced Structures and Composites Center",
@@ -766,7 +836,9 @@
       "lng": -68.671,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Bigelow Laboratory for Ocean Sciences",
@@ -778,7 +850,9 @@
       "lng": -69.598,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Roux Institute at Northeastern",
@@ -790,7 +864,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "New England Ocean Cluster",
@@ -802,7 +878,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Maine Maritime Academy",
@@ -814,7 +892,9 @@
       "lng": -68.799,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Maine Venture Fund",
@@ -826,7 +906,9 @@
       "lng": -69.276,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Corsair Venture Partners",
@@ -838,7 +920,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Maine Defense Industry Alliance",
@@ -850,7 +934,9 @@
       "lng": -70.774,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Loring Development Authority",
@@ -862,7 +948,9 @@
       "lng": -67.826,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Central Maine Growth Council",
@@ -874,7 +962,9 @@
       "lng": -69.632,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Compotech",
@@ -886,7 +976,9 @@
       "lng": -68.762,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Kenway Composites",
@@ -898,7 +990,9 @@
       "lng": -69.78,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Custom Composite Technologies",
@@ -910,7 +1004,9 @@
       "lng": -69.813,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Advanced Infrastructure Technologies",
@@ -922,7 +1018,9 @@
       "lng": -68.762,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "HighByte",
@@ -934,7 +1032,9 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Evergreen Additive",
@@ -946,7 +1046,9 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Pennington Mountain",
@@ -958,7 +1060,9 @@
       "lng": -68.45,
       "precision": "approximate",
       "countyLevel": true,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     },
     {
       "name": "Coast Guard Sector Northern New England",
@@ -970,10 +1074,17 @@
       "lng": -70.241,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
+      "offshore": false,
+      "outsideMaine": false,
+      "plotted": true
     }
   ],
   "unresolved": [
+    {
+      "name": "Navy SERE East and the Redington range",
+      "location": "CENSECFOR Detachment Kittery · 12,500-acre Navy range, Redington Township, near Rangeley",
+      "where": "section 3 meta line"
+    },
     {
       "name": "Greisen Aerospace",
       "location": "Maine",
@@ -985,142 +1096,154 @@
       "where": "5.1 Shared space and coworking"
     }
   ],
+  "notes": [
+    {
+      "entity": "General Dynamics Bath Iron Works",
+      "ignoredPart": "approximately 11 miles from Brunswick Landing",
+      "reason": "commentary, not a location"
+    },
+    {
+      "entity": "Navy SERE East and the Redington range",
+      "ignoredPart": "12,500-acre Navy range, Redington Township, near Rangeley",
+      "reason": "commentary, not a location"
+    }
+  ],
   "outline": [
     [
-      -70.75,
-      43.08
+      -70.68,
+      43.06
     ],
     [
-      -70.6,
-      43.35
+      -70.55,
+      43.24
     ],
     [
-      -70.4,
-      43.47
-    ],
-    [
-      -70.25,
-      43.55
+      -70.36,
+      43.4
     ],
     [
       -70.2,
-      43.65
+      43.5
     ],
     [
-      -70.1,
+      -70.08,
+      43.58
+    ],
+    [
+      -69.96,
+      43.64
+    ],
+    [
+      -69.82,
+      43.66
+    ],
+    [
+      -69.7,
+      43.7
+    ],
+    [
+      -69.55,
       43.72
     ],
     [
-      -69.95,
-      43.79
+      -69.4,
+      43.74
     ],
     [
-      -69.81,
-      43.73
+      -69.25,
+      43.8
     ],
     [
-      -69.63,
-      43.84
+      -69.05,
+      43.9
     ],
     [
-      -69.5,
-      43.85
-    ],
-    [
-      -69.32,
-      43.77
-    ],
-    [
-      -69.06,
-      44.1
-    ],
-    [
-      -68.85,
-      44.42
-    ],
-    [
-      -68.79,
-      44.55
+      -68.9,
+      44.05
     ],
     [
       -68.6,
-      44.4
+      44.1
     ],
     [
-      -68.4,
-      44.3
+      -68.35,
+      44.15
     ],
     [
-      -68.2,
+      -68.15,
+      44.22
+    ],
+    [
+      -67.95,
       44.32
     ],
     [
-      -68,
+      -67.75,
       44.42
     ],
     [
-      -67.8,
-      44.52
+      -67.55,
+      44.48
     ],
     [
-      -67.6,
-      44.55
+      -67.35,
+      44.58
     ],
     [
-      -67.4,
-      44.65
+      -67.1,
+      44.72
     ],
     [
-      -67.15,
+      -66.95,
       44.8
     ],
     [
-      -66.98,
-      44.81
+      -66.92,
+      44.92
     ],
     [
       -67.05,
-      44.9
+      45.05
     ],
     [
-      -67.13,
-      45.09
+      -67.15,
+      45.15
     ],
     [
-      -67.29,
-      45.19
+      -67.3,
+      45.2
     ],
     [
-      -67.42,
+      -67.45,
       45.5
     ],
     [
-      -67.48,
-      45.6
+      -67.55,
+      45.62
     ],
     [
-      -67.72,
-      45.68
+      -67.75,
+      45.7
     ],
     [
       -67.78,
-      45.94
-    ],
-    [
-      -67.8,
-      46.2
+      46
     ],
     [
       -67.79,
-      47.07
+      46.5
+    ],
+    [
+      -67.79,
+      47.06
     ],
     [
       -68.23,
       47.35
     ],
     [
-      -68.38,
-      47.29
+      -68.4,
+      47.28
     ],
     [
       -68.9,
@@ -1152,7 +1275,7 @@
     ],
     [
       -71.08,
-      45.3
+      45.31
     ],
     [
       -71.05,
@@ -1187,8 +1310,12 @@
       43.42
     ],
     [
-      -70.83,
-      43.24
+      -70.86,
+      43.22
+    ],
+    [
+      -70.8,
+      43.04
     ]
   ],
   "corridor": [
@@ -1215,6 +1342,7 @@
       "lng": -68.45,
       "precision": "approximate",
       "countyLevel": true,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1223,6 +1351,7 @@
       "lng": -69.78,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1231,6 +1360,7 @@
       "lng": -68.778,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1239,6 +1369,7 @@
       "lng": -68.204,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1247,6 +1378,7 @@
       "lng": -69.813,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1255,6 +1387,7 @@
       "lng": -70.453,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1263,6 +1396,7 @@
       "lng": -68.762,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1271,6 +1405,7 @@
       "lng": -69.966,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1279,6 +1414,7 @@
       "lng": -69.939,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1287,14 +1423,16 @@
       "lng": -68.799,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
       "town": "Coastal",
-      "lat": 43.72,
-      "lng": -69.7,
+      "lat": 43.53,
+      "lng": -69.3,
       "precision": "approximate",
-      "countyLevel": true,
+      "countyLevel": false,
+      "offshore": true,
       "outsideMaine": false
     },
     {
@@ -1303,6 +1441,7 @@
       "lng": -70.926,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": true
     },
     {
@@ -1311,6 +1450,7 @@
       "lng": -69.598,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1319,6 +1459,7 @@
       "lng": -70.444,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1327,6 +1468,7 @@
       "lng": -72.289,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": true
     },
     {
@@ -1335,6 +1477,7 @@
       "lng": -70.744,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1343,6 +1486,7 @@
       "lng": -70.215,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1351,6 +1495,7 @@
       "lng": -67.826,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1359,6 +1504,7 @@
       "lng": -69.276,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1367,6 +1513,7 @@
       "lng": -70.734,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1375,6 +1522,7 @@
       "lng": -68.671,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1383,6 +1531,7 @@
       "lng": -70.255,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1391,14 +1540,7 @@
       "lng": -68.016,
       "precision": "approximate",
       "countyLevel": false,
-      "outsideMaine": false
-    },
-    {
-      "town": "Rangeley",
-      "lat": 44.966,
-      "lng": -70.644,
-      "precision": "approximate",
-      "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1407,6 +1549,7 @@
       "lng": -70.42,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1415,6 +1558,7 @@
       "lng": -70.443,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1423,6 +1567,7 @@
       "lng": -70.774,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1431,6 +1576,7 @@
       "lng": -70.241,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1439,6 +1585,7 @@
       "lng": -70.72,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1447,6 +1594,7 @@
       "lng": -69.632,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1455,6 +1603,7 @@
       "lng": -70.371,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     },
     {
@@ -1463,6 +1612,7 @@
       "lng": -70.187,
       "precision": "approximate",
       "countyLevel": false,
+      "offshore": false,
       "outsideMaine": false
     }
   ],

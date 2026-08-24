@@ -380,6 +380,7 @@ function resolvePlaces(locationString) {
 function buildGeo(sections) {
   const points = [];
   const unresolved = [];
+  const geoNotes = [];
   const seen = new Set();
 
   const add = (name, placeName, category, detail, sourceRef) => {
@@ -398,7 +399,10 @@ function buildGeo(sections) {
       lng: p.lng,
       precision: 'approximate',
       countyLevel: !!p.countyLevel,
-      outsideMaine: !!p.outsideMaine
+      offshore: !!p.offshore,
+      outsideMaine: !!p.outsideMaine,
+      /* Outside the state outline, so listed but never drawn. */
+      plotted: !p.outsideMaine
     });
   };
 
@@ -413,11 +417,26 @@ function buildGeo(sections) {
       if (m) anchors.push({ title: e.title, meta: m });
     });
   });
+  /*
+   * A middot strip reads: short name · location · commentary. Part 0 is the
+   * identifier and the tail is commentary, and commentary mentions towns that
+   * are not where the entity sits. "BIW · Bath, Maine · approximately 11 miles
+   * from Brunswick Landing" must plot at Bath alone.
+   *
+   * Rule: skip part 0, and read places only out of parts short enough to be a
+   * location rather than a sentence. Every part this drops is listed in the
+   * closing notes so the judgement is visible.
+   */
+  var LOCATION_PART_MAX = 40;
   anchors.forEach(a => {
-    const joined = a.meta.parts.join(' , ');
-    const places = resolvePlaces(joined);
-    if (!places.length) unresolved.push({ name: a.title, location: joined, where: 'section 3 meta line' });
-    places.forEach(pl => add(a.title, pl, 'anchor', joined, 'section 3, identity line'));
+    const tail = a.meta.parts.slice(1);
+    const locParts = tail.filter(p => p.length <= LOCATION_PART_MAX);
+    const skipped = tail.filter(p => p.length > LOCATION_PART_MAX && resolvePlaces(p).length);
+    skipped.forEach(p => geoNotes.push({ entity: a.title, ignoredPart: p, reason: 'commentary, not a location' }));
+    const places = [];
+    locParts.forEach(p => resolvePlaces(p).forEach(x => { if (places.indexOf(x) < 0) places.push(x); }));
+    if (!places.length) unresolved.push({ name: a.title, location: a.meta.parts.join(' · '), where: 'section 3 meta line' });
+    places.forEach(pl => add(a.title, pl, 'anchor', a.meta.parts.join(' · '), 'section 3, identity line'));
   });
 
   /* 2, 3, 4, 5. Any table carrying a Location column. */
@@ -453,12 +472,14 @@ function buildGeo(sections) {
   return {
     points,
     unresolved,
+    notes: geoNotes,
     outline: OUTLINE,
     corridor: CORRIDOR.map(n => ({ name: n, lat: PLACES[n].lat, lng: PLACES[n].lng })),
     derivedCoordinates: usedTowns.map(t => ({
       town: t, lat: PLACES[t].lat, lng: PLACES[t].lng,
       precision: 'approximate',
       countyLevel: !!PLACES[t].countyLevel,
+      offshore: !!PLACES[t].offshore,
       outsideMaine: !!PLACES[t].outsideMaine
     })),
     proseLocationAudit: PROSE_LOCATIONS,
@@ -496,6 +517,17 @@ function main() {
 
   const numbered = sections.filter(s => s.num !== null);
   const contents = sections.find(s => s.title.toLowerCase() === 'contents' && s.num === null);
+
+  /* The source Contents block is a markdown table with no header row, so its
+     first row is content. Flag it rather than promoting "1. Overview" into a
+     column heading. The row is pushed back where it belongs. */
+  if (contents) {
+    contents.blocks.filter(b => b.type === 'table').forEach(t => {
+      t.headerless = true;
+      t.rows.unshift(t.headers.map(c => ({ raw: c, runs: toRuns(c) })));
+      t.headers = [];
+    });
+  }
 
   /* The document header block is the opening ROSC INTERNAL callout, which sits
    * before any heading and therefore lands outside every section. */
