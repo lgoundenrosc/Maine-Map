@@ -137,7 +137,9 @@
   .chain-legend { font-size: 7.4pt; }
 
   .geo-layout { grid-template-columns: 1fr 1fr; }
-  .geo-figure { break-inside: avoid; page-break-inside: avoid; }
+  .geo-figure, .inset-map { break-inside: avoid; page-break-inside: avoid; }
+  .geo-figure svg.mainmap { height: auto; width: 100%; }
+  .geo-rail { display: flex; flex-direction: column; gap: 10pt; }
   .geo-list { max-height: none; overflow: visible; }
   .geo-note { font-size: 7.4pt; }
 

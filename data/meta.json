@@ -12,6 +12,13 @@
     "INTERNAL"
   ],
   "runningFooter": "For internal Rosc use only · Personnel unverified, confirm before any outreach",
+  "links": [
+    {
+      "text": "Maine builds what the nation sails and flies",
+      "href": "https://firstlightworks.com/",
+      "reason": "supplied by the document owner"
+    }
+  ],
   "sourceFile": "content/maine_map_content_v3.md",
   "generated": true
 }

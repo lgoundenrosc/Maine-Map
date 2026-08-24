@@ -780,28 +780,59 @@ table.data td.chipcell { white-space: nowrap; }
 /* Geographic view                                                   */
 /* ---------------------------------------------------------------- */
 
-.geo-layout { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 20px; align-items: start; }
+.geo-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 20px; align-items: start; }
+.geo-rail { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 .geo-figure {
   background: var(--paper);
   border: 1px solid var(--rule);
   border-radius: 8px;
   padding: 10px;
 }
-.geo-figure svg {
+.geo-figure svg.mainmap {
   display: block;
   margin: 0 auto;
   height: min(74vh, 800px);
   width: auto;
   max-width: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+.geo-figure svg.mainmap.dragging { cursor: grabbing; }
+
+/* The corridor inset. Same projection, windowed onto the industrial arc. */
+.inset-map {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 10px 12px 12px;
+}
+.inset-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+.inset-map svg.insetmap { display: block; width: 100%; height: auto; }
+
+/* Shows on the main map what the inset covers. */
+.locator { fill: none; stroke: var(--rust); opacity: 0.7; }
+
+.zoomlabel {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--grey-2);
+  min-width: 34px;
 }
 
-.maine-outline { fill: #f6f4f0; stroke: var(--navy-3); stroke-width: 1.1; stroke-linejoin: round; }
-.corridor-band { fill: none; stroke: var(--rust); stroke-width: 15; stroke-linecap: round; stroke-linejoin: round; opacity: 0.16; }
+.maine-outline { fill: #f6f4f0; stroke: var(--navy-3); stroke-linejoin: round; }
+.corridor-band { fill: none; stroke: var(--rust); stroke-linecap: round; stroke-linejoin: round; opacity: 0.16; }
 .corridor-band.on { opacity: 0.36; }
-.corridor-line { fill: none; stroke: var(--rust); stroke-width: 1.4; stroke-dasharray: 5 4; opacity: 0.75; }
+.corridor-line { fill: none; stroke: var(--rust); opacity: 0.75; }
 
 .pt { cursor: pointer; }
-.pt circle { stroke: #fff; stroke-width: 1.4; }
+.pt circle { stroke: #fff; }
 .pt.cat-anchor      circle { fill: var(--red); }
 .pt.cat-test        circle { fill: var(--navy-2); }
 .pt.cat-company     circle { fill: var(--rust); }
@@ -812,7 +843,7 @@ table.data td.chipcell { white-space: nowrap; }
 .pt circle.hit { fill: transparent; stroke: none; }
 .pt:hover circle.hit { fill: rgba(22, 35, 58, 0.08); }
 .pt.dim { opacity: 0.2; }
-.pt.sel circle { stroke: var(--ink); stroke-width: 2.2; }
+.pt.sel circle { stroke: var(--ink); }
 .pt text {
   font-family: var(--mono);
   font-size: 6.4px;
@@ -900,7 +931,14 @@ table.data td.chipcell { white-space: nowrap; }
   margin-top: 10px;
 }
 
-a { color: var(--rust); }
+a {
+  color: var(--rust);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a:hover { color: var(--rust-2); text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--rust); outline-offset: 2px; border-radius: 2px; }
 
 @media (max-width: 900px) {
   .geo-layout { grid-template-columns: 1fr; }

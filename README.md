@@ -19,7 +19,7 @@ the markdown out of the emitted JSON and diffing against the source.
 
 Deviations the document owner asks for are declared in `scripts/build-config.js` rather than applied
 to the source file, so the source stays byte identical to the extraction and the fidelity check keeps
-proving that nothing outside that one file changed. Two are declared today:
+proving that nothing outside that one file changed. These are declared today:
 
 | Deviation | Effect |
 |---|---|
@@ -27,9 +27,18 @@ proving that nothing outside that one file changed. Two are declared today:
 | Section 9 is withheld | Constraints and gaps does not render |
 | Four cross-references to section 9 removed | One whole row of the 8.1 mechanics table, two trimmed sentences, one dropped clause |
 | Contact strings removed from the openness lines | All 22 entries in section 5 keep the openness chip and lose the address |
+| One declared outbound link | "Maine builds what the nation sails and flies" links to firstlightworks.com |
 
-Withholding a section does not resequence the numbering. The numbers belong to the document and its
-own cross-references depend on them, so the tab strip runs 1 to 8 and then 10 to 12.
+What remains is resequenced so the rendered document runs 1 to 11 with no gap, and each section
+keeps its `sourceNum` alongside the number a reader sees. Old 10, 11 and 12 become 9, 10 and 11.
+
+Resequencing is safe only because no prose in the source cross-references a section above 9, and no
+section above 9 carries subsections that would then disagree with their parent. The parser checks the
+second condition on every run and fails the build rather than silently breaking a reference.
+
+The declared link is the one exception the contact rule allows. `scripts/audit.js` fails on any
+address that is neither in the source nor on the `LINKS` list, so a fabricated route still cannot
+reach the page.
 
 **No contact information is invented.** Every institutional web address and every entry that reads
 "contact not confirmed" comes from the source. `scripts/audit.js` scans the rendered page for email
@@ -116,6 +125,11 @@ Everything below a section heading folds. A headline row shows the title and wha
 applies, and the body opens on click, so a tab is a scannable list rather than a long page. Each tab
 carries expand and collapse controls, and a reference table longer than twelve rows gets a filter.
 Print ignores all of it and renders everything open.
+
+The map zooms and pans: wheel to zoom, drag to pan, and buttons for in, out, fit the corridor, and
+reset. Dots and labels hold a constant size on screen as you zoom, so zooming spreads the southwest
+cluster apart instead of magnifying it, and every town in the corridor gets a label at that scale. A
+dashed rectangle on the full map marks what the corridor inset covers.
 
 ## The geographic view
 

@@ -32,7 +32,7 @@ const EXPECTED = {
   tables: 15
 };
 
-const { RENDER_EXCLUDE_SECTIONS, applyDeclared } = require('./build-config.js');
+const { LINKS, RENDER_EXCLUDE_SECTIONS, applyDeclared } = require('./build-config.js');
 
 /* ------------------------------------------------------------------ */
 /* Callout label to colour scheme. Brief section 4.3.                  */
@@ -583,12 +583,38 @@ function main() {
   const rendered = numbered.filter(s => excludeNums.indexOf(s.num) < 0);
   const withheld = numbered.filter(s => excludeNums.indexOf(s.num) >= 0);
 
+  /*
+   * Resequence what remains so the rendered document runs 1..N with no gap.
+   * `sourceNum` keeps the number the section carries in the markdown, which is
+   * what the label and marker tables are keyed on and what the closing notes
+   * need in order to map a rendered section back to the source.
+   *
+   * Safe here because no prose in the source cross-references a section above
+   * 9, and the only section above 9 that is renumbered has no subsections. A
+   * revision that adds either would need this revisited, so the check below
+   * fails the build rather than silently breaking a reference.
+   */
+  const renumbered = [];
+  rendered.forEach((s, i) => {
+    const sourceNum = s.num;
+    const renderNum = String(i + 1);
+    if (renderNum !== sourceNum && s.subsections.length) {
+      console.error('Section ' + sourceNum + ' is renumbered to ' + renderNum +
+        ' but carries subsections numbered ' + sourceNum + '.x, which would now disagree.');
+      process.exit(1);
+    }
+    s.sourceNum = sourceNum;
+    s.num = renderNum;
+    if (renderNum !== sourceNum) renumbered.push({ from: sourceNum, to: renderNum, title: s.title });
+  });
+
   const tabs = rendered.map(s => ({
     num: s.num,
+    sourceNum: s.sourceNum,
     id: s.id,
-    label: TAB_LABELS[s.num] || s.title,
+    label: TAB_LABELS[s.sourceNum] || s.title,
     heading: s.heading,
-    mark: TAB_MARKS[s.num] || null
+    mark: TAB_MARKS[s.sourceNum] || null
   }));
 
   const meta = {
@@ -597,6 +623,7 @@ function main() {
     badge: 'ROSC INTERNAL',
     runningHeader: ['Maine Defense Innovation Ecosystem', 'Rosc', 'August 2026', 'INTERNAL'],
     runningFooter: 'For internal Rosc use only · Personnel unverified, confirm before any outreach',
+    links: LINKS,
     sourceFile: 'content/maine_map_content_v3.md',
     generated: true
   };
@@ -627,6 +654,7 @@ function main() {
       subsections: s.subsections.length, entries: countEntries([s])
     })),
     declared: declared.counts,
+    renumbered: renumbered,
     renderedCallouts: countIn(rendered, 'callout') + 1,   // the masthead block
     renderedTables: countIn(rendered, 'table') + (contents ? countIn([contents], 'table') : 0),
     renderedSubsections: rendered.reduce((n, s) => n + s.subsections.length, 0),
@@ -699,8 +727,12 @@ function main() {
   manifest.withheldSections.forEach(x => console.log(
     '  withheld        section ' + x.num + ' ' + x.title +
     '  (' + x.callouts + ' callouts, ' + x.tables + ' table, ' + x.entries + ' entries)  ' + x.reason));
+  LINKS.forEach(x => console.log(
+    '  link            "' + x.text + '" -> ' + x.href + '  (' + x.reason + ')'));
+  manifest.renumbered.forEach(x => console.log(
+    '  renumbered      section ' + x.from + ' -> ' + x.to + '  ' + x.title));
   console.log('  rendered        ' + manifest.sections + ' sections, ' + manifest.renderedCallouts +
-    ' callouts, ' + manifest.renderedTables + ' tables');
+    ' callouts, ' + manifest.renderedTables + ' tables, numbered 1 to ' + manifest.sections);
   if (unclassified.length) console.log('  labels defaulted to rust (' + unclassified.length + '): ' + unclassified.join(' / '));
   if (geo.unresolved.length) {
     console.log('  locations not plotted (' + geo.unresolved.length + '):');

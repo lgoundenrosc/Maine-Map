@@ -66,6 +66,25 @@ const LINE_RULES = [
 ];
 
 /*
+ * Outbound links added to the rendered document.
+ *
+ * Rule 2 says no contact route is ever invented, and scripts/audit.js enforces
+ * it by failing on any address that is not in the source. A link the document
+ * owner supplies directly is declared here so the audit can tell the two
+ * apart: anything not in the source and not on this list still fails.
+ *
+ * `text` must match a phrase in the rendered prose exactly. The phrase becomes
+ * a link and the words themselves are untouched.
+ */
+const LINKS = [
+  {
+    text: 'Maine builds what the nation sails and flies',
+    href: 'https://firstlightworks.com/',
+    reason: 'supplied by the document owner'
+  }
+];
+
+/*
  * Parsed and validated as normal, then held back from the rendered document.
  * Section numbers are not resequenced. They are the document's own numbers
  * and its internal cross-references depend on them, so the tab strip skips
@@ -100,4 +119,4 @@ function applyDeclared(text) {
   return { text, counts };
 }
 
-module.exports = { SUBSTITUTIONS, LINE_RULES, RENDER_EXCLUDE_SECTIONS, applyDeclared };
+module.exports = { SUBSTITUTIONS, LINE_RULES, LINKS, RENDER_EXCLUDE_SECTIONS, applyDeclared };

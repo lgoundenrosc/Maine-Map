@@ -12,7 +12,7 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
-const { SUBSTITUTIONS } = require('./build-config.js');
+const { SUBSTITUTIONS, LINKS } = require('./build-config.js');
 
 const ROOT = path.resolve(__dirname, '..');
 let source = fs.readFileSync(path.join(ROOT, 'content', 'maine_map_content_v3.md'), 'utf8');
@@ -64,8 +64,9 @@ const URL = /\b(?:https?:\/\/|www\.)\S+|\b[a-z0-9-]+(?:\.[a-z0-9-]+)*\.(?:com|or
 
   /* Rule: no em dash, no semicolon, no emoji in authored interface text.
      The star and the square are house-style section markers named in the
-     brief, and the arrow is a rail label, so all three are allowed. */
-  const ALLOWED_GLYPHS = /[★■→·]/g;
+     brief, the arrow is a rail label, and the minus sign is the zoom-out
+     control, so all of them are allowed. */
+  const ALLOWED_GLYPHS = /[★■→·−]/g;
   const badProse = uniqueAuthored.filter(t => {
     const stripped = t.replace(ALLOWED_GLYPHS, '');
     return /—/.test(stripped) || /;/.test(stripped) ||
@@ -80,7 +81,8 @@ const URL = /\b(?:https?:\/\/|www\.)\S+|\b[a-z0-9-]+(?:\.[a-z0-9-]+)*\.(?:com|or
       let m;
       while ((m = re.exec(t)) !== null) {
         const hit = m[0].replace(/[.,)]+$/, '');
-        if (SOURCE_NORM.indexOf(hit) < 0) contacts.push({ found: hit, inText: t.slice(0, 90) });
+        var declared = LINKS.some(function (l) { return l.href.indexOf(hit) >= 0; });
+        if (!declared && SOURCE_NORM.indexOf(hit) < 0) contacts.push({ found: hit, inText: t.slice(0, 90) });
       }
     });
   });

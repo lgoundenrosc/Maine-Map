@@ -1,6 +1,7 @@
 [
   {
     "num": "1",
+    "sourceNum": "1",
     "id": "1-overview",
     "label": "Overview",
     "heading": "1. Overview",
@@ -8,6 +9,7 @@
   },
   {
     "num": "2",
+    "sourceNum": "2",
     "id": "2-the-formation-chain",
     "label": "Formation chain",
     "heading": "2. The formation chain",
@@ -15,6 +17,7 @@
   },
   {
     "num": "3",
+    "sourceNum": "3",
     "id": "3-anchor-demand-nodes",
     "label": "Anchor demand nodes",
     "heading": "3. Anchor demand nodes",
@@ -22,6 +25,7 @@
   },
   {
     "num": "4",
+    "sourceNum": "4",
     "id": "4-capability-clusters-and-white-space",
     "label": "Capability clusters",
     "heading": "4. Capability clusters and white space",
@@ -29,6 +33,7 @@
   },
   {
     "num": "5",
+    "sourceNum": "5",
     "id": "5-institution-playbook",
     "label": "Institution playbook",
     "heading": "5. Institution playbook",
@@ -36,6 +41,7 @@
   },
   {
     "num": "6",
+    "sourceNum": "6",
     "id": "6-capital-stack-and-state-instruments",
     "label": "Capital stack",
     "heading": "6. Capital stack and state instruments",
@@ -43,6 +49,7 @@
   },
   {
     "num": "7",
+    "sourceNum": "7",
     "id": "7-test-and-evaluation-infrastructure",
     "label": "Test infrastructure",
     "heading": "7. Test and evaluation infrastructure",
@@ -50,27 +57,31 @@
   },
   {
     "num": "8",
+    "sourceNum": "8",
     "id": "8-engagement-and-routing",
     "label": "Engagement and routing",
     "heading": "8. Engagement and routing",
     "mark": null
   },
   {
-    "num": "10",
+    "num": "9",
+    "sourceNum": "10",
     "id": "10-key-names",
     "label": "Key names",
     "heading": "10. Key names",
     "mark": null
   },
   {
-    "num": "11",
+    "num": "10",
+    "sourceNum": "11",
     "id": "11-glossary",
     "label": "Glossary",
     "heading": "11. Glossary",
     "mark": null
   },
   {
-    "num": "12",
+    "num": "11",
+    "sourceNum": "12",
     "id": "12-sources",
     "label": "Sources",
     "heading": "12. Sources",

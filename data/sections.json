@@ -17,7 +17,8 @@
         "line": 43
       }
     ],
-    "subsections": []
+    "subsections": [],
+    "sourceNum": "1"
   },
   {
     "kind": "section",
@@ -366,7 +367,8 @@
         "line": 65
       }
     ],
-    "subsections": []
+    "subsections": [],
+    "sourceNum": "2"
   },
   {
     "kind": "section",
@@ -1493,7 +1495,8 @@
           }
         ]
       }
-    ]
+    ],
+    "sourceNum": "3"
   },
   {
     "kind": "section",
@@ -3273,7 +3276,8 @@
           }
         ]
       }
-    ]
+    ],
+    "sourceNum": "4"
   },
   {
     "kind": "section",
@@ -5298,7 +5302,8 @@
           }
         ]
       }
-    ]
+    ],
+    "sourceNum": "5"
   },
   {
     "kind": "section",
@@ -5863,7 +5868,8 @@
         ],
         "entries": []
       }
-    ]
+    ],
+    "sourceNum": "6"
   },
   {
     "kind": "section",
@@ -6613,7 +6619,8 @@
         "line": 937
       }
     ],
-    "subsections": []
+    "subsections": [],
+    "sourceNum": "7"
   },
   {
     "kind": "section",
@@ -7324,11 +7331,12 @@
           }
         ]
       }
-    ]
+    ],
+    "sourceNum": "8"
   },
   {
     "kind": "section",
-    "num": "10",
+    "num": "9",
     "title": "Key names",
     "heading": "10. Key names",
     "id": "10-key-names",
@@ -8649,11 +8657,12 @@
         "line": 1141
       }
     ],
-    "subsections": []
+    "subsections": [],
+    "sourceNum": "10"
   },
   {
     "kind": "section",
-    "num": "11",
+    "num": "10",
     "title": "Glossary",
     "heading": "11. Glossary",
     "id": "11-glossary",
@@ -9450,11 +9459,12 @@
         "line": 1180
       }
     ],
-    "subsections": []
+    "subsections": [],
+    "sourceNum": "11"
   },
   {
     "kind": "section",
-    "num": "12",
+    "num": "11",
     "title": "Sources",
     "heading": "12. Sources",
     "id": "12-sources",
@@ -9873,6 +9883,7 @@
           }
         ]
       }
-    ]
+    ],
+    "sourceNum": "12"
   }
 ]

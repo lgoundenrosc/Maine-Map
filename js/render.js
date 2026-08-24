@@ -109,10 +109,30 @@
   /* Runs                                                              */
   /* ---------------------------------------------------------------- */
 
+  /* Declared outbound links. A phrase on this list becomes a link wherever it
+     appears in the prose, and the words themselves are left alone. */
+  var LINKS = (window.MAINE_MAP_DATA && window.MAINE_MAP_DATA.meta.links) || [];
+
+  function appendLinked(parent, text) {
+    for (var i = 0; i < LINKS.length; i++) {
+      var at = text.indexOf(LINKS[i].text);
+      if (at < 0) continue;
+      if (at > 0) parent.appendChild(document.createTextNode(text.slice(0, at)));
+      parent.appendChild(el('a', {
+        href: LINKS[i].href,
+        target: '_blank',
+        rel: 'noopener noreferrer'
+      }, [LINKS[i].text]));
+      appendLinked(parent, text.slice(at + LINKS[i].text.length));
+      return;
+    }
+    if (text) parent.appendChild(document.createTextNode(text));
+  }
+
   function appendRuns(parent, runs) {
     (runs || []).forEach(function (r) {
       if (r.t === 'marker') parent.appendChild(markerChip(r));
-      else parent.appendChild(document.createTextNode(r.v));
+      else appendLinked(parent, r.v);
     });
     return parent;
   }
