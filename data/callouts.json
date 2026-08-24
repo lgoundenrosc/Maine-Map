@@ -1,0 +1,260 @@
+[
+  {
+    "label": "ROSC INTERNAL",
+    "scheme": "structural",
+    "classified": true,
+    "line": 5
+  },
+  {
+    "label": "MAINE CONSTRAINT · STAGE 6",
+    "scheme": "red",
+    "classified": true,
+    "line": 62
+  },
+  {
+    "label": "MAINE CONSTRAINT · STAGE 7",
+    "scheme": "red",
+    "classified": true,
+    "line": 65
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 122
+  },
+  {
+    "label": "WHY ONLY TWO ANCHORS",
+    "scheme": "rust",
+    "classified": false,
+    "line": 129
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 152
+  },
+  {
+    "label": "HANDLE WITH CARE",
+    "scheme": "red",
+    "classified": true,
+    "line": 156
+  },
+  {
+    "label": "WHY THIS ENTRY MATTERS",
+    "scheme": "rust",
+    "classified": false,
+    "line": 163
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 175
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 199
+  },
+  {
+    "label": "HOW TO READ THIS ENTRY",
+    "scheme": "amber",
+    "classified": true,
+    "line": 206
+  },
+  {
+    "label": "THE REST OF THE COMPANY IS NOT IN MAINE",
+    "scheme": "rust",
+    "classified": false,
+    "line": 219
+  },
+  {
+    "label": "WHAT IS ACTUALLY HERE",
+    "scheme": "rust",
+    "classified": false,
+    "line": 227
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 236
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 261
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 282
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 317
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 338
+  },
+  {
+    "label": "MAINE CONSTRAINT · NANOCELLULOSE TIMELINES",
+    "scheme": "red",
+    "classified": true,
+    "line": 342
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 356
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 369
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 416
+  },
+  {
+    "label": "MAINE CONSTRAINT · DO NOT BUILD THE SPACE CASE ON LAUNCH",
+    "scheme": "red",
+    "classified": true,
+    "line": 421
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 452
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 468
+  },
+  {
+    "label": "MAINE CONSTRAINT · CLEARANCE DENSITY",
+    "scheme": "red",
+    "classified": true,
+    "line": 471
+  },
+  {
+    "label": "MAINE CONSTRAINT · DO NOT BUILD THE MINERALS CASE ON ORE",
+    "scheme": "red",
+    "classified": true,
+    "line": 511
+  },
+  {
+    "label": "VC READ ON ELMET",
+    "scheme": "green",
+    "classified": true,
+    "line": 518
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 523
+  },
+  {
+    "label": "TRACK THIS, DO NOT UNDERWRITE IT",
+    "scheme": "red",
+    "classified": true,
+    "line": 553
+  },
+  {
+    "label": "VC WHITE SPACE",
+    "scheme": "green",
+    "classified": true,
+    "line": 562
+  },
+  {
+    "label": "MTI IS THE UNIVERSAL FIRST CALL",
+    "scheme": "start",
+    "classified": true,
+    "line": 570
+  },
+  {
+    "label": "RELATED PARTY",
+    "scheme": "amber",
+    "classified": true,
+    "line": 698
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 771
+  },
+  {
+    "label": "WHAT THIS ADDS UP TO",
+    "scheme": "rust",
+    "classified": false,
+    "line": 813
+  },
+  {
+    "label": "THREE CONNECTIONS WORTH SEEING",
+    "scheme": "rust",
+    "classified": false,
+    "line": 834
+  },
+  {
+    "label": "TIME-SENSITIVE",
+    "scheme": "urgent",
+    "classified": true,
+    "line": 855
+  },
+  {
+    "label": "THE DEFINING MECHANIC",
+    "scheme": "start",
+    "classified": true,
+    "line": 898
+  },
+  {
+    "label": "DUE 1 OCTOBER 2026",
+    "scheme": "urgent",
+    "classified": true,
+    "line": 903
+  },
+  {
+    "label": "TWO ACCREDITED LABORATORIES",
+    "scheme": "rust",
+    "classified": false,
+    "line": 932
+  },
+  {
+    "label": "MAINE CONSTRAINT · THE HANGARS ARE THE CONTAMINATED SITE",
+    "scheme": "red",
+    "classified": true,
+    "line": 937
+  },
+  {
+    "label": "ON CONTACT INFORMATION",
+    "scheme": "amber",
+    "classified": true,
+    "line": 1135
+  },
+  {
+    "label": "REVISION NOTE",
+    "scheme": "structural",
+    "classified": true,
+    "line": 1307
+  }
+]

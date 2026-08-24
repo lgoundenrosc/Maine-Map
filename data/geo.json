@@ -1,0 +1,1562 @@
+{
+  "points": [
+    {
+      "name": "General Dynamics Bath Iron Works",
+      "town": "Brunswick Landing",
+      "category": "anchor",
+      "detail": "BIW , Bath, Maine , approximately 11 miles from Brunswick Landing",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "General Dynamics Bath Iron Works",
+      "town": "Bath",
+      "category": "anchor",
+      "detail": "BIW , Bath, Maine , approximately 11 miles from Brunswick Landing",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.911,
+      "lng": -69.813,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Portsmouth Naval Shipyard",
+      "town": "Kittery",
+      "category": "anchor",
+      "detail": "PNSY , Kittery, Maine , the shipyard is in Maine despite the name",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.089,
+      "lng": -70.744,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Navy SERE East and the Redington range",
+      "town": "Redington Township",
+      "category": "anchor",
+      "detail": "CENSECFOR Detachment Kittery , 12,500-acre Navy range, Redington Township, near Rangeley",
+      "sourceRef": "section 3, identity line",
+      "lat": 45.02,
+      "lng": -70.42,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Navy SERE East and the Redington range",
+      "town": "Rangeley",
+      "category": "anchor",
+      "detail": "CENSECFOR Detachment Kittery , 12,500-acre Navy range, Redington Township, near Rangeley",
+      "sourceRef": "section 3, identity line",
+      "lat": 44.966,
+      "lng": -70.644,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Navy SERE East and the Redington range",
+      "town": "Kittery",
+      "category": "anchor",
+      "detail": "CENSECFOR Detachment Kittery , 12,500-acre Navy range, Redington Township, near Rangeley",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.089,
+      "lng": -70.744,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Howe & Howe Inc.",
+      "town": "Waterboro",
+      "category": "anchor",
+      "detail": "Textron Systems subsidiary , Waterboro, Maine",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.536,
+      "lng": -70.72,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Pratt & Whitney North Berwick Aero Systems",
+      "town": "North Berwick",
+      "category": "anchor",
+      "detail": "RTX business , North Berwick, Maine , the largest manufacturing facility under one roof in Maine",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.304,
+      "lng": -70.734,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "The Elmet Group Co.",
+      "town": "Lewiston",
+      "category": "anchor",
+      "detail": "NASDAQ: ELMT , headquarters Portland , principal plant Lewiston , full treatment in cluster 4.8",
+      "sourceRef": "section 3, identity line",
+      "lat": 44.101,
+      "lng": -70.215,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "The Elmet Group Co.",
+      "town": "Portland",
+      "category": "anchor",
+      "detail": "NASDAQ: ELMT , headquarters Portland , principal plant Lewiston , full treatment in cluster 4.8",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Teledyne at Brunswick Landing",
+      "town": "Brunswick Landing",
+      "category": "anchor",
+      "detail": "Teledyne Technologies (NYSE: TDY) , Brunswick Landing , a sales office, not a plant",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "General Dynamics Ordnance and Tactical Systems, Saco Operations",
+      "town": "Saco",
+      "category": "anchor",
+      "detail": "GD-OTS , Saco, Maine , arms manufacturing on this site since the early 1800s",
+      "sourceRef": "section 3, identity line",
+      "lat": 43.501,
+      "lng": -70.443,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "101st Air Refueling Wing",
+      "town": "Bangor",
+      "category": "anchor",
+      "detail": "Maine Air National Guard , Bangor Air National Guard Base , the MAINEiacs",
+      "sourceRef": "section 3, identity line",
+      "lat": 44.801,
+      "lng": -68.778,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "bluShift Aerospace",
+      "town": "Brunswick Landing",
+      "category": "company",
+      "detail": "Brunswick Landing",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Teledyne",
+      "town": "Brunswick Landing",
+      "category": "company",
+      "detail": "Brunswick Landing",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Poseidon Aerospace",
+      "town": "Brunswick Landing",
+      "category": "company",
+      "detail": "Brunswick Landing",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Promin Aerospace",
+      "town": "Brunswick Landing",
+      "category": "company",
+      "detail": "Brunswick Landing",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Stratton Aviation",
+      "town": "Brunswick Landing",
+      "category": "company",
+      "detail": "Brunswick Landing",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Mallard Enterprises",
+      "town": "Brunswick Landing",
+      "category": "company",
+      "detail": "Brunswick Landing",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "New England Aviation Academy",
+      "town": "Brunswick Landing",
+      "category": "company",
+      "detail": "Brunswick Landing",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "VALT Enterprizes",
+      "town": "Presque Isle",
+      "category": "company",
+      "detail": "Presque Isle",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 46.681,
+      "lng": -68.016,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Elmet Technologies",
+      "town": "Lewiston",
+      "category": "company",
+      "detail": "Lewiston",
+      "sourceRef": "4.5 Space and high-latitude, Location column",
+      "lat": 44.101,
+      "lng": -70.215,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Jackson Laboratory",
+      "town": "Bar Harbor",
+      "category": "company",
+      "detail": "Bar Harbor",
+      "sourceRef": "4.6 Food, water, and biological supply chain security, Location column",
+      "lat": 44.388,
+      "lng": -68.204,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "MDI Biological Laboratory",
+      "town": "Bar Harbor",
+      "category": "company",
+      "detail": "Bar Harbor",
+      "sourceRef": "4.6 Food, water, and biological supply chain security, Location column",
+      "lat": 44.388,
+      "lng": -68.204,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "IDEXX",
+      "town": "Westbrook",
+      "category": "company",
+      "detail": "Westbrook",
+      "sourceRef": "4.6 Food, water, and biological supply chain security, Location column",
+      "lat": 43.677,
+      "lng": -70.371,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "TechPlace",
+      "town": "Brunswick Landing",
+      "category": "institution",
+      "detail": "Brunswick Landing",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "SMCC MATEC",
+      "town": "Brunswick Landing",
+      "category": "institution",
+      "detail": "Brunswick Landing",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "The Hus",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland waterfront",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Think Tank Coworking",
+      "town": "Biddeford",
+      "category": "institution",
+      "detail": "Portland, Yarmouth, Biddeford",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.493,
+      "lng": -70.453,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Think Tank Coworking",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland, Yarmouth, Biddeford",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Think Tank Coworking",
+      "town": "Yarmouth",
+      "category": "institution",
+      "detail": "Portland, Yarmouth, Biddeford",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.801,
+      "lng": -70.187,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Cloudport",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Factory 3, PelotonLabs, Engine Room",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Open Bench Project",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Fork Food Lab",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "75 Park, Lovely Ideas",
+      "town": "Lewiston",
+      "category": "institution",
+      "detail": "Lewiston",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 44.101,
+      "lng": -70.215,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Bangor Innovation Center, HQ Bangor",
+      "town": "Bangor",
+      "category": "institution",
+      "detail": "Bangor",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 44.801,
+      "lng": -68.778,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "UpStart Center for Entrepreneurship",
+      "town": "Orono",
+      "category": "institution",
+      "detail": "Orono",
+      "sourceRef": "5.1 Shared space and coworking, Location column",
+      "lat": 44.883,
+      "lng": -68.671,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Bowdoin College",
+      "town": "Brunswick",
+      "category": "institution",
+      "detail": "Brunswick",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 43.915,
+      "lng": -69.966,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Colby College",
+      "town": "Waterville",
+      "category": "institution",
+      "detail": "Waterville",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 44.552,
+      "lng": -69.632,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Bates College",
+      "town": "Lewiston",
+      "category": "institution",
+      "detail": "Lewiston",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 44.101,
+      "lng": -70.215,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "University of Southern Maine",
+      "town": "Lewiston",
+      "category": "institution",
+      "detail": "Portland, Gorham, Lewiston",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 44.101,
+      "lng": -70.215,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "University of Southern Maine",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland, Gorham, Lewiston",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "University of Southern Maine",
+      "town": "Gorham",
+      "category": "institution",
+      "detail": "Portland, Gorham, Lewiston",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 43.679,
+      "lng": -70.444,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "University of New England",
+      "town": "Biddeford",
+      "category": "institution",
+      "detail": "Biddeford, Portland",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 43.493,
+      "lng": -70.453,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "University of New England",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Biddeford, Portland",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "College of the Atlantic",
+      "town": "Bar Harbor",
+      "category": "institution",
+      "detail": "Bar Harbor",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 44.388,
+      "lng": -68.204,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Husson University and Thomas College",
+      "town": "Waterville",
+      "category": "institution",
+      "detail": "Bangor, Waterville",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 44.552,
+      "lng": -69.632,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Husson University and Thomas College",
+      "town": "Bangor",
+      "category": "institution",
+      "detail": "Bangor, Waterville",
+      "sourceRef": "5.2 The colleges, Location column",
+      "lat": 44.801,
+      "lng": -68.778,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "UMaine ASCC",
+      "town": "Orono",
+      "category": "test",
+      "detail": "Orono",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 44.883,
+      "lng": -68.671,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Alfond W2 Ocean Engineering Laboratory",
+      "town": "Orono",
+      "category": "test",
+      "detail": "Orono",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 44.883,
+      "lng": -68.671,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Elmet analytical laboratory",
+      "town": "Lewiston",
+      "category": "test",
+      "detail": "Lewiston",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 44.101,
+      "lng": -70.215,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Brunswick Executive Airport",
+      "town": "Brunswick Landing",
+      "category": "test",
+      "detail": "Brunswick Landing",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Navy Redington range",
+      "town": "Redington Township",
+      "category": "test",
+      "detail": "Redington Township",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 45.02,
+      "lng": -70.42,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Gulf of Maine littorals",
+      "town": "Coastal",
+      "category": "test",
+      "detail": "Coastal",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 43.72,
+      "lng": -69.7,
+      "precision": "approximate",
+      "countyLevel": true,
+      "outsideMaine": false
+    },
+    {
+      "name": "Loring runways",
+      "town": "Limestone",
+      "category": "test",
+      "detail": "Limestone",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 46.909,
+      "lng": -67.826,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Portland International Marine Terminal",
+      "town": "Portland",
+      "category": "test",
+      "detail": "Portland",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Brunswick Landing microgrid",
+      "town": "Brunswick Landing",
+      "category": "test",
+      "detail": "Brunswick Landing",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Maine Space Corp SpaceTech Facility",
+      "town": "Brunswick Landing",
+      "category": "test",
+      "detail": "Hangar 5, Brunswick Landing",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "MMA Maritime Industrial Workforce Training Center",
+      "town": "Brunswick Landing",
+      "category": "test",
+      "detail": "Brunswick Landing",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Maine Maritime Academy, Castine",
+      "town": "Castine",
+      "category": "test",
+      "detail": "Castine",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 44.387,
+      "lng": -68.799,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "CRREL",
+      "town": "Hanover NH",
+      "category": "test",
+      "detail": "Hanover NH",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 43.702,
+      "lng": -72.289,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": true
+    },
+    {
+      "name": "UNH engineering and wave tanks",
+      "town": "Durham NH",
+      "category": "test",
+      "detail": "Durham NH",
+      "sourceRef": "Test and evaluation infrastructure, Location column",
+      "lat": 43.134,
+      "lng": -70.926,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": true
+    },
+    {
+      "name": "UMaine Advanced Structures and Composites Center",
+      "town": "Orono",
+      "category": "institution",
+      "detail": "Orono",
+      "sourceRef": "section 7 table, Location column: Orono",
+      "lat": 44.883,
+      "lng": -68.671,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Bigelow Laboratory for Ocean Sciences",
+      "town": "East Boothbay",
+      "category": "institution",
+      "detail": "East Boothbay",
+      "sourceRef": "5. Institution playbook: \"East Boothbay. President, CEO and senior research scientist Deborah Bronk\"",
+      "lat": 43.838,
+      "lng": -69.598,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Roux Institute at Northeastern",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland",
+      "sourceRef": "5. Institution playbook: \"Portland. Launched 2020 with a $100 million founding gift.\"",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "New England Ocean Cluster",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland",
+      "sourceRef": "5. Institution playbook: \"Blue economy incubator on Portland’s working waterfront.\"",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Maine Maritime Academy",
+      "town": "Castine",
+      "category": "institution",
+      "detail": "Castine",
+      "sourceRef": "5. Institution playbook: \"Castine. Public college established 1941\"",
+      "lat": 44.387,
+      "lng": -68.799,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Maine Venture Fund",
+      "town": "Newport",
+      "category": "institution",
+      "detail": "Newport",
+      "sourceRef": "5. Institution playbook: \"investing since 1997, based in Newport\"",
+      "lat": 44.836,
+      "lng": -69.276,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Corsair Venture Partners",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland",
+      "sourceRef": "5. Institution playbook: \"Early-stage venture capital firm based in Portland, Maine\"",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Maine Defense Industry Alliance",
+      "town": "Sanford",
+      "category": "institution",
+      "detail": "Sanford",
+      "sourceRef": "5. Institution playbook: \"based at the York County Community College instructional site in Sanford\"",
+      "lat": 43.439,
+      "lng": -70.774,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Loring Development Authority",
+      "town": "Limestone",
+      "category": "institution",
+      "detail": "Limestone",
+      "sourceRef": "5. Institution playbook: \"Limestone, Aroostook County. Former Loring AFB\"",
+      "lat": 46.909,
+      "lng": -67.826,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Central Maine Growth Council",
+      "town": "Waterville",
+      "category": "institution",
+      "detail": "Waterville",
+      "sourceRef": "5. Institution playbook: \"Waterville is a Qualified Opportunity Zone.\"",
+      "lat": 44.552,
+      "lng": -69.632,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Compotech",
+      "town": "Brewer",
+      "category": "institution",
+      "detail": "Brewer",
+      "sourceRef": "cluster 4.2: \"Compotech (Brewer, $40 million in contracts 2017 to 2025...\"",
+      "lat": 44.796,
+      "lng": -68.762,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Kenway Composites",
+      "town": "Augusta",
+      "category": "institution",
+      "detail": "Augusta",
+      "sourceRef": "cluster 4.2: \"Kenway Composites (Augusta)\"",
+      "lat": 44.311,
+      "lng": -69.78,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Custom Composite Technologies",
+      "town": "Bath",
+      "category": "institution",
+      "detail": "Bath",
+      "sourceRef": "cluster 4.2: \"Custom Composite Technologies (Bath)\"",
+      "lat": 43.911,
+      "lng": -69.813,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Advanced Infrastructure Technologies",
+      "town": "Brewer",
+      "category": "institution",
+      "detail": "Brewer",
+      "sourceRef": "cluster 4.2: \"Advanced Infrastructure Technologies (Brewer)\"",
+      "lat": 44.796,
+      "lng": -68.762,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "HighByte",
+      "town": "Portland",
+      "category": "institution",
+      "detail": "Portland",
+      "sourceRef": "cluster 4.3: \"HighByte (Portland, industrial DataOps)\"",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Evergreen Additive",
+      "town": "Brunswick Landing",
+      "category": "institution",
+      "detail": "Brunswick Landing",
+      "sourceRef": "cluster 4.1: \"Headquartered at TechPlace at Brunswick Landing\"",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "name": "Pennington Mountain",
+      "town": "Aroostook County",
+      "category": "institution",
+      "detail": "Aroostook County",
+      "sourceRef": "cluster 4.8: \"Pennington Mountain, Aroostook County\"",
+      "lat": 46.6,
+      "lng": -68.45,
+      "precision": "approximate",
+      "countyLevel": true,
+      "outsideMaine": false
+    },
+    {
+      "name": "Coast Guard Sector Northern New England",
+      "town": "South Portland",
+      "category": "institution",
+      "detail": "South Portland",
+      "sourceRef": "cluster 4.9: \"Coast Guard Sector Northern New England is already headquartered in South Portland.\"",
+      "lat": 43.641,
+      "lng": -70.241,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    }
+  ],
+  "unresolved": [
+    {
+      "name": "Greisen Aerospace",
+      "location": "Maine",
+      "where": "4.5 Space and high-latitude"
+    },
+    {
+      "name": "SoPoCo Works, Anchorspace, The Gem, Our Katahdin",
+      "location": "statewide",
+      "where": "5.1 Shared space and coworking"
+    }
+  ],
+  "outline": [
+    [
+      -70.75,
+      43.08
+    ],
+    [
+      -70.6,
+      43.35
+    ],
+    [
+      -70.4,
+      43.47
+    ],
+    [
+      -70.25,
+      43.55
+    ],
+    [
+      -70.2,
+      43.65
+    ],
+    [
+      -70.1,
+      43.72
+    ],
+    [
+      -69.95,
+      43.79
+    ],
+    [
+      -69.81,
+      43.73
+    ],
+    [
+      -69.63,
+      43.84
+    ],
+    [
+      -69.5,
+      43.85
+    ],
+    [
+      -69.32,
+      43.77
+    ],
+    [
+      -69.06,
+      44.1
+    ],
+    [
+      -68.85,
+      44.42
+    ],
+    [
+      -68.79,
+      44.55
+    ],
+    [
+      -68.6,
+      44.4
+    ],
+    [
+      -68.4,
+      44.3
+    ],
+    [
+      -68.2,
+      44.32
+    ],
+    [
+      -68,
+      44.42
+    ],
+    [
+      -67.8,
+      44.52
+    ],
+    [
+      -67.6,
+      44.55
+    ],
+    [
+      -67.4,
+      44.65
+    ],
+    [
+      -67.15,
+      44.8
+    ],
+    [
+      -66.98,
+      44.81
+    ],
+    [
+      -67.05,
+      44.9
+    ],
+    [
+      -67.13,
+      45.09
+    ],
+    [
+      -67.29,
+      45.19
+    ],
+    [
+      -67.42,
+      45.5
+    ],
+    [
+      -67.48,
+      45.6
+    ],
+    [
+      -67.72,
+      45.68
+    ],
+    [
+      -67.78,
+      45.94
+    ],
+    [
+      -67.8,
+      46.2
+    ],
+    [
+      -67.79,
+      47.07
+    ],
+    [
+      -68.23,
+      47.35
+    ],
+    [
+      -68.38,
+      47.29
+    ],
+    [
+      -68.9,
+      47.18
+    ],
+    [
+      -69.05,
+      47.42
+    ],
+    [
+      -69.24,
+      47.46
+    ],
+    [
+      -69.99,
+      46.7
+    ],
+    [
+      -70.31,
+      45.97
+    ],
+    [
+      -70.72,
+      45.51
+    ],
+    [
+      -70.84,
+      45.29
+    ],
+    [
+      -71.08,
+      45.3
+    ],
+    [
+      -71.05,
+      45
+    ],
+    [
+      -70.96,
+      44.81
+    ],
+    [
+      -70.83,
+      44.5
+    ],
+    [
+      -70.98,
+      44.3
+    ],
+    [
+      -71.03,
+      44.1
+    ],
+    [
+      -70.97,
+      43.79
+    ],
+    [
+      -70.82,
+      43.58
+    ],
+    [
+      -70.96,
+      43.42
+    ],
+    [
+      -70.83,
+      43.24
+    ]
+  ],
+  "corridor": [
+    {
+      "name": "Bath",
+      "lat": 43.911,
+      "lng": -69.813
+    },
+    {
+      "name": "Portland",
+      "lat": 43.659,
+      "lng": -70.255
+    },
+    {
+      "name": "Kittery",
+      "lat": 43.089,
+      "lng": -70.744
+    }
+  ],
+  "derivedCoordinates": [
+    {
+      "town": "Aroostook County",
+      "lat": 46.6,
+      "lng": -68.45,
+      "precision": "approximate",
+      "countyLevel": true,
+      "outsideMaine": false
+    },
+    {
+      "town": "Augusta",
+      "lat": 44.311,
+      "lng": -69.78,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Bangor",
+      "lat": 44.801,
+      "lng": -68.778,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Bar Harbor",
+      "lat": 44.388,
+      "lng": -68.204,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Bath",
+      "lat": 43.911,
+      "lng": -69.813,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Biddeford",
+      "lat": 43.493,
+      "lng": -70.453,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Brewer",
+      "lat": 44.796,
+      "lng": -68.762,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Brunswick",
+      "lat": 43.915,
+      "lng": -69.966,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Brunswick Landing",
+      "lat": 43.891,
+      "lng": -69.939,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Castine",
+      "lat": 44.387,
+      "lng": -68.799,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Coastal",
+      "lat": 43.72,
+      "lng": -69.7,
+      "precision": "approximate",
+      "countyLevel": true,
+      "outsideMaine": false
+    },
+    {
+      "town": "Durham NH",
+      "lat": 43.134,
+      "lng": -70.926,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": true
+    },
+    {
+      "town": "East Boothbay",
+      "lat": 43.838,
+      "lng": -69.598,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Gorham",
+      "lat": 43.679,
+      "lng": -70.444,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Hanover NH",
+      "lat": 43.702,
+      "lng": -72.289,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": true
+    },
+    {
+      "town": "Kittery",
+      "lat": 43.089,
+      "lng": -70.744,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Lewiston",
+      "lat": 44.101,
+      "lng": -70.215,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Limestone",
+      "lat": 46.909,
+      "lng": -67.826,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Newport",
+      "lat": 44.836,
+      "lng": -69.276,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "North Berwick",
+      "lat": 43.304,
+      "lng": -70.734,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Orono",
+      "lat": 44.883,
+      "lng": -68.671,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Portland",
+      "lat": 43.659,
+      "lng": -70.255,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Presque Isle",
+      "lat": 46.681,
+      "lng": -68.016,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Rangeley",
+      "lat": 44.966,
+      "lng": -70.644,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Redington Township",
+      "lat": 45.02,
+      "lng": -70.42,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Saco",
+      "lat": 43.501,
+      "lng": -70.443,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Sanford",
+      "lat": 43.439,
+      "lng": -70.774,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "South Portland",
+      "lat": 43.641,
+      "lng": -70.241,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Waterboro",
+      "lat": 43.536,
+      "lng": -70.72,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Waterville",
+      "lat": 44.552,
+      "lng": -69.632,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Westbrook",
+      "lat": 43.677,
+      "lng": -70.371,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    },
+    {
+      "town": "Yarmouth",
+      "lat": 43.801,
+      "lng": -70.187,
+      "precision": "approximate",
+      "countyLevel": false,
+      "outsideMaine": false
+    }
+  ],
+  "proseLocationAudit": [
+    {
+      "name": "UMaine Advanced Structures and Composites Center",
+      "place": "Orono",
+      "sourceQuote": "section 7 table, Location column: Orono"
+    },
+    {
+      "name": "Bigelow Laboratory for Ocean Sciences",
+      "place": "East Boothbay",
+      "sourceQuote": "5. Institution playbook: \"East Boothbay. President, CEO and senior research scientist Deborah Bronk\""
+    },
+    {
+      "name": "Roux Institute at Northeastern",
+      "place": "Portland",
+      "sourceQuote": "5. Institution playbook: \"Portland. Launched 2020 with a $100 million founding gift.\""
+    },
+    {
+      "name": "New England Ocean Cluster",
+      "place": "Portland",
+      "sourceQuote": "5. Institution playbook: \"Blue economy incubator on Portland’s working waterfront.\""
+    },
+    {
+      "name": "Maine Maritime Academy",
+      "place": "Castine",
+      "sourceQuote": "5. Institution playbook: \"Castine. Public college established 1941\""
+    },
+    {
+      "name": "Maine Venture Fund",
+      "place": "Newport",
+      "sourceQuote": "5. Institution playbook: \"investing since 1997, based in Newport\""
+    },
+    {
+      "name": "Corsair Venture Partners",
+      "place": "Portland",
+      "sourceQuote": "5. Institution playbook: \"Early-stage venture capital firm based in Portland, Maine\""
+    },
+    {
+      "name": "Maine Defense Industry Alliance",
+      "place": "Sanford",
+      "sourceQuote": "5. Institution playbook: \"based at the York County Community College instructional site in Sanford\""
+    },
+    {
+      "name": "Loring Development Authority",
+      "place": "Limestone",
+      "sourceQuote": "5. Institution playbook: \"Limestone, Aroostook County. Former Loring AFB\""
+    },
+    {
+      "name": "Central Maine Growth Council",
+      "place": "Waterville",
+      "sourceQuote": "5. Institution playbook: \"Waterville is a Qualified Opportunity Zone.\""
+    },
+    {
+      "name": "Compotech",
+      "place": "Brewer",
+      "sourceQuote": "cluster 4.2: \"Compotech (Brewer, $40 million in contracts 2017 to 2025...\""
+    },
+    {
+      "name": "Kenway Composites",
+      "place": "Augusta",
+      "sourceQuote": "cluster 4.2: \"Kenway Composites (Augusta)\""
+    },
+    {
+      "name": "Custom Composite Technologies",
+      "place": "Bath",
+      "sourceQuote": "cluster 4.2: \"Custom Composite Technologies (Bath)\""
+    },
+    {
+      "name": "Advanced Infrastructure Technologies",
+      "place": "Brewer",
+      "sourceQuote": "cluster 4.2: \"Advanced Infrastructure Technologies (Brewer)\""
+    },
+    {
+      "name": "HighByte",
+      "place": "Portland",
+      "sourceQuote": "cluster 4.3: \"HighByte (Portland, industrial DataOps)\""
+    },
+    {
+      "name": "Evergreen Additive",
+      "place": "Brunswick Landing",
+      "sourceQuote": "cluster 4.1: \"Headquartered at TechPlace at Brunswick Landing\""
+    },
+    {
+      "name": "Pennington Mountain",
+      "place": "Aroostook County",
+      "sourceQuote": "cluster 4.8: \"Pennington Mountain, Aroostook County\""
+    },
+    {
+      "name": "Coast Guard Sector Northern New England",
+      "place": "South Portland",
+      "sourceQuote": "cluster 4.9: \"Coast Guard Sector Northern New England is already headquartered in South Portland.\""
+    }
+  ],
+  "disclaimer": "Coordinates are derived from town names in the source and are approximate. The source carries no coordinates. The outline is schematic."
+}

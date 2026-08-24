@@ -1,0 +1,86 @@
+[
+  {
+    "num": "1",
+    "id": "1-overview",
+    "label": "Overview",
+    "heading": "1. Overview",
+    "mark": null
+  },
+  {
+    "num": "2",
+    "id": "2-the-formation-chain",
+    "label": "Formation chain",
+    "heading": "2. The formation chain",
+    "mark": null
+  },
+  {
+    "num": "3",
+    "id": "3-anchor-demand-nodes",
+    "label": "Anchor demand nodes",
+    "heading": "3. Anchor demand nodes",
+    "mark": null
+  },
+  {
+    "num": "4",
+    "id": "4-capability-clusters-and-white-space",
+    "label": "Capability clusters",
+    "heading": "4. Capability clusters and white space",
+    "mark": "star"
+  },
+  {
+    "num": "5",
+    "id": "5-institution-playbook",
+    "label": "Institution playbook",
+    "heading": "5. Institution playbook",
+    "mark": null
+  },
+  {
+    "num": "6",
+    "id": "6-capital-stack-and-state-instruments",
+    "label": "Capital stack",
+    "heading": "6. Capital stack and state instruments",
+    "mark": null
+  },
+  {
+    "num": "7",
+    "id": "7-test-and-evaluation-infrastructure",
+    "label": "Test infrastructure",
+    "heading": "7. Test and evaluation infrastructure",
+    "mark": null
+  },
+  {
+    "num": "8",
+    "id": "8-engagement-and-routing",
+    "label": "Engagement and routing",
+    "heading": "8. Engagement and routing",
+    "mark": null
+  },
+  {
+    "num": "9",
+    "id": "9-constraints-and-gaps",
+    "label": "Constraints and gaps",
+    "heading": "9. Constraints and gaps",
+    "mark": "square"
+  },
+  {
+    "num": "10",
+    "id": "10-key-names",
+    "label": "Key names",
+    "heading": "10. Key names",
+    "mark": null
+  },
+  {
+    "num": "11",
+    "id": "11-glossary",
+    "label": "Glossary",
+    "heading": "11. Glossary",
+    "mark": null
+  },
+  {
+    "num": "12",
+    "id": "12-sources",
+    "label": "Sources",
+    "heading": "12. Sources",
+    "mark": null
+  }
+]

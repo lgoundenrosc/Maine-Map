@@ -1,0 +1,2841 @@
+[
+  {
+    "num": "4.1",
+    "title": "Maritime autonomy and undersea",
+    "id": "4-1-maritime-autonomy-and-undersea",
+    "heat": "HOT",
+    "depth": "DEEP",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Maine has the water, the hulls, the mariners, and the sustainment base. It now has one company printing hulls and tooling for uncrewed vessels, founded eighteen months ago, still small enough to be pre-institutional."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "The gap is everything around the hull. Autonomy stacks, power and propulsion, payload integration, mission software, and the maintenance model for an unmanned vessel nobody is aboard to fix. Evergreen makes the structure. Nobody in Maine makes the vessel."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Evergreen is also the cleanest available test of the section 2 argument. An ASCC spinout with technology proven under an ONR program, a named commercial supply agreement, and a defense market. If that company has to leave Maine to raise a Series A, the formation chain argument is proven in the least useful way possible. Watch where its next round comes from."
+              }
+            ]
+          }
+        ],
+        "line": 317
+      }
+    ],
+    "reads": [],
+    "constraints": [],
+    "otherCallouts": [],
+    "whoIsThere": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Hodgdon (combatant craft for US special operations, boatbuilder since 1816), Lyman-Morse (building a 15,000 sq ft composite fabrication facility as defense and industrial demand rises), Front Street Shipyard, Washburn and Doughty, Kelson Marine, Bluesonde Technologies, Evergreen Additive."
+              }
+            ],
+            "line": 296
+          }
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "BIW surface combatant construction, PNSY submarine sustainment, Maine Maritime Academy mariners and simulators, the Gulf of Maine littorals as open test water, Bigelow and GMRI ocean science, the Darling Marine Center, a working boatbuilding industry from Kittery to Eastport, and ASCC's proven ability to print large marine structures for Marine Corps Systems Command."
+          }
+        ],
+        "line": 292
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Hodgdon (combatant craft for US special operations, boatbuilder since 1816), Lyman-Morse (building a 15,000 sq ft composite fabrication facility as defense and industrial demand rises), Front Street Shipyard, Washburn and Doughty, Kelson Marine, Bluesonde Technologies, Evergreen Additive."
+              }
+            ],
+            "line": 296
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "Evergreen Additive",
+        "id": "evergreen-additive",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The closest thing Maine has to the formation event this document argues for, and it is eighteen months old."
+              }
+            ],
+            "line": 300
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Founded 2025 as a spinout from UMaine ASCC by four staff research leaders: Kyle Warren (CEO), Peter Drown, Andrew Gifford, and Benjamin Steva. Headquartered at TechPlace at Brunswick Landing and working with MRRA to find manufacturing space on site."
+              }
+            ],
+            "line": 302
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Large-format additive manufacturing for commercial marine tooling and defense unmanned systems. The pitch is boat tooling in half the usual lead time, aimed at boatbuilders constrained by tooling lead times, skilled labor shortages, and material costs."
+              }
+            ],
+            "line": 304
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Under an ONR-funded program at ASCC the founding team took a six-metre uncrewed surface vessel from CAD model to sea trials in five months. That is the proof point."
+              }
+            ],
+            "line": 306
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "May 2026: supply agreement with Airtech Advanced Materials Group, a 1973-vintage specialty materials supplier with operations across the US, Europe, the UK, China, and India."
+              }
+            ],
+            "line": 308
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Retains a working relationship with ASCC for access to emerging technology, test facilities, and workforce."
+              }
+            ],
+            "line": 310
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "A second ASCC spinout, ReForm Composites, was selected as one of 20 global finalists in the JEC World Startup Booster and is moving to a larger site with four planned production lines."
+              }
+            ],
+            "line": 312
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Maine has the water, the hulls, the mariners, and the sustainment base. It now has one company printing hulls and tooling for uncrewed vessels, founded eighteen months ago, still small enough to be pre-institutional."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The gap is everything around the hull. Autonomy stacks, power and propulsion, payload integration, mission software, and the maintenance model for an unmanned vessel nobody is aboard to fix. Evergreen makes the structure. Nobody in Maine makes the vessel."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Evergreen is also the cleanest available test of the section 2 argument. An ASCC spinout with technology proven under an ONR program, a named commercial supply agreement, and a defense market. If that company has to leave Maine to raise a Series A, the formation chain argument is proven in the least useful way possible. Watch where its next round comes from."
+                  }
+                ]
+              }
+            ],
+            "line": 317
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "4.2",
+    "title": "Advanced composites, additive manufacturing, and forest-derived materials",
+    "id": "4-2-advanced-composites-additive-manufacturing-and-forest-derived-materials",
+    "heat": "HOT",
+    "depth": "DEEP",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Two distinct openings sit in this cluster."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "First, qualification and certification workflow for additively manufactured parts entering naval service. PNSY has proven the technical path with the copper-nickel flange, which moves the bottleneck to paperwork, inspection, and weld qualification rather than printing. Software that compresses AM part certification has a named customer in-state and a Navy-wide market behind it."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Second, and less obvious, a defense material qualification path for cellulose nanofibril. Feedstock pilot production, composite fabrication, and accredited ballistic testing all exist inside the University of Maine System, and nobody has assembled them."
+              }
+            ]
+          }
+        ],
+        "line": 338
+      }
+    ],
+    "reads": [],
+    "constraints": [
+      {
+        "type": "callout",
+        "label": "MAINE CONSTRAINT · NANOCELLULOSE TIMELINES",
+        "scheme": "red",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Nanocellulose has been ten years away from commercial scale for about fifteen years. Two tons per day is a pilot rate."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Anything here is a materials qualification problem with a long timeline, competing against carbon fiber and UHMWPE incumbents that carry decades of qualification data."
+              }
+            ]
+          }
+        ],
+        "line": 342
+      }
+    ],
+    "otherCallouts": [],
+    "whoIsThere": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Compotech (Brewer, $40 million in contracts 2017 to 2025 for the Expeditionary Shelter Protection System), Kenway Composites (Augusta), Custom Composite Technologies (Bath), Advanced Infrastructure Technologies (Brewer), Evergreen Additive (2025 ASCC spinout, Navy-funded core technology)."
+              }
+            ],
+            "line": 327
+          }
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "UMaine ASCC with the world's largest polymer 3D printer and ISO 17025 accreditation, the TechPlace composites layup facility, and the UMaine Process Development Center as a nanocellulose feedstock source."
+          }
+        ],
+        "line": 323
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Compotech (Brewer, $40 million in contracts 2017 to 2025 for the Expeditionary Shelter Protection System), Kenway Composites (Augusta), Custom Composite Technologies (Bath), Advanced Infrastructure Technologies (Brewer), Evergreen Additive (2025 ASCC spinout, Navy-funded core technology)."
+              }
+            ],
+            "line": 327
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "The nanocellulose position",
+        "id": "the-nanocellulose-position",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The UMaine Process Development Center operates a nanocellulose refiner and pilot plant, has worked with industry for more than 35 years, and holds a patented cellulose nanofibril process licensed to Valmet. It is expanding with three new refiners toward a two ton per day continuous process. UMaine brands the effort Nanocellulose Valley."
+              }
+            ],
+            "line": 331
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The defense connection is real and it is not Maine's yet. Cellulose nanofibril has very high specific strength, and the US Forest Service Forest Products Laboratory has evaluated a nanocrystal and nanofibril material in support of an Army Research Laboratory project at Aberdeen aimed at transparent armor and high-performance glass."
+              }
+            ],
+            "line": 333
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Two distinct openings sit in this cluster."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "First, qualification and certification workflow for additively manufactured parts entering naval service. PNSY has proven the technical path with the copper-nickel flange, which moves the bottleneck to paperwork, inspection, and weld qualification rather than printing. Software that compresses AM part certification has a named customer in-state and a Navy-wide market behind it."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Second, and less obvious, a defense material qualification path for cellulose nanofibril. Feedstock pilot production, composite fabrication, and accredited ballistic testing all exist inside the University of Maine System, and nobody has assembled them."
+                  }
+                ]
+              }
+            ],
+            "line": 338
+          },
+          {
+            "type": "callout",
+            "label": "MAINE CONSTRAINT · NANOCELLULOSE TIMELINES",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Nanocellulose has been ten years away from commercial scale for about fifteen years. Two tons per day is a pilot rate."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Anything here is a materials qualification problem with a long timeline, competing against carbon fiber and UHMWPE incumbents that carry decades of qualification data."
+                  }
+                ]
+              }
+            ],
+            "line": 342
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "4.3",
+    "title": "Shipyard sustainment and industrial AI",
+    "id": "4-3-shipyard-sustainment-and-industrial-ai",
+    "heat": "HOT",
+    "depth": "DEEP",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Machine-shop and dry dock data capture, predictive maintenance for yard equipment, and automated non-destructive testing. A pilot at Norfolk Naval Shipyard using commercially available NDT technology reduced part-inspection times by 20 percent, which establishes both the demand and the benchmark."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Nobody in Maine is building this and three customers are local."
+              }
+            ]
+          }
+        ],
+        "line": 356
+      }
+    ],
+    "reads": [],
+    "constraints": [],
+    "otherCallouts": [],
+    "whoIsThere": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "HighByte (Portland, industrial DataOps), Maine Manufacturing Extension Partnership, UMaine Advanced Manufacturing Center."
+              }
+            ],
+            "line": 352
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Machine-shop and dry dock data capture, predictive maintenance for yard equipment, and automated non-destructive testing. A pilot at Norfolk Naval Shipyard using commercially available NDT technology reduced part-inspection times by 20 percent, which establishes both the demand and the benchmark."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Nobody in Maine is building this and three customers are local."
+                  }
+                ]
+              }
+            ],
+            "line": 356
+          }
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "Two major yards inside fifty miles, PNSY's innovation team and machine-shop sensor pilot, BIW's throughput constraint, and Elmet's disclosed spend on production automation and inspection."
+          }
+        ],
+        "line": 348
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "HighByte (Portland, industrial DataOps), Maine Manufacturing Extension Partnership, UMaine Advanced Manufacturing Center."
+              }
+            ],
+            "line": 352
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Machine-shop and dry dock data capture, predictive maintenance for yard equipment, and automated non-destructive testing. A pilot at Norfolk Naval Shipyard using commercially available NDT technology reduced part-inspection times by 20 percent, which establishes both the demand and the benchmark."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Nobody in Maine is building this and three customers are local."
+                  }
+                ]
+              }
+            ],
+            "line": 356
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "4.4",
+    "title": "Uncrewed ground systems",
+    "id": "4-4-uncrewed-ground-systems",
+    "heat": "OPEN",
+    "depth": "MODERATE",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Payload modules, autonomy software, and power systems for the MOSA-designed Ripsaw family. The open architecture is an explicit invitation and there is no local supplier base responding to it."
+              }
+            ]
+          }
+        ],
+        "line": 369
+      }
+    ],
+    "reads": [],
+    "constraints": [],
+    "otherCallouts": [],
+    "whoIsThere": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Howe & Howe Inc. (Waterboro), a Textron Systems subsidiary. See section 3.4."
+              }
+            ],
+            "line": 366
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Payload modules, autonomy software, and power systems for the MOSA-designed Ripsaw family. The open architecture is an explicit invitation and there is no local supplier base responding to it."
+                  }
+                ]
+              }
+            ],
+            "line": 369
+          }
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "A single producer with deep capability and no ecosystem around it."
+          }
+        ],
+        "line": 362
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Howe & Howe Inc. (Waterboro), a Textron Systems subsidiary. See section 3.4."
+              }
+            ],
+            "line": 366
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Payload modules, autonomy software, and power systems for the MOSA-designed Ripsaw family. The open architecture is an explicit invitation and there is no local supplier base responding to it."
+                  }
+                ]
+              }
+            ],
+            "line": 369
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "4.5",
+    "title": "Space and high-latitude",
+    "id": "4-5-space-and-high-latitude",
+    "heat": "HOT",
+    "depth": "MODERATE",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Space qualification testing is the durable position and it is the one Maine has built. A test lab with vibration, shock, environmental, and electronics capability, sitting next to an airport with rocket engine test capability and a refractory metals supplier thirty miles away, is a qualification cluster rather than a launch cluster."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Openings: space-qualified electronics test throughput and the software around it, radiation-tolerant component supply, high-latitude and polar ground stations, and airborne test services using the Brunswick and Loring runways."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Two adjacencies the state does not connect. Elmet supplies refractory components into satellites and missiles and is not in any Maine space conversation this research found. Microwave Techniques in Gorham builds the RF power and waveguide hardware that satellite communications and radar need, and is in none either. Maine's space sector is talking about launch while two of its component suppliers sit unmentioned inside the state."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "The hypersonics thread through VALT in Presque Isle is the least examined line in the sector and connects directly to cluster 4.8."
+              }
+            ]
+          }
+        ],
+        "line": 416
+      }
+    ],
+    "reads": [],
+    "constraints": [
+      {
+        "type": "callout",
+        "label": "MAINE CONSTRAINT · DO NOT BUILD THE SPACE CASE ON LAUNCH",
+        "scheme": "red",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Maine's coastal launch plans met local opposition and the Maine Space Corporation has pivoted toward sea-based options. Statute caps activity at small satellites and small rockets."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "The Corporation was created in 2022, only recently filed for 501(c)(3) status, and has been funded largely by a two-year $426,000 MTI grant plus $29,000 from the Maine Space Grant Consortium. It is a small organization carrying a large strategy."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Build the case on qualification, components, and ground systems. Launch is the part of this sector most likely to be litigated in a town meeting."
+              }
+            ]
+          }
+        ],
+        "line": 421
+      }
+    ],
+    "otherCallouts": [],
+    "whoIsThere": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "table",
+            "id": "table-03",
+            "headers": [
+              "Company",
+              "Location",
+              "What it does"
+            ],
+            "rows": [
+              [
+                {
+                  "raw": "bluShift Aerospace",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "bluShift Aerospace"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Biofuel-powered small launch. Launched Stardust 1.0 from Loring in January 2021, the first commercial launch of a rocket on biofuel.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Biofuel-powered small launch. Launched Stardust 1.0 from Loring in January 2021, the first commercial launch of a rocket on biofuel."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Teledyne",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Teledyne"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Part-time sales and business development office from the space imaging unit. See section 3.5.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Part-time sales and business development office from the space imaging unit. See section 3.5."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Poseidon Aerospace",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Poseidon Aerospace"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Heavy-lift unmanned cargo aircraft. Claims an $11 million seed and a two-ton payload over 1,500 miles. Company-supplied and unverified.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Heavy-lift unmanned cargo aircraft. Claims an $11 million seed and a two-ton payload over 1,500 miles. Company-supplied and unverified."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Promin Aerospace",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Promin Aerospace"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Small launch vehicle development.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Small launch vehicle development."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Stratton Aviation",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Stratton Aviation"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Aviation services.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Aviation services."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Mallard Enterprises",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Mallard Enterprises"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Aerospace tenant.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Aerospace tenant."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "New England Aviation Academy",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "New England Aviation Academy"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Flight training and the pilot pipeline.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Flight training and the pilot pipeline."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Greisen Aerospace",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Greisen Aerospace"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Maine",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Maine"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Aerospace engineering.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Aerospace engineering."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "VALT Enterprizes",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "VALT Enterprizes"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Presque Isle",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Presque Isle"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Hypersonic delivery systems. $14.8 million Department of War contract, September 2024.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Hypersonic delivery systems. $14.8 million Department of War contract, September 2024."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Elmet Technologies",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Elmet Technologies"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Lewiston",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Lewiston"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Tungsten heavy alloy and MP35N components flown on Artemis II. See cluster 4.8.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Tungsten heavy alloy and MP35N components flown on Artemis II. See cluster 4.8."
+                    }
+                  ]
+                }
+              ]
+            ],
+            "line": 399
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Space qualification testing is the durable position and it is the one Maine has built. A test lab with vibration, shock, environmental, and electronics capability, sitting next to an airport with rocket engine test capability and a refractory metals supplier thirty miles away, is a qualification cluster rather than a launch cluster."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Openings: space-qualified electronics test throughput and the software around it, radiation-tolerant component supply, high-latitude and polar ground stations, and airborne test services using the Brunswick and Loring runways."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Two adjacencies the state does not connect. Elmet supplies refractory components into satellites and missiles and is not in any Maine space conversation this research found. Microwave Techniques in Gorham builds the RF power and waveguide hardware that satellite communications and radar need, and is in none either. Maine's space sector is talking about launch while two of its component suppliers sit unmentioned inside the state."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The hypersonics thread through VALT in Presque Isle is the least examined line in the sector and connects directly to cluster 4.8."
+                  }
+                ]
+              }
+            ],
+            "line": 416
+          },
+          {
+            "type": "callout",
+            "label": "MAINE CONSTRAINT · DO NOT BUILD THE SPACE CASE ON LAUNCH",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Maine's coastal launch plans met local opposition and the Maine Space Corporation has pivoted toward sea-based options. Statute caps activity at small satellites and small rockets."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The Corporation was created in 2022, only recently filed for 501(c)(3) status, and has been funded largely by a two-year $426,000 MTI grant plus $29,000 from the Maine Space Grant Consortium. It is a small organization carrying a large strategy."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Build the case on qualification, components, and ground systems. Launch is the part of this sector most likely to be litigated in a town meeting."
+                  }
+                ]
+              }
+            ],
+            "line": 421
+          }
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "Maine has more space infrastructure, more companies, and a more coherent state strategy than the sector usually gets credit for. The constraint is launch. Everything else here is open."
+          }
+        ],
+        "line": 375
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "The Maine Space Complex",
+        "id": "the-maine-space-complex",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The Maine Space Corporation is a quasi-state body created by the Legislature in 2022, headquartered in Hangar 5 at Brunswick Landing. Its strategy, set out in Maine Space 2030, is a three-part complex spanning several locations: an innovation hub, a research and development element, and a launch element. Enabling legislation limits launch activity to small satellites and small rockets, and anything larger needs the Legislature to act again."
+              }
+            ],
+            "line": 379
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Executive Director Terry Shehata has been explicit about the ceiling. Maine is not trying to be a Cape Canaveral of the north. The state is pursuing a share of the new space economy on terms that fit its politics, which is the same reason the coastal launch plans stalled."
+              }
+            ],
+            "line": 381
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "Physical assets",
+        "id": "physical-assets",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The SpaceTech Facility in Hangar 5 at Brunswick Landing, opened 24 October 2025 alongside the Maritime Industrial Workforce Training Center. A 1,300 square foot lab and collaboration hub with a thermal chamber and equipment simulating launch, transport, and operational environments. Capabilities cover qualification of electronics and hardware for space, prototyping, advanced materials research, and reliability testing for consumer and industrial products. The state's first space qualification testing facility."
+              }
+            ],
+            "line": 385
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The Maine Space Corporation is looking to place small satellite testing hubs in Aroostook and Washington counties and in western Maine, so companies elsewhere in the state can reach qualification testing without driving to Brunswick. Shehata's stated goal is all elements of the space complex operational within five years."
+              }
+            ],
+            "line": 387
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Brunswick Executive Airport, with 18 aerospace tenants, two 8,000-foot former Navy runways, 650,000 sq ft of hangar and maintenance space, established UAS operating procedures, more than 27,000 annual flight operations, and rocket engine test capability. Subject to the AFFF constraint in section 7."
+              }
+            ],
+            "line": 389
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Loring in Limestone, with two 12,100-foot runways, the longest in Maine, uncongested airspace, and a launch already flown from it."
+              }
+            ],
+            "line": 391
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "High-latitude geography suited to polar and sun-synchronous orbit access, plus the Andover earth station heritage."
+              }
+            ],
+            "line": 393
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The Maine Space Grant Consortium, and a 50-plus organization NSF Regional Innovation Engines coalition across Maine and New Hampshire."
+              }
+            ],
+            "line": 395
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "table",
+            "id": "table-03",
+            "headers": [
+              "Company",
+              "Location",
+              "What it does"
+            ],
+            "rows": [
+              [
+                {
+                  "raw": "bluShift Aerospace",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "bluShift Aerospace"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Biofuel-powered small launch. Launched Stardust 1.0 from Loring in January 2021, the first commercial launch of a rocket on biofuel.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Biofuel-powered small launch. Launched Stardust 1.0 from Loring in January 2021, the first commercial launch of a rocket on biofuel."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Teledyne",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Teledyne"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Part-time sales and business development office from the space imaging unit. See section 3.5.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Part-time sales and business development office from the space imaging unit. See section 3.5."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Poseidon Aerospace",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Poseidon Aerospace"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Heavy-lift unmanned cargo aircraft. Claims an $11 million seed and a two-ton payload over 1,500 miles. Company-supplied and unverified.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Heavy-lift unmanned cargo aircraft. Claims an $11 million seed and a two-ton payload over 1,500 miles. Company-supplied and unverified."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Promin Aerospace",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Promin Aerospace"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Small launch vehicle development.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Small launch vehicle development."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Stratton Aviation",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Stratton Aviation"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Aviation services.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Aviation services."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Mallard Enterprises",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Mallard Enterprises"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Aerospace tenant.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Aerospace tenant."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "New England Aviation Academy",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "New England Aviation Academy"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Brunswick Landing",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Brunswick Landing"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Flight training and the pilot pipeline.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Flight training and the pilot pipeline."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Greisen Aerospace",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Greisen Aerospace"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Maine",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Maine"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Aerospace engineering.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Aerospace engineering."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "VALT Enterprizes",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "VALT Enterprizes"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Presque Isle",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Presque Isle"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Hypersonic delivery systems. $14.8 million Department of War contract, September 2024.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Hypersonic delivery systems. $14.8 million Department of War contract, September 2024."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Elmet Technologies",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Elmet Technologies"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Lewiston",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Lewiston"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Tungsten heavy alloy and MP35N components flown on Artemis II. See cluster 4.8.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Tungsten heavy alloy and MP35N components flown on Artemis II. See cluster 4.8."
+                    }
+                  ]
+                }
+              ]
+            ],
+            "line": 399
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Space qualification testing is the durable position and it is the one Maine has built. A test lab with vibration, shock, environmental, and electronics capability, sitting next to an airport with rocket engine test capability and a refractory metals supplier thirty miles away, is a qualification cluster rather than a launch cluster."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Openings: space-qualified electronics test throughput and the software around it, radiation-tolerant component supply, high-latitude and polar ground stations, and airborne test services using the Brunswick and Loring runways."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Two adjacencies the state does not connect. Elmet supplies refractory components into satellites and missiles and is not in any Maine space conversation this research found. Microwave Techniques in Gorham builds the RF power and waveguide hardware that satellite communications and radar need, and is in none either. Maine's space sector is talking about launch while two of its component suppliers sit unmentioned inside the state."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The hypersonics thread through VALT in Presque Isle is the least examined line in the sector and connects directly to cluster 4.8."
+                  }
+                ]
+              }
+            ],
+            "line": 416
+          },
+          {
+            "type": "callout",
+            "label": "MAINE CONSTRAINT · DO NOT BUILD THE SPACE CASE ON LAUNCH",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Maine's coastal launch plans met local opposition and the Maine Space Corporation has pivoted toward sea-based options. Statute caps activity at small satellites and small rockets."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The Corporation was created in 2022, only recently filed for 501(c)(3) status, and has been funded largely by a two-year $426,000 MTI grant plus $29,000 from the Maine Space Grant Consortium. It is a small organization carrying a large strategy."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Build the case on qualification, components, and ground systems. Launch is the part of this sector most likely to be litigated in a town meeting."
+                  }
+                ]
+              }
+            ],
+            "line": 421
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "4.6",
+    "title": "Food, water, and biological supply chain security",
+    "id": "4-6-food-water-and-biological-supply-chain-security",
+    "heat": "OPEN",
+    "depth": "MODERATE",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Ration and supplement inputs, marine-derived pharmaceutical precursors, biomanufacturing feedstock resilience, environmental DNA for biosurveillance and detection, cold-chain and remote-base food security, and expeditionary water treatment. Add PFAS remediation as a water security use case, since Maine has an instrumented contaminated site and DoW has the same problem across its installation portfolio."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Biomanufacturing is where the state is furthest from its own potential. Maine argues it is 4.7 percent defense by share of GDP and holds three life science institutions of national standing with zero defense engagement between them. Feedstock resilience, fermentation capacity, and domestic biomanufacturing are named priorities with a real capacity problem, and Maine has the aquaculture sector, the forest bioproducts base, and a genomics institution to characterize any of it."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "None of this requires new institutions. It requires naming the ones that exist."
+              }
+            ]
+          }
+        ],
+        "line": 452
+      }
+    ],
+    "reads": [],
+    "constraints": [],
+    "otherCallouts": [],
+    "whoIsThere": [],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "The most differentiated cluster in the state and the least built. No other candidate hub location has this combination."
+          }
+        ],
+        "line": 427
+      },
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "Assets include Bigelow Laboratory's National Center for Marine Algae and Microbiota, the Tandy Center for Ocean Forecasting, and the Center for Seafood Solutions. Bigelow launched a Blue Biotech Innovation Ecosystem in October 2025 with MTI seed funding alongside Hatch Blue and Ocean House Consulting. Add UMaine Maine-eDNA, Cooperative Extension, the Forest Bioproducts Research Institute, the UMaine-led Forest Bioproducts Tech Hub (roughly $20 million EDA, July 2026, unverified), the state aquaculture sector, and the Maine Aquaculture Innovation Center."
+          }
+        ],
+        "line": 429
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "The biotechnology base",
+        "id": "the-biotechnology-base",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Biotechnology is a Department of War critical technology area and biomanufacturing sits inside it. Maine holds three life science institutions of national standing and none of them has a defense relationship."
+              }
+            ],
+            "line": 433
+          },
+          {
+            "type": "table",
+            "id": "table-04",
+            "headers": [
+              "Institution",
+              "Location",
+              "What it is",
+              "Defense relationship"
+            ],
+            "rows": [
+              [
+                {
+                  "raw": "Jackson Laboratory",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Jackson Laboratory"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Bar Harbor",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Bar Harbor"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Genomics research institution and NCI-designated Cancer Center. One of the world's primary sources of characterized mouse models. Runs the Mouse Genome Database and the Mutant Mouse Resource and Research Center. Funding record is NIH and NSF.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Genomics research institution and NCI-designated Cancer Center. One of the world's primary sources of characterized mouse models. Runs the Mouse Genome Database and the Mutant Mouse Resource and Research Center. Funding record is NIH and NSF."
+                    }
+                  ]
+                },
+                {
+                  "raw": "None found.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "None found."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "MDI Biological Laboratory",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "MDI Biological Laboratory"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Bar Harbor",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Bar Harbor"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Regeneration and aging biology. Small, research-intensive, adjacent to JAX.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Regeneration and aging biology. Small, research-intensive, adjacent to JAX."
+                    }
+                  ]
+                },
+                {
+                  "raw": "None found.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "None found."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "IDEXX",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "IDEXX"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Westbrook",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Westbrook"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Maine's second-largest industrial employer. Veterinary and water diagnostics at volume. A detection and assay manufacturing base.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Maine's second-largest industrial employer. Veterinary and water diagnostics at volume. A detection and assay manufacturing base."
+                    }
+                  ]
+                },
+                {
+                  "raw": "None found.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "None found."
+                    }
+                  ]
+                }
+              ]
+            ],
+            "line": 435
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Read Jackson Laboratory as two things, and neither of them is a customer today."
+              }
+            ],
+            "line": 441
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "First, a potential demand node. Medical countermeasure development for chemical, biological, radiological, and nuclear agents requires animal-model testing, and BARDA runs a standing Broad Agency Announcement soliciting that work through 2028, with a parallel USAMRDC announcement alongside it. JAX supplies the models that work depends on. Nothing in the public record suggests anyone has made that argument to either side."
+              }
+            ],
+            "line": 443
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Second, and more useful in the near term, a talent source. A genomics institution of that size concentrates molecular biologists, bioinformaticians, and laboratory operations people in a state that otherwise has very few. Any Maine biosurveillance, detection, or biomanufacturing company will hire out of JAX and its alumni network before it hires anywhere else. IDEXX plays the same role for assay development and regulated diagnostics manufacturing."
+              }
+            ],
+            "line": 445
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The Roux Institute runs research seminars with JAX, which is the shortest available route in."
+              }
+            ],
+            "line": 447
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Ration and supplement inputs, marine-derived pharmaceutical precursors, biomanufacturing feedstock resilience, environmental DNA for biosurveillance and detection, cold-chain and remote-base food security, and expeditionary water treatment. Add PFAS remediation as a water security use case, since Maine has an instrumented contaminated site and DoW has the same problem across its installation portfolio."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Biomanufacturing is where the state is furthest from its own potential. Maine argues it is 4.7 percent defense by share of GDP and holds three life science institutions of national standing with zero defense engagement between them. Feedstock resilience, fermentation capacity, and domestic biomanufacturing are named priorities with a real capacity problem, and Maine has the aquaculture sector, the forest bioproducts base, and a genomics institution to characterize any of it."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "None of this requires new institutions. It requires naming the ones that exist."
+                  }
+                ]
+              }
+            ],
+            "line": 452
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "4.7",
+    "title": "Cyber, secure communications, and dual-use software",
+    "id": "4-7-cyber-secure-communications-and-dual-use-software",
+    "heat": "OPEN",
+    "depth": "MODERATE",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Limited on talent-intensive software. Anything competing with Boston on engineers loses."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Compute infrastructure is the exception. If the Waterville hub is real, sovereign and regional compute for biotech and blue economy modelling is a position nobody else in northern New England holds."
+              }
+            ]
+          }
+        ],
+        "line": 468
+      }
+    ],
+    "reads": [],
+    "constraints": [
+      {
+        "type": "callout",
+        "label": "MAINE CONSTRAINT · CLEARANCE DENSITY",
+        "scheme": "red",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Maine has no clearance density and no meaningful cleared facility capacity outside PNSY and BIW. This is the thinnest of the nine."
+              }
+            ]
+          }
+        ],
+        "line": 471
+      }
+    ],
+    "otherCallouts": [],
+    "whoIsThere": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "HighByte, Defendify, Tilson Technology, VividCloud."
+              }
+            ],
+            "line": 464
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Limited on talent-intensive software. Anything competing with Boston on engineers loses."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Compute infrastructure is the exception. If the Waterville hub is real, sovereign and regional compute for biotech and blue economy modelling is a position nobody else in northern New England holds."
+                  }
+                ]
+              }
+            ],
+            "line": 468
+          },
+          {
+            "type": "callout",
+            "label": "MAINE CONSTRAINT · CLEARANCE DENSITY",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Maine has no clearance density and no meaningful cleared facility capacity outside PNSY and BIW. This is the thinnest of the nine."
+                  }
+                ]
+              }
+            ],
+            "line": 471
+          }
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "SubCom subsea cable presence, Roux Institute computer and data science, Bowdoin and Colby CS departments, and the ASCC practice of pairing its large-format printer with high-performance computing."
+          }
+        ],
+        "line": 458
+      },
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "Central Maine Growth Council reports a $6.2 million NIST award to establish a Maine High-Performance Computing Hub in Waterville, aimed at AI, biotech, and blue economy work.  "
+          },
+          {
+            "t": "marker",
+            "v": "UNVERIFIED, SINGLE SOURCE",
+            "tone": "unverified"
+          },
+          {
+            "t": "text",
+            "v": " If that award is real and operating, Maine has regional compute infrastructure that changes how this cluster should be rated. Confirm before repeating it externally."
+          }
+        ],
+        "line": 460
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "HighByte, Defendify, Tilson Technology, VividCloud."
+              }
+            ],
+            "line": 464
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Limited on talent-intensive software. Anything competing with Boston on engineers loses."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Compute infrastructure is the exception. If the Waterville hub is real, sovereign and regional compute for biotech and blue economy modelling is a position nobody else in northern New England holds."
+                  }
+                ]
+              }
+            ],
+            "line": 468
+          },
+          {
+            "type": "callout",
+            "label": "MAINE CONSTRAINT · CLEARANCE DENSITY",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Maine has no clearance density and no meaningful cleared facility capacity outside PNSY and BIW. This is the thinnest of the nine."
+                  }
+                ]
+              }
+            ],
+            "line": 471
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "4.8",
+    "title": "Critical minerals and refractory metals",
+    "id": "4-8-critical-minerals-and-refractory-metals",
+    "heat": "HOT",
+    "depth": "DEEP",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "The investable position today is processing, fabrication, and the instrumentation around them, which is where Elmet already sits."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Openings: refractory additive manufacturing and post-processing, in-line inspection and metrology for high-temperature parts, powder handling and reclamation, non-PRC supply chain provenance and traceability software, and high-power microwave subsystems adjacent to the Gorham operation."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Elmet's $4.3 million Department of War contract names production automation, additive manufacturing, and inspection systems as the money's destination. That is a published buying signal from a public company in Maine, pointed at technology nobody in Maine builds."
+              }
+            ]
+          }
+        ],
+        "line": 523
+      }
+    ],
+    "reads": [
+      {
+        "type": "callout",
+        "label": "VC READ ON ELMET",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Elmet is a supplier, a customer, and a comparable at once, and it is the most useful single company in this document for that reason."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "As a customer: a public company with $66 million of cash, a stated capacity expansion program, and a federal contract explicitly naming production automation, additive manufacturing, and inspection systems. It is buying the capabilities clusters 4.2 and 4.3 describe, in Maine, with disclosed money."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "As a supplier: the refractory feedstock behind hypersonics, interceptors, fragmentation, and directed energy. A Maine portfolio company in any of those areas has a domestic, ITAR-registered, non-PRC materials source thirty miles from Portland."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "As a comparable: it prices the question. A Maine industrial manufacturer with defense end markets cleared $400 million of market capitalization. The route there was acquisition and private equity, not venture."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "The Engineered Microwave Products division is the least examined asset in the state. High-power microwave and RF into directed energy, radar, and fusion, built in Gorham, appears in no Maine ecosystem material this research found."
+              }
+            ]
+          }
+        ],
+        "line": 518
+      }
+    ],
+    "constraints": [
+      {
+        "type": "callout",
+        "label": "MAINE CONSTRAINT · DO NOT BUILD THE MINERALS CASE ON ORE",
+        "scheme": "red",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "The Maine Geological Survey classifies Pennington Mountain as an occurrence, not a deposit. Tonnage and grade are unknown."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "The land is privately held by Aroostook Timberlands, the area is not zoned for mining, and a permit application would need rezoning plus a minimum two years of baseline environmental monitoring. Nothing comes out of the ground inside a fund's hold period."
+              }
+            ]
+          }
+        ],
+        "line": 511
+      }
+    ],
+    "otherCallouts": [],
+    "whoIsThere": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Elmet Technologies (Lewiston) and Microwave Techniques (Gorham), both under The Elmet Group Co., NASDAQ ELMT. See section 3.5."
+              }
+            ],
+            "line": 483
+          }
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "The most defensible cluster in the state and the only one with a company already in it. Refractory metals sit under hypersonics, interceptors, fragmentation, nuclear, semiconductor tooling, and medical imaging. China controls most of world supply."
+          }
+        ],
+        "line": 477
+      },
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "The REEShore Act bars Chinese tungsten in military equipment starting 2026, and USGS reported no commercial US tungsten production between 2015 and 2019.  "
+          },
+          {
+            "t": "marker",
+            "v": "UNVERIFIED, CONFIRM EFFECTIVE DATE",
+            "tone": "unverified"
+          }
+        ],
+        "line": 479
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Elmet Technologies (Lewiston) and Microwave Techniques (Gorham), both under The Elmet Group Co., NASDAQ ELMT. See section 3.5."
+              }
+            ],
+            "line": 483
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "Elmet, the capability detail",
+        "id": "elmet-the-capability-detail",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Q2 2026: revenue $66.4 million, up 35.2 percent year over year. Backlog $131.5 million, up 55 percent. Gross margin 25.0 percent. Adjusted EBITDA $8.9 million. Cash $66.1 million post-IPO."
+              }
+            ],
+            "line": 487
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Over $41.8 million in US government-backed grants invested in capacity upgrades to date. ITAR registered and DFARS compliant."
+              }
+            ],
+            "line": 489
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Claims support of more than 100 US defense programs and more than 95 national laboratory programs  "
+              },
+              {
+                "t": "marker",
+                "v": "COMPANY-SUPPLIED",
+                "tone": "supplied"
+              }
+            ],
+            "line": 491
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Published defense product lines: tungsten kinetic energy penetrators, blast fragmentation sleeves, tungsten fragmentation parts, TZM forging dies, and molybdenum forging billets, alongside molybdenum sputtering targets for semiconductor manufacturing. Naming the products matters. Refractory metals is a category. Penetrators and fragmentation sleeves are a supply chain position."
+              }
+            ],
+            "line": 493
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "9 June 2026: $4.3 million Department of War contract for domestic molybdenum and refractory component manufacturing, covering precision machining, production automation, additive manufacturing, material feeding, post-processing, finishing, and inspection. Aimed at interceptor systems."
+              }
+            ],
+            "line": 495
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "August 2025: $5.1 million order for domestic Inconel and Monel extrusion for the Navy supply chain, and a $4.2 million IBAS award for tungsten heavy alloy and molybdenum announced by Sen. Collins, tied to preserving 155 jobs  "
+              },
+              {
+                "t": "marker",
+                "v": "UNVERIFIED",
+                "tone": "unverified"
+              }
+            ],
+            "line": 497
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "25 June 2026: exercised an option to buy 20 million ordinary shares of EQ Resources, an Australian and Spanish tungsten producer, alongside a multi-year concentrate offtake. Named non-PRC sourcing also includes Masan Tungsten, Climax under Freeport-McMoRan, Molymet, and Taniobis."
+              }
+            ],
+            "line": 499
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Microwave Techniques licensed ARC Sentry detection technology from Brookhaven National Laboratory on 2 June 2026. US Patent 12,571,080 covers fabrication of metallic parts by additive manufacturing."
+              }
+            ],
+            "line": 501
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Customers named on the Q1 2026 earnings call include Lockheed Martin, Pratt & Whitney, and Raytheon. Leadership: Peter V. Anania, CEO and Chairman of the group. Derek Fox, CEO of Elmet Technologies. Michael Steven Lee, CFO."
+              }
+            ],
+            "line": 503
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "Upstream",
+        "id": "upstream",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Pennington Mountain, Aroostook County, found through a 2021 USGS Earth MRI airborne survey and reported as the first hard-rock rare earth occurrence identified east of the Mississippi. Whole-rock analyses show zirconium at 1.17 weight percent, niobium at 1,656 ppm, plus dysprosium, erbium, lanthanum, and cerium. Maine also holds the Maple-Hovey manganese deposit, described by the Maine Geological Survey as the largest in the United States, and Plumbago North, a lithium pegmatite with a preliminary estimate of 11 million tons at 4.68 percent Li2O. All unverified."
+              }
+            ],
+            "line": 507
+          },
+          {
+            "type": "callout",
+            "label": "MAINE CONSTRAINT · DO NOT BUILD THE MINERALS CASE ON ORE",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The Maine Geological Survey classifies Pennington Mountain as an occurrence, not a deposit. Tonnage and grade are unknown."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The land is privately held by Aroostook Timberlands, the area is not zoned for mining, and a permit application would need rezoning plus a minimum two years of baseline environmental monitoring. Nothing comes out of the ground inside a fund's hold period."
+                  }
+                ]
+              }
+            ],
+            "line": 511
+          },
+          {
+            "type": "callout",
+            "label": "VC READ ON ELMET",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Elmet is a supplier, a customer, and a comparable at once, and it is the most useful single company in this document for that reason."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "As a customer: a public company with $66 million of cash, a stated capacity expansion program, and a federal contract explicitly naming production automation, additive manufacturing, and inspection systems. It is buying the capabilities clusters 4.2 and 4.3 describe, in Maine, with disclosed money."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "As a supplier: the refractory feedstock behind hypersonics, interceptors, fragmentation, and directed energy. A Maine portfolio company in any of those areas has a domestic, ITAR-registered, non-PRC materials source thirty miles from Portland."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "As a comparable: it prices the question. A Maine industrial manufacturer with defense end markets cleared $400 million of market capitalization. The route there was acquisition and private equity, not venture."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The Engineered Microwave Products division is the least examined asset in the state. High-power microwave and RF into directed energy, radar, and fusion, built in Gorham, appears in no Maine ecosystem material this research found."
+                  }
+                ]
+              }
+            ],
+            "line": 518
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The investable position today is processing, fabrication, and the instrumentation around them, which is where Elmet already sits."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Openings: refractory additive manufacturing and post-processing, in-line inspection and metrology for high-temperature parts, powder handling and reclamation, non-PRC supply chain provenance and traceability software, and high-power microwave subsystems adjacent to the Gorham operation."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Elmet's $4.3 million Department of War contract names production automation, additive manufacturing, and inspection systems as the money's destination. That is a published buying signal from a public company in Maine, pointed at technology nobody in Maine builds."
+                  }
+                ]
+              }
+            ],
+            "line": 523
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "4.9",
+    "title": "Ports and North Atlantic logistics",
+    "id": "4-9-ports-and-north-atlantic-logistics",
+    "heat": "OPEN",
+    "depth": "MODERATE",
+    "whiteSpace": [
+      {
+        "type": "callout",
+        "label": "VC WHITE SPACE",
+        "scheme": "green",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Portland is a scheduled, operating, weekly North Atlantic sealift connection into Iceland and northern Europe, run by a private carrier, sitting 25 miles from Brunswick Landing. That is contested-logistics infrastructure that already exists and costs the government nothing."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Openings: cold-chain and reefer telemetry, cargo provenance and manifest integrity, port and terminal sensing, expeditionary containerized power and refrigeration, and dual-use sealift scheduling. The reefer business is the differentiator, because temperature-controlled North Atlantic logistics is a niche Portland already owns commercially."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Eastport is the more interesting long-dated position. The deepest natural port in the continental US, underused, and closest to the Northwest Passage approaches. Nobody is building anything there."
+              }
+            ]
+          }
+        ],
+        "line": 562
+      }
+    ],
+    "reads": [],
+    "constraints": [],
+    "otherCallouts": [
+      {
+        "type": "callout",
+        "label": "TRACK THIS, DO NOT UNDERWRITE IT",
+        "scheme": "red",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "A homeport decision would put a Coast Guard Arctic surface presence, a sustainment workload, and a crew population into a Maine deep-water port. It would connect the ports cluster, the cold weather cluster, and the shipyard sustainment cluster into one argument rather than three."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "It is also a lobbying letter with eight slots and every coastal state writing one. No decision has been announced. Treat it as the single highest-value item on the watch list and build nothing on it."
+              }
+            ]
+          }
+        ],
+        "line": 553
+      }
+    ],
+    "whoIsThere": [
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Eimskip USA, Soli DG, Sprague Energy at Searsport. No defense-side company."
+              }
+            ],
+            "line": 557
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Portland is a scheduled, operating, weekly North Atlantic sealift connection into Iceland and northern Europe, run by a private carrier, sitting 25 miles from Brunswick Landing. That is contested-logistics infrastructure that already exists and costs the government nothing."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Openings: cold-chain and reefer telemetry, cargo provenance and manifest integrity, port and terminal sensing, expeditionary containerized power and refrigeration, and dual-use sealift scheduling. The reefer business is the differentiator, because temperature-controlled North Atlantic logistics is a niche Portland already owns commercially."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Eastport is the more interesting long-dated position. The deepest natural port in the continental US, underused, and closest to the Northwest Passage approaches. Nobody is building anything there."
+                  }
+                ]
+              }
+            ],
+            "line": 562
+          }
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "Maine has run a Three-Port Strategy since 1978, splitting cargo development across Portland, Searsport, and Eastport while keeping the rest of the coast for fishing and recreation. The Maine Port Authority is a quasi-state agency under MaineDOT. The state has put close to $100 million into the three ports since 2009."
+          }
+        ],
+        "line": 529
+      }
+    ],
+    "entries": [
+      {
+        "kind": "entry",
+        "title": "Portland",
+        "id": "portland",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Deep-draft, ice-free, naturally sheltered, 48-foot draft. Second-largest tonnage seaport in New England and a major petroleum port. The International Marine Terminal is a 33-acre facility at 460 Commercial Street with a container crane, a refrigerated container yard, and a rail connection. TWIC required for cargo delivery."
+              }
+            ],
+            "line": 533
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Eimskip made Portland its primary US port of call in 2013 after evaluating Boston, Rhode Island, and Portsmouth, and runs a weekly Green Line service. Portland to Reykjavik is roughly seven days, extending to the Faroes, the UK, Scandinavia, the Baltics, and the Mediterranean, with Asia connections by transshipment at Reykjavik. Eimskip is also the terminal operator. Volumes reached roughly 50,000 TEU in 2023 and grew about 3 percent in 2025 against tariff headwinds."
+              }
+            ],
+            "line": 535
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "A reefer rack expansion toward roughly 420 containers ran over budget at $17.8 million with about $14.3 million federal, and MARAD approved a de-scoped plan. MaineDOT also holds a Clean Ports Program planning grant."
+              }
+            ],
+            "line": 537
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "Searsport and Eastport",
+        "id": "searsport-and-eastport",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Searsport at Mack Point is the energy port, with preliminary design and permitting work for offshore wind port infrastructure at Mack Point or Sears Island. Eastport is the deepest natural seaport in the continental United States, handles vessels up to 900 feet, and is commercially in a slump. Its recent federal work is a breakwater wingwall extension and fish pier repair."
+              }
+            ],
+            "line": 541
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "The Arctic Security Cutter homeport question",
+        "id": "the-arctic-security-cutter-homeport-question",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The Coast Guard is building 11 Arctic Security Cutters, contracted across Rauma Marine Constructions in Finland, Bollinger in Houma, and Davie Defense at Helsinki, Galveston, and Port Arthur. First delivery is expected by the end of 2028. The first three go to Alaska, two at Kodiak and one at Seward, which leaves eight homeports undecided."
+              }
+            ],
+            "line": 545
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "On 6 July 2026 Sen. Angus King wrote to Commandant Adm. Kevin Lunday urging the Coast Guard to select Maine for at least one. His argument is geography, deep-water access, shipbuilding and repair capacity, and Arctic expertise, naming Portland and Eastport as the candidate ports and citing UMaine Arctic research and Maine Maritime Academy as the sustaining ecosystem. Coast Guard Sector Northern New England is already headquartered in South Portland."
+              }
+            ],
+            "line": 547
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "King co-chairs the Senate Arctic Caucus with Sen. Murkowski, chairs the Strategic Forces Subcommittee, and travelled to Greenland in early 2026. This is a serious push rather than a press release."
+              }
+            ],
+            "line": 549
+          },
+          {
+            "type": "callout",
+            "label": "TRACK THIS, DO NOT UNDERWRITE IT",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "A homeport decision would put a Coast Guard Arctic surface presence, a sustainment workload, and a crew population into a Maine deep-water port. It would connect the ports cluster, the cold weather cluster, and the shipyard sustainment cluster into one argument rather than three."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "It is also a lobbying letter with eight slots and every coastal state writing one. No decision has been announced. Treat it as the single highest-value item on the watch list and build nothing on it."
+                  }
+                ]
+              }
+            ],
+            "line": 553
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "title": "Who is there",
+        "id": "who-is-there",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Eimskip USA, Soli DG, Sprague Energy at Searsport. No defense-side company."
+              }
+            ],
+            "line": 557
+          },
+          {
+            "type": "callout",
+            "label": "VC WHITE SPACE",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Portland is a scheduled, operating, weekly North Atlantic sealift connection into Iceland and northern Europe, run by a private carrier, sitting 25 miles from Brunswick Landing. That is contested-logistics infrastructure that already exists and costs the government nothing."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Openings: cold-chain and reefer telemetry, cargo provenance and manifest integrity, port and terminal sensing, expeditionary containerized power and refrigeration, and dual-use sealift scheduling. The reefer business is the differentiator, because temperature-controlled North Atlantic logistics is a niche Portland already owns commercially."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Eastport is the more interesting long-dated position. The deepest natural port in the continental US, underused, and closest to the Northwest Passage approaches. Nobody is building anything there."
+                  }
+                ]
+              }
+            ],
+            "line": 562
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,214 @@
+{
+  "stages": [
+    {
+      "index": 1,
+      "name": "Research origin",
+      "what": "Technology emerges from a lab or a shop floor",
+      "institutions": [
+        "UMaine ASCC",
+        "UMaine Process Development Center",
+        "UMaine Climate Change Institute",
+        "VEMI Lab",
+        "Bigelow",
+        "Jackson Laboratory",
+        "GMRI",
+        "Roux Institute",
+        "Darling Marine Center",
+        "boatyard R&D"
+      ],
+      "institutionsRaw": "UMaine ASCC, UMaine Process Development Center, UMaine Climate Change Institute, VEMI Lab, Bigelow, Jackson Laboratory, GMRI, Roux Institute, Darling Marine Center, boatyard R&D",
+      "health": "STRONG"
+    },
+    {
+      "index": 2,
+      "name": "Incubation",
+      "what": "Space, tooling, first customers",
+      "institutions": [
+        "TechPlace at Brunswick Landing",
+        "SMCC MATEC",
+        "New England Ocean Cluster",
+        "Roux Founder Residency",
+        "Dirigo Labs",
+        "MCE Top Gun",
+        "Open Bench Project",
+        "a statewide coworking network"
+      ],
+      "institutionsRaw": "TechPlace at Brunswick Landing, SMCC MATEC, New England Ocean Cluster, Roux Founder Residency, Dirigo Labs, MCE Top Gun, Open Bench Project, a statewide coworking network",
+      "health": "ADEQUATE"
+    },
+    {
+      "index": 3,
+      "name": "Non-dilutive capital",
+      "what": "Grants and federal R&D dollars",
+      "institutions": [
+        "MTI (TechStart",
+        "Seed",
+        "Development Loans",
+        "MTAF)",
+        "SBIR and STTR",
+        "CMGC SBIR Resource Center",
+        "ONR and DoW direct"
+      ],
+      "institutionsRaw": "MTI (TechStart, Seed, Development Loans, MTAF), SBIR and STTR, CMGC SBIR Resource Center, ONR and DoW direct",
+      "health": "STRONG"
+    },
+    {
+      "index": 4,
+      "name": "Test and qualification",
+      "what": "Proving the thing works",
+      "institutions": [
+        "UMaine ASCC (ISO 17025)",
+        "Elmet analytical laboratory (ISO 17025)",
+        "Maine Space Corporation test lab",
+        "Brunswick Executive Airport",
+        "Gulf of Maine littorals",
+        "Loring runways",
+        "Navy Redington range"
+      ],
+      "institutionsRaw": "UMaine ASCC (ISO 17025), Elmet analytical laboratory (ISO 17025), Maine Space Corporation test lab, Brunswick Executive Airport, Gulf of Maine littorals, Loring runways, Navy Redington range",
+      "health": "STRONG"
+    },
+    {
+      "index": 5,
+      "name": "Production",
+      "what": "Making it at rate",
+      "institutions": [
+        "BIW supplier network",
+        "Elmet Lewiston",
+        "Midcoast boatyards",
+        "Compotech",
+        "Kenway",
+        "Cianbro",
+        "roughly 300 defense contractors statewide"
+      ],
+      "institutionsRaw": "BIW supplier network, Elmet Lewiston, Midcoast boatyards, Compotech, Kenway, Cianbro, roughly 300 defense contractors statewide",
+      "health": "STRONG"
+    },
+    {
+      "index": 6,
+      "name": "Equity capital",
+      "what": "Scaling the company",
+      "institutions": [
+        "MTI equity",
+        "Maine Venture Fund",
+        "Maine Angels",
+        "CEI Ventures",
+        "Gaven Capital",
+        "Corsair Venture Partners",
+        "FAME Seed Capital Tax Credit"
+      ],
+      "institutionsRaw": "MTI equity, Maine Venture Fund, Maine Angels, CEI Ventures, Gaven Capital, Corsair Venture Partners, FAME Seed Capital Tax Credit",
+      "health": "LIMITED"
+    },
+    {
+      "index": 7,
+      "name": "Mission partner",
+      "what": "Getting to a program",
+      "institutions": [
+        "No in-state acquisition authority. NAVSEA via SUPSHIP Bath",
+        "PNSY",
+        "Marine Corps Systems Command AMOC",
+        "ONR",
+        "DIU"
+      ],
+      "institutionsRaw": "No in-state acquisition authority. NAVSEA via SUPSHIP Bath, PNSY, Marine Corps Systems Command AMOC, ONR, DIU",
+      "health": "LIMITED"
+    }
+  ],
+  "rails": [
+    {
+      "from": 1,
+      "to": 2,
+      "broken": false
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "broken": false
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "broken": false
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "broken": false
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "broken": true
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "broken": true
+    }
+  ],
+  "constraints": [
+    {
+      "type": "callout",
+      "label": "MAINE CONSTRAINT · STAGE 6",
+      "scheme": "red",
+      "classified": true,
+      "paragraphs": [
+        {
+          "runs": [
+            {
+              "t": "text",
+              "v": "Maine Venture Fund's typical position is roughly $400,000 built over time, two orders of magnitude below what a maritime autonomy or advanced manufacturing company needs to reach a program of record."
+            }
+          ]
+        },
+        {
+          "runs": [
+            {
+              "t": "text",
+              "v": "Private venture capital does exist in the state. Gaven Capital lists defense and space among three stated investment areas, though its named portfolio is consumer marketplaces and platforms and the defense exposure it displays is a SpaceX logo. Corsair Venture Partners is an early-stage firm based in Portland backing founders across New England. Neither shows a defense hardware track record."
+            }
+          ]
+        },
+        {
+          "runs": [
+            {
+              "t": "text",
+              "v": "So the break is narrower than saying Maine has no venture capital. Maine has early-stage venture capital and no defense hardware venture capital. No firm in the state has led a Series A into a hardware-heavy, long-sales-cycle defense company, and that is the sentence the formation argument rests on."
+            }
+          ]
+        }
+      ],
+      "line": 62
+    },
+    {
+      "type": "callout",
+      "label": "MAINE CONSTRAINT · STAGE 7",
+      "scheme": "red",
+      "classified": true,
+      "paragraphs": [
+        {
+          "runs": [
+            {
+              "t": "text",
+              "v": "There is no DIU office, no OnRamp Hub, and no NSIN physical presence within 100 miles of Brunswick Landing. The nearest NSIN activity is in Boston. Neither Maine nor New Hampshire holds a Defense Manufacturing Community designation. A Maine company must build its customer relationship out of state from day one."
+            }
+          ]
+        }
+      ],
+      "line": 65
+    }
+  ],
+  "intro": [
+    {
+      "type": "para",
+      "runs": [
+        {
+          "t": "text",
+          "v": "Seven stages from research origin to a program of record. Maine's chain is complete and in several places strong through stage five. It breaks at stages six and seven."
+        }
+      ],
+      "line": 47
+    }
+  ]
+}
