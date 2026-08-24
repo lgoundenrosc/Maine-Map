@@ -242,7 +242,15 @@
         var matches = active.category === 'all' ||
           t.items.some(function (x) { return x.category === active.category; });
         var cls = 'pt cat-' + cat + (matches ? '' : ' dim') + (active.selected === t.town ? ' sel' : '');
+        /* An invisible hit circle. The painted dot runs from 3 to 8.5 units in
+           a 400 unit viewBox, which is a small target for a mouse and a very
+           small one for a finger. */
         var kids = [
+          svgEl('circle', {
+            class: 'hit',
+            cx: px(t.lng).toFixed(1), cy: py(t.lat).toFixed(1),
+            r: Math.max(t.r + 4, 9).toFixed(1)
+          }),
           svgEl('circle', { cx: px(t.lng).toFixed(1), cy: py(t.lat).toFixed(1), r: t.r.toFixed(1) }),
           svgEl('title', null, [t.town + ', ' + t.items.length + (t.items.length === 1 ? ' entity' : ' entities')])
         ];

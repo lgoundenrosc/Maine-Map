@@ -672,6 +672,9 @@ table.data td.chipcell { white-space: nowrap; }
 
 .pt { cursor: pointer; }
 .pt circle { stroke: #fff; stroke-width: 1.4; }
+/* Transparent, and still hit-tested because it is filled rather than none. */
+.pt circle.hit { fill: transparent; stroke: none; }
+.pt:hover circle.hit { fill: rgba(22, 35, 58, 0.07); }
 .pt.cat-anchor      circle { fill: var(--red); }
 .pt.cat-test        circle { fill: var(--navy-2); }
 .pt.cat-company     circle { fill: var(--rust); }
@@ -682,8 +685,11 @@ table.data td.chipcell { white-space: nowrap; }
   font-family: var(--mono);
   font-size: 6.4px;
   fill: var(--ink-2);
-  pointer-events: none;
+  /* The label is part of the target, so a reader can click the name. */
+  pointer-events: auto;
 }
+.pt:hover text { fill: var(--ink); font-weight: 600; }
+.pt.sel text { fill: var(--ink); font-weight: 700; }
 
 .geo-note {
   font-family: var(--mono);
