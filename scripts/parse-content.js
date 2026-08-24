@@ -272,6 +272,24 @@ function walk(sections, fn) {
 /* ------------------------------------------------------------------ */
 /* Formation chain, from the section 2 table.                          */
 /* ------------------------------------------------------------------ */
+
+/*
+ * Split a comma list without cutting inside parentheses. The stage 3 cell
+ * reads "MTI (TechStart, Seed, Development Loans, MTAF), SBIR and STTR, ..."
+ * and a naive split turns one institution into four fragments.
+ */
+function splitTopLevel(text) {
+  const out = [];
+  let depth = 0, buf = '';
+  for (const ch of text) {
+    if (ch === '(') depth++;
+    else if (ch === ')') depth = Math.max(0, depth - 1);
+    if (ch === ',' && depth === 0) { out.push(buf.trim()); buf = ''; continue; }
+    buf += ch;
+  }
+  if (buf.trim()) out.push(buf.trim());
+  return out.filter(Boolean);
+}
 function buildChain(sections) {
   const s2 = sections.find(s => s.num === '2');
   const table = s2.blocks.find(b => b.type === 'table');
@@ -282,7 +300,7 @@ function buildChain(sections) {
       index: m ? Number(m[1]) : null,
       name: m ? m[2] : label,
       what: cells[1].raw,
-      institutions: cells[2].raw.split(/,\s*/).map(x => x.trim()).filter(Boolean),
+      institutions: splitTopLevel(cells[2].raw),
       institutionsRaw: cells[2].raw,
       health: cells[3].raw.trim()
     };

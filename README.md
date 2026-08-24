@@ -1,114 +1,132 @@
 # Maine Defense Innovation Ecosystem, VC Landscape Map
 
-Third in the Rosc VC Landscape Map series, after US SOCOM (June 2026) and US Space Force (May 2026).
-Internal Rosc Capital document, August 2026.
+Internal Rosc Capital document, August 2026. A supply-side landscape analysis of Maine's defense
+innovation ecosystem.
 
-Unlike the prior two maps, which are demand-side documents built around an acquisition chain, this one
-is the supply-side inverse. Maine holds no acquisition authority, so the spine is a formation chain
-that runs from research origin to mission partner, and it visibly breaks at stages 6 and 7.
+The structural fact that shapes the interface: Maine holds no acquisition authority, so no customer
+for any of this sits in the state. The spine is a seven-stage formation chain running from research
+origin to a program of record, and the analytical payload is where that chain breaks. It breaks at
+stages 6 and 7, and the diagram says so with broken red rails.
+
+This document reads standalone. It carries no cross-references to the other maps in the series.
+
+## The three rules this build follows
+
+**The content is not changed.** `content/maine_map_content_v3.md` is the source of truth. The build
+renders it. No sentence is rewritten, no apparent inconsistency is fixed, no duplicated entry is
+merged, and no conflicting figure is resolved. `scripts/verify-fidelity.js` proves it by rebuilding
+the markdown out of the emitted JSON and diffing against the source.
+
+**No contact information is invented.** Every institutional web address and every entry that reads
+"contact not confirmed" comes from the source. `scripts/audit.js` scans the rendered page for email
+addresses, phone numbers and domains, and fails if any of them is absent from the source.
+
+**Every confidence marker survives.** The source carries 16 inline markers in square brackets, plus
+34 values in a Confidence column. The parser lifts each inline marker out of the character stream
+into its own run so the interface can render it as a chip in the position it occupied. Nothing is
+dropped and nothing is upgraded.
 
 ## Running it
 
-There is no build step and no dependency to install. Open `index.html` in a browser, from disk or from
-a static host. Every path is relative and nothing is fetched at runtime, so the document works offline
-and on GitHub Pages without configuration.
+No build step, no dependency, no network. Open `index.html`, from disk or from a static host.
 
 ```
-python3 -m http.server 8000     # or just open index.html directly
+python3 -m http.server 8000     # or open index.html directly
 ```
 
-## Why plain HTML, CSS and JS
+## Regenerating the data after a v4 lands
 
-The spec allows React with Vite or plain HTML. Plain won because a bundler adds a build artifact and a
-module loader for no gain here. The data is static, there are no runtime dependencies, and a Vite build
-emits ES modules that a browser refuses to load over `file://`, which would break the offline
-requirement. Classic scripts assigning into a `window.RoscData` namespace load everywhere.
+Drop the new markdown into `content/`, point `SRC` in the parser at it, then:
+
+```
+node scripts/parse-content.js     # emits data/*.json and data/bundle.js
+node scripts/verify-fidelity.js   # round-trips the JSON back to markdown
+node scripts/audit.js             # renders the page and checks the two content rules
+```
+
+The parser validates against an expected inventory and exits non-zero on drift. For v3 that is
+12 sections, 9 capability clusters, 43 callouts and 15 tables. Update `EXPECTED` when the inventory
+legitimately changes, and treat a failure as a parse problem until proven otherwise.
+
+Components read the generated data and never carry content, so a revision usually touches no UI code.
 
 ## Layout
 
 ```
-index.html            document shell, loads data before the application
-css/styles.css        design system, derived from the SOCOM map
-css/print.css         @media print, see below
-data/                 all content, one module per section of the source brief
-js/components.js      chips, callouts, inset boxes, accordion cards
-js/views.js           chain diagram and geographic map
-js/app.js             tabs, filters, search, detail panel, section panels
+content/maine_map_content_v3.md   source of truth, committed alongside the generated JSON
+scripts/parse-content.js          markdown to data/*.json, with inventory validation
+scripts/geo-coordinates.js        derived coordinates and the schematic Maine outline
+scripts/verify-fidelity.js        rebuilds the markdown from JSON and diffs it
+scripts/audit.js                  renders the page and checks prose and contact rules
+data/*.json                       generated, inspectable
+data/bundle.js                    generated, the same JSON as a classic script for file:// loading
+css/styles.css                    design system
+css/print.css                     @media print
+js/render.js                      chips, callouts, tables, blocks
+js/views.js                       formation chain and geographic plot
+js/app.js                         masthead, tabs, panels, cluster filters
 ```
 
-No prose lives in a component. Every string a reader sees comes from `data/`.
+`data/` holds both JSON and a `bundle.js` wrapper. The JSON is the artifact worth inspecting. The
+wrapper exists because a `fetch()` of a local JSON file is blocked under `file://`, and the document
+has to open offline.
 
-### Record shape
+## The chip system
 
-```js
-{
-  id, name,
-  location: { town, lat, lng, precision: 'approximate' | 'exact' },
-  category,
-  confidence: 'verified' | 'unverified' | 'stale' | 'gap',
-  asOf: 'YYYY-MM',
-  sourceIds: ['src-01'],
-  note
-}
-```
+| Family | Values |
+|---|---|
+| Cluster heat | `HOT` `OPEN` `WATCH` |
+| Cluster depth | `DEEP` `MODERATE` `THIN` |
+| Chain health | `STRONG` `ADEQUATE` `LIMITED` |
+| Openness | `HIGH` `MED` `LOW` |
+| Accreditation | `ISO 17025` `NOT CONFIRMED` `RESTRICTED` `PFAS SITE` |
+| Confidence | `VERIFIED` `UNVERIFIED` `COMPANY-SUPPLIED` `NOT CONFIRMED` |
 
-`confidence` drives rendering. `verified` renders no badge, `unverified` renders an amber badge,
-`stale` renders a grey italic badge carrying the source year, and `gap` renders a grey empty state
-where the SOCOM map would show a contact string. Nothing is silently upgraded.
+`VERIFIED` carries no colour by design. `NOT CONFIRMED` renders as a dashed grey empty state.
 
-## Two rules this build follows without exception
+The strongest red in the palette is reserved for the contaminated marker, which the source writes as
+`PFAS SITE`. It marks the Brunswick Landing hangars, which are the state's test asset and its
+environmental liability at once, and it renders on the same screen as the 650,000 square feet of
+hangar space counted as a test asset.
 
-**No invented contact information.** The only contact strings anywhere in the repository are the ones
-supplied in the source brief: `mainetechnology.org`, `brunswicklanding.us`, `umaine.edu`,
-`roux.northeastern.edu`, `maineapex.com`, `centralmaine.org`, `maineventurefund.com`, `bigelow.org`,
-`diu.mil`, `BuildSubmarines.com`, `statsamerica.org/innovation2`, and the Maine SBDC number
-`207-780-4420` which is tagged unverified because it came from a secondary source. Every other entry
-point renders the empty state and appears in the verification gaps table. There is an audit script
-note at the bottom of this file for re-checking after any edit.
+## The geographic view
 
-**Every fact carries a confidence tag.** Where sources conflict, the range renders and the conflict is
-stated rather than resolved. BIW headcount, ASCC staff and MVF capitalisation are the three live
-examples.
+The source carries no coordinates. Every coordinate in `scripts/geo-coordinates.js` was derived from
+a place name that appears in the text, ships tagged `precision: "approximate"`, and a disclaimer
+renders next to the map. County-level points, the one offshore point, and out-of-state assets are
+labelled as such in the side panel. Out-of-state assets are listed and never drawn.
+
+Locations come from a Location column wherever the source has one. Where a location came from prose
+instead, the entry records the sentence it was read out of, and that sentence renders under the entity
+in the side panel.
+
+A point-in-polygon check confirms every derived Maine town falls inside the outline. The outline is
+schematic: the coast is a smooth seaward envelope, islands are omitted, and Penobscot Bay is not cut
+in.
 
 ## Print
 
-`css/print.css` expands every accordion, renders all nine tab panels in order with a page break
-between them, collapses the tabs, filters, search and detail panel, keeps background colours so the
-chips stay legible, and scales the chain diagram to page width with `zoom` rather than `transform` so
-it does not reserve unscaled height. Exporting to PDF at Letter portrait produces roughly 45 pages.
+`css/print.css` prints all twelve panels in section order with a page break between sections, drops
+the tabs, filters and view toggles, opens every accordion, expands the stage nodes, and keeps both
+the chain and the geographic view. Background colours are forced on so the confidence system stays
+legible. The chain is scaled with `zoom` rather than `transform`, because `transform` leaves the
+unscaled height reserved and blows a page. Letter portrait exports to roughly 67 pages.
 
 ## Access control, needs a decision
 
-The two reference sites are password gated. **No password is stored in this repository and none should
-be added.** Raising this rather than implementing it silently:
+**No password is stored in this repository and none should be added.**
 
-A client-side password gate on GitHub Pages is obfuscation, not access control. The check runs in the
-visitor's browser, which means the gate and the entire document are already on the visitor's machine
-before the prompt appears. Anyone who can load the page can read the source. This build contains named
-individuals at a federal installation and a partly unverified contact list, so that distinction is not
-academic.
+A client-side password gate on GitHub Pages is obfuscation rather than access control. The check runs
+in the visitor's browser, which means the gate and the whole document are already on the visitor's
+machine before the prompt appears. This build names individuals at a federal installation and carries
+a partly unverified contact list, so the distinction is not academic.
 
-If real access control is wanted, the options are:
+Real options, all of which check on the server:
 
-1. A private repository with Pages enabled, which requires a paid GitHub plan.
+1. A private repository with Pages enabled, which needs a paid GitHub plan.
 2. Cloudflare Access in front of the site.
 3. Netlify password protection.
 
-All three check on the server. If a client-side gate is chosen anyway as a speed bump, take the value
-from an environment variable at build time, never from a committed file. `.gitignore` already covers
-`.env` and local credential files, and was committed before any content.
-
-## Known deviations from the brief
-
-The brief bans em dashes in prose. The document title, `Maine Defense Innovation Ecosystem — VC
-Landscape Map`, is specified verbatim with an em dash and is treated as a proper name rather than
-prose, so it is preserved in the page title, the header and the running header. Every other em dash is
-gone, and there are no semicolons in prose anywhere. Rewriting the document's own name seemed the
-worse of the two options, but it is a one-line change in `data/meta.js` if the call goes the other way.
-
-## Re-auditing after edits
-
-The two checks worth repeating before any publish are a scan of every string literal in `data/` and
-`js/` for em dashes and prose semicolons, and a scan of the same strings for email addresses, phone
-numbers and domains that are not on the allowlist above. Both are simple regex passes over the string
-literals in `data/*.js`, `js/*.js` and `index.html`.
+If a client-side gate is wanted anyway as a speed bump, take the value from an environment variable at
+build time. `.gitignore` covers `.env` and local credential files and was committed before any
+content.
