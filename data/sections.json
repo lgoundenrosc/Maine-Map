@@ -4174,7 +4174,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "mainetechnology.org",
+            "contact": null,
             "line": 574
           },
           {
@@ -4403,7 +4403,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "brunswicklanding.us",
+            "contact": null,
             "line": 593
           },
           {
@@ -4431,7 +4431,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "composites.umaine.edu",
+            "contact": null,
             "line": 599
           },
           {
@@ -4474,7 +4474,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "umaine.edu",
+            "contact": null,
             "line": 609
           },
           {
@@ -4507,7 +4507,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "umaine.edu/pdc",
+            "contact": null,
             "line": 617
           },
           {
@@ -4530,7 +4530,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "umaine.edu/arctic",
+            "contact": null,
             "line": 623
           },
           {
@@ -4577,7 +4577,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "roux.northeastern.edu",
+            "contact": null,
             "line": 631
           },
           {
@@ -4600,7 +4600,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "newenglandoceancluster.com",
+            "contact": null,
             "line": 637
           },
           {
@@ -4643,7 +4643,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "startupmaine.org",
+            "contact": null,
             "line": 647
           },
           {
@@ -4676,7 +4676,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "maineapex.com",
+            "contact": null,
             "line": 655
           },
           {
@@ -4699,7 +4699,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "maineports.com",
+            "contact": null,
             "line": 661
           },
           {
@@ -4737,7 +4737,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "centralmaine.org",
+            "contact": null,
             "line": 669
           },
           {
@@ -4770,7 +4770,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "maineventurefund.com",
+            "contact": null,
             "line": 677
           },
           {
@@ -4818,7 +4818,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "corsair.vc",
+            "contact": null,
             "line": 687
           },
           {
@@ -4856,7 +4856,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "gavencapital.com",
+            "contact": null,
             "line": 695
           },
           {
@@ -4921,7 +4921,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "bigelow.org",
+            "contact": null,
             "line": 708
           },
           {
@@ -4959,7 +4959,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "mainedefenseindustryalliance.com",
+            "contact": null,
             "line": 716
           },
           {
@@ -5012,7 +5012,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "mitc.com",
+            "contact": null,
             "line": 728
           },
           {
@@ -5045,7 +5045,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "contact not confirmed",
+            "contact": null,
             "line": 736
           },
           {
@@ -5083,7 +5083,7 @@
           {
             "type": "openness",
             "level": "HIGH",
-            "contact": "mainemaritime.edu",
+            "contact": null,
             "line": 744
           },
           {
@@ -5202,7 +5202,7 @@
                 "runs": [
                   {
                     "t": "text",
-                    "v": "The talent constraint in section 9 is the binding one for any Maine hardware company, and this building is the state's answer to it. A portfolio company hiring machinists, welders, or pipefitters in the midcoast now has a pipeline with a named operator rather than a competition with BIW for the same people."
+                    "v": "The talent constraint is the binding one for any Maine hardware company, and this building is the state's answer to it. A portfolio company hiring machinists, welders, or pipefitters in the midcoast now has a pipeline with a named operator rather than a competition with BIW for the same people."
                   }
                 ]
               },
@@ -5235,7 +5235,7 @@
           {
             "type": "openness",
             "level": "MED",
-            "contact": "contact not confirmed",
+            "contact": null,
             "line": 775
           },
           {
@@ -5273,7 +5273,7 @@
           {
             "type": "openness",
             "level": "LOW",
-            "contact": "contact not confirmed",
+            "contact": null,
             "line": 783
           },
           {
@@ -6767,26 +6767,6 @@
                     }
                   ]
                 }
-              ],
-              [
-                {
-                  "raw": "Section 9 carries the limits",
-                  "runs": [
-                    {
-                      "t": "text",
-                      "v": "Section 9 carries the limits"
-                    }
-                  ]
-                },
-                {
-                  "raw": "What Maine cannot support is listed in one place rather than distributed through the document.",
-                  "runs": [
-                    {
-                      "t": "text",
-                      "v": "What Maine cannot support is listed in one place rather than distributed through the document."
-                    }
-                  ]
-                }
               ]
             ],
             "line": 945
@@ -7246,11 +7226,11 @@
                   ]
                 },
                 {
-                  "raw": "To be developed. See section 9.3.",
+                  "raw": "To be developed.",
                   "runs": [
                     {
                       "t": "text",
-                      "v": "To be developed. See section 9.3."
+                      "v": "To be developed."
                     }
                   ]
                 }
@@ -9884,7 +9864,7 @@
                 "runs": [
                   {
                     "t": "text",
-                    "v": "August 2026. This document is built to be revised. Section 9.3 is the working list of what must be confirmed before the next version, and several areas of the Maine market noted there have not yet been surveyed."
+                    "v": "August 2026. This document is built to be revised."
                   }
                 ]
               }

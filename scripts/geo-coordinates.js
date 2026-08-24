@@ -19,7 +19,7 @@ const PLACES = {
   'Augusta':            { lat: 44.311, lng: -69.780 },
   'Bangor':             { lat: 44.801, lng: -68.778 },
   'Bar Harbor':         { lat: 44.388, lng: -68.204 },
-  'Bath':               { lat: 43.911, lng: -69.813 },
+  'Bath':               { lat: 43.911, lng: -69.821 },
   'Belfast':            { lat: 44.426, lng: -69.007 },
   'Bethel':             { lat: 44.404, lng: -70.791 },
   'Biddeford':          { lat: 43.493, lng: -70.453 },
@@ -34,7 +34,7 @@ const PLACES = {
   'Ellsworth':          { lat: 44.544, lng: -68.419 },
   'Gorham':             { lat: 43.679, lng: -70.444 },
   'Hanover NH':         { lat: 43.702, lng: -72.289, outsideMaine: true },
-  'Kittery':            { lat: 43.089, lng: -70.744 },
+  'Kittery':            { lat: 43.090, lng: -70.737 },
   'Lewiston':           { lat: 44.101, lng: -70.215 },
   'Limestone':          { lat: 46.909, lng: -67.826 },
   'Machias':            { lat: 44.715, lng: -67.461 },
@@ -55,8 +55,8 @@ const PLACES = {
   'Waterboro':          { lat: 43.536, lng: -70.720 },
   'Waterville':         { lat: 44.552, lng: -69.632 },
   'Westbrook':          { lat: 43.677, lng: -70.371 },
-  'Yarmouth':           { lat: 43.801, lng: -70.187 },
-  'Aroostook County':   { lat: 46.600, lng: -68.450, countyLevel: true },
+  'Yarmouth':           { lat: 43.796, lng: -70.187 },
+  'Aroostook County':   { lat: 46.720, lng: -68.600, countyLevel: true },
   'Coastal':            { lat: 43.530, lng: -69.300, offshore: true }
 };
 
@@ -67,27 +67,46 @@ const PLACES = {
  * handful of segments. It exists to give the points a recognisable shape.
  */
 const OUTLINE = [
-  /* South coast, running northeast from Kittery. Drawn as a smooth seaward
-     envelope rather than a true coastline, so that every coastal town named
-     in the source falls inside the shape. Penobscot Bay, Casco Bay and the
-     peninsulas are not cut in. */
-  [-70.68, 43.06], [-70.55, 43.24], [-70.36, 43.40], [-70.20, 43.50],
-  [-70.08, 43.58], [-69.96, 43.64], [-69.82, 43.66], [-69.70, 43.70],
-  [-69.55, 43.72], [-69.40, 43.74], [-69.25, 43.80], [-69.05, 43.90],
-  [-68.90, 44.05], [-68.60, 44.10], [-68.35, 44.15], [-68.15, 44.22],
-  [-67.95, 44.32], [-67.75, 44.42], [-67.55, 44.48], [-67.35, 44.58],
-  [-67.10, 44.72], [-66.95, 44.80], [-66.92, 44.92],
-  /* New Brunswick border, up the St Croix and then due north. */
-  [-67.05, 45.05], [-67.15, 45.15], [-67.30, 45.20], [-67.45, 45.50],
+  /* South coast, Kittery to Quoddy Head, running northeast.
+     Generalised but no longer a smooth envelope: Casco Bay, the Kennebec,
+     the Damariscotta and Medomak rivers, Penobscot Bay and Mount Desert are
+     all cut in, so a town on the water reads as a town on the water. Islands
+     other than Mount Desert are omitted and Mount Desert is joined to the
+     mainland. */
+  [-70.72, 43.05], [-70.62, 43.17], [-70.58, 43.28], [-70.47, 43.36],
+  [-70.38, 43.45], [-70.37, 43.52], [-70.30, 43.56], [-70.20, 43.57],
+  /* Casco Bay */
+  [-70.23, 43.65], [-70.19, 43.72], [-70.14, 43.79], [-70.08, 43.83],
+  [-70.02, 43.78], [-69.99, 43.70], [-69.94, 43.80], [-69.87, 43.75],
+  /* Kennebec, up past Bath and back down */
+  [-69.82, 43.84], [-69.79, 43.95], [-69.74, 43.86], [-69.68, 43.83],
+  /* Boothbay, Damariscotta and Medomak */
+  [-69.66, 43.79], [-69.64, 43.85], [-69.61, 43.79], [-69.57, 43.87],
+  [-69.53, 44.05], [-69.47, 43.90], [-69.40, 44.12], [-69.33, 43.95],
+  [-69.30, 43.93], [-69.26, 43.93],
+  /* Penobscot Bay, up the west shore past Rockland and Belfast to Bucksport,
+     then back down the east shore around Castine */
+  [-69.15, 44.00], [-69.06, 44.10], [-69.03, 44.20], [-68.98, 44.38],
+  [-68.97, 44.43], [-68.88, 44.47], [-68.83, 44.55], [-68.80, 44.45],
+  [-68.82, 44.40], [-68.75, 44.35],
+  /* Blue Hill Bay and Mount Desert */
+  [-68.60, 44.40], [-68.53, 44.30], [-68.40, 44.28], [-68.30, 44.22],
+  [-68.15, 44.28], [-68.12, 44.40],
+  /* Down East */
+  [-68.00, 44.45], [-67.85, 44.48], [-67.70, 44.50], [-67.60, 44.55],
+  [-67.45, 44.62], [-67.40, 44.65], [-67.30, 44.68], [-67.15, 44.75],
+  [-66.98, 44.82], [-66.95, 44.90],
+  /* New Brunswick border, up the St Croix and then due north */
+  [-67.02, 45.00], [-67.15, 45.15], [-67.30, 45.20], [-67.45, 45.50],
   [-67.55, 45.62], [-67.75, 45.70], [-67.78, 46.00], [-67.79, 46.50],
   [-67.79, 47.06],
-  /* The St John valley across the top. */
+  /* The St John valley across the top */
   [-68.23, 47.35], [-68.40, 47.28], [-68.90, 47.18], [-69.05, 47.42],
   [-69.24, 47.46],
-  /* Quebec border, southwest along the height of land. */
+  /* Quebec border, southwest along the height of land */
   [-69.99, 46.70], [-70.31, 45.97], [-70.72, 45.51], [-70.84, 45.29],
   [-71.08, 45.31],
-  /* New Hampshire border, south to the sea. */
+  /* New Hampshire border, south to the sea */
   [-71.05, 45.00], [-70.96, 44.81], [-70.83, 44.50], [-70.98, 44.30],
   [-71.03, 44.10], [-70.97, 43.79], [-70.82, 43.58], [-70.96, 43.42],
   [-70.86, 43.22], [-70.80, 43.04]

@@ -168,14 +168,45 @@
         el('tr', null, t.headers.map(function (h) { return el('th', { text: h }); }))
       ]));
     }
-    kids.push(el('tbody', null, t.rows.map(function (cells) {
+    var rows = t.rows.map(function (cells) {
       return el('tr', null, cells.map(function (c, i) {
         return cellFor(t.headerless ? '' : t.headers[i], c, i === 0);
       }));
-    })));
+    });
+    kids.push(el('tbody', null, rows));
     var wrap = el('div', { class: 'tablewrap' }, [el('table', { class: 'data' }, kids)]);
-    if (!caption) return wrap;
-    return el('div', null, [el('p', { class: 'table-caption', text: caption }), wrap]);
+
+    var out = [];
+    if (caption) out.push(el('p', { class: 'table-caption', text: caption }));
+
+    /* A long reference table gets a filter, so a glossary or a name list can
+       be narrowed instead of scrolled. */
+    if (rows.length > 12) {
+      var haystacks = t.rows.map(function (cells) {
+        return cells.map(function (c) { return c.raw; }).join(' ').toLowerCase();
+      });
+      var count = el('span', { class: 'fcount' });
+      var input = el('input', {
+        class: 'tfilter', type: 'search',
+        placeholder: 'Filter ' + rows.length + ' rows',
+        'aria-label': 'Filter table rows',
+        oninput: function () {
+          var q = input.value.trim().toLowerCase();
+          var shown = 0;
+          rows.forEach(function (tr, i) {
+            var hit = !q || haystacks[i].indexOf(q) >= 0;
+            tr.hidden = !hit;
+            if (hit) shown++;
+          });
+          count.textContent = q ? shown + ' of ' + rows.length + ' rows' : rows.length + ' rows';
+        }
+      });
+      count.textContent = rows.length + ' rows';
+      out.push(el('div', { class: 'tbar' }, [input, count]));
+    }
+
+    out.push(wrap);
+    return out.length === 1 ? out[0] : el('div', null, out);
   }
 
   /* ---------------------------------------------------------------- */
@@ -198,7 +229,7 @@
       case 'openness':
         return el('div', { class: 'chiprow' }, [
           opennessChip(b.level),
-          el('span', { class: 'metastrip', style: 'margin:0' }, [el('span', { text: b.contact })])
+          b.contact ? el('span', { class: 'metastrip', style: 'margin:0' }, [el('span', { text: b.contact })]) : null
         ]);
 
       case 'callout':
@@ -221,22 +252,61 @@
     return frag;
   }
 
-  function entry(e) {
-    var wrap = el('div', { class: 'card' });
-    wrap.appendChild(el('h4', { class: 'entry-title', text: e.title }));
-    wrap.appendChild(blocks(e.blocks));
-    return wrap;
+  /*
+   * A collapsible card. The headline, its chips and a chevron stay visible,
+   * and the body opens on click. Chips are lifted out of the body into the
+   * summary so a collapsed card still carries its rating.
+   */
+  var LIFT = { openness: true, rating: true };
+
+  function collapsible(title, blockList, opts) {
+    opts = opts || {};
+    var lifted = [];
+    var rest = [];
+    (blockList || []).forEach(function (b) {
+      if (LIFT[b.type] && !opts.keepChips) lifted.push(b);
+      else rest.push(b);
+    });
+
+    var chips = [];
+    lifted.forEach(function (b) {
+      if (b.type === 'openness') chips.push(opennessChip(b.level));
+      if (b.type === 'rating') { chips.push(heatChip(b.heat)); chips.push(depthChip(b.depth)); }
+    });
+    (opts.extraChips || []).forEach(function (c) { chips.push(c); });
+
+    var head = el('span', { class: 'sum-head' }, [
+      opts.num ? el('span', { class: 'sum-num', text: opts.num }) : null,
+      el('span', { class: 'sum-title', text: title })
+    ]);
+
+    var summary = el('summary', null, [
+      head,
+      el('span', { class: 'sum-chips' }, chips),
+      el('span', { class: 'chev', 'aria-hidden': 'true' })
+    ]);
+
+    var body = el('div', { class: 'card-body' });
+    body.appendChild(blocks(rest));
+    (opts.after || []).forEach(function (n) { body.appendChild(n); });
+
+    return el('details', {
+      class: 'card fold' + (opts.level ? ' fold-' + opts.level : ''),
+      id: opts.id || null,
+      open: !!opts.open
+    }, [summary, body]);
   }
 
-  function subsection(sub, opts) {
-    var frag = document.createDocumentFragment();
-    var h = el('h3', { class: 'sub-title', id: sub.id });
-    if (sub.num) h.appendChild(el('span', { class: 'n', text: sub.num }));
-    h.appendChild(document.createTextNode(sub.title));
-    frag.appendChild(h);
-    frag.appendChild(blocks(sub.blocks));
-    (sub.entries || []).forEach(function (e) { frag.appendChild(entry(e)); });
-    return frag;
+  function entry(e) {
+    return collapsible(e.title, e.blocks, { id: e.id, level: 'entry' });
+  }
+
+  /* A subsection folds too, with its own entries nested inside it. */
+  function subsection(sub) {
+    var inner = (sub.entries || []).map(entry);
+    return collapsible(sub.title, sub.blocks, {
+      id: sub.id, num: sub.num, level: 'sub', after: inner
+    });
   }
 
   function section(s, opts) {
@@ -252,7 +322,7 @@
   }
 
   global.R = {
-    el: el, svgEl: svgEl, chip: chip,
+    el: el, svgEl: svgEl, chip: chip, collapsible: collapsible,
     heatChip: heatChip, depthChip: depthChip, healthChip: healthChip,
     opennessChip: opennessChip, accreditationChip: accreditationChip,
     confidenceChip: confidenceChip,

@@ -259,6 +259,121 @@ p.prose {
 }
 .card-head h3, .card-head h4 { margin: 0; }
 
+/* ---------------------------------------------------------------- */
+/* Collapsible cards                                                 */
+/* ---------------------------------------------------------------- */
+
+details.fold {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  margin: 0 0 8px;
+  padding: 0;
+  overflow: hidden;
+}
+details.fold > summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+  padding: 13px 16px;
+  border-left: 4px solid var(--navy-3);
+}
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary:hover { background: var(--rust-pale); }
+details.fold > summary:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: -2px;
+}
+details.fold[open] > summary {
+  border-bottom: 1px solid var(--rule-2);
+  background: #fbfbfc;
+}
+details.fold.fold-sub > summary { border-left-color: var(--rust); }
+details.fold.fold-sub > summary .sum-title { font-size: 16px; }
+
+.sum-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.sum-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--rust);
+  flex: 0 0 auto;
+}
+.sum-title {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--navy-2);
+  line-height: 1.35;
+}
+.sum-chips { display: flex; flex-wrap: wrap; gap: 6px; flex: 0 0 auto; }
+
+.chev {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--grey-2);
+  border-bottom: 2px solid var(--grey-2);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.15s ease;
+}
+details.fold[open] > summary .chev {
+  transform: rotate(225deg) translate(-2px, -2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .chev { transition: none; }
+}
+
+.card-body { padding: 15px 18px 16px; }
+.card-body > :last-child { margin-bottom: 0; }
+/* Nested entries inside a folded subsection sit flush and quieter. */
+.card-body details.fold { border-color: var(--rule-2); }
+
+.foldbar { display: flex; gap: 6px; align-items: center; margin: 0 0 14px; }
+
+/* ---------------------------------------------------------------- */
+/* Landing page navigation                                           */
+/* ---------------------------------------------------------------- */
+
+.navgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 8px;
+  margin: 0 0 22px;
+}
+.navcard {
+  appearance: none;
+  text-align: left;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--navy-3);
+  border-radius: 7px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font: inherit;
+  color: var(--ink);
+}
+.navcard:hover { border-color: var(--grey-2); border-left-color: var(--rust); background: var(--rust-pale); }
+.navcard:focus-visible { outline: 2px solid var(--rust); outline-offset: 2px; }
+.navnum {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--rust);
+  flex: 0 0 auto;
+}
+.navtitle { font-weight: 600; font-size: 13.5px; line-height: 1.35; }
+
 details.acc { border-top: 1px solid var(--rule-2); }
 details.acc > summary {
   cursor: pointer;
@@ -463,6 +578,21 @@ table.data td.mono,
 table.data td.first { font-family: var(--mono); font-size: 12.5px; }
 table.data td.first { font-weight: 600; color: var(--navy-2); white-space: nowrap; }
 table.data td.chipcell { white-space: nowrap; }
+
+.tbar { display: flex; align-items: center; gap: 12px; margin: 0 0 8px; }
+.tfilter {
+  appearance: none;
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 7px 11px;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  min-width: 240px;
+}
+.tfilter:focus-visible { outline: 2px solid var(--rust); outline-offset: -1px; border-color: var(--rust); }
+.tbar .fcount { margin-left: 0; }
 
 .table-caption {
   font-family: var(--mono);
@@ -672,13 +802,15 @@ table.data td.chipcell { white-space: nowrap; }
 
 .pt { cursor: pointer; }
 .pt circle { stroke: #fff; stroke-width: 1.4; }
-/* Transparent, and still hit-tested because it is filled rather than none. */
-.pt circle.hit { fill: transparent; stroke: none; }
-.pt:hover circle.hit { fill: rgba(22, 35, 58, 0.07); }
 .pt.cat-anchor      circle { fill: var(--red); }
 .pt.cat-test        circle { fill: var(--navy-2); }
 .pt.cat-company     circle { fill: var(--rust); }
 .pt.cat-institution circle { fill: var(--green); }
+/* The hit circle is transparent and still hit-tested, because it is filled
+   rather than none. These sit after the category colours deliberately: the
+   selectors tie on specificity, so order is what decides. */
+.pt circle.hit { fill: transparent; stroke: none; }
+.pt:hover circle.hit { fill: rgba(22, 35, 58, 0.08); }
 .pt.dim { opacity: 0.2; }
 .pt.sel circle { stroke: var(--ink); stroke-width: 2.2; }
 .pt text {

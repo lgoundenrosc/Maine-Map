@@ -32,7 +32,7 @@ const EXPECTED = {
   tables: 15
 };
 
-const { SUBSTITUTIONS, RENDER_EXCLUDE_SECTIONS } = require('./build-config.js');
+const { RENDER_EXCLUDE_SECTIONS, applyDeclared } = require('./build-config.js');
 
 /* ------------------------------------------------------------------ */
 /* Callout label to colour scheme. Brief section 4.3.                  */
@@ -112,7 +112,7 @@ const RE_QUOTE = /^> ?(.*)$/;
 const RE_TABLE = /^\|/;
 const RE_SEPARATOR = /^\|[\s\-:|]+\|$/;
 const RE_RATING = /^\*\*([A-Z]+)\s+DEPTH:\s*([A-Z]+)\*\*$/;
-const RE_OPENNESS = /^(HIGH|MED|LOW)\s{2,}(.+)$/;
+const RE_OPENNESS = /^(HIGH|MED|LOW)(?:\s{2,}(.+))?$/;
 const RE_NUMBERED = /^(\d+(?:\.\d+)?)\.?\s+(.*)$/;
 
 function splitRow(line) {
@@ -144,7 +144,7 @@ function parseBlocks(lines) {
     }
 
     if ((m = line.match(RE_OPENNESS))) {
-      blocks.push({ type: 'openness', level: m[1], contact: m[2].trim(), line: i + 1 });
+      blocks.push({ type: 'openness', level: m[1], contact: m[2] ? m[2].trim() : null, line: i + 1 });
       i++; continue;
     }
 
@@ -531,12 +531,8 @@ const TAB_MARKS = { '4': 'star', '9': 'square' };
 /* ------------------------------------------------------------------ */
 function main() {
   const raw = fs.readFileSync(SRC, 'utf8');
-  let md = raw;
-  const substitutionCounts = SUBSTITUTIONS.map(sub => {
-    const hits = md.split(sub.from).length - 1;
-    md = md.split(sub.from).join(sub.to);
-    return { from: sub.from, to: sub.to, reason: sub.reason, replaced: hits };
-  });
+  const declared = applyDeclared(raw);
+  const md = declared.text;
   const lines = md.split(/\r?\n/);
   const blocks = parseBlocks(lines);
   const sections = buildTree(blocks);
@@ -630,7 +626,7 @@ function main() {
       callouts: countIn([s], 'callout'), tables: countIn([s], 'table'),
       subsections: s.subsections.length, entries: countEntries([s])
     })),
-    substitutions: substitutionCounts,
+    declared: declared.counts,
     renderedCallouts: countIn(rendered, 'callout') + 1,   // the masthead block
     renderedTables: countIn(rendered, 'table') + (contents ? countIn([contents], 'table') : 0),
     renderedSubsections: rendered.reduce((n, s) => n + s.subsections.length, 0),
@@ -696,8 +692,10 @@ function main() {
   console.log('  entries         ' + manifest.entries);
   console.log('  inline markers  ' + manifest.inlineMarkers);
   console.log('  geo points      ' + geo.points.length + ' across ' + geo.derivedCoordinates.length + ' derived coordinates');
-  substitutionCounts.forEach(x => console.log(
-    '  substitution    "' + x.from + '" -> "' + x.to + '"  x' + x.replaced + '  (' + x.reason + ')'));
+  declared.counts.substitutions.forEach(x => console.log(
+    '  substitution    x' + x.replaced + '  ' + x.reason));
+  declared.counts.lineRules.forEach(x => console.log(
+    '  line rule       x' + x.replaced + (x.expected != null ? ' of ' + x.expected : '') + '  ' + x.reason));
   manifest.withheldSections.forEach(x => console.log(
     '  withheld        section ' + x.num + ' ' + x.title +
     '  (' + x.callouts + ' callouts, ' + x.tables + ' table, ' + x.entries + ' entries)  ' + x.reason));

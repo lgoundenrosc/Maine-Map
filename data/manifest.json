@@ -12,14 +12,48 @@
       "entries": 9
     }
   ],
-  "substitutions": [
-    {
-      "from": "Rosc Capital",
-      "to": "Rosc",
-      "reason": "Rosc is the official name, per the document owner",
-      "replaced": 1
-    }
-  ],
+  "declared": {
+    "substitutions": [
+      {
+        "from": "Rosc Capital",
+        "to": "Rosc",
+        "reason": "Rosc is the official name, per the document owner",
+        "replaced": 1
+      },
+      {
+        "from": "| Section 9 carries the limits | What Maine cannot support is listed in one place rather than distributed through the document. |",
+        "to": "",
+        "reason": "section 9 withheld, whole row removed from the 8.1 mechanics table",
+        "replaced": 1
+      },
+      {
+        "from": "To be developed. See section 9.3.",
+        "to": "To be developed.",
+        "reason": "section 9 withheld, cross-reference dropped from the 8.2 routing table",
+        "replaced": 1
+      },
+      {
+        "from": "The talent constraint in section 9 is the binding one",
+        "to": "The talent constraint is the binding one",
+        "reason": "section 9 withheld, cross-reference dropped from the MIWTC VC READ box",
+        "replaced": 1
+      },
+      {
+        "from": " Section 9.3 is the working list of what must be confirmed before the next version, and several areas of the Maine market noted there have not yet been surveyed.",
+        "to": "",
+        "reason": "section 9 withheld, sentence removed from the revision note",
+        "replaced": 1
+      }
+    ],
+    "lineRules": [
+      {
+        "pattern": "^(HIGH|MED|LOW)\\s{2,}.+$",
+        "reason": "contact information removed from the institution playbook, per the document owner",
+        "replaced": 22,
+        "expected": 22
+      }
+    ]
+  },
   "renderedCallouts": 42,
   "renderedTables": 14,
   "renderedSubsections": 23,
@@ -31,8 +65,8 @@
   "inlineMarkers": 16,
   "subsections": 26,
   "entries": 72,
-  "sourceBytes": 124574,
-  "sourceWords": 19081,
+  "sourceBytes": 123739,
+  "sourceWords": 18995,
   "defaultedCalloutLabels": [
     "WHY ONLY TWO ANCHORS",
     "WHY THIS ENTRY MATTERS",

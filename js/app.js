@@ -66,33 +66,12 @@
   /* Panel 2: formation chain with the chain and geographic toggle      */
   /* ---------------------------------------------------------------- */
 
-  /* Both views stay in the DOM and swap with the hidden attribute, so a print
-     run carries the chain and the geographic plot rather than whichever one
-     happened to be on screen. */
   function chainPanel() {
     var s = byNum['2'];
-    var chainHost = el('div', { class: 'view-chain' }, [V.chainDiagram(D.chain)]);
-    var geoHost = el('div', { class: 'view-geo', hidden: true }, [V.geoView(D.geo)]);
-
-    var chainBtn, geoBtn;
-    function paint(mode) {
-      chainHost.hidden = mode !== 'chain';
-      geoHost.hidden = mode !== 'geo';
-      chainBtn.setAttribute('aria-selected', mode === 'chain' ? 'true' : 'false');
-      geoBtn.setAttribute('aria-selected', mode === 'geo' ? 'true' : 'false');
-    }
-
-    chainBtn = el('button', { class: 'fbtn', type: 'button', 'aria-selected': 'true', text: 'Chain view',
-      onclick: function () { paint('chain'); } });
-    geoBtn = el('button', { class: 'fbtn', type: 'button', 'aria-selected': 'false', text: 'Geographic view',
-      onclick: function () { paint('geo'); } });
-
     return el('div', null, [
       sectionHead(s),
       R.blocks(s.blocks.filter(function (b) { return b.type === 'para'; })),
-      el('div', { class: 'viewtoggle' }, [chainBtn, geoBtn]),
-      chainHost,
-      geoHost,
+      V.chainDiagram(D.chain),
       R.blocks(s.blocks.filter(function (b) { return b.type === 'callout'; })),
       el('details', { class: 'acc' }, [
         el('summary', { text: 'Stage table as printed in the source' }),
@@ -123,16 +102,7 @@
     var count = el('span', { class: 'fcount' });
 
     function clusterCard(c) {
-      var card = el('div', { class: 'card' });
-      var head = el('div', { class: 'card-head' }, [
-        el('h3', { class: 'sub-title', style: 'margin:0', id: c.id }, [
-          el('span', { class: 'n', text: c.num }),
-          document.createTextNode(c.title)
-        ]),
-        R.heatChip(c.heat),
-        R.depthChip(c.depth)
-      ]);
-      card.appendChild(head);
+      var card = el('div');
 
       if (state.view === 'all') {
         var sub = subByNum[c.num];
@@ -160,7 +130,12 @@
       if (state.view !== 'all') {
         c.constraints.forEach(function (co) { card.appendChild(R.callout(co)); });
       }
-      return card;
+
+      return R.collapsible(c.title, [], {
+        id: c.id, num: c.num, level: 'sub',
+        extraChips: [R.heatChip(c.heat), R.depthChip(c.depth)],
+        after: [card]
+      });
     }
 
     function paint() {
@@ -209,12 +184,14 @@
 
     paint();
 
-    return el('div', null, [
+    var wrap = el('div', null, [
       sectionHead(s),
       R.blocks(s.blocks),
       bar,
+      foldBar(cardHost),
       cardHost
     ]);
+    return wrap;
   }
 
   function unique(a) {
@@ -227,9 +204,46 @@
   /* Panel 1: overview, plus the Contents block as printed              */
   /* ---------------------------------------------------------------- */
 
+  /* Expand and collapse every fold inside one panel. */
+  function foldBar(scope) {
+    function setAll(open) {
+      Array.prototype.forEach.call(scope.querySelectorAll('details.fold'), function (d) { d.open = open; });
+    }
+    return el('div', { class: 'foldbar' }, [
+      el('span', { class: 'flabel', text: 'Sections' }),
+      el('button', { class: 'fbtn', type: 'button', text: 'Expand all', onclick: function () { setAll(true); } }),
+      el('button', { class: 'fbtn', type: 'button', text: 'Collapse all', onclick: function () { setAll(false); } })
+    ]);
+  }
+
+  /* The landing page. Section 1 as written, then the map, then a way into
+     every other section. */
   function overviewPanel() {
     var s = byNum['1'];
-    var nodes = [sectionHead(s), R.section(s), standfirst()];
+
+    var nav = el('div', { class: 'navgrid' }, tabs.filter(function (t) { return t.num !== '1'; })
+      .map(function (t) {
+        return el('button', {
+          class: 'navcard', type: 'button',
+          onclick: function () { select(t.num, true); }
+        }, [
+          el('span', { class: 'navnum', text: t.num }),
+          el('span', { class: 'navtitle', text: byNum[t.num].title }),
+          t.mark === 'star' ? el('span', { class: 'mark-star', text: '★' }) : null,
+          t.mark === 'square' ? el('span', { class: 'mark-square', text: '■' }) : null
+        ]);
+      }));
+
+    var nodes = [
+      sectionHead(s),
+      R.blocks(s.blocks),
+      el('h3', { class: 'sub-title', text: 'Where it sits' }),
+      V.geoView(D.geo),
+      el('h3', { class: 'sub-title', text: 'The rest of the document' }),
+      nav,
+      standfirst()
+    ];
+
     if (D.contents) {
       var t = (D.contents.blocks || []).filter(function (b) { return b.type === 'table'; })[0];
       if (t) {
@@ -251,7 +265,11 @@
 
   function genericPanel(num) {
     var s = byNum[num];
-    return el('div', null, [sectionHead(s), R.section(s)]);
+    var body = el('div', null, [R.section(s)]);
+    var nodes = [sectionHead(s)];
+    if (body.querySelector('details.fold')) nodes.push(foldBar(body));
+    nodes.push(body);
+    return el('div', null, nodes);
   }
 
   /* ---------------------------------------------------------------- */
@@ -316,8 +334,9 @@
     el('span', { text: meta.runningFooter })
   ]));
 
+  /* The overview is the landing page, so it opens by default. */
   var fromHash = (location.hash.match(/^#section-(\d+)$/) || [])[1];
-  select(byNum[fromHash] ? fromHash : '2', false);
+  select(byNum[fromHash] && panels[fromHash] ? fromHash : '1', false);
 
   /* ---------------------------------------------------------------- */
   /* Print                                                             */
@@ -331,8 +350,7 @@
     });
     Array.prototype.forEach.call(document.querySelectorAll('details'), function (d) { d.open = true; });
     Array.prototype.forEach.call(document.querySelectorAll('.stage-node .insts'), function (u) { u.hidden = false; });
-    var geo = document.querySelector('.view-geo');
-    if (geo) geo.hidden = false;
+
   }
   window.addEventListener('beforeprint', prepareForPrint);
   if (window.matchMedia) {

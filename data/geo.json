@@ -7,7 +7,7 @@
       "detail": "BIW · Bath, Maine · approximately 11 miles from Brunswick Landing",
       "sourceRef": "section 3, identity line",
       "lat": 43.911,
-      "lng": -69.813,
+      "lng": -69.821,
       "precision": "approximate",
       "countyLevel": false,
       "offshore": false,
@@ -20,8 +20,8 @@
       "category": "anchor",
       "detail": "PNSY · Kittery, Maine · the shipyard is in Maine despite the name",
       "sourceRef": "section 3, identity line",
-      "lat": 43.089,
-      "lng": -70.744,
+      "lat": 43.09,
+      "lng": -70.737,
       "precision": "approximate",
       "countyLevel": false,
       "offshore": false,
@@ -370,7 +370,7 @@
       "category": "institution",
       "detail": "Portland, Yarmouth, Biddeford",
       "sourceRef": "5.1 Shared space and coworking, Location column",
-      "lat": 43.801,
+      "lat": 43.796,
       "lng": -70.187,
       "precision": "approximate",
       "countyLevel": false,
@@ -1001,7 +1001,7 @@
       "detail": "Bath",
       "sourceRef": "cluster 4.2: \"Custom Composite Technologies (Bath)\"",
       "lat": 43.911,
-      "lng": -69.813,
+      "lng": -69.821,
       "precision": "approximate",
       "countyLevel": false,
       "offshore": false,
@@ -1056,8 +1056,8 @@
       "category": "institution",
       "detail": "Aroostook County",
       "sourceRef": "cluster 4.8: \"Pennington Mountain, Aroostook County\"",
-      "lat": 46.6,
-      "lng": -68.45,
+      "lat": 46.72,
+      "lng": -68.6,
       "precision": "approximate",
       "countyLevel": true,
       "offshore": false,
@@ -1110,100 +1110,232 @@
   ],
   "outline": [
     [
-      -70.68,
-      43.06
+      -70.72,
+      43.05
     ],
     [
-      -70.55,
-      43.24
+      -70.62,
+      43.17
     ],
     [
-      -70.36,
-      43.4
+      -70.58,
+      43.28
+    ],
+    [
+      -70.47,
+      43.36
+    ],
+    [
+      -70.38,
+      43.45
+    ],
+    [
+      -70.37,
+      43.52
+    ],
+    [
+      -70.3,
+      43.56
     ],
     [
       -70.2,
-      43.5
+      43.57
     ],
     [
-      -70.08,
-      43.58
+      -70.23,
+      43.65
     ],
     [
-      -69.96,
-      43.64
-    ],
-    [
-      -69.82,
-      43.66
-    ],
-    [
-      -69.7,
-      43.7
-    ],
-    [
-      -69.55,
+      -70.19,
       43.72
     ],
     [
-      -69.4,
-      43.74
+      -70.14,
+      43.79
     ],
     [
-      -69.25,
+      -70.08,
+      43.83
+    ],
+    [
+      -70.02,
+      43.78
+    ],
+    [
+      -69.99,
+      43.7
+    ],
+    [
+      -69.94,
       43.8
     ],
     [
-      -69.05,
-      43.9
+      -69.87,
+      43.75
     ],
     [
-      -68.9,
+      -69.82,
+      43.84
+    ],
+    [
+      -69.79,
+      43.95
+    ],
+    [
+      -69.74,
+      43.86
+    ],
+    [
+      -69.68,
+      43.83
+    ],
+    [
+      -69.66,
+      43.79
+    ],
+    [
+      -69.64,
+      43.85
+    ],
+    [
+      -69.61,
+      43.79
+    ],
+    [
+      -69.57,
+      43.87
+    ],
+    [
+      -69.53,
       44.05
     ],
     [
-      -68.6,
+      -69.47,
+      43.9
+    ],
+    [
+      -69.4,
+      44.12
+    ],
+    [
+      -69.33,
+      43.95
+    ],
+    [
+      -69.3,
+      43.93
+    ],
+    [
+      -69.26,
+      43.93
+    ],
+    [
+      -69.15,
+      44
+    ],
+    [
+      -69.06,
       44.1
     ],
     [
-      -68.35,
-      44.15
+      -69.03,
+      44.2
     ],
     [
-      -68.15,
+      -68.98,
+      44.38
+    ],
+    [
+      -68.97,
+      44.43
+    ],
+    [
+      -68.88,
+      44.47
+    ],
+    [
+      -68.83,
+      44.55
+    ],
+    [
+      -68.8,
+      44.45
+    ],
+    [
+      -68.82,
+      44.4
+    ],
+    [
+      -68.75,
+      44.35
+    ],
+    [
+      -68.6,
+      44.4
+    ],
+    [
+      -68.53,
+      44.3
+    ],
+    [
+      -68.4,
+      44.28
+    ],
+    [
+      -68.3,
       44.22
     ],
     [
-      -67.95,
-      44.32
+      -68.15,
+      44.28
     ],
     [
-      -67.75,
-      44.42
+      -68.12,
+      44.4
     ],
     [
-      -67.55,
+      -68,
+      44.45
+    ],
+    [
+      -67.85,
       44.48
     ],
     [
-      -67.35,
-      44.58
+      -67.7,
+      44.5
     ],
     [
-      -67.1,
-      44.72
+      -67.6,
+      44.55
+    ],
+    [
+      -67.45,
+      44.62
+    ],
+    [
+      -67.4,
+      44.65
+    ],
+    [
+      -67.3,
+      44.68
+    ],
+    [
+      -67.15,
+      44.75
+    ],
+    [
+      -66.98,
+      44.82
     ],
     [
       -66.95,
-      44.8
+      44.9
     ],
     [
-      -66.92,
-      44.92
-    ],
-    [
-      -67.05,
-      45.05
+      -67.02,
+      45
     ],
     [
       -67.15,
@@ -1322,7 +1454,7 @@
     {
       "name": "Bath",
       "lat": 43.911,
-      "lng": -69.813
+      "lng": -69.821
     },
     {
       "name": "Portland",
@@ -1331,15 +1463,15 @@
     },
     {
       "name": "Kittery",
-      "lat": 43.089,
-      "lng": -70.744
+      "lat": 43.09,
+      "lng": -70.737
     }
   ],
   "derivedCoordinates": [
     {
       "town": "Aroostook County",
-      "lat": 46.6,
-      "lng": -68.45,
+      "lat": 46.72,
+      "lng": -68.6,
       "precision": "approximate",
       "countyLevel": true,
       "offshore": false,
@@ -1375,7 +1507,7 @@
     {
       "town": "Bath",
       "lat": 43.911,
-      "lng": -69.813,
+      "lng": -69.821,
       "precision": "approximate",
       "countyLevel": false,
       "offshore": false,
@@ -1473,8 +1605,8 @@
     },
     {
       "town": "Kittery",
-      "lat": 43.089,
-      "lng": -70.744,
+      "lat": 43.09,
+      "lng": -70.737,
       "precision": "approximate",
       "countyLevel": false,
       "offshore": false,
@@ -1608,7 +1740,7 @@
     },
     {
       "town": "Yarmouth",
-      "lat": 43.801,
+      "lat": 43.796,
       "lng": -70.187,
       "precision": "approximate",
       "countyLevel": false,

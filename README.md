@@ -25,6 +25,8 @@ proving that nothing outside that one file changed. Two are declared today:
 |---|---|
 | `Rosc Capital` renders as `Rosc` | One occurrence, in the glossary entry for First Light Works |
 | Section 9 is withheld | Constraints and gaps does not render |
+| Four cross-references to section 9 removed | One whole row of the 8.1 mechanics table, two trimmed sentences, one dropped clause |
+| Contact strings removed from the openness lines | All 22 entries in section 5 keep the openness chip and lose the address |
 
 Withholding a section does not resequence the numbering. The numbers belong to the document and its
 own cross-references depend on them, so the tab strip runs 1 to 8 and then 10 to 12.
@@ -71,6 +73,7 @@ content/maine_map_content_v3.md   source of truth, committed alongside the gener
 scripts/build-config.js           declared substitutions and withheld sections
 scripts/parse-content.js          markdown to data/*.json, with inventory validation
 scripts/geo-coordinates.js        derived coordinates and the schematic Maine outline
+scripts/build-single-file.js      inlines everything into dist/
 scripts/verify-fidelity.js        rebuilds the markdown from JSON and diffs it
 scripts/audit.js                  renders the page and checks prose and contact rules
 data/*.json                       generated, inspectable
@@ -104,6 +107,16 @@ The strongest red in the palette is reserved for the contaminated marker, which 
 environmental liability at once, and it renders on the same screen as the 650,000 square feet of
 hangar space counted as a test asset.
 
+## Reading it
+
+The overview is the landing page. It carries section 1 as written, the map, and a way into every
+other section.
+
+Everything below a section heading folds. A headline row shows the title and whatever rating chip
+applies, and the body opens on click, so a tab is a scannable list rather than a long page. Each tab
+carries expand and collapse controls, and a reference table longer than twelve rows gets a filter.
+Print ignores all of it and renders everything open.
+
 ## The geographic view
 
 The source carries no coordinates. Every coordinate in `scripts/geo-coordinates.js` was derived from
@@ -115,9 +128,11 @@ Locations come from a Location column wherever the source has one. Where a locat
 instead, the entry records the sentence it was read out of, and that sentence renders under the entity
 in the side panel.
 
-A point-in-polygon check confirms every derived Maine town falls inside the outline. The outline is
-schematic: the coast is a smooth seaward envelope, islands are omitted, and Penobscot Bay is not cut
-in.
+A point-in-polygon check confirms every derived Maine town falls inside the outline, and a second
+check reports each coastal town's distance to the drawn coast. The outline is schematic but not a
+smooth envelope: Casco Bay, the Kennebec, the Damariscotta and Medomak rivers, Penobscot Bay and
+Mount Desert are cut in, so a town on the water reads as a town on the water. Coastal towns sit
+within about a kilometre or two of the line. Islands other than Mount Desert are omitted.
 
 ## Print
 

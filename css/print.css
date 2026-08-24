@@ -47,8 +47,19 @@
   }
   #panel-1 { break-before: auto; page-break-before: avoid; }
 
-  /* Accordions open. */
+  /* Accordions open. Every fold prints expanded, with its headline kept as a
+     heading rather than a control. */
   details.acc > summary { display: none; }
+  details.fold { border-radius: 0; break-inside: auto; page-break-inside: auto; margin-bottom: 6pt; }
+  details.fold > summary { padding: 6pt 8pt; background: transparent !important; break-after: avoid; page-break-after: avoid; }
+  details.fold[open] > summary { background: transparent !important; }
+  details.fold > summary .chev { display: none; }
+  .card-body { padding: 6pt 8pt 8pt; }
+  .foldbar,
+  .navgrid,
+  .tbar { display: none !important; }
+  /* A filtered row must never be missing from the printed record. */
+  table.data tbody tr[hidden] { display: table-row !important; }
   details.acc { border-top: 0; }
   details.acc .acc-body { padding: 0 0 10px; }
   .stage-node .insts[hidden] { display: block !important; }

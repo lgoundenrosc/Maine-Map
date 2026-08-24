@@ -13,7 +13,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { SUBSTITUTIONS, RENDER_EXCLUDE_SECTIONS } = require('./build-config.js');
+const { SUBSTITUTIONS, LINE_RULES, RENDER_EXCLUDE_SECTIONS, applyDeclared } = require('./build-config.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const SRC = path.join(ROOT, 'content', 'maine_map_content_v3.md');
@@ -37,7 +37,7 @@ function emitBlock(b, out) {
       out.push('**' + b.heat + ' DEPTH: ' + b.depth + '**');
       break;
     case 'openness':
-      out.push(b.level + ' ' + b.contact);
+      out.push(b.contact ? b.level + ' ' + b.contact : b.level);
       break;
     case 'callout':
       out.push('> [!CALLOUT] ' + b.label);
@@ -77,9 +77,9 @@ function normalise(text) {
 
 let source = fs.readFileSync(SRC, 'utf8');
 
-/* Apply the declared substitutions, so the diff below proves the rendered
-   document differs from the source by exactly this list and nothing else. */
-SUBSTITUTIONS.forEach(sub => { source = source.split(sub.from).join(sub.to); });
+/* Apply the declared rules, so the diff below proves the rendered document
+   differs from the source by exactly that list and nothing else. */
+source = applyDeclared(source).text;
 
 /* Cut the withheld sections out of the comparison text. A section runs from
    its own H2 to the next H2. */
@@ -116,8 +116,8 @@ if (rebuilt === original) {
   console.log('FIDELITY OK');
   console.log('  ' + original.split('\n').length + ' content lines round-tripped identically');
   console.log('  ' + original.length + ' characters compared');
-  SUBSTITUTIONS.forEach(x => console.log('  declared substitution  "' + x.from + '" -> "' + x.to + '"'));
-  RENDER_EXCLUDE_SECTIONS.forEach(x => console.log('  declared exclusion     section ' + x.num));
+  console.log('  declared: ' + SUBSTITUTIONS.length + ' substitutions, ' + LINE_RULES.length +
+    ' line rule, ' + RENDER_EXCLUDE_SECTIONS.length + ' withheld section');
   console.log('  everything outside those declarations is character identical');
   process.exit(0);
 }
