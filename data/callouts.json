@@ -256,5 +256,41 @@
     "scheme": "structural",
     "classified": true,
     "line": 1307
+  },
+  {
+    "label": "RELATED PARTY",
+    "scheme": "amber",
+    "classified": true,
+    "line": 1317
+  },
+  {
+    "label": "HANDLE WITH CARE",
+    "scheme": "red",
+    "classified": true,
+    "line": 1347
+  },
+  {
+    "label": "VC READ",
+    "scheme": "green",
+    "classified": true,
+    "line": 1367
+  },
+  {
+    "label": "WHAT THIS ADDS UP TO",
+    "scheme": "rust",
+    "classified": false,
+    "line": 1379
+  },
+  {
+    "label": "TRACK THIS, DO NOT UNDERWRITE IT",
+    "scheme": "red",
+    "classified": true,
+    "line": 1395
+  },
+  {
+    "label": "MAINE CONSTRAINT · THE LIMITS OF A FRONT DOOR",
+    "scheme": "red",
+    "classified": true,
+    "line": 1407
   }
 ]

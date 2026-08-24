@@ -236,6 +236,16 @@ p.prose {
   margin: 0 0 11px;
   max-width: 78ch;
 }
+p.prose strong { font-weight: 700; color: var(--navy-2); }
+
+/* A whole-line bold lead-in introducing the block that follows. */
+p.lead-in {
+  margin: 16px 0 8px;
+  max-width: 78ch;
+  font-weight: 700;
+  color: var(--navy-2);
+  font-size: 14.5px;
+}
 
 /* ---------------------------------------------------------------- */
 /* Cards                                                             */

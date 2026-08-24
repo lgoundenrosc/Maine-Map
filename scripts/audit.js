@@ -15,7 +15,13 @@ const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const { SUBSTITUTIONS, LINKS } = require('./build-config.js');
 
 const ROOT = path.resolve(__dirname, '..');
-let source = fs.readFileSync(path.join(ROOT, 'content', 'maine_map_content_v3.md'), 'utf8');
+/* Every file in content/, so an addendum is source text rather than text this
+   build invented. */
+let source = fs.readdirSync(path.join(ROOT, 'content'))
+  .filter(f => f.endsWith('.md'))
+  .sort()
+  .map(f => fs.readFileSync(path.join(ROOT, 'content', f), 'utf8'))
+  .join('\n\n');
 /* Compare against the source as rendered, so the declared substitutions do not
    show up as text this build invented. */
 SUBSTITUTIONS.forEach(sub => { source = source.split(sub.from).join(sub.to); });

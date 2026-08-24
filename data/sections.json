@@ -9885,5 +9885,1024 @@
       }
     ],
     "sourceNum": "12"
+  },
+  {
+    "kind": "section",
+    "num": "12",
+    "title": "The OnRamp Hub question",
+    "heading": "13. The OnRamp Hub question",
+    "id": "13-the-onramp-hub-question",
+    "blocks": [
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "Section 2 describes a formation chain that is strong through stage five and breaks at stages six and seven. This section examines what a Defense Innovation OnRamp Hub at Brunswick Landing would do about those two breaks, and what it would not."
+          }
+        ],
+        "line": 1311
+      },
+      {
+        "type": "para",
+        "runs": [
+          {
+            "t": "text",
+            "v": "The section is written to test the case rather than to make it. A reader who finishes it should be able to argue either side."
+          }
+        ],
+        "line": 1313
+      },
+      {
+        "type": "callout",
+        "label": "RELATED PARTY",
+        "scheme": "amber",
+        "classified": true,
+        "paragraphs": [
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "Rosc is a party to a bid for this designation, through the First Light Works joint venture with Ateklo, Inc. and Gaven Capital. Ateklo submitted before the 31 July 2026 deadline. No award had been announced as of August 2026."
+              }
+            ]
+          },
+          {
+            "runs": [
+              {
+                "t": "text",
+                "v": "This section describes an outcome in which Rosc has a direct financial interest. It is included because the hub question bears on every other section of this document, and omitting it would leave a hole. Read section 12.5 first if you want the case against."
+              }
+            ]
+          }
+        ],
+        "line": 1317
+      }
+    ],
+    "subsections": [
+      {
+        "kind": "subsection",
+        "num": "12.1",
+        "title": "What an OnRamp Hub is",
+        "heading": "13.1 What an OnRamp Hub is",
+        "id": "13-1-what-an-onramp-hub-is",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "A physical local front door. DIU describes the hubs as its open front door to the private sector and academia, and to the mission partners who want to interact with them."
+              }
+            ],
+            "line": 1321
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The structural facts:"
+              }
+            ],
+            "line": 1323
+          },
+          {
+            "type": "table",
+            "id": "table-16",
+            "headers": [
+              "Element",
+              "Detail"
+            ],
+            "rows": [
+              [
+                {
+                  "raw": "Authority",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Authority"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Section 913 of the FY2026 NDAA",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Section 913 of the FY2026 NDAA"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Administrator",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Administrator"
+                    }
+                  ]
+                },
+                {
+                  "raw": "The Applied Research Institute, under a five-year, $600 million cooperative agreement awarded by DIU in July 2025. Hubs are sub-awardees under 2 CFR 200.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "The Applied Research Institute, under a five-year, $600 million cooperative agreement awarded by DIU in July 2025. Hubs are sub-awardees under 2 CFR 200."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Existing locations",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Existing locations"
+                    }
+                  ]
+                },
+                {
+                  "raw": "DIU's site currently lists Arizona, Hawaii, Kansas, Minnesota, Montana, Ohio, and Washington. Kentucky was announced in May 2026 at the University of Louisville. None in New England.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "DIU's site currently lists Arizona, Hawaii, Kansas, Minnesota, Montana, Ohio, and Washington. Kentucky was announced in May 2026 at the University of Louisville. None in New England."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Staffing floor",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Staffing floor"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Four fully dedicated FTE, local, onsite, identified as OnRamp Hub personnel",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Four fully dedicated FTE, local, onsite, identified as OnRamp Hub personnel"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Facility",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Facility"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Dedicated collaboration space with permanent DIU branding, capacity for 100-person events",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Dedicated collaboration space with permanent DIU branding, capacity for 100-person events"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Cost share",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Cost share"
+                    }
+                  ]
+                },
+                {
+                  "raw": "At least 10 percent of the total award from non-federal sources, cash or allowable in-kind",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "At least 10 percent of the total award from non-federal sources, cash or allowable in-kind"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Sustainment",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Sustainment"
+                    }
+                  ]
+                },
+                {
+                  "raw": "DIU states a preference for full self-sustainment within five years",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "DIU states a preference for full self-sustainment within five years"
+                    }
+                  ]
+                }
+              ]
+            ],
+            "line": 1325
+          },
+          {
+            "type": "lead",
+            "text": "What the hub does, per the published statement of work:",
+            "line": 1335
+          },
+          {
+            "type": "table",
+            "id": "table-17",
+            "headers": [
+              "Service",
+              "What it would mean in Maine"
+            ],
+            "rows": [
+              [
+                {
+                  "raw": "Technology ecosystem intelligence",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Technology ecosystem intelligence"
+                    }
+                  ]
+                },
+                {
+                  "raw": "A maintained database of Maine and northern New England companies, fed into DIU's central system. Maine companies become findable by a federal customer without anyone in Maine placing a call.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "A maintained database of Maine and northern New England companies, fed into DIU's central system. Maine companies become findable by a federal customer without anyone in Maine placing a call."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Defense market education",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Defense market education"
+                    }
+                  ]
+                },
+                {
+                  "raw": "One to two program events per quarter pairing mission partners with commercial builders. Currently no recurring mechanism brings a NAVSEA or PNSY program office physically into a room with Maine companies.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "One to two program events per quarter pairing mission partners with commercial builders. Currently no recurring mechanism brings a NAVSEA or PNSY program office physically into a room with Maine companies."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Mission-focused technology scouting",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Mission-focused technology scouting"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Time-bound sprints triggered by a defined mission-partner need, with priority to partners holding funding and intent to purchase.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Time-bound sprints triggered by a defined mission-partner need, with priority to partners holding funding and intent to purchase."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Defense readiness assessment",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Defense readiness assessment"
+                    }
+                  ]
+                },
+                {
+                  "raw": "TRL and MRL scoring, customer identification, supply chain analysis, one-on-one mentoring.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "TRL and MRL scoring, customer identification, supply chain analysis, one-on-one mentoring."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Mission and resource alignment",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Mission and resource alignment"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Matching a need to a funding pathway. The color-of-money problem, which is where most first-time federal applicants stall.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Matching a need to a funding pathway. The color-of-money problem, which is where most first-time federal applicants stall."
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Technology validation, IV&V",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Technology validation, IV&V"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Facility access agreements and test events in operationally relevant environments, with post-test transition support.",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Facility access agreements and test events in operationally relevant environments, with post-test transition support."
+                    }
+                  ]
+                }
+              ]
+            ],
+            "line": 1337
+          },
+          {
+            "type": "callout",
+            "label": "HANDLE WITH CARE",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "DIU states explicitly that OnRamp Hubs are not involved in SBIR programming. Maine's stage three is already strong, carried by MTI's free application assistance and the CMGC SBIR Resource Center. A hub adds nothing there and would not replace either."
+                  }
+                ]
+              }
+            ],
+            "line": 1347
+          }
+        ],
+        "entries": [],
+        "sourceNum": "13.1"
+      },
+      {
+        "kind": "subsection",
+        "num": "12.2",
+        "title": "The stage seven argument",
+        "heading": "13.2 The stage seven argument",
+        "id": "13-2-the-stage-seven-argument",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Maine's stage seven break is an access problem, not a capability problem. The demand exists, it is documented elsewhere in this map, and there is no Maine channel that routes a company to it."
+              }
+            ],
+            "line": 1351
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Five specific instances, all drawn from earlier sections:"
+              }
+            ],
+            "line": 1353
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Portsmouth Naval Shipyard has named innovation staff, a certified drone program, a machine-shop sensor pilot, and a proven willingness to run commercial technology trials. It installed a welded additively manufactured copper-nickel flange aboard USS Washington in March 2026. Nothing in Maine routes a company toward that team."
+              }
+            ],
+            "line": 1355
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Elmet is buying precision machining, production automation, additive manufacturing, and inspection systems, under a June 2026 Department of War contract, with a public balance sheet behind it. That is a Maine buyer purchasing exactly what clusters 4.2 and 4.3 describe, and there is no in-state mechanism connecting it to Maine suppliers."
+              }
+            ],
+            "line": 1357
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "DIU's Blue Manufacturing initiative qualifies advanced commercial manufacturers and connects them to technology companies needing to scale. Maine's composites and machining base is the supply side of that program. No Maine entity appears to be engaged with it."
+              }
+            ],
+            "line": 1359
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The ONR maritime modernization solicitation closes 1 October 2026 and covers advanced materials, robotics, AI and ML, digital tools, and inspection technologies. It maps onto Maine's two strongest clusters and there is no coordinated state response."
+              }
+            ],
+            "line": 1361
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Howe & Howe builds a MOSA-designed uncrewed ground vehicle family with an Army program of record behind it, and has no Maine supplier ecosystem around it."
+              }
+            ],
+            "line": 1363
+          },
+          {
+            "type": "callout",
+            "label": "VC READ",
+            "scheme": "green",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Every one of those five is a matching failure rather than a capability failure. The capability sits in Maine. The demand sits in a program office. Nobody performs the introduction."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "That is the specific function an OnRamp Hub performs, and it is the only mechanism described anywhere in this document that performs it. MTI funds but does not transition. APEX navigates procurement but does not scout technology or run test events. MDIA trains workers. ASCC tests. None of them route a company to a mission partner, and none of them are resourced to."
+                  }
+                ]
+              }
+            ],
+            "line": 1367
+          }
+        ],
+        "entries": [],
+        "sourceNum": "13.2"
+      },
+      {
+        "kind": "subsection",
+        "num": "12.3",
+        "title": "The test infrastructure argument",
+        "heading": "13.3 The test infrastructure argument",
+        "id": "13-3-the-test-infrastructure-argument",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The underrated benefit, and the one least replicable by a competing location."
+              }
+            ],
+            "line": 1371
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "Section 7 rates Maine's test and evaluation capacity as strong and underused. Two ISO 17025 accredited laboratories, the Maine Space Corporation test lab, two 8,000-foot runways with established UAS procedures, 650,000 square feet of hangar space, open littoral water, the Navy Redington range, and Loring's two 12,100-foot runways."
+              }
+            ],
+            "line": 1373
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "A hub carries an IV&V mandate. It executes facility access agreements and runs test events in operationally relevant environments. That is a mechanism that converts idle accredited test capacity into utilized capacity, and it is the only such mechanism in this document."
+              }
+            ],
+            "line": 1375
+          },
+          {
+            "type": "callout",
+            "label": "WHAT THIS ADDS UP TO",
+            "scheme": "rust",
+            "classified": false,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Most candidate hub locations would use a hub to build an ecosystem. Maine would use one to connect an ecosystem that already exists to customers it cannot currently reach, and to run test events on infrastructure the Navy already paid for."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "The cost of establishment is low for the same reason. The runways, hangars, microgrid, and fiber were built by the Navy and are already there."
+                  }
+                ]
+              }
+            ],
+            "line": 1379
+          }
+        ],
+        "entries": [],
+        "sourceNum": "13.3"
+      },
+      {
+        "kind": "subsection",
+        "num": "12.4",
+        "title": "Second-order effects on stage six",
+        "heading": "13.4 Second-order effects on stage six",
+        "id": "13-4-second-order-effects-on-stage-six",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "A hub does not write checks. It has no capital function and cannot close the stage six break directly. Four indirect effects are worth naming, in descending order of confidence."
+              }
+            ],
+            "line": 1383
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "strong",
+                "v": "Discoverability."
+              },
+              {
+                "t": "text",
+                "v": " The ecosystem intelligence function produces a maintained, structured database of Maine companies visible to federal customers and, in practice, to co-investors. Maine's deal flow is currently invisible from Boston. A maintained inventory changes that at the margin."
+              }
+            ],
+            "line": 1385
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "strong",
+                "v": "Credential."
+              },
+              {
+                "t": "text",
+                "v": " A federal designation is a signal that travels. For an out-of-state fund evaluating a Maine company, evidence that the company has been assessed, tested, and routed toward a program office reduces the diligence burden that currently makes Maine deals expensive to underwrite."
+              }
+            ],
+            "line": 1387
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "strong",
+                "v": "Match capital."
+              },
+              {
+                "t": "text",
+                "v": " The 10 percent non-federal share pulls state and private money into the ecosystem alongside the federal award. Given that every MTI program already carries a 1:1 match requirement, this compounds."
+              }
+            ],
+            "line": 1389
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "strong",
+                "v": "Convening."
+              },
+              {
+                "t": "text",
+                "v": " Quarterly events that bring mission partners physically into Maine create the ambient contact that a company in Northern Virginia gets for free and a company in Brunswick currently does not get at all."
+              }
+            ],
+            "line": 1391
+          },
+          {
+            "type": "callout",
+            "label": "TRACK THIS, DO NOT UNDERWRITE IT",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "None of the four is a substitute for a resident fund willing to write a Series A into a hardware company with a long sales cycle. Maine Venture Fund's typical position remains roughly $400,000. A hub does not change that number."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "If the stage six break is going to close, private capital closes it. A hub improves the conditions under which that capital would deploy. It does not deploy it."
+                  }
+                ]
+              }
+            ],
+            "line": 1395
+          }
+        ],
+        "entries": [],
+        "sourceNum": "13.4"
+      },
+      {
+        "kind": "subsection",
+        "num": "12.5",
+        "title": "What a hub would not fix",
+        "heading": "13.5 What a hub would not fix",
+        "id": "13-5-what-a-hub-would-not-fix",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The case against, stated plainly."
+              }
+            ],
+            "line": 1399
+          },
+          {
+            "type": "callout",
+            "label": "MAINE CONSTRAINT · THE LIMITS OF A FRONT DOOR",
+            "scheme": "red",
+            "classified": true,
+            "paragraphs": [
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "No acquisition authority moves to Maine. A hub is a front door, not a buyer. Every dollar still gets decided elsewhere, and section 2's stage seven break narrows rather than closes."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "No capital. Hubs do not fund companies, and DIU states they are not involved in SBIR programming."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "No effect on clearance density. Maine's facility clearance desert outside PNSY and BIW is untouched, and classified work remains out of reach for a Maine-domiciled company without a cleared partner."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "No effect on talent supply. The 1,200 to 1,700 skilled workers per year that Maine's defense employers need is a workforce problem that MDIA and the community colleges own. A hub that adds demand without addressing supply makes that arithmetic worse before it makes it better."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "No effect on the research base. Maine ranks 46th of 50 states in R&D spending at 0.8 percent of GDP. Four FTE and an events budget do not move that."
+                  }
+                ]
+              },
+              {
+                "runs": [
+                  {
+                    "t": "text",
+                    "v": "Four people. The staffing floor is four dedicated FTE. Set that against roughly 300 defense contractors, 9 capability clusters, and a state 320 miles long."
+                  }
+                ]
+              }
+            ],
+            "line": 1407
+          }
+        ],
+        "entries": [],
+        "sourceNum": "13.5"
+      },
+      {
+        "kind": "subsection",
+        "num": "12.6",
+        "title": "What good would look like",
+        "heading": "13.6 What good would look like",
+        "id": "13-6-what-good-would-look-like",
+        "blocks": [
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "If a hub is established, these are the indicators worth tracking in the first three years. Each has a stated baseline from elsewhere in this document, so movement is measurable rather than asserted."
+              }
+            ],
+            "line": 1411
+          },
+          {
+            "type": "table",
+            "id": "table-18",
+            "headers": [
+              "Indicator",
+              "Current baseline",
+              "What movement looks like"
+            ],
+            "rows": [
+              [
+                {
+                  "raw": "Maine companies in a federal-facing inventory",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Maine companies in a federal-facing inventory"
+                    }
+                  ]
+                },
+                {
+                  "raw": "No maintained inventory exists",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "No maintained inventory exists"
+                    }
+                  ]
+                },
+                {
+                  "raw": "A structured database, refreshed, with the roughly 300 defense contractors segmented by capability",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "A structured database, refreshed, with the roughly 300 defense contractors segmented by capability"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Mission partner events held in Maine",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Mission partner events held in Maine"
+                    }
+                  ]
+                },
+                {
+                  "raw": "No recurring mechanism",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "No recurring mechanism"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Four to eight per year with a program office present",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Four to eight per year with a program office present"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "IV&V events on Maine test infrastructure",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "IV&V events on Maine test infrastructure"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Not tracked",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Not tracked"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Test events executed at ASCC, Brunswick, or the littorals, with written outputs",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Test events executed at ASCC, Brunswick, or the littorals, with written outputs"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Maine companies winning first federal contracts",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Maine companies winning first federal contracts"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Not tracked",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Not tracked"
+                    }
+                  ]
+                },
+                {
+                  "raw": "First-time awards, with contract value recorded",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "First-time awards, with contract value recorded"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Blue Manufacturing participation",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Blue Manufacturing participation"
+                    }
+                  ]
+                },
+                {
+                  "raw": "No Maine entity engaged",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "No Maine entity engaged"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Maine manufacturers qualified into the program",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Maine manufacturers qualified into the program"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "USV companies domiciled in Maine",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "USV companies domiciled in Maine"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Zero",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Zero"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Any",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Any"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Out-of-state capital following into Maine companies",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Out-of-state capital following into Maine companies"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Not tracked",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Not tracked"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Rounds led from outside Maine into hub-assessed companies",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Rounds led from outside Maine into hub-assessed companies"
+                    }
+                  ]
+                }
+              ],
+              [
+                {
+                  "raw": "Test asset utilization",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Test asset utilization"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Underused, not quantified",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Underused, not quantified"
+                    }
+                  ]
+                },
+                {
+                  "raw": "Hours booked, tracked against capacity",
+                  "runs": [
+                    {
+                      "t": "text",
+                      "v": "Hours booked, tracked against capacity"
+                    }
+                  ]
+                }
+              ]
+            ],
+            "line": 1413
+          },
+          {
+            "type": "para",
+            "runs": [
+              {
+                "t": "text",
+                "v": "The last two are the ones that matter to a fund. The rest are programmatic."
+              }
+            ],
+            "line": 1424
+          }
+        ],
+        "entries": [],
+        "sourceNum": "13.6"
+      }
+    ],
+    "sourceNum": "13"
   }
 ]

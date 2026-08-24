@@ -17,13 +17,18 @@ const { SUBSTITUTIONS, LINE_RULES, RENDER_EXCLUDE_SECTIONS, applyDeclared } = re
 
 const ROOT = path.resolve(__dirname, '..');
 const SRC = path.join(ROOT, 'content', 'maine_map_content_v3.md');
+const ADDENDA = [path.join(ROOT, 'content', 'section-13-onramp-hub.md')];
 const DATA = path.join(ROOT, 'data');
 
 const read = f => JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8'));
 
 /* A run list renders back to its original string by putting every marker
  * back inside its brackets. */
-const fromRuns = runs => runs.map(r => r.t === 'marker' ? '[' + r.v + ']' : r.v).join('');
+const fromRuns = runs => runs.map(function (r) {
+  if (r.t === 'marker') return '[' + r.v + ']';
+  if (r.t === 'strong') return '**' + r.v + '**';
+  return r.v;
+}).join('');
 
 function emitBlock(b, out) {
   switch (b.type) {
@@ -32,6 +37,9 @@ function emitBlock(b, out) {
       break;
     case 'meta':
       out.push(b.parts.join(' · '));
+      break;
+    case 'lead':
+      out.push('**' + b.text + '**');
       break;
     case 'rating':
       out.push('**' + b.heat + ' DEPTH: ' + b.depth + '**');
@@ -75,7 +83,9 @@ function normalise(text) {
     .join('\n');
 }
 
-let source = fs.readFileSync(SRC, 'utf8');
+let source = [SRC].concat(ADDENDA)
+  .map(f => fs.readFileSync(f, 'utf8').replace(/\s*$/, ''))
+  .join('\n\n') + '\n';
 
 /* Apply the declared rules, so the diff below proves the rendered document
    differs from the source by exactly that list and nothing else. */

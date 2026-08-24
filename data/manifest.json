@@ -1,6 +1,6 @@
 {
-  "sections": 11,
-  "sectionsParsed": 12,
+  "sections": 12,
+  "sectionsParsed": 13,
   "withheldSections": [
     {
       "num": "9",
@@ -43,6 +43,18 @@
         "to": "",
         "reason": "section 9 withheld, sentence removed from the revision note",
         "replaced": 1
+      },
+      {
+        "from": "Sections 2 and 9 describe a formation chain",
+        "to": "Section 2 describes a formation chain",
+        "reason": "section 9 withheld, cross-reference dropped from the opening of the OnRamp Hub section",
+        "replaced": 1
+      },
+      {
+        "from": "Read section 13.5 first",
+        "to": "Read section 12.5 first",
+        "reason": "the OnRamp Hub section renumbers from 13 to 12, so its own cross-reference follows",
+        "replaced": 1
       }
     ],
     "lineRules": [
@@ -58,32 +70,49 @@
     {
       "from": "10",
       "to": "9",
-      "title": "Key names"
+      "title": "Key names",
+      "subsections": []
     },
     {
       "from": "11",
       "to": "10",
-      "title": "Glossary"
+      "title": "Glossary",
+      "subsections": []
     },
     {
       "from": "12",
       "to": "11",
-      "title": "Sources"
+      "title": "Sources",
+      "subsections": []
+    },
+    {
+      "from": "13",
+      "to": "12",
+      "title": "The OnRamp Hub question",
+      "subsections": [
+        "13.1 -> 12.1",
+        "13.2 -> 12.2",
+        "13.3 -> 12.3",
+        "13.4 -> 12.4",
+        "13.5 -> 12.5",
+        "13.6 -> 12.6"
+      ]
     }
   ],
-  "renderedCallouts": 42,
-  "renderedTables": 13,
-  "renderedSubsections": 23,
+  "staleSectionRefs": [],
+  "renderedCallouts": 48,
+  "renderedTables": 16,
+  "renderedSubsections": 29,
   "renderedEntries": 63,
-  "sectionsAll": 12,
+  "sectionsAll": 13,
   "clusters": 9,
-  "callouts": 43,
-  "tables": 15,
+  "callouts": 49,
+  "tables": 18,
   "inlineMarkers": 16,
-  "subsections": 26,
+  "subsections": 32,
   "entries": 72,
-  "sourceBytes": 123739,
-  "sourceWords": 18995,
+  "sourceBytes": 134793,
+  "sourceWords": 20790,
   "defaultedCalloutLabels": [
     "WHY ONLY TWO ANCHORS",
     "WHY THIS ENTRY MATTERS",
@@ -91,7 +120,8 @@
     "WHAT IS ACTUALLY HERE",
     "WHAT THIS ADDS UP TO",
     "THREE CONNECTIONS WORTH SEEING",
-    "TWO ACCREDITED LABORATORIES"
+    "TWO ACCREDITED LABORATORIES",
+    "WHAT THIS ADDS UP TO"
   ],
   "unresolvedLocations": [
     {
@@ -111,9 +141,9 @@
     }
   ],
   "expected": {
-    "sections": 12,
+    "sections": 13,
     "clusters": 9,
-    "callouts": 43,
-    "tables": 15
+    "callouts": 49,
+    "tables": 18
   }
 }

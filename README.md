@@ -12,8 +12,10 @@ This document reads standalone. It carries no cross-references to the other maps
 
 ## The three rules this build follows
 
-**The content is not changed.** `content/maine_map_content_v3.md` is the source of truth. The build
-renders it. No sentence is rewritten, no apparent inconsistency is fixed, no duplicated entry is
+**The content is not changed.** `content/` is the source of truth:
+`maine_map_content_v3.md` is the v3 extraction, and each later section arrives as its own file
+alongside it rather than being pasted in, so the extraction stays byte identical and an addition
+stays visible as one. `content/section-13-onramp-hub.md` is the first. The build renders all of it. No sentence is rewritten, no apparent inconsistency is fixed, no duplicated entry is
 merged, and no conflicting figure is resolved. `scripts/verify-fidelity.js` proves it by rebuilding
 the markdown out of the emitted JSON and diffing against the source.
 
@@ -30,13 +32,16 @@ proving that nothing outside that one file changed. These are declared today:
 | One declared outbound link | "Maine builds what the nation sails and flies" links to firstlightworks.com |
 | The source Contents block is withheld | Contents are generated from the rendered sections instead |
 | The Elmet Group Co. is pinned to Lewiston | Source gives headquarters Portland and principal plant Lewiston, so the map carries one dot |
+| Two cross-references in section 13 rewritten | One pointed at the withheld section 9, one at its own pre-renumber subsection |
 
-What remains is resequenced so the rendered document runs 1 to 11 with no gap, and each section
-keeps its `sourceNum` alongside the number a reader sees. Old 10, 11 and 12 become 9, 10 and 11.
+What remains is resequenced so the rendered document runs 1 to 12 with no gap, and each section keeps
+its `sourceNum` alongside the number a reader sees. Old 10 to 13 become 9 to 12, and a renumbered
+section takes its subsections with it, so 13.1 through 13.6 render as 12.1 through 12.6.
 
-Resequencing is safe only because no prose in the source cross-references a section above 9, and no
-section above 9 carries subsections that would then disagree with their parent. The parser checks the
-second condition on every run and fails the build rather than silently breaking a reference.
+Prose that referred to a moved section is fixed by declared substitution. The parser also fails the
+build on any reference to a section number the rendered document no longer has. That catches a
+number gone out of range. It cannot catch a reference to a number that still exists but now names a
+different section, which is why the section 9 references were removed by hand.
 
 The declared link is the one exception the contact rule allows. `scripts/audit.js` fails on any
 address that is neither in the source nor on the `LINKS` list, so a fabricated route still cannot
@@ -69,8 +74,8 @@ node scripts/verify-fidelity.js   # round-trips the JSON back to markdown
 node scripts/audit.js             # renders the page and checks the two content rules
 ```
 
-The parser validates against an expected inventory and exits non-zero on drift. For v3 that is
-12 sections, 9 capability clusters, 43 callouts and 15 tables. Validation runs against the full parse
+The parser validates against an expected inventory and exits non-zero on drift. Across `content/`
+that is 13 sections, 9 capability clusters, 49 callouts and 18 tables. Validation runs against the full parse
 before anything is withheld, so a declared exclusion never hides a parse failure. Update `EXPECTED`
 when the inventory legitimately changes, and treat a failure as a parse problem until proven
 otherwise.
@@ -80,7 +85,8 @@ Components read the generated data and never carry content, so a revision usuall
 ## Layout
 
 ```
-content/maine_map_content_v3.md   source of truth, committed alongside the generated JSON
+content/maine_map_content_v3.md   the v3 extraction, byte identical, committed alongside the JSON
+content/section-13-onramp-hub.md  section added after the extraction
 scripts/build-config.js           declared substitutions and withheld sections
 scripts/parse-content.js          markdown to data/*.json, with inventory validation
 scripts/geo-coordinates.js        derived coordinates and the schematic Maine outline

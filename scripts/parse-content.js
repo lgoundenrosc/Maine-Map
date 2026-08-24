@@ -20,16 +20,20 @@ const { PLACES, OUTLINE, CORRIDOR } = require('./geo-coordinates.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const SRC = path.join(ROOT, 'content', 'maine_map_content_v3.md');
+/* Sections added after the v3 extraction. Kept in their own files so the
+   extraction stays byte identical and an addition stays visible as one. */
+const ADDENDA = [path.join(ROOT, 'content', 'section-13-onramp-hub.md')];
 const OUT = path.join(ROOT, 'data');
 
 /* ------------------------------------------------------------------ */
 /* Expected inventory. The parser fails the build if these drift.      */
 /* ------------------------------------------------------------------ */
+/* Counted across content/, the v3 extraction plus every addendum. */
 const EXPECTED = {
-  sections: 12,      // top-level numbered sections, Contents excluded
+  sections: 13,      // top-level numbered sections, Contents excluded
   clusters: 9,       // section 4.1 through 4.9
-  callouts: 43,
-  tables: 15
+  callouts: 49,
+  tables: 18
 };
 
 const { LINKS, GEO_PINS, RENDER_EXCLUDE_SECTIONS, applyDeclared } = require('./build-config.js');
@@ -68,6 +72,8 @@ function labelIsClassified(label) {
 /* Inline confidence markers.                                          */
 /* ------------------------------------------------------------------ */
 const MARKER_RE = /\[([A-Z][A-Z0-9 ,./:()-]*)\]/g;
+/* A confidence marker, or a bold span. Bold arrived with the addenda. */
+const INLINE_RE = /(\[[A-Z][A-Z0-9 ,./:()-]*\])|(\*\*[^*]+\*\*)/g;
 
 function markerTone(body) {
   const B = body.toUpperCase().trim();
@@ -85,11 +91,16 @@ function markerTone(body) {
 function toRuns(text) {
   const runs = [];
   let last = 0;
-  MARKER_RE.lastIndex = 0;
+  INLINE_RE.lastIndex = 0;
   let m;
-  while ((m = MARKER_RE.exec(text)) !== null) {
+  while ((m = INLINE_RE.exec(text)) !== null) {
     if (m.index > last) runs.push({ t: 'text', v: text.slice(last, m.index) });
-    runs.push({ t: 'marker', v: m[1].trim(), tone: markerTone(m[1]) });
+    if (m[1]) {
+      const body = m[1].slice(1, -1);
+      runs.push({ t: 'marker', v: body.trim(), tone: markerTone(body) });
+    } else {
+      runs.push({ t: 'strong', v: m[2].slice(2, -2) });
+    }
     last = m.index + m[0].length;
   }
   if (last < text.length) runs.push({ t: 'text', v: text.slice(last) });
@@ -140,6 +151,11 @@ function parseBlocks(lines) {
 
     if ((m = line.match(RE_RATING))) {
       blocks.push({ type: 'rating', heat: m[1], depth: m[2], line: i + 1 });
+      i++; continue;
+    }
+
+    if ((m = line.match(/^\*\*(.+)\*\*$/)) && m[1].indexOf('**') < 0) {
+      blocks.push({ type: 'lead', text: m[1], line: i + 1 });
       i++; continue;
     }
 
@@ -644,7 +660,8 @@ const TAB_LABELS = {
   '9': 'Constraints and gaps',
   '10': 'Key names',
   '11': 'Glossary',
-  '12': 'Sources'
+  '12': 'Sources',
+  '13': 'OnRamp Hub question'
 };
 const TAB_MARKS = { '4': 'star', '9': 'square' };
 
@@ -652,7 +669,9 @@ const TAB_MARKS = { '4': 'star', '9': 'square' };
 /* Main.                                                               */
 /* ------------------------------------------------------------------ */
 function main() {
-  const raw = fs.readFileSync(SRC, 'utf8');
+  const raw = [SRC].concat(ADDENDA)
+    .map(f => fs.readFileSync(f, 'utf8').replace(/\s*$/, ''))
+    .join('\n\n') + '\n';
   const declared = applyDeclared(raw);
   const md = declared.text;
   const lines = md.split(/\r?\n/);
@@ -720,14 +739,51 @@ function main() {
   rendered.forEach((s, i) => {
     const sourceNum = s.num;
     const renderNum = String(i + 1);
-    if (renderNum !== sourceNum && s.subsections.length) {
-      console.error('Section ' + sourceNum + ' is renumbered to ' + renderNum +
-        ' but carries subsections numbered ' + sourceNum + '.x, which would now disagree.');
-      process.exit(1);
-    }
     s.sourceNum = sourceNum;
     s.num = renderNum;
-    if (renderNum !== sourceNum) renumbered.push({ from: sourceNum, to: renderNum, title: s.title });
+    if (renderNum === sourceNum) return;
+
+    /* Subsections carry their parent's number, so they move with it. */
+    s.subsections.forEach(sub => {
+      if (!sub.num) return;
+      sub.sourceNum = sub.num;
+      sub.num = sub.num.replace(new RegExp('^' + sourceNum + '\\.'), renderNum + '.');
+    });
+    renumbered.push({
+      from: sourceNum, to: renderNum, title: s.title,
+      subsections: s.subsections.filter(x => x.sourceNum).map(x => x.sourceNum + ' -> ' + x.num)
+    });
+  });
+
+  /*
+   * Catch a prose reference to a section number the rendered document no
+   * longer has. Renumbering shifts every number above a withheld section, and
+   * the references that follow are fixed by declared substitution, so this
+   * exists to stop one going stale unnoticed.
+   *
+   * It can only catch a number that is now out of range. A reference to a
+   * number that still exists but now names a different section reads as valid
+   * either way, which is why the section 9 references were removed by hand
+   * rather than left to this check.
+   */
+  const staleRefs = [];
+  const highest = rendered.length;
+  const REF_RE = /\bsections?\s+(\d+)(\.\d+)?\b/gi;
+  walk(rendered, b => {
+    const texts = [];
+    if (b.type === 'para') texts.push(runsToText(b.runs));
+    if (b.type === 'lead') texts.push(b.text);
+    if (b.type === 'callout') b.paragraphs.forEach(x => texts.push(runsToText(x.runs)));
+    if (b.type === 'table') b.rows.forEach(cs => cs.forEach(c => texts.push(c.raw)));
+    texts.forEach(t => {
+      let m;
+      REF_RE.lastIndex = 0;
+      while ((m = REF_RE.exec(t)) !== null) {
+        /* "Section 913 of the FY2026 NDAA" is a statute, not a cross-reference. */
+        if (!m[2] && m[1].length > 2) continue;
+        if (Number(m[1]) > highest) staleRefs.push(m[0] + '  in: ' + t.slice(0, 70));
+      }
+    });
   });
 
   const tabs = rendered.map(s => ({
@@ -777,6 +833,7 @@ function main() {
     })),
     declared: declared.counts,
     renumbered: renumbered,
+    staleSectionRefs: staleRefs,
     renderedCallouts: countIn(rendered, 'callout') + 1,   // the masthead block
     renderedTables: countIn(rendered, 'table'),
     renderedSubsections: rendered.reduce((n, s) => n + s.subsections.length, 0),
@@ -866,7 +923,13 @@ function main() {
   LINKS.forEach(x => console.log(
     '  link            "' + x.text + '" -> ' + x.href + '  (' + x.reason + ')'));
   manifest.renumbered.forEach(x => console.log(
-    '  renumbered      section ' + x.from + ' -> ' + x.to + '  ' + x.title));
+    '  renumbered      section ' + x.from + ' -> ' + x.to + '  ' + x.title +
+    (x.subsections && x.subsections.length ? '  [' + x.subsections.join(', ') + ']' : '')));
+  if (staleRefs.length) {
+    console.error('  STALE REFERENCES to a renumbered section (' + staleRefs.length + '):');
+    staleRefs.forEach(r => console.error('    ' + r));
+    process.exit(1);
+  }
   console.log('  rendered        ' + manifest.sections + ' sections, ' + manifest.renderedCallouts +
     ' callouts, ' + manifest.renderedTables + ' tables, numbered 1 to ' + manifest.sections);
   if (unclassified.length) console.log('  labels defaulted to rust (' + unclassified.length + '): ' + unclassified.join(' / '));

@@ -132,6 +132,7 @@
   function appendRuns(parent, runs) {
     (runs || []).forEach(function (r) {
       if (r.t === 'marker') parent.appendChild(markerChip(r));
+      else if (r.t === 'strong') parent.appendChild(el('strong', { text: r.v }));
       else appendLinked(parent, r.v);
     });
     return parent;
@@ -242,6 +243,9 @@
         return el('p', { class: 'metastrip' }, b.parts.map(function (p) {
           return el('span', { text: p });
         }));
+
+      case 'lead':
+        return el('p', { class: 'lead-in', text: b.text });
 
       case 'rating':
         return el('div', { class: 'chiprow' }, [heatChip(b.heat), depthChip(b.depth)]);

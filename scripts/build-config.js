@@ -46,6 +46,16 @@ const SUBSTITUTIONS = [
     from: ' Section 9.3 is the working list of what must be confirmed before the next version, and several areas of the Maine market noted there have not yet been surveyed.',
     to: '',
     reason: 'section 9 withheld, sentence removed from the revision note'
+  },
+  {
+    from: 'Sections 2 and 9 describe a formation chain',
+    to: 'Section 2 describes a formation chain',
+    reason: 'section 9 withheld, cross-reference dropped from the opening of the OnRamp Hub section'
+  },
+  {
+    from: 'Read section 13.5 first',
+    to: 'Read section 12.5 first',
+    reason: 'the OnRamp Hub section renumbers from 13 to 12, so its own cross-reference follows'
   }
 ];
 
