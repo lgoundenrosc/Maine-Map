@@ -13,6 +13,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { SUBSTITUTIONS, RENDER_EXCLUDE_SECTIONS } = require('./build-config.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const SRC = path.join(ROOT, 'content', 'maine_map_content_v3.md');
@@ -74,7 +75,28 @@ function normalise(text) {
     .join('\n');
 }
 
-const source = fs.readFileSync(SRC, 'utf8');
+let source = fs.readFileSync(SRC, 'utf8');
+
+/* Apply the declared substitutions, so the diff below proves the rendered
+   document differs from the source by exactly this list and nothing else. */
+SUBSTITUTIONS.forEach(sub => { source = source.split(sub.from).join(sub.to); });
+
+/* Cut the withheld sections out of the comparison text. A section runs from
+   its own H2 to the next H2. */
+const excludeNums = RENDER_EXCLUDE_SECTIONS.map(x => x.num);
+function dropSections(text) {
+  const lines = text.split(/\r?\n/);
+  const out = [];
+  let skipping = false;
+  for (const l of lines) {
+    const m = l.match(/^## (?:(\d+)\.)?\s*(.*)$/);
+    if (l.startsWith('## ')) skipping = !!(m && m[1] && excludeNums.indexOf(m[1]) >= 0);
+    if (!skipping) out.push(l);
+  }
+  return out.join('\n');
+}
+source = dropSections(source);
+
 const contents = read('contents.json');
 const sections = read('sections.json');
 
@@ -94,6 +116,9 @@ if (rebuilt === original) {
   console.log('FIDELITY OK');
   console.log('  ' + original.split('\n').length + ' content lines round-tripped identically');
   console.log('  ' + original.length + ' characters compared');
+  SUBSTITUTIONS.forEach(x => console.log('  declared substitution  "' + x.from + '" -> "' + x.to + '"'));
+  RENDER_EXCLUDE_SECTIONS.forEach(x => console.log('  declared exclusion     section ' + x.num));
+  console.log('  everything outside those declarations is character identical');
   process.exit(0);
 }
 

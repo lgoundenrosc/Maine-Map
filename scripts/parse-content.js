@@ -32,6 +32,8 @@ const EXPECTED = {
   tables: 15
 };
 
+const { SUBSTITUTIONS, RENDER_EXCLUDE_SECTIONS } = require('./build-config.js');
+
 /* ------------------------------------------------------------------ */
 /* Callout label to colour scheme. Brief section 4.3.                  */
 /* ------------------------------------------------------------------ */
@@ -528,7 +530,13 @@ const TAB_MARKS = { '4': 'star', '9': 'square' };
 /* Main.                                                               */
 /* ------------------------------------------------------------------ */
 function main() {
-  const md = fs.readFileSync(SRC, 'utf8');
+  const raw = fs.readFileSync(SRC, 'utf8');
+  let md = raw;
+  const substitutionCounts = SUBSTITUTIONS.map(sub => {
+    const hits = md.split(sub.from).length - 1;
+    md = md.split(sub.from).join(sub.to);
+    return { from: sub.from, to: sub.to, reason: sub.reason, replaced: hits };
+  });
   const lines = md.split(/\r?\n/);
   const blocks = parseBlocks(lines);
   const sections = buildTree(blocks);
@@ -573,7 +581,13 @@ function main() {
   const clusters = buildClusters(sections);
   const geo = buildGeo(sections);
 
-  const tabs = numbered.map(s => ({
+  /* Validation above ran against the full parse. Only now is the excluded
+     set held back, so a source change still has to survive every check. */
+  const excludeNums = RENDER_EXCLUDE_SECTIONS.map(x => x.num);
+  const rendered = numbered.filter(s => excludeNums.indexOf(s.num) < 0);
+  const withheld = numbered.filter(s => excludeNums.indexOf(s.num) >= 0);
+
+  const tabs = rendered.map(s => ({
     num: s.num,
     id: s.id,
     label: TAB_LABELS[s.num] || s.title,
@@ -585,14 +599,43 @@ function main() {
     title: headerCallout ? headerCallout.paragraphs[0].runs.map(r => r.v).join('') : 'Maine Defense Innovation Ecosystem',
     subtitle: headerCallout ? headerCallout.paragraphs.slice(1).map(p => p.runs.map(r => r.v).join('')) : [],
     badge: 'ROSC INTERNAL',
-    runningHeader: ['Maine Defense Innovation Ecosystem', 'Rosc Capital', 'August 2026', 'INTERNAL'],
-    runningFooter: 'For internal Rosc Capital use only · Personnel unverified, confirm before any outreach',
+    runningHeader: ['Maine Defense Innovation Ecosystem', 'Rosc', 'August 2026', 'INTERNAL'],
+    runningFooter: 'For internal Rosc use only · Personnel unverified, confirm before any outreach',
     sourceFile: 'content/maine_map_content_v3.md',
     generated: true
   };
 
+  const countIn = (list, type) => {
+    let n = 0;
+    const scanBlocks = bs => bs.forEach(b => { if (b.type === type) n++; });
+    list.forEach(sec => {
+      scanBlocks(sec.blocks);
+      (sec.entries || []).forEach(e => scanBlocks(e.blocks));
+      sec.subsections.forEach(sub => {
+        scanBlocks(sub.blocks);
+        sub.entries.forEach(e => scanBlocks(e.blocks));
+      });
+    });
+    return n;
+  };
+  const countEntries = list => list.reduce(
+    (n, sec) => n + (sec.entries || []).length + sec.subsections.reduce((m, x) => m + x.entries.length, 0), 0);
+
   const manifest = {
-    sections: numbered.length,
+    sections: rendered.length,
+    sectionsParsed: numbered.length,
+    withheldSections: withheld.map(s => ({
+      num: s.num, title: s.title,
+      reason: (RENDER_EXCLUDE_SECTIONS.find(x => x.num === s.num) || {}).reason,
+      callouts: countIn([s], 'callout'), tables: countIn([s], 'table'),
+      subsections: s.subsections.length, entries: countEntries([s])
+    })),
+    substitutions: substitutionCounts,
+    renderedCallouts: countIn(rendered, 'callout') + 1,   // the masthead block
+    renderedTables: countIn(rendered, 'table') + (contents ? countIn([contents], 'table') : 0),
+    renderedSubsections: rendered.reduce((n, s) => n + s.subsections.length, 0),
+    renderedEntries: countEntries(rendered),
+    sectionsAll: numbered.length,
     clusters: clusters.length,
     callouts: allCallouts.length,
     tables: allTables.length,
@@ -623,7 +666,7 @@ function main() {
     'meta.json': meta,
     'tabs.json': tabs,
     'contents.json': contents || null,
-    'sections.json': numbered,
+    'sections.json': rendered,
     'chain.json': chain,
     'clusters.json': clusters,
     'geo.json': geo,
@@ -645,7 +688,7 @@ function main() {
   );
 
   console.log('Parsed ' + meta.sourceFile);
-  console.log('  sections        ' + manifest.sections + '   (expected ' + EXPECTED.sections + ')');
+  console.log('  sections        ' + manifest.sectionsParsed + '   (expected ' + EXPECTED.sections + ')');
   console.log('  clusters        ' + manifest.clusters + '   (expected ' + EXPECTED.clusters + ')');
   console.log('  callouts        ' + manifest.callouts + '  (expected ' + EXPECTED.callouts + ')');
   console.log('  tables          ' + manifest.tables + '  (expected ' + EXPECTED.tables + ')');
@@ -653,6 +696,13 @@ function main() {
   console.log('  entries         ' + manifest.entries);
   console.log('  inline markers  ' + manifest.inlineMarkers);
   console.log('  geo points      ' + geo.points.length + ' across ' + geo.derivedCoordinates.length + ' derived coordinates');
+  substitutionCounts.forEach(x => console.log(
+    '  substitution    "' + x.from + '" -> "' + x.to + '"  x' + x.replaced + '  (' + x.reason + ')'));
+  manifest.withheldSections.forEach(x => console.log(
+    '  withheld        section ' + x.num + ' ' + x.title +
+    '  (' + x.callouts + ' callouts, ' + x.tables + ' table, ' + x.entries + ' entries)  ' + x.reason));
+  console.log('  rendered        ' + manifest.sections + ' sections, ' + manifest.renderedCallouts +
+    ' callouts, ' + manifest.renderedTables + ' tables');
   if (unclassified.length) console.log('  labels defaulted to rust (' + unclassified.length + '): ' + unclassified.join(' / '));
   if (geo.unresolved.length) {
     console.log('  locations not plotted (' + geo.unresolved.length + '):');

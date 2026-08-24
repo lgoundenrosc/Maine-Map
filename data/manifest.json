@@ -1,13 +1,38 @@
 {
-  "sections": 12,
+  "sections": 11,
+  "sectionsParsed": 12,
+  "withheldSections": [
+    {
+      "num": "9",
+      "title": "Constraints and gaps",
+      "reason": "constraints and gaps not needed at this time, per the document owner",
+      "callouts": 1,
+      "tables": 1,
+      "subsections": 3,
+      "entries": 9
+    }
+  ],
+  "substitutions": [
+    {
+      "from": "Rosc Capital",
+      "to": "Rosc",
+      "reason": "Rosc is the official name, per the document owner",
+      "replaced": 1
+    }
+  ],
+  "renderedCallouts": 42,
+  "renderedTables": 14,
+  "renderedSubsections": 23,
+  "renderedEntries": 63,
+  "sectionsAll": 12,
   "clusters": 9,
   "callouts": 43,
   "tables": 15,
   "inlineMarkers": 16,
   "subsections": 26,
   "entries": 72,
-  "sourceBytes": 124582,
-  "sourceWords": 19082,
+  "sourceBytes": 124574,
+  "sourceWords": 19081,
   "defaultedCalloutLabels": [
     "WHY ONLY TWO ANCHORS",
     "WHY THIS ENTRY MATTERS",

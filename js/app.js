@@ -46,8 +46,8 @@
       el('span', { text: meta.sourceFile }),
       el('div', { class: 'parse-audit', text:
         manifest.sections + ' sections · ' + manifest.clusters + ' capability clusters · ' +
-        manifest.callouts + ' callouts · ' + manifest.tables + ' tables · ' +
-        manifest.inlineMarkers + ' inline confidence markers · ' + manifest.entries + ' entries' })
+        manifest.renderedCallouts + ' callouts · ' + manifest.renderedTables + ' tables · ' +
+        manifest.inlineMarkers + ' inline confidence markers · ' + manifest.renderedEntries + ' entries' })
     ]);
   }
 

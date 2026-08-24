@@ -12,9 +12,13 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { SUBSTITUTIONS } = require('./build-config.js');
 
 const ROOT = path.resolve(__dirname, '..');
-const source = fs.readFileSync(path.join(ROOT, 'content', 'maine_map_content_v3.md'), 'utf8');
+let source = fs.readFileSync(path.join(ROOT, 'content', 'maine_map_content_v3.md'), 'utf8');
+/* Compare against the source as rendered, so the declared substitutions do not
+   show up as text this build invented. */
+SUBSTITUTIONS.forEach(sub => { source = source.split(sub.from).join(sub.to); });
 const norm = s => s.replace(/\s+/g, ' ').trim();
 const SOURCE_NORM = norm(source);
 
