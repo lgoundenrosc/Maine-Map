@@ -73,6 +73,24 @@ window.RoscData.meta = {
       'Brunswick Landing sits about 11 miles from Bath Iron Works, Portland roughly 35 miles from Bath ' +
       'and roughly 50 miles from Kittery. Treat these distances as approximate road miles.'
   },
+  /* The corridor as coordinates, so the chain diagram and the ecosystem map
+     draw the same line from the same source. Bath, Portland, Kittery. */
+  corridorPath: [[43.9109, -69.8133], [43.6591, -70.2568], [43.0793, -70.7420]],
+
+  /* The ecosystem map is a second document over the same records. It carries
+     no internal marking and no personnel layer, it maps organisations and the
+     places they sit in. */
+  ecosystem: {
+    title: 'Maine Defense Innovation Ecosystem Map',
+    shortTitle: 'Ecosystem Map',
+    description:
+      'Organisations in Maine\u2019s defense innovation ecosystem, plotted by the town they sit in. ' +
+      'Companion to the Maine Defense Innovation Ecosystem VC Landscape Map.',
+    scopeNote:
+      'This map shows organisations and places. Named individuals, routing contacts and the ' +
+      'engagement playbook stay in the VC landscape map, which is the document built to carry them.'
+  },
+
   siblingMaps: [
     { id: 'socom', label: 'Rosc US SOCOM Map (June 2026)', url: 'https://scremling.github.io/Rosc-US-SOCOM-Map/' },
     { id: 'ussf', label: 'Rosc US Space Force Map (May 2026)', url: 'https://scremling.github.io/Rosc-US-Space-Force/' }

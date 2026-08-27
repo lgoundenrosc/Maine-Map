@@ -1,0 +1,483 @@
+/* ==========================================================================
+   Maine Defense Innovation Ecosystem, Ecosystem Map.
+
+   A dark treatment of the Rosc series palette already defined in styles.css.
+   Navy and rust are carried across unchanged in hue. The series accent stays
+   rust, which is what the VC map already uses for the defense corridor.
+
+   No external fonts, no CDN assets. The file must work offline.
+   ========================================================================== */
+
+:root {
+  /* Surfaces, darkest to lightest. */
+  --e-void:      #05090f;
+  --e-water:     #081120;
+  --e-land:      #182b42;
+  --e-coast:     #35526f;
+  --e-boundary:  #3d5877;
+
+  --e-panel:     rgba(13, 27, 48, 0.94);
+  --e-panel-2:   #0d1b30;
+  --e-raised:    #14263f;
+  --e-inset:     #101f36;
+  --e-line:      #22384f;
+  --e-line-2:    #2d4763;
+
+  /* Text. Cream and pale blue, from the series tokens. */
+  --e-text:      #eef3f9;
+  --e-text-2:    #a8c0dc;
+  --e-text-3:    #7089a5;
+  --e-text-4:    #55708c;
+
+  /* Accent. Rust, lifted for legibility on a dark ground. */
+  --e-rust:      #d4763c;
+  --e-rust-2:    #b0552a;
+  --e-rust-dim:  rgba(212, 118, 60, 0.16);
+
+  /* Semantic, matched to the light document's meanings. */
+  --e-green:     #5fae76;
+  --e-green-dim: rgba(95, 174, 118, 0.15);
+  --e-amber:     #d9a441;
+  --e-amber-dim: rgba(217, 164, 65, 0.15);
+  --e-red:       #d4657f;
+  --e-grey-dim:  rgba(168, 192, 220, 0.10);
+
+  --e-radius:    14px;
+  --e-radius-sm: 8px;
+  --e-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --e-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --e-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 12px 34px rgba(0, 0, 0, 0.34);
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--e-void);
+  color: var(--e-text);
+  font-family: var(--e-sans);
+  font-size: 14.5px;
+  line-height: 1.55;
+  overflow: hidden;
+}
+
+/* The same rule the VC map follows. Monospace carries badges, values,
+   locations and counts. Never body prose. */
+.e-mono, .e-badge, .e-chip, .e-count, .e-loc, .e-kv-val, .e-stat,
+.e-legend-row span, .e-tag { font-family: var(--e-mono); }
+
+button { font: inherit; color: inherit; }
+
+/* ============================================================ shell ====== */
+
+.e-app { position: fixed; inset: 0; }
+#e-map { position: absolute; inset: 0; background: var(--e-water); }
+
+.leaflet-container { background: var(--e-water); outline: none; font-family: var(--e-sans); }
+.leaflet-control-attribution {
+  background: rgba(5, 9, 15, 0.78) !important;
+  color: var(--e-text-4) !important;
+  font-family: var(--e-mono);
+  font-size: 10.5px;
+  padding: 3px 8px;
+  border-radius: 6px 0 0 0;
+}
+.leaflet-control-attribution a { color: var(--e-text-3); }
+.leaflet-control-zoom { display: none; }
+
+/* ======================================================= brand card ====== */
+
+.e-brand {
+  position: absolute; top: 18px; left: 18px; z-index: 830;
+  display: flex; align-items: center; gap: 13px;
+  padding: 13px 20px 13px 14px;
+  background: var(--e-panel); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius); box-shadow: var(--e-shadow);
+  backdrop-filter: blur(9px);
+}
+.e-brand-mark {
+  width: 42px; height: 42px; border-radius: 11px; flex: none;
+  background: linear-gradient(150deg, var(--e-rust), var(--e-rust-2));
+  display: grid; place-items: center; color: #fdf6e8;
+}
+.e-brand h1 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.15px; }
+.e-brand p { margin: 1px 0 0; font-size: 11.5px; color: var(--e-text-3); font-family: var(--e-mono); }
+.e-brand p b { color: var(--e-text-2); font-weight: 600; }
+
+/* ============================================================ rail ======= */
+
+.e-rail {
+  position: absolute; top: 18px; right: 82px; z-index: 830;
+  width: 306px; max-height: calc(100vh - 36px);
+  display: flex; flex-direction: column; gap: 11px;
+  overflow-y: auto; padding-bottom: 4px;
+  scrollbar-width: thin; scrollbar-color: var(--e-line-2) transparent;
+}
+.e-rail[hidden] { display: none; }
+.e-rail::-webkit-scrollbar { width: 7px; }
+.e-rail::-webkit-scrollbar-thumb { background: var(--e-line-2); border-radius: 4px; }
+
+.e-card {
+  background: var(--e-panel); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius); box-shadow: var(--e-shadow);
+  backdrop-filter: blur(9px); flex: none;
+}
+.e-card-head {
+  display: flex; align-items: center; gap: 9px; width: 100%;
+  padding: 13px 15px; background: none; border: 0; cursor: pointer;
+  font-size: 13.5px; font-weight: 600; text-align: left;
+}
+.e-card-head .e-grow { flex: 1; }
+.e-card-head svg { flex: none; color: var(--e-rust); }
+.e-card-head .e-chev { color: var(--e-text-3); transition: transform 0.16s ease; }
+.e-card-head[aria-expanded="true"] .e-chev { transform: rotate(180deg); }
+.e-card-body { padding: 0 15px 14px; }
+
+.e-label {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--e-text-3); font-family: var(--e-mono);
+}
+
+select.e-select {
+  width: 100%; padding: 10px 12px; font-size: 13.5px; font-weight: 600;
+  color: var(--e-text); background: var(--e-inset);
+  border: 1px solid var(--e-line-2); border-radius: var(--e-radius-sm);
+  appearance: none; cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237089a5' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center;
+}
+select.e-select:focus-visible { outline: 2px solid var(--e-rust); outline-offset: 1px; }
+select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
+
+.e-mode { display: flex; gap: 5px; margin-top: 9px; }
+.e-mode button {
+  flex: 1; padding: 7px 4px; font-size: 11px; font-family: var(--e-mono);
+  background: var(--e-inset); border: 1px solid var(--e-line-2);
+  border-radius: var(--e-radius-sm); color: var(--e-text-3); cursor: pointer;
+}
+.e-mode button[aria-pressed="true"] {
+  background: var(--e-rust-dim); border-color: var(--e-rust);
+  color: var(--e-rust); font-weight: 700;
+}
+
+.e-legend-row {
+  display: flex; align-items: center; gap: 9px;
+  padding: 4px 0; font-size: 12.5px; color: var(--e-text-2);
+}
+.e-legend-row i {
+  width: 15px; height: 15px; border-radius: 50%; flex: none;
+  border: 2px solid currentColor;
+}
+.e-legend-row span { margin-left: auto; color: var(--e-text-4); font-size: 11px; }
+.e-legend-note {
+  margin: 9px 0 0; font-size: 11.5px; color: var(--e-text-4); line-height: 1.5;
+}
+
+.e-comm { max-height: 232px; overflow-y: auto; scrollbar-width: thin; }
+.e-comm::-webkit-scrollbar { width: 7px; }
+.e-comm::-webkit-scrollbar-thumb { background: var(--e-line-2); border-radius: 4px; }
+.e-comm button {
+  display: flex; align-items: center; gap: 9px; width: 100%;
+  padding: 6px 8px; background: none; border: 0; border-radius: 7px;
+  cursor: pointer; font-size: 13px; text-align: left; color: var(--e-text-2);
+}
+.e-comm button:hover, .e-comm button:focus-visible {
+  background: var(--e-raised); color: var(--e-text); outline: none;
+}
+.e-comm i { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.e-comm .e-grow { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.e-count {
+  font-size: 11.5px; font-weight: 700; color: var(--e-text-2);
+  background: var(--e-grey-dim); padding: 2px 8px; border-radius: 20px;
+}
+
+.e-btn {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  width: 100%; padding: 13px 15px; cursor: pointer;
+  background: var(--e-rust-dim); border: 1px solid var(--e-rust);
+  border-radius: var(--e-radius); color: var(--e-rust);
+  font-size: 13.5px; font-weight: 700; box-shadow: var(--e-shadow);
+}
+.e-btn:hover { background: rgba(212, 118, 60, 0.26); }
+
+/* ============================================================ dock ======= */
+
+.e-dock {
+  position: absolute; top: 50%; right: 18px; transform: translateY(-50%);
+  /* Above every surface, Leaflet's own controls included. The dock is the
+     only way back out of a full view, so nothing may cover it. */
+  z-index: 900; display: flex; flex-direction: column; gap: 3px; padding: 7px;
+  background: var(--e-panel); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius); box-shadow: var(--e-shadow);
+  backdrop-filter: blur(9px);
+}
+.e-dock button {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  background: none; border: 0; border-radius: 10px; cursor: pointer;
+  color: var(--e-text-3);
+}
+.e-dock button:hover { background: var(--e-raised); color: var(--e-text-2); }
+.e-dock button[aria-current="true"] { background: var(--e-rust-dim); color: var(--e-rust); }
+.e-app.has-drawer .e-dock { right: calc(min(486px, 43vw) + 18px); }
+
+/* ========================================================= markers ======= */
+
+.e-bubble { cursor: pointer; transition: filter 0.14s ease; }
+.e-bubble:hover { filter: brightness(1.28); }
+.e-bubble-label {
+  font-family: var(--e-mono); font-size: 11.5px; font-weight: 700;
+  color: #fdf6e8; pointer-events: none;
+  text-shadow: 0 1px 3px rgba(5, 9, 15, 0.8);
+}
+
+.leaflet-tooltip.e-tip {
+  background: var(--e-panel-2); border: 1px solid var(--e-line-2);
+  border-radius: 9px; box-shadow: var(--e-shadow);
+  color: var(--e-text); padding: 8px 12px; font-family: var(--e-sans);
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+}
+.leaflet-tooltip.e-tip::before { border-top-color: var(--e-line-2); }
+.leaflet-tooltip.e-tip b {
+  display: block; font-family: var(--e-mono); font-size: 11.5px;
+  font-weight: 500; color: var(--e-text-3);
+}
+
+/* ========================================================== sheet ======== */
+/* The municipality drill-down. Sits over the map, which stays visible and
+   dimmed so the reader keeps their bearings. */
+
+.e-sheet {
+  position: absolute; inset: 0; z-index: 840;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  background: linear-gradient(to bottom, rgba(5, 9, 15, 0.14) 0%, rgba(5, 9, 15, 0.72) 42%, rgba(5, 9, 15, 0.93) 100%);
+  padding: 0 78px 30px 34px; pointer-events: none;
+}
+.e-sheet > * { pointer-events: auto; }
+.e-sheet[hidden] { display: none; }
+
+.e-sheet-head { margin-bottom: 16px; max-width: 720px; }
+.e-eyebrow {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 12.5px; color: var(--e-text-2); margin-bottom: 5px;
+}
+.e-sheet-head h2 {
+  margin: 0; font-size: clamp(34px, 5vw, 58px); font-weight: 700;
+  letter-spacing: -1.4px; line-height: 1.02;
+}
+.e-sheet-head p { margin: 7px 0 0; font-size: 15.5px; color: var(--e-text-2); }
+
+.e-grid {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 288px;
+  grid-template-rows: repeat(2, auto); gap: 13px;
+  overflow-x: auto; overflow-y: hidden; padding: 4px 4px 14px;
+  scrollbar-width: thin; scrollbar-color: var(--e-line-2) transparent;
+}
+.e-grid.e-grid-single { grid-template-rows: auto; }
+.e-grid::-webkit-scrollbar { height: 9px; }
+.e-grid::-webkit-scrollbar-thumb { background: var(--e-line-2); border-radius: 5px; }
+
+.e-tile {
+  display: flex; flex-direction: column; gap: 8px; padding: 15px;
+  background: var(--e-panel); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius); box-shadow: var(--e-shadow);
+  cursor: pointer; text-align: left; min-height: 152px;
+  backdrop-filter: blur(9px);
+}
+.e-tile:hover, .e-tile:focus-visible {
+  border-color: var(--e-rust); background: var(--e-raised); outline: none;
+}
+.e-tile-top { display: flex; align-items: flex-start; justify-content: space-between; }
+.e-avatar {
+  width: 38px; height: 38px; border-radius: 10px; flex: none;
+  display: grid; place-items: center; font-family: var(--e-mono);
+  font-size: 15px; font-weight: 700; color: #fdf6e8;
+}
+.e-tile h3 {
+  margin: 0; font-size: 15px; font-weight: 700; line-height: 1.28;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.e-tile p {
+  margin: 0; font-size: 12.5px; color: var(--e-text-3); line-height: 1.48;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.e-tile-foot {
+  margin-top: auto; padding-top: 9px; border-top: 1px solid var(--e-line);
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+
+.e-chip {
+  display: inline-block; padding: 3px 9px; border-radius: 6px;
+  font-size: 11px; font-weight: 600; background: var(--e-grey-dim);
+  color: var(--e-text-2); border: 1px solid transparent;
+}
+.e-chip.e-chip-type { background: var(--e-rust-dim); color: var(--e-rust); border-color: rgba(212, 118, 60, 0.3); }
+
+/* Confidence, carrying the same meanings as the VC map's legend. */
+.e-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 2px 8px; border-radius: 5px; font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.e-badge-unverified { background: var(--e-amber-dim); color: var(--e-amber); }
+.e-badge-stale { background: var(--e-grey-dim); color: var(--e-text-3); font-style: italic; font-weight: 600; }
+.e-badge-gap { background: var(--e-grey-dim); color: var(--e-text-4); font-weight: 600; }
+.e-empty { color: var(--e-text-4); font-size: 12px; font-style: italic; }
+
+/* ========================================================= drawer ======== */
+
+.e-drawer {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(486px, 43vw);
+  z-index: 870; display: flex; flex-direction: column;
+  background: var(--e-panel-2); border-left: 1px solid var(--e-line-2);
+  box-shadow: -18px 0 48px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; scrollbar-width: thin;
+}
+.e-drawer[hidden] { display: none; }
+.e-drawer::-webkit-scrollbar { width: 9px; }
+.e-drawer::-webkit-scrollbar-thumb { background: var(--e-line-2); border-radius: 5px; }
+.e-drawer-in { padding: 26px 30px 34px; }
+.e-drawer-top { display: flex; gap: 15px; align-items: flex-start; margin-bottom: 15px; }
+.e-drawer-top .e-avatar { width: 52px; height: 52px; border-radius: 13px; font-size: 20px; }
+.e-drawer h2 { margin: 0; font-size: 25px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.18; }
+.e-drawer-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+
+.e-section {
+  background: var(--e-inset); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius-sm); padding: 15px 17px; margin-bottom: 13px;
+}
+.e-section .e-label { display: block; margin-bottom: 7px; }
+.e-section p { margin: 0; font-size: 14px; color: var(--e-text-2); line-height: 1.6; }
+.e-kv { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-bottom: 13px; }
+.e-kv > div {
+  background: var(--e-inset); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius-sm); padding: 12px 14px;
+}
+.e-kv-val { display: block; margin-top: 4px; font-size: 14px; font-weight: 600; color: var(--e-text); }
+
+.e-cta {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  width: 100%; padding: 14px; margin-top: 4px; cursor: pointer;
+  background: var(--e-rust-dim); border: 1px solid var(--e-rust);
+  border-radius: var(--e-radius-sm); color: var(--e-rust);
+  font-size: 14px; font-weight: 700; text-decoration: none;
+}
+.e-cta:hover { background: rgba(212, 118, 60, 0.26); }
+.e-cta-gap {
+  display: block; width: 100%; padding: 14px; margin-top: 4px; text-align: center;
+  background: var(--e-grey-dim); border: 1px dashed var(--e-line-2);
+  border-radius: var(--e-radius-sm); color: var(--e-text-4);
+  font-size: 13px; font-style: italic;
+}
+
+.e-close {
+  position: absolute; top: 15px; right: 15px; z-index: 5;
+  width: 34px; height: 34px; display: grid; place-items: center;
+  background: var(--e-raised); border: 1px solid var(--e-line-2);
+  border-radius: 50%; color: var(--e-text-2); cursor: pointer;
+}
+.e-close:hover { background: var(--e-line); color: var(--e-text); }
+.e-close-inline {
+  display: inline-flex; align-items: center; gap: 6px; margin-left: 14px;
+  padding: 4px 11px 4px 9px; cursor: pointer;
+  background: var(--e-raised); border: 1px solid var(--e-line-2);
+  border-radius: 20px; color: var(--e-text-2); font-size: 12px;
+}
+.e-close-inline:hover { background: var(--e-line); color: var(--e-text); }
+
+/* ========================================================== views ======== */
+/* Home, index and help. Full surface panels over the map. */
+
+.e-view {
+  position: absolute; inset: 0; z-index: 860; overflow-y: auto;
+  background: var(--e-void); scrollbar-width: thin;
+}
+.e-view[hidden] { display: none; }
+.e-view::-webkit-scrollbar { width: 11px; }
+.e-view::-webkit-scrollbar-thumb { background: var(--e-line-2); border-radius: 6px; }
+.e-view-in { max-width: 1080px; margin: 0 auto; padding: 74px 34px 92px; }
+.e-view h2 { margin: 0 0 7px; font-size: 30px; font-weight: 700; letter-spacing: -0.6px; }
+.e-view h3 { margin: 34px 0 12px; font-size: 17px; font-weight: 700; }
+.e-view .e-lede { margin: 0 0 26px; font-size: 15.5px; color: var(--e-text-2); max-width: 74ch; }
+.e-view p { max-width: 82ch; }
+
+.e-note {
+  border-left: 3px solid var(--e-rust); background: var(--e-inset);
+  border-radius: 0 var(--e-radius-sm) var(--e-radius-sm) 0;
+  padding: 15px 18px; margin: 0 0 20px;
+}
+.e-note b { color: var(--e-rust); }
+.e-note p { margin: 5px 0 0; color: var(--e-text-2); font-size: 14px; }
+
+.e-stats { display: flex; flex-wrap: wrap; gap: 11px; margin: 0 0 26px; }
+.e-stat {
+  background: var(--e-inset); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius-sm); padding: 13px 18px; min-width: 132px;
+}
+.e-stat b { display: block; font-size: 25px; font-weight: 700; color: var(--e-rust); line-height: 1.2; }
+.e-stat span { font-size: 11.5px; color: var(--e-text-3); }
+
+table.e-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+table.e-table th {
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--e-line-2);
+  font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--e-text-3); font-family: var(--e-mono); white-space: nowrap;
+}
+table.e-table th button {
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font: inherit; color: inherit; letter-spacing: inherit;
+}
+table.e-table th button:hover { color: var(--e-text); }
+table.e-table td { padding: 10px 12px; border-bottom: 1px solid var(--e-line); vertical-align: top; }
+table.e-table td:last-child { white-space: nowrap; font-family: var(--e-mono); font-size: 12.5px; }
+table.e-table tr { cursor: pointer; }
+table.e-table tbody tr:hover td { background: var(--e-inset); }
+table.e-table .e-td-name { font-weight: 600; }
+
+.e-search {
+  width: 100%; max-width: 420px; padding: 11px 14px; margin-bottom: 18px;
+  background: var(--e-inset); border: 1px solid var(--e-line-2);
+  border-radius: var(--e-radius-sm); color: var(--e-text); font-size: 14px;
+}
+.e-search::placeholder { color: var(--e-text-4); }
+.e-search:focus-visible { outline: 2px solid var(--e-rust); outline-offset: 1px; }
+
+.e-defs { display: grid; gap: 11px; }
+.e-def {
+  background: var(--e-inset); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius-sm); padding: 13px 16px;
+}
+.e-def b { display: block; font-size: 14px; margin-bottom: 3px; }
+.e-def span { font-size: 13.5px; color: var(--e-text-2); }
+
+.e-unplaced { display: grid; gap: 9px; margin-top: 13px; }
+.e-unplaced button {
+  display: flex; gap: 11px; align-items: baseline; width: 100%; text-align: left;
+  background: var(--e-inset); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius-sm); padding: 11px 14px; cursor: pointer;
+}
+.e-unplaced button:hover { border-color: var(--e-rust); }
+.e-unplaced b { font-size: 14px; font-weight: 600; }
+.e-unplaced span { font-size: 12px; color: var(--e-text-3); margin-left: auto; }
+
+/* ====================================================== small screens ==== */
+
+@media (max-width: 900px) {
+  /* The rail stacks above the dock rather than under it. */
+  .e-rail { right: 14px; top: auto; bottom: 76px; width: calc(100vw - 28px); max-height: 44vh; }
+  .e-dock { top: auto; bottom: 14px; right: 14px; transform: none; flex-direction: row; }
+  .e-app.has-drawer .e-dock { right: 14px; }
+  .e-brand { top: 12px; left: 12px; padding: 10px 15px 10px 11px; }
+  .e-brand h1 { font-size: 15px; }
+  .e-sheet { padding: 0 16px 20px; }
+  .e-sheet .e-close { right: 16px; }
+  .e-drawer { width: 100vw; }
+  .e-view-in { padding: 58px 20px 78px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

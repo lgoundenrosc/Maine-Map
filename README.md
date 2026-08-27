@@ -7,14 +7,86 @@ Unlike the prior two maps, which are demand-side documents built around an acqui
 is the supply-side inverse. Maine holds no acquisition authority, so the spine is a formation chain
 that runs from research origin to mission partner, and it visibly breaks at stages 6 and 7.
 
+## Two documents
+
+`index.html` is the VC landscape map: nine tabs, a formation chain, a print stylesheet, the personnel
+and routing layers. It is the analytic document.
+
+`ecosystem.html` is the ecosystem map: the same records plotted on a real map of Maine, browsable by
+town. Four surfaces, reached from the dock on the right.
+
+| | VC landscape map | Ecosystem map |
+| --- | --- | --- |
+| Entry | `index.html` | `ecosystem.html` |
+| Shape | nine tabs, chain diagram | map, municipality drill-down, index, help |
+| Theme | light, print first | dark, screen first |
+| Records | all of `data/` | organisations and places only |
+| Personnel | included | excluded, see below |
+| Print | 45 pages at Letter | not a print document |
+
+Both read the same `data/` directory. Editing a record changes both. Neither has a build step and
+neither fetches anything at runtime.
+
+### What the ecosystem map deliberately leaves out
+
+It maps organisations and the places they sit in. Named individuals, routing contacts and the
+engagement playbook stay in the VC landscape map, which is the document built to carry them. The only
+contact strings it renders are the allowlisted domains, and it reaches them through the same
+`entryPoints` records, filtered against an explicit list in `js/entities.js`. A domain added to
+`data/` without being added to that list renders as a gap rather than as a link, which is the
+intended failure direction.
+
+It carries no `ROSC INTERNAL` badge.
+
+### Three things the records needed before they could be plotted
+
+The source `location.town` strings were written for a reading document, not for a rollup.
+`data/places.js` resolves them and says why in full.
+
+1. Brunswick is spelled three ways. `Brunswick`, `Brunswick Landing` and `Hangar 5, Brunswick Landing`
+   are one municipality with 16 records, not three places with 5, 5 and 1.
+2. Fifteen records are not in a town. `Maine`, `Statewide` and `Coastal` carry coordinates that were
+   invented so the old renderer could draw a dot. They are listed rather than plotted. Nothing sits on
+   the map at a coordinate made up to satisfy a renderer.
+3. One record is in New Hampshire. It stays on the map because the test route matters, but it is not
+   a Maine community and does not count as one.
+
+## The basemap
+
+The map draws a real coastline without calling a tile service. `tools/build-geo.js` clips
+OpenStreetMap derived vectors to the viewport at build time and writes `data/geo.js`, which is
+committed. Leaflet is vendored into `vendor/` and loaded without a tile layer, supplying dragging,
+scroll zoom, tooltip anchoring and marker management over the baked geometry.
+
+```
+npm install          # build-time only, the documents have no runtime dependencies
+npm run geo          # rebake data/geo.js after changing the viewport
+npm run vendor       # recopy Leaflet after a version bump
+```
+
+Two rectangles matter. `BAKE` is what geometry is clipped to and is far wider than Maine, because past
+its edge land simply stops and the canvas reads as open ocean. `VIEW` is what the reader can pan to,
+inset far enough inside `BAKE` that the cut edge never comes on screen, and the map takes its
+`maxBounds` from it. The minimum zoom is recomputed on resize so `VIEW` always covers the window.
+
+Resolution is 500m rather than 100m. At the zoom range this map allows the two are indistinguishable,
+and 500m costs about a third as much, 272 KB against 765 KB, while still carrying 146 islands along
+the Maine coast.
+
+Attribution is required and is rendered by the map: coastline from OpenStreetMap contributors under
+ODbL, boundaries from the US Census Bureau. `data/geo.js` is generated. Rerun `npm run geo` rather
+than editing it.
+
 ## Running it
+
+
 
 There is no build step and no dependency to install. Open `index.html` in a browser, from disk or from
 a static host. Every path is relative and nothing is fetched at runtime, so the document works offline
 and on GitHub Pages without configuration.
 
 ```
-python3 -m http.server 8000     # or just open index.html directly
+python3 -m http.server 8000     # or just open either html file directly
 ```
 
 ## Why plain HTML, CSS and JS
@@ -27,13 +99,22 @@ requirement. Classic scripts assigning into a `window.RoscData` namespace load e
 ## Layout
 
 ```
-index.html            document shell, loads data before the application
-css/styles.css        design system, derived from the SOCOM map
+index.html            VC landscape map shell, loads data before the application
+ecosystem.html        ecosystem map shell, same data layer
+css/styles.css        light design system, derived from the SOCOM map
 css/print.css         @media print, see below
+css/ecosystem.css     dark treatment of the same palette, screen first
 data/                 all content, one module per section of the source brief
+data/geo.js           generated basemap, see The basemap
+data/places.js        town canonicalisation and placement rules
 js/components.js      chips, callouts, inset boxes, accordion cards
-js/views.js           chain diagram and geographic map
+js/views.js           chain diagram and the old stylised map
 js/app.js             tabs, filters, search, detail panel, section panels
+js/entities.js        flattens the six record sets into one plottable array
+js/basemap.js         Leaflet wrapper, no tile layer
+js/ecosystem.js       dock, rail, drill-down, drawer, index, help
+tools/                build-time scripts, not loaded by either document
+vendor/               Leaflet, vendored so nothing is fetched at runtime
 ```
 
 No prose lives in a component. Every string a reader sees comes from `data/`.
