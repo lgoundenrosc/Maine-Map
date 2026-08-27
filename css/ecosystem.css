@@ -55,6 +55,9 @@ html, body { height: 100%; }
 
 body {
   margin: 0;
+  /* The shell is fixed to the viewport, so nothing is in normal flow to give
+     the document height. Embedders that size to content need this. */
+  min-height: 100vh;
   background: var(--e-void);
   color: var(--e-text);
   font-family: var(--e-sans);

@@ -62,7 +62,14 @@ scroll zoom, tooltip anchoring and marker management over the baked geometry.
 npm install          # build-time only, the documents have no runtime dependencies
 npm run geo          # rebake data/geo.js after changing the viewport
 npm run vendor       # recopy Leaflet after a version bump
+npm run artifact     # bundle ecosystem.html into one self-contained file
+npm run standalone   # the same for index.html
 ```
+
+`tools/build-artifact.js` folds every stylesheet and script inline and drops the document wrapper, for
+hosts that supply their own doctype, head and body. The result makes no network requests at all, which
+is what lets it run under a strict content security policy. Regenerate it after any change to `data/`,
+`css/` or `js/`. Both bundles are generated and neither is committed.
 
 Two rectangles matter. `BAKE` is what geometry is clipped to and is far wider than Maine, because past
 its edge land simply stops and the canvas reads as open ocean. `VIEW` is what the reader can pan to,

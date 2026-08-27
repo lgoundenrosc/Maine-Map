@@ -6,7 +6,8 @@
   "scripts": {
     "geo": "node tools/build-geo.js",
     "vendor": "node tools/vendor-leaflet.js",
-    "standalone": "node build-single-file.js"
+    "standalone": "node build-single-file.js",
+    "artifact": "node tools/build-artifact.js"
   },
   "devDependencies": {
     "leaflet": "^1.9.4",
