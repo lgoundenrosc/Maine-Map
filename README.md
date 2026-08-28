@@ -146,13 +146,19 @@ where the SOCOM map would show a contact string. Nothing is silently upgraded.
 
 ## Two rules this build follows without exception
 
-**No invented contact information.** The only contact strings anywhere in the repository are the ones
-supplied in the source brief: `mainetechnology.org`, `brunswicklanding.us`, `umaine.edu`,
-`roux.northeastern.edu`, `maineapex.com`, `centralmaine.org`, `maineventurefund.com`, `bigelow.org`,
-`diu.mil`, `BuildSubmarines.com`, `statsamerica.org/innovation2`, and the Maine SBDC number
-`207-780-4420` which is tagged unverified because it came from a secondary source. Every other entry
-point renders the empty state and appears in the verification gaps table. There is an audit script
-note at the bottom of this file for re-checking after any edit.
+**No invented contact information.** Every contact string in the repository is checked against its own
+official site before being added, and is listed in `DOMAIN_ALLOWLIST` in `js/entities.js`, which is the
+enforcement point, not this paragraph. The source brief supplied `mainetechnology.org`,
+`brunswicklanding.us`, `umaine.edu`, `roux.northeastern.edu`, `maineapex.com`, `centralmaine.org`,
+`maineventurefund.com`, `bigelow.org`, `diu.mil`, `BuildSubmarines.com`, `statsamerica.org/innovation2`,
+and the Maine SBDC number `207-780-4420`, tagged unverified because it came from a secondary source. The
+education and workforce records added afterward, on request, extend the allowlist with each
+institution's own domain, checked the same way: `smccme.edu`, `yccc.edu`, `mainemaritime.edu`,
+`bowdoin.edu`, `umaine.edu`, `usm.maine.edu`, `uma.edu`, `umfk.edu`, `umpi.edu`, `machias.edu`,
+`husson.edu`, `thomas.edu`, `cmcc.edu`, `emcc.edu`, `kvcc.me.edu`, `nmcc.edu`, `wccc.me.edu`,
+`educatemaine.org`, `liveandworkinmaine.com`, `apprenticeship.maine.gov`. Every other entry point
+renders the empty state and appears in the verification gaps table. There is an audit script note at the
+bottom of this file for re-checking after any edit.
 
 **Every fact carries a confidence tag.** Where sources conflict, the range renders and the conflict is
 stated rather than resolved. BIW headcount, ASCC staff and MVF capitalisation are the three live

@@ -45,5 +45,31 @@ window.RoscData.sources = [
   { id: 'src-41', n: 41, title: 'Maine Defense Industry Alliance founding and workforce materials', publisher: 'MDIA and BlueForge Alliance', date: '2025', locator: '', quality: 'primary' },
   { id: 'src-43', n: 43, title: 'Rosc US SOCOM VC Landscape Map', publisher: 'Rosc Capital', date: '2026-06', locator: 'scremling.github.io/Rosc-US-SOCOM-Map/', quality: 'internal, first in series' },
   { id: 'src-44', n: 44, title: 'Rosc US Space Force VC Landscape Map', publisher: 'Rosc Capital', date: '2026-05', locator: 'scremling.github.io/Rosc-US-Space-Force/', quality: 'internal, second in series' },
-  { id: 'src-42', n: 42, title: 'Maine defense contractor and manufacturing counts', publisher: 'Commercial contract aggregator', date: '2026', locator: '', quality: 'low quality, flagged in the record that cites it' }
+  { id: 'src-42', n: 42, title: 'Maine defense contractor and manufacturing counts', publisher: 'Commercial contract aggregator', date: '2026', locator: '', quality: 'low quality, flagged in the record that cites it' },
+
+  /* Education and workforce pipeline, added on request. Each source is the
+     institution's own site, checked for its own name, location and website
+     only. None of these claim a defense-specific relationship beyond what is
+     stated in the citing record. */
+  { id: 'src-45', n: 45, title: 'Campus and program pages', publisher: 'Southern Maine Community College', date: '2026', locator: 'smccme.edu', quality: 'primary' },
+  { id: 'src-46', n: 46, title: 'Campus and program pages', publisher: 'York County Community College', date: '2026', locator: 'yccc.edu', quality: 'primary' },
+  { id: 'src-47', n: 47, title: 'Campus and program pages', publisher: 'Maine Maritime Academy', date: '2026', locator: 'mainemaritime.edu', quality: 'primary' },
+  { id: 'src-48', n: 48, title: 'Campus and program pages', publisher: 'Bowdoin College', date: '2026', locator: 'bowdoin.edu', quality: 'primary' },
+  { id: 'src-49', n: 49, title: 'Campus and program pages', publisher: 'University of Maine', date: '2026', locator: 'umaine.edu', quality: 'primary' },
+  { id: 'src-50', n: 50, title: 'Campus and program pages', publisher: 'University of Southern Maine', date: '2026', locator: 'usm.maine.edu', quality: 'primary' },
+  { id: 'src-51', n: 51, title: 'Campus and program pages', publisher: 'University of Maine at Augusta', date: '2026', locator: 'uma.edu', quality: 'primary' },
+  { id: 'src-52', n: 52, title: 'Campus and program pages', publisher: 'University of Maine at Fort Kent', date: '2026', locator: 'umfk.edu', quality: 'primary' },
+  { id: 'src-53', n: 53, title: 'Campus and program pages', publisher: 'University of Maine at Presque Isle', date: '2026', locator: 'umpi.edu', quality: 'primary' },
+  { id: 'src-54', n: 54, title: 'Campus and program pages', publisher: 'University of Maine at Machias', date: '2026', locator: 'machias.edu', quality: 'primary' },
+  { id: 'src-55', n: 55, title: 'Campus and program pages', publisher: 'Husson University', date: '2026', locator: 'husson.edu', quality: 'primary' },
+  { id: 'src-56', n: 56, title: 'Campus and program pages', publisher: 'Thomas College', date: '2026', locator: 'thomas.edu', quality: 'primary' },
+  { id: 'src-57', n: 57, title: 'Campus and program pages', publisher: 'Central Maine Community College', date: '2026', locator: 'cmcc.edu', quality: 'primary' },
+  { id: 'src-58', n: 58, title: 'Campus and program pages', publisher: 'Eastern Maine Community College', date: '2026', locator: 'emcc.edu', quality: 'primary' },
+  { id: 'src-59', n: 59, title: 'Campus and program pages', publisher: 'Kennebec Valley Community College', date: '2026', locator: 'kvcc.me.edu', quality: 'primary' },
+  { id: 'src-60', n: 60, title: 'Campus and program pages', publisher: 'Northern Maine Community College', date: '2026', locator: 'nmcc.edu', quality: 'primary' },
+  { id: 'src-61', n: 61, title: 'Campus and program pages', publisher: 'Washington County Community College', date: '2026', locator: 'wccc.me.edu', quality: 'primary' },
+  { id: 'src-62', n: 62, title: 'Mission and program pages', publisher: 'Educate Maine', date: '2026', locator: 'educatemaine.org', quality: 'primary' },
+  { id: 'src-63', n: 63, title: 'Program pages', publisher: 'Live + Work in Maine', date: '2026', locator: 'liveandworkinmaine.com', quality: 'primary' },
+  { id: 'src-64', n: 64, title: 'Registered Apprenticeship program pages', publisher: 'Maine Department of Labor', date: '2026', locator: 'apprenticeship.maine.gov', quality: 'primary' },
+  { id: 'src-65', n: 65, title: 'System overview and locations', publisher: 'Maine Community College System', date: '2026', locator: 'mccs.me.edu', quality: 'primary' }
 ];

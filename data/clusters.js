@@ -249,6 +249,59 @@ window.RoscData.clusters = {
       whiteSpace:
         'Where it works, it works as dual-use industrial software attached to cluster 3 rather than as a ' +
         'cyber thesis of its own. HighByte is the pattern to copy, not Defendify.'
+    },
+    {
+      id: 'workforce-education',
+      short: 'Workforce',
+      name: 'Education and workforce training pipeline',
+      category: 'cluster',
+      heat: 'OPEN',
+      depth: 'deep',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-41', 'src-65'],
+      flag: 'Added on request. Not one of the original seven clusters, and not a target for a portfolio company in the way the others are, it is the labor supply behind all of them.',
+      summary:
+        'Every other cluster in this map assumes a workforce exists to staff it. This is that workforce, ' +
+        'and where it is trained.',
+      assets: [
+        'University of Maine System, eight campuses statewide',
+        'Maine Community College System, seven colleges within 25 miles of 92 percent of the population',
+        'Maine Maritime Academy, licensed mariners and marine engineers',
+        'UMaine Advanced Structures and Composites Center, graduate research capacity feeding the same pipeline, listed separately under Anchor demand nodes',
+        'Private colleges with relevant programs, Bowdoin, Husson, Thomas',
+        'The Maine Apprenticeship Program, registered apprenticeships across trades and technical occupations',
+        'Educate Maine and Live + Work in Maine, advocacy and talent attraction rather than training providers themselves'
+      ],
+      whoIsThere: [
+        { name: 'University of Maine', ref: 'inst-umaine' },
+        { name: 'University of Southern Maine', ref: 'inst-usm' },
+        { name: 'University of Maine at Augusta', ref: 'inst-uma' },
+        { name: 'University of Maine at Fort Kent', ref: 'inst-umfk' },
+        { name: 'University of Maine at Presque Isle', ref: 'inst-umpi' },
+        { name: 'University of Maine at Machias', ref: 'inst-umm' },
+        { name: 'Maine Maritime Academy', ref: 'inst-mma' },
+        { name: 'Husson University', ref: 'inst-husson' },
+        { name: 'Thomas College', ref: 'inst-thomas' },
+        { name: 'Bowdoin College', ref: 'inst-bowdoin' },
+        { name: 'Southern Maine Community College', ref: 'inst-smcc' },
+        { name: 'York County Community College', note: 'BlueForge-funded welding lab, the one program in this cluster built for a specific defense customer', ref: 'inst-yccc' },
+        { name: 'Central Maine Community College', ref: 'inst-cmcc' },
+        { name: 'Eastern Maine Community College', ref: 'inst-emcc' },
+        { name: 'Kennebec Valley Community College', ref: 'inst-kvcc' },
+        { name: 'Northern Maine Community College', ref: 'inst-nmcc' },
+        { name: 'Washington County Community College', ref: 'inst-wccc' },
+        { name: 'Educate Maine', ref: 'inst-educatemaine' },
+        { name: 'Live + Work in Maine', ref: 'inst-livework' },
+        { name: 'Maine Apprenticeship Program', ref: 'inst-apprenticeship' }
+      ],
+      whiteSpace:
+        'The capacity is broad and none of it is defense-specialized. YCCC’s welding lab, funded through ' +
+        'MDIA and BlueForge Alliance for the submarine industrial base, is the one program in the entire ' +
+        'system built for a named defense customer. Nothing in the source material documents a security ' +
+        'clearance pathway, a structured internship pipeline into BIW, PNSY or GD-OTS, or a curriculum ' +
+        'track built around a defense program of record. That absence, not a shortage of colleges, is the ' +
+        'finding.'
     }
   ]
 };

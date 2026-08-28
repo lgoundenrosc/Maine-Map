@@ -369,9 +369,9 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-32'],
+      sourceIds: ['src-32', 'src-47'],
       location: { town: 'Castine', lat: 44.3873, lng: -68.7998, precision: 'approximate' },
-      cluster: ['maritime-autonomy'],
+      cluster: ['maritime-autonomy', 'workforce-education'],
       what:
         'Licensed mariners, marine engineering, naval architecture and vessel operations. Research ' +
         'vessels, marine science and engineering laboratories, power-plant and navigation simulators, a ' +
@@ -384,8 +384,10 @@ window.RoscData.institutions = {
         'The crewed-operations counterpart to any uncrewed maritime thesis. Simulators and research ' +
         'vessels are a cheap test environment, and licensed mariners are the people who will write the ' +
         'concept of operations a USV has to satisfy.',
-      entryPoints: [],
-      entryGap: 'No entry point confirmed. President not confirmed.'
+      entryPoints: [
+        { value: 'mainemaritime.edu', confidence: 'verified' }
+      ],
+      entryGap: 'President not confirmed.'
     },
     {
       id: 'inst-mdia',
@@ -626,16 +628,18 @@ window.RoscData.institutions = {
       short: 'SMCC',
       category: 'institution',
       chainStage: 5,
-      openness: 'MED',
-      confidence: 'unverified',
+      openness: 'HIGH',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-45'],
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
-      cluster: [],
-      what: 'Community college with a campus at Brunswick Landing.',
+      cluster: ['workforce-education'],
+      what: 'Community college with a campus at Brunswick Landing, part of the seven-college Maine Community College System.',
       facts: [],
-      entryPoints: [],
-      entryGap: 'No entry point confirmed.'
+      entryPoints: [
+        { value: 'smccme.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
     },
     {
       id: 'inst-yccc',
@@ -643,18 +647,21 @@ window.RoscData.institutions = {
       short: 'YCCC',
       category: 'institution',
       chainStage: 5,
-      openness: 'MED',
+      openness: 'HIGH',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-41'],
+      sourceIds: ['src-41', 'src-46'],
       location: { town: 'Wells', lat: 43.3223, lng: -70.5806, precision: 'approximate' },
-      cluster: [],
+      cluster: ['workforce-education'],
       what:
         'Recipient of the MDIA-raised $5M submarine industrial base funding, executed via BlueForge ' +
-        'Alliance, for a 10,000 square foot welding lab and trades expansion.',
+        'Alliance, for a 10,000 square foot welding lab and trades expansion. Part of the Maine ' +
+        'Community College System.',
       facts: [],
-      entryPoints: [],
-      entryGap: 'No entry point confirmed.'
+      entryPoints: [
+        { value: 'yccc.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
     },
     {
       id: 'inst-bowdoin',
@@ -663,15 +670,17 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 1,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-48'],
       location: { town: 'Brunswick', lat: 43.9075, lng: -69.9628, precision: 'approximate' },
-      cluster: ['cyber-software'],
+      cluster: ['cyber-software', 'workforce-education'],
       what: 'Liberal arts college adjacent to Brunswick Landing, with a computer science department.',
       facts: [],
-      entryPoints: [],
-      entryGap: 'No entry point confirmed.'
+      entryPoints: [
+        { value: 'bowdoin.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
     },
     {
       id: 'inst-sbdc',
@@ -750,6 +759,327 @@ window.RoscData.institutions = {
       entryPoints: [
         { value: 'Dana Delano, APEX counselor, Aroostook', confidence: 'verified' }
       ]
+    },
+
+    /* Education and workforce pipeline, added on request. Colleges, community
+       colleges and the organisations that route people into employers rather
+       than into any specific technology. Chain stage 5 follows the precedent
+       already set by SMCC and YCCC above, the closest existing stage to
+       workforce output. Confidence is verified because what each record
+       claims is limited to name, location, type and official website, all
+       confirmed against the institution's own site. */
+    {
+      id: 'inst-umaine',
+      name: 'University of Maine',
+      short: 'UMaine',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'MED',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-49'],
+      location: { town: 'Orono', lat: 44.9012, lng: -68.6698, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what:
+        'Flagship of the University of Maine System, in Orono. Engineering, computing and marine science ' +
+        'degree programs feed the same workforce pipeline as the ASCC research center on the same campus, ' +
+        'listed separately.',
+      facts: [],
+      entryPoints: [
+        { value: 'umaine.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-usm',
+      name: 'University of Southern Maine',
+      short: 'USM',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'MED',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-50'],
+      location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'University of Maine System campus with locations in Portland, Gorham and Lewiston.',
+      facts: [],
+      entryPoints: [
+        { value: 'usm.maine.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-uma',
+      name: 'University of Maine at Augusta',
+      short: 'UMA',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'MED',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-51'],
+      location: { town: 'Augusta', lat: 44.3106, lng: -69.7795, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'University of Maine System campus in the state capital, with a second location in Bangor.',
+      facts: [],
+      entryPoints: [
+        { value: 'uma.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-umfk',
+      name: 'University of Maine at Fort Kent',
+      short: 'UMFK',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'MED',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-52'],
+      location: { town: 'Fort Kent', lat: 47.2597, lng: -68.5956, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'University of Maine System campus in the far north of Aroostook County.',
+      facts: [],
+      entryPoints: [
+        { value: 'umfk.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-umpi',
+      name: 'University of Maine at Presque Isle',
+      short: 'UMPI',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'MED',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-53'],
+      location: { town: 'Presque Isle', lat: 46.6812, lng: -68.0159, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'University of Maine System campus serving Aroostook County.',
+      facts: [],
+      entryPoints: [
+        { value: 'umpi.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-umm',
+      name: 'University of Maine at Machias',
+      short: 'UMM',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'MED',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-54'],
+      location: { town: 'Machias', lat: 44.7148, lng: -67.4602, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'University of Maine System campus, the downeast regional campus.',
+      facts: [],
+      entryPoints: [
+        { value: 'machias.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-husson',
+      name: 'Husson University',
+      short: 'Husson',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'MED',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-55'],
+      location: { town: 'Bangor', lat: 44.8016, lng: -68.7712, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'Private university in Bangor, undergraduate and graduate programs.',
+      facts: [],
+      entryPoints: [
+        { value: 'husson.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-thomas',
+      name: 'Thomas College',
+      short: 'Thomas',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'MED',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-56'],
+      location: { town: 'Waterville', lat: 44.5520, lng: -69.6317, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'Private college in Waterville, business and applied programs.',
+      facts: [],
+      entryPoints: [
+        { value: 'thomas.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-cmcc',
+      name: 'Central Maine Community College',
+      short: 'CMCC',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'HIGH',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-57'],
+      location: { town: 'Auburn', lat: 44.0979, lng: -70.2312, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'Community college in Auburn, part of the Maine Community College System.',
+      facts: [],
+      entryPoints: [
+        { value: 'cmcc.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-emcc',
+      name: 'Eastern Maine Community College',
+      short: 'EMCC',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'HIGH',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-58'],
+      location: { town: 'Bangor', lat: 44.8016, lng: -68.7712, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'Community college in Bangor, part of the Maine Community College System.',
+      facts: [],
+      entryPoints: [
+        { value: 'emcc.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-kvcc',
+      name: 'Kennebec Valley Community College',
+      short: 'KVCC',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'HIGH',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-59'],
+      location: { town: 'Fairfield', lat: 44.5887, lng: -69.5978, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'Community college with campuses in Fairfield and Hinckley, part of the Maine Community College System.',
+      facts: [],
+      entryPoints: [
+        { value: 'kvcc.me.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-nmcc',
+      name: 'Northern Maine Community College',
+      short: 'NMCC',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'HIGH',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-60'],
+      location: { town: 'Presque Isle', lat: 46.6812, lng: -68.0159, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'Community college in Presque Isle, part of the Maine Community College System.',
+      facts: [],
+      entryPoints: [
+        { value: 'nmcc.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-wccc',
+      name: 'Washington County Community College',
+      short: 'WCCC',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'HIGH',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-61'],
+      location: { town: 'Calais', lat: 45.1809, lng: -67.2778, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what: 'Community college in Calais, part of the Maine Community College System.',
+      facts: [],
+      entryPoints: [
+        { value: 'wccc.me.edu', confidence: 'verified' }
+      ],
+      entryGap: 'No named workforce or admissions contact confirmed.'
+    },
+    {
+      id: 'inst-educatemaine',
+      name: 'Educate Maine',
+      short: 'Educate Maine',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'HIGH',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-62'],
+      location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what:
+        'Business-led education advocacy nonprofit founded 2011, working on college and career readiness, ' +
+        'computer science education, and internship and apprenticeship support.',
+      facts: [],
+      entryPoints: [
+        { value: 'educatemaine.org', confidence: 'verified' }
+      ],
+      entryGap: 'No named contact confirmed.'
+    },
+    {
+      id: 'inst-livework',
+      name: 'Live + Work in Maine',
+      short: 'Live + Work',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'HIGH',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-63'],
+      location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what:
+        'Nonprofit talent attraction and retention initiative, working with employers on recruiting and ' +
+        'relocation marketing statewide.',
+      facts: [],
+      entryPoints: [
+        { value: 'liveandworkinmaine.com', confidence: 'verified' }
+      ],
+      entryGap: 'No named contact confirmed.'
+    },
+    {
+      id: 'inst-apprenticeship',
+      name: 'Maine Apprenticeship Program',
+      short: 'Apprenticeship ME',
+      category: 'institution',
+      chainStage: 5,
+      openness: 'HIGH',
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-64'],
+      location: { town: 'Augusta', lat: 44.3106, lng: -69.7795, precision: 'approximate' },
+      cluster: ['workforce-education'],
+      what:
+        'Registered apprenticeship program run by the Maine Department of Labor, connecting employers to ' +
+        'trainees across trades and technical occupations statewide.',
+      facts: [],
+      entryPoints: [
+        { value: 'apprenticeship.maine.gov', confidence: 'verified' }
+      ],
+      entryGap: 'No named contact confirmed.'
     }
   ]
 };

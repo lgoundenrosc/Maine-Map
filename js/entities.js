@@ -15,7 +15,14 @@
     'mainetechnology.org', 'brunswicklanding.us', 'umaine.edu',
     'roux.northeastern.edu', 'maineapex.com', 'centralmaine.org',
     'maineventurefund.com', 'bigelow.org', 'diu.mil', 'buildsubmarines.com',
-    'statsamerica.org'
+    'statsamerica.org',
+    /* Education and workforce pipeline, added on request. Each domain was
+       checked against the official site it names before being added here. */
+    'smccme.edu', 'yccc.edu', 'mainemaritime.edu', 'bowdoin.edu',
+    'usm.maine.edu', 'uma.edu', 'umfk.edu', 'umpi.edu', 'machias.edu',
+    'husson.edu', 'thomas.edu', 'cmcc.edu', 'emcc.edu', 'kvcc.me.edu',
+    'nmcc.edu', 'wccc.me.edu', 'educatemaine.org', 'liveandworkinmaine.com',
+    'apprenticeship.maine.gov'
   ];
 
   var DOMAIN_RE = /^[a-z0-9][a-z0-9.-]*\.(org|com|mil|edu|us|gov|net)(\/[\w\-/]*)?$/i;
