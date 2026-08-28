@@ -886,28 +886,28 @@ window.RoscData.institutions = {
       entryGap: 'No named workforce or admissions contact confirmed.'
     },
     {
-      id: 'inst-husson',
-      name: 'Husson University',
-      short: 'Husson',
+      id: 'inst-bates',
+      name: 'Bates College',
+      short: 'Bates',
       category: 'institution',
       chainStage: 5,
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-55'],
-      location: { town: 'Bangor', lat: 44.8016, lng: -68.7712, precision: 'approximate' },
+      location: { town: 'Lewiston', lat: 44.1004, lng: -70.2148, precision: 'approximate' },
       cluster: ['workforce-education'],
-      what: 'Private university in Bangor, undergraduate and graduate programs.',
+      what: 'Liberal arts college in Lewiston, part of the Colby-Bates-Bowdoin consortium.',
       facts: [],
       entryPoints: [
-        { value: 'husson.edu', confidence: 'verified' }
+        { value: 'bates.edu', confidence: 'verified' }
       ],
       entryGap: 'No named workforce or admissions contact confirmed.'
     },
     {
-      id: 'inst-thomas',
-      name: 'Thomas College',
-      short: 'Thomas',
+      id: 'inst-colby',
+      name: 'Colby College',
+      short: 'Colby',
       category: 'institution',
       chainStage: 5,
       openness: 'MED',
@@ -916,10 +916,10 @@ window.RoscData.institutions = {
       sourceIds: ['src-56'],
       location: { town: 'Waterville', lat: 44.5520, lng: -69.6317, precision: 'approximate' },
       cluster: ['workforce-education'],
-      what: 'Private college in Waterville, business and applied programs.',
+      what: 'Liberal arts college in Waterville, part of the Colby-Bates-Bowdoin consortium.',
       facts: [],
       entryPoints: [
-        { value: 'thomas.edu', confidence: 'verified' }
+        { value: 'colby.edu', confidence: 'verified' }
       ],
       entryGap: 'No named workforce or admissions contact confirmed.'
     },

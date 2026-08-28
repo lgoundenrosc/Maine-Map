@@ -20,7 +20,7 @@
        checked against the official site it names before being added here. */
     'smccme.edu', 'yccc.edu', 'mainemaritime.edu', 'bowdoin.edu',
     'usm.maine.edu', 'uma.edu', 'umfk.edu', 'umpi.edu', 'machias.edu',
-    'husson.edu', 'thomas.edu', 'cmcc.edu', 'emcc.edu', 'kvcc.me.edu',
+    'bates.edu', 'colby.edu', 'cmcc.edu', 'emcc.edu', 'kvcc.me.edu',
     'nmcc.edu', 'wccc.me.edu', 'educatemaine.org', 'liveandworkinmaine.com',
     'apprenticeship.maine.gov'
   ];
