@@ -78,16 +78,16 @@ window.RoscData.meta = {
   corridorPath: [[43.9109, -69.8133], [43.6591, -70.2568], [43.0793, -70.7420]],
 
   /* The ecosystem map is a second document over the same records. It carries
-     no internal marking and no personnel layer, it maps organisations and the
+     no internal marking and no personnel layer, it maps organizations and the
      places they sit in. */
   ecosystem: {
     title: 'Maine Defense Innovation Ecosystem Map',
     shortTitle: 'Ecosystem Map',
     description:
-      'Organisations in Maine\u2019s defense innovation ecosystem, plotted by the town they sit in. ' +
+      'Organizations in Maine\u2019s defense innovation ecosystem, plotted by the town they sit in. ' +
       'Companion to the Maine Defense Innovation Ecosystem VC Landscape Map.',
     scopeNote:
-      'This map shows organisations and places. Named individuals, routing contacts and the ' +
+      'This map shows organizations and places. Named individuals, routing contacts and the ' +
       'engagement playbook stay in the VC landscape map, which is the document built to carry them.'
   },
 
@@ -99,7 +99,7 @@ window.RoscData.meta = {
   legend: [
     { tag: 'verified', meaning: 'Sourced to a named publication or primary document, dated', treatment: 'Normal, no badge' },
     { tag: 'unverified', meaning: 'Believed accurate, no source confirmed', treatment: 'Amber badge, tooltip reads unconfirmed' },
-    { tag: 'stale', meaning: 'Sourced but the source is old enough that it may have changed', treatment: 'Grey italic badge with the source year' },
-    { tag: 'gap', meaning: 'Known missing, listed in the verification gaps table', treatment: 'Grey empty state reading not yet confirmed' }
+    { tag: 'stale', meaning: 'Sourced but the source is old enough that it may have changed', treatment: 'Gray italic badge with the source year' },
+    { tag: 'gap', meaning: 'Known missing, listed in the verification gaps table', treatment: 'Gray empty state reading not yet confirmed' }
   ]
 };

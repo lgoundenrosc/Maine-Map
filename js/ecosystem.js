@@ -184,7 +184,7 @@
           '<button class="e-close-inline" type="button" id="e-sheet-close">' + I.close + 'Close</button>' +
         '</span>' +
         '<h2>' + esc(c.town) + '</h2>' +
-        '<p>' + n + (n === 1 ? ' organisation' : ' organisations') + ' in the defense innovation ecosystem' +
+        '<p>' + n + (n === 1 ? ' organization' : ' organizations') + ' in the defense innovation ecosystem' +
           (state.sector === 'all' ? '' : ', in this sector') + '</p>' +
       '</div>' +
       '<div class="e-grid' + (n <= 4 ? ' e-grid-single' : '') + '">' + c.items.map(tileHtml).join('') + '</div>';
@@ -246,7 +246,7 @@
       '<h2>' + esc(m.ecosystem.title) + '</h2>' +
       '<p class="e-lede">' + esc(m.ecosystem.description) + '</p>' +
       '<div class="e-stats">' +
-        '<div class="e-stat"><b>' + ALL.length + '</b><span>organisations</span></div>' +
+        '<div class="e-stat"><b>' + ALL.length + '</b><span>organizations</span></div>' +
         '<div class="e-stat"><b>' + comms.length + '</b><span>communities</span></div>' +
         '<div class="e-stat"><b>' + verified + '</b><span>verified records</span></div>' +
         '<div class="e-stat"><b>' + unpl.length + '</b><span>not plotted</span></div>' +
@@ -265,7 +265,7 @@
   }
 
   var COLS = [
-    { key: 'name', label: 'Organisation' },
+    { key: 'name', label: 'Organization' },
     { key: 'type', label: 'Type' },
     { key: 'cluster', label: 'Sector' },
     { key: 'town', label: 'Place' },
@@ -298,7 +298,7 @@
       '<h2>Index</h2>' +
       '<p class="e-lede">Every record behind the map, including the ' + E.unplaced(ALL).length +
         ' that carry no plottable location.</p>' +
-      '<input class="e-search" id="e-search" type="search" placeholder="Search organisations and places" value="' +
+      '<input class="e-search" id="e-search" type="search" placeholder="Search organizations and places" value="' +
         attr(state.query) + '" aria-label="Search the index">' +
       '<div style="overflow-x:auto"><table class="e-table"><thead><tr>' +
         COLS.map(function (c) {
@@ -396,7 +396,7 @@
     }
 
     var counts = D.meta.ecosystem;
-    el.brand.querySelector('p').innerHTML = '<b>' + ALL.length + '</b> organisations · <b>' +
+    el.brand.querySelector('p').innerHTML = '<b>' + ALL.length + '</b> organizations · <b>' +
       E.communities(ALL).length + '</b> communities';
     void counts;
   }
@@ -429,7 +429,7 @@
           '<button type="button" data-view="help" title="How to read this map" aria-label="How to read this map">' + I.help + '</button>' +
         '</nav>' +
         '<div class="e-sheet" id="e-sheet" hidden></div>' +
-        '<aside class="e-drawer" id="e-drawer" hidden aria-label="Organisation detail"></aside>' +
+        '<aside class="e-drawer" id="e-drawer" hidden aria-label="Organization detail"></aside>' +
         '<div class="e-view" id="e-home" hidden></div>' +
         '<div class="e-view" id="e-index" hidden></div>' +
         '<div class="e-view" id="e-help" hidden></div>' +

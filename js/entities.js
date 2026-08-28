@@ -57,15 +57,15 @@
     var rule = D.places.canonical[loc.town] || {};
     var town = rule.town || loc.town;
     var placement = rule.placement || 'municipality';
-    var centre = D.places.centres[town];
+    var center = D.places.centers[town];
     return {
       town: town,
       sub: rule.sub || null,
       placement: placement,
-      /* Municipalities snap to a single centre so that five records in
+      /* Municipalities snap to a single center so that five records in
          Brunswick make one bubble rather than three overlapping ones. */
-      lat: placement === 'municipality' && centre ? centre.lat : loc.lat,
-      lng: placement === 'municipality' && centre ? centre.lng : loc.lng,
+      lat: placement === 'municipality' && center ? center.lat : loc.lat,
+      lng: placement === 'municipality' && center ? center.lng : loc.lng,
       precision: loc.precision || 'approximate',
       sourceTown: loc.town
     };

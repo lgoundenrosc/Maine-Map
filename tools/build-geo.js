@@ -35,7 +35,7 @@ var BAKE = { w: -78.0, e: -58.5, s: 38.5, n: 51.0 };
 var VIEW = { w: -75.5, e: -61.0, s: 40.5, n: 49.3 };
 var BB = BAKE;
 
-/* Coordinates are rounded to four decimal places, about 11 metres at this
+/* Coordinates are rounded to four decimal places, about 11 meters at this
    latitude. Below the width of the stroke that draws them. */
 function r4(x) { return Math.round(x * 1e4) / 1e4; }
 

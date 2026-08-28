@@ -20,7 +20,7 @@ town. Four surfaces, reached from the dock on the right.
 | Entry | `index.html` | `ecosystem.html` |
 | Shape | nine tabs, chain diagram | map, municipality drill-down, index, help |
 | Theme | light, print first | dark, screen first |
-| Records | all of `data/` | organisations and places only |
+| Records | all of `data/` | organizations and places only |
 | Personnel | included | excluded, see below |
 | Print | 45 pages at Letter | not a print document |
 
@@ -29,7 +29,7 @@ neither fetches anything at runtime.
 
 ### What the ecosystem map deliberately leaves out
 
-It maps organisations and the places they sit in. Named individuals, routing contacts and the
+It maps organizations and the places they sit in. Named individuals, routing contacts and the
 engagement playbook stay in the VC landscape map, which is the document built to carry them. The only
 contact strings it renders are the allowlisted domains, and it reaches them through the same
 `entryPoints` records, filtered against an explicit list in `js/entities.js`. A domain added to
@@ -113,9 +113,9 @@ css/print.css         @media print, see below
 css/ecosystem.css     dark treatment of the same palette, screen first
 data/                 all content, one module per section of the source brief
 data/geo.js           generated basemap, see The basemap
-data/places.js        town canonicalisation and placement rules
+data/places.js        town canonicalization and placement rules
 js/components.js      chips, callouts, inset boxes, accordion cards
-js/views.js           chain diagram and the old stylised map
+js/views.js           chain diagram and the old stylized map
 js/app.js             tabs, filters, search, detail panel, section panels
 js/entities.js        flattens the six record sets into one plottable array
 js/basemap.js         Leaflet wrapper, no tile layer
@@ -141,7 +141,7 @@ No prose lives in a component. Every string a reader sees comes from `data/`.
 ```
 
 `confidence` drives rendering. `verified` renders no badge, `unverified` renders an amber badge,
-`stale` renders a grey italic badge carrying the source year, and `gap` renders a grey empty state
+`stale` renders a gray italic badge carrying the source year, and `gap` renders a gray empty state
 where the SOCOM map would show a contact string. Nothing is silently upgraded.
 
 ## Two rules this build follows without exception
@@ -161,13 +161,13 @@ renders the empty state and appears in the verification gaps table. There is an 
 bottom of this file for re-checking after any edit.
 
 **Every fact carries a confidence tag.** Where sources conflict, the range renders and the conflict is
-stated rather than resolved. BIW headcount, ASCC staff and MVF capitalisation are the three live
+stated rather than resolved. BIW headcount, ASCC staff and MVF capitalization are the three live
 examples.
 
 ## Print
 
 `css/print.css` expands every accordion, renders all nine tab panels in order with a page break
-between them, collapses the tabs, filters, search and detail panel, keeps background colours so the
+between them, collapses the tabs, filters, search and detail panel, keeps background colors so the
 chips stay legible, and scales the chain diagram to page width with `zoom` rather than `transform` so
 it does not reserve unscaled height. Exporting to PDF at Letter portrait produces roughly 45 pages.
 

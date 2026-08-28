@@ -71,5 +71,25 @@ window.RoscData.sources = [
   { id: 'src-62', n: 62, title: 'Mission and program pages', publisher: 'Educate Maine', date: '2026', locator: 'educatemaine.org', quality: 'primary' },
   { id: 'src-63', n: 63, title: 'Program pages', publisher: 'Live + Work in Maine', date: '2026', locator: 'liveandworkinmaine.com', quality: 'primary' },
   { id: 'src-64', n: 64, title: 'Registered Apprenticeship program pages', publisher: 'Maine Department of Labor', date: '2026', locator: 'apprenticeship.maine.gov', quality: 'primary' },
-  { id: 'src-65', n: 65, title: 'System overview and locations', publisher: 'Maine Community College System', date: '2026', locator: 'mccs.me.edu', quality: 'primary' }
+  { id: 'src-65', n: 65, title: 'System overview and locations', publisher: 'Maine Community College System', date: '2026', locator: 'mccs.me.edu', quality: 'primary' },
+
+  /* Summaries for the nine companies that had none, added on request. Each
+     company's own site plus one press or trade source where a specific claim
+     needed one. No figure here is company-supplied without saying so. */
+  { id: 'src-66', n: 66, title: 'Kenway Composites, About Us', publisher: 'Creative Composites Group', date: '2026', locator: 'creativecompositesgroup.com', quality: 'primary' },
+  { id: 'src-67', n: 67, title: 'Kenway Corp. acquired by Pennsylvania firm', publisher: 'Mainebiz', date: '2017-03', locator: '', quality: 'trade press' },
+  { id: 'src-68', n: 68, title: 'Company site', publisher: 'Custom Composite Technologies', date: '2026', locator: 'customcomposite.com', quality: 'primary' },
+  { id: 'src-69', n: 69, title: 'Custom Composite Technologies at cutting edge of growing industry', publisher: 'Mainebiz', date: '2026', locator: '', quality: 'trade press' },
+  { id: 'src-70', n: 70, title: 'Company site and history', publisher: 'Lyman-Morse Boatbuilding', date: '2026', locator: 'lymanmorse.com', quality: 'primary' },
+  { id: 'src-71', n: 71, title: 'Company site', publisher: 'Front Street Shipyard', date: '2026', locator: 'frontstreetshipyard.com', quality: 'primary' },
+  { id: 'src-72', n: 72, title: 'Private equity giant to acquire Front Street Shipyard in Belfast by end of the year', publisher: 'Bangor Daily News', date: '2025-11-10', locator: '', quality: 'press' },
+  { id: 'src-73', n: 73, title: 'Company site and history', publisher: 'Washburn and Doughty Associates', date: '2026', locator: 'washburndoughty.com', quality: 'primary' },
+  { id: 'src-74', n: 74, title: 'Washburn and Doughty building new 5,100-hp tugs for Moran', publisher: 'WorkBoat', date: '2026', locator: '', quality: 'trade press' },
+  { id: 'src-75', n: 75, title: 'Company site', publisher: 'Cianbro Corporation', date: '2026', locator: 'cianbro.com', quality: 'primary' },
+  { id: 'src-76', n: 76, title: 'Collins, King announce nearly $27 million contract to Cianbro for construction and dock repairs at Portsmouth Naval Shipyard', publisher: 'Office of Senator Angus King', date: '2026', locator: 'king.senate.gov', quality: 'primary' },
+  { id: 'src-77', n: 77, title: 'Navy awards $112M dry dock construction contract to Cianbro', publisher: 'GovConWire', date: '2026', locator: '', quality: 'trade press' },
+  { id: 'src-78', n: 78, title: 'Company site', publisher: 'Lattice Materials', date: '2026', locator: 'latticematerials.com', quality: 'primary' },
+  { id: 'src-79', n: 79, title: 'Company site', publisher: 'Greisen Aerospace', date: '2026', locator: 'greisenaerospace.com', quality: 'primary' },
+  { id: 'src-80', n: 80, title: 'Company site', publisher: 'Promin Aerospace', date: '2026', locator: 'prominaerospace.com', quality: 'primary' },
+  { id: 'src-81', n: 81, title: 'Ukrainian small launcher finds refuge in the US', publisher: 'Payload Space', date: '2026', locator: '', quality: 'trade press' }
 ];

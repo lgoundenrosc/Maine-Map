@@ -30,7 +30,7 @@
     return COLORS.count[COLORS.count.length - 1].fill;
   }
 
-  /* A community holding several kinds of record takes the colour of whichever
+  /* A community holding several kinds of record takes the color of whichever
      kind is most numerous, ties going to the earlier entry in COLORS.type. */
   function typeColor(items) {
     var tally = {}, best = null, bestN = 0;
@@ -134,7 +134,7 @@
            swallow the single record next to it. */
         zIndexOffset: 1000 - n
       })
-        .bindTooltip(c.town + '<b>' + n + (n === 1 ? ' organisation' : ' organisations') + '</b>',
+        .bindTooltip(c.town + '<b>' + n + (n === 1 ? ' organization' : ' organizations') + '</b>',
           { className: 'e-tip', direction: 'top', offset: [0, -r] })
         .on('click', function () { onPick(c); })
         .on('keypress', function (ev) { if (ev.originalEvent.key === 'Enter') onPick(c); });

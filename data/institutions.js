@@ -762,7 +762,7 @@ window.RoscData.institutions = {
     },
 
     /* Education and workforce pipeline, added on request. Colleges, community
-       colleges and the organisations that route people into employers rather
+       colleges and the organizations that route people into employers rather
        than into any specific technology. Chain stage 5 follows the precedent
        already set by SMCC and YCCC above, the closest existing stage to
        workforce output. Confidence is verified because what each record

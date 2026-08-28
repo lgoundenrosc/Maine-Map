@@ -1,5 +1,5 @@
 /**
- * Place canonicalisation for the ecosystem map.
+ * Place canonicalization for the ecosystem map.
  *
  * The source records carry a free text `location.town` written for a reading
  * document, not for a rollup. Three things need resolving before towns can be
@@ -32,10 +32,10 @@ window.RoscData.places = {
     'Coastal': { town: 'Gulf of Maine', placement: 'region' }
   },
 
-  /** Where a municipality centre is drawn. Set from the most frequent
+  /** Where a municipality center is drawn. Set from the most frequent
       coordinate in the source records rather than a gazetteer, so the map and
       the document cannot disagree. */
-  centres: {
+  centers: {
     'Brunswick': { lat: 43.9075, lng: -69.9628 },
     'Portland': { lat: 43.6591, lng: -70.2568 },
     'Orono': { lat: 44.9012, lng: -68.6698 },
@@ -59,5 +59,5 @@ window.RoscData.places = {
 
   attribution:
     'Coastline from OpenStreetMap contributors, ODbL. State boundaries from the US Census Bureau. ' +
-    'Organisation coordinates are approximate town centres, for orientation only.'
+    'Organization coordinates are approximate town centers, for orientation only.'
 };
