@@ -7,19 +7,22 @@
 
   var D = global.RoscData;
 
+  /* Purple carries the sequential by-count scale, orange marks only the top
+     tier, the one place a bubble's color is meant to say "look here" rather
+     than just "more". */
   var COLORS = {
     count: [
-      { min: 12, fill: '#d4763c', label: '12 or more' },
-      { min: 6,  fill: '#b0552a', label: '6 to 11' },
-      { min: 3,  fill: '#6c86a8', label: '3 to 5' },
-      { min: 1,  fill: '#47617f', label: '1 or 2' }
+      { min: 12, fill: '#e0721f', label: '12 or more' },
+      { min: 6,  fill: '#472285', label: '6 to 11' },
+      { min: 3,  fill: '#5b2a9e', label: '3 to 5' },
+      { min: 1,  fill: '#8f6bc9', label: '1 or 2' }
     ],
     type: {
-      anchor:      { fill: '#5b8fd6', label: 'Anchor demand node' },
-      institution: { fill: '#5fae76', label: 'Institution' },
-      company:     { fill: '#d4763c', label: 'Company' },
-      'test-asset':{ fill: '#a184c9', label: 'Test asset' },
-      capital:     { fill: '#d4657f', label: 'Capital instrument' }
+      anchor:      { fill: '#2f5aa8', label: 'Anchor demand node' },
+      institution: { fill: '#5b2a9e', label: 'Institution' },
+      company:     { fill: '#e0721f', label: 'Company' },
+      'test-asset':{ fill: '#1f8a8c', label: 'Test asset' },
+      capital:     { fill: '#a13f88', label: 'Capital instrument' }
     }
   };
 
@@ -38,7 +41,7 @@
     Object.keys(COLORS.type).forEach(function (t) {
       if ((tally[t] || 0) > bestN) { bestN = tally[t]; best = t; }
     });
-    return COLORS.type[best] ? COLORS.type[best].fill : '#47617f';
+    return COLORS.type[best] ? COLORS.type[best].fill : '#8f6bc9';
   }
 
   /* Area, not diameter, tracks the count. Kept small enough that the dense
@@ -76,23 +79,24 @@
     geo.land.forEach(function (ring) {
       L.polygon(ring.map(function (p) { return [p[1], p[0]]; }), {
         renderer: base, interactive: false,
-        fillColor: '#182b42', fillOpacity: 1,
-        color: '#3a5a78', weight: 0.7, lineJoin: 'round'
+        fillColor: '#fbf9fe', fillOpacity: 1,
+        color: '#b9a6de', weight: 0.7, lineJoin: 'round'
       }).addTo(map);
     });
 
     geo.borders.forEach(function (ring) {
       L.polyline(ring.map(function (p) { return [p[1], p[0]]; }), {
         renderer: base, interactive: false,
-        color: '#3d5877', weight: 1, opacity: 0.6, dashArray: '4 5'
+        color: '#9c82c7', weight: 1, opacity: 0.6, dashArray: '4 5'
       }).addTo(map);
     });
 
     /* The defense corridor, Bath through Portland to Kittery. Same three
-       points the VC map draws. */
+       points the VC map draws. Orange, the one line on the map that isn't
+       purple, so it reads as a route rather than as more data. */
     corridorLine = L.polyline(D.meta.corridorPath, {
       renderer: base, interactive: false,
-      color: '#b0552a', weight: 2.5, opacity: 0.72, dashArray: '9 7'
+      color: '#e0721f', weight: 2.5, opacity: 0.78, dashArray: '9 7'
     }).addTo(map);
 
     layer = L.layerGroup().addTo(map);
@@ -123,8 +127,11 @@
         className: '',
         iconSize: [r * 2, r * 2],
         iconAnchor: [r, r],
+        /* Higher fill opacity than the old dark map needed. Against a light
+           basemap a translucent bubble washes out, especially the lightest
+           purple tier, and the white count label loses contrast with it. */
         html: '<div class="e-bubble" style="width:' + (r * 2) + 'px;height:' + (r * 2) +
-          'px;border-radius:50%;background:' + fill + '99;border:2px solid ' + fill +
+          'px;border-radius:50%;background:' + fill + 'e8;border:2px solid ' + fill +
           ';display:grid;place-items:center"><span class="e-bubble-label" style="stroke:none">' +
           n + '</span></div>'
       });

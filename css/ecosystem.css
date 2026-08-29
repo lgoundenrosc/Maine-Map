@@ -1,52 +1,69 @@
 /* ==========================================================================
    Maine Defense Innovation Ecosystem, Ecosystem Map.
 
-   A dark treatment of the Rosc series palette already defined in styles.css.
-   Navy and rust are carried across unchanged in hue. The series accent stays
-   rust, which is what the VC map already uses for the defense corridor.
+   A light, purple-and-orange treatment, distinct from the Rosc series navy
+   and rust used in styles.css and in the original dark build of this file.
+   White is a surface color here, not just text on a dark ground, per the
+   brief this was built to. Purple is the primary accent, orange is the
+   secondary accent reserved for emphasis, the corridor line and the top
+   bubble tier, in that order of restraint. The purple-to-orange gradient on
+   the brand mark is the one deliberate reference to the name this document
+   may end up sitting next to, dawn breaking.
 
    No external fonts, no CDN assets. The file must work offline.
    ========================================================================== */
 
 :root {
-  /* Surfaces, darkest to lightest. */
-  --e-void:      #05090f;
-  --e-water:     #081120;
-  --e-land:      #182b42;
-  --e-coast:     #35526f;
-  --e-boundary:  #3d5877;
+  /* Surfaces, a light purple-white rather than a dark ground. */
+  --e-void:      #f7f4fc;
+  --e-water:     #e2dbf3;
+  --e-land:      #fbf9fe;
+  --e-coast:     #b9a6de;
+  --e-boundary:  #9c82c7;
 
-  --e-panel:     rgba(13, 27, 48, 0.94);
-  --e-panel-2:   #0d1b30;
-  --e-raised:    #14263f;
-  --e-inset:     #101f36;
-  --e-line:      #22384f;
-  --e-line-2:    #2d4763;
+  --e-panel:     rgba(255, 255, 255, 0.88);
+  --e-panel-2:   #ffffff;
+  --e-raised:    #f3edfb;
+  --e-inset:     #f5f1fa;
+  --e-line:      #e4daf3;
+  --e-line-2:    #d2c1ea;
 
-  /* Text. Cream and pale blue, from the series tokens. */
-  --e-text:      #eef3f9;
-  --e-text-2:    #a8c0dc;
-  --e-text-3:    #7089a5;
-  --e-text-4:    #55708c;
+  /* Text. A near-black ink with a purple hue bias, never literal black,
+     down through three muted steps. */
+  --e-text:      #211539;
+  --e-text-2:    #4e3e72;
+  --e-text-3:    #7a6b99;
+  --e-text-4:    #9c8fb8;
 
-  /* Accent. Rust, lifted for legibility on a dark ground. */
-  --e-rust:      #d4763c;
-  --e-rust-2:    #b0552a;
-  --e-rust-dim:  rgba(212, 118, 60, 0.16);
+  /* Accent. Purple primary, orange secondary and used more sparingly, kept
+     as two named tokens rather than one so restraint is visible in the code
+     as well as on screen. */
+  --e-purple:     #5b2a9e;
+  --e-purple-2:   #472285;
+  --e-purple-dim: rgba(91, 42, 158, 0.12);
+  --e-orange:     #e0721f;
+  --e-orange-2:   #b85a18;
+  --e-orange-dim: rgba(224, 114, 31, 0.14);
 
-  /* Semantic, matched to the light document's meanings. */
-  --e-green:     #5fae76;
-  --e-green-dim: rgba(95, 174, 118, 0.15);
-  --e-amber:     #d9a441;
-  --e-amber-dim: rgba(217, 164, 65, 0.15);
-  --e-red:       #d4657f;
-  --e-grey-dim:  rgba(168, 192, 220, 0.10);
+  /* Kept for call sites not yet converted below; equal to --e-purple. */
+  --e-rust:      var(--e-purple);
+  --e-rust-2:    var(--e-purple-2);
+  --e-rust-dim:  var(--e-purple-dim);
+
+  /* Semantic. Deliberately outside the purple or orange hue family, so a
+     status color is never mistaken for the brand accent. */
+  --e-green:     #1f8a54;
+  --e-green-dim: rgba(31, 138, 84, 0.12);
+  --e-amber:     #9c6b14;
+  --e-amber-dim: rgba(156, 107, 20, 0.12);
+  --e-red:       #b3324a;
+  --e-grey-dim:  rgba(78, 62, 114, 0.08);
 
   --e-radius:    14px;
   --e-radius-sm: 8px;
   --e-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --e-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --e-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 12px 34px rgba(0, 0, 0, 0.34);
+  --e-shadow: 0 2px 6px rgba(76, 39, 128, 0.09), 0 12px 30px rgba(76, 39, 128, 0.13);
 }
 
 * { box-sizing: border-box; }
@@ -80,7 +97,7 @@ button { font: inherit; color: inherit; }
 
 .leaflet-container { background: var(--e-water); outline: none; font-family: var(--e-sans); }
 .leaflet-control-attribution {
-  background: rgba(5, 9, 15, 0.78) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
   color: var(--e-text-4) !important;
   font-family: var(--e-mono);
   font-size: 10.5px;
@@ -102,8 +119,10 @@ button { font: inherit; color: inherit; }
 }
 .e-brand-mark {
   width: 42px; height: 42px; border-radius: 11px; flex: none;
-  background: linear-gradient(150deg, var(--e-rust), var(--e-rust-2));
-  display: grid; place-items: center; color: #fdf6e8;
+  /* The one deliberate use of both accents together, purple to orange, the
+     signature gradient reserved for the mark alone. */
+  background: linear-gradient(150deg, var(--e-purple), var(--e-orange));
+  display: grid; place-items: center; color: #ffffff;
 }
 .e-brand h1 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.15px; }
 .e-brand p { margin: 1px 0 0; font-size: 11.5px; color: var(--e-text-3); font-family: var(--e-mono); }
@@ -148,7 +167,7 @@ select.e-select {
   color: var(--e-text); background: var(--e-inset);
   border: 1px solid var(--e-line-2); border-radius: var(--e-radius-sm);
   appearance: none; cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237089a5' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a6b99' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 12px center;
 }
 select.e-select:focus-visible { outline: 2px solid var(--e-rust); outline-offset: 1px; }
@@ -196,14 +215,16 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
   background: var(--e-grey-dim); padding: 2px 8px; border-radius: 20px;
 }
 
+/* Orange marks the two buttons that take the reader somewhere: this one and
+   .e-cta below. Everywhere else in the interface, purple is the accent. */
 .e-btn {
   display: flex; align-items: center; justify-content: center; gap: 9px;
   width: 100%; padding: 13px 15px; cursor: pointer;
-  background: var(--e-rust-dim); border: 1px solid var(--e-rust);
-  border-radius: var(--e-radius); color: var(--e-rust);
+  background: var(--e-orange-dim); border: 1px solid var(--e-orange);
+  border-radius: var(--e-radius); color: var(--e-orange-2);
   font-size: 13.5px; font-weight: 700; box-shadow: var(--e-shadow);
 }
-.e-btn:hover { background: rgba(212, 118, 60, 0.26); }
+.e-btn:hover { background: rgba(224, 114, 31, 0.24); }
 
 /* ============================================================ dock ======= */
 
@@ -231,8 +252,8 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
 .e-bubble:hover { filter: brightness(1.28); }
 .e-bubble-label {
   font-family: var(--e-mono); font-size: 11.5px; font-weight: 700;
-  color: #fdf6e8; pointer-events: none;
-  text-shadow: 0 1px 3px rgba(5, 9, 15, 0.8);
+  color: #ffffff; pointer-events: none;
+  text-shadow: 0 1px 2px rgba(33, 21, 57, 0.55);
 }
 
 .leaflet-tooltip.e-tip {
@@ -254,7 +275,9 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
 .e-sheet {
   position: absolute; inset: 0; z-index: 840;
   display: flex; flex-direction: column; justify-content: flex-end;
-  background: linear-gradient(to bottom, rgba(5, 9, 15, 0.14) 0%, rgba(5, 9, 15, 0.72) 42%, rgba(5, 9, 15, 0.93) 100%);
+  /* Fades up to the page ground rather than down to black, so the map keeps
+     reading as a light surface underneath, dimmed rather than darkened. */
+  background: linear-gradient(to bottom, rgba(247, 244, 252, 0.08) 0%, rgba(247, 244, 252, 0.86) 42%, rgba(247, 244, 252, 0.97) 100%);
   padding: 0 78px 30px 34px; pointer-events: none;
 }
 .e-sheet > * { pointer-events: auto; }
@@ -295,7 +318,7 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
 .e-avatar {
   width: 38px; height: 38px; border-radius: 10px; flex: none;
   display: grid; place-items: center; font-family: var(--e-mono);
-  font-size: 15px; font-weight: 700; color: #fdf6e8;
+  font-size: 15px; font-weight: 700; color: #ffffff;
 }
 .e-tile h3 {
   margin: 0; font-size: 15px; font-weight: 700; line-height: 1.28;
@@ -317,7 +340,7 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
   font-size: 11px; font-weight: 600; background: var(--e-grey-dim);
   color: var(--e-text-2); border: 1px solid transparent;
 }
-.e-chip.e-chip-type { background: var(--e-rust-dim); color: var(--e-rust); border-color: rgba(212, 118, 60, 0.3); }
+.e-chip.e-chip-type { background: var(--e-purple-dim); color: var(--e-purple); border-color: rgba(91, 42, 158, 0.28); }
 
 /* Confidence, carrying the same meanings as the VC map's legend. */
 .e-badge {
@@ -336,7 +359,7 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
   position: absolute; top: 0; right: 0; bottom: 0; width: min(486px, 43vw);
   z-index: 870; display: flex; flex-direction: column;
   background: var(--e-panel-2); border-left: 1px solid var(--e-line-2);
-  box-shadow: -18px 0 48px rgba(0, 0, 0, 0.5);
+  box-shadow: -18px 0 40px rgba(76, 39, 128, 0.16);
   overflow-y: auto; scrollbar-width: thin;
 }
 .e-drawer[hidden] { display: none; }
@@ -364,11 +387,11 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
 .e-cta {
   display: flex; align-items: center; justify-content: center; gap: 9px;
   width: 100%; padding: 14px; margin-top: 4px; cursor: pointer;
-  background: var(--e-rust-dim); border: 1px solid var(--e-rust);
-  border-radius: var(--e-radius-sm); color: var(--e-rust);
+  background: var(--e-orange-dim); border: 1px solid var(--e-orange);
+  border-radius: var(--e-radius-sm); color: var(--e-orange-2);
   font-size: 14px; font-weight: 700; text-decoration: none;
 }
-.e-cta:hover { background: rgba(212, 118, 60, 0.26); }
+.e-cta:hover { background: rgba(224, 114, 31, 0.24); }
 .e-cta-gap {
   display: block; width: 100%; padding: 14px; margin-top: 4px; text-align: center;
   background: var(--e-grey-dim); border: 1px dashed var(--e-line-2);
@@ -420,7 +443,7 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
   background: var(--e-inset); border: 1px solid var(--e-line);
   border-radius: var(--e-radius-sm); padding: 13px 18px; min-width: 132px;
 }
-.e-stat b { display: block; font-size: 25px; font-weight: 700; color: var(--e-rust); line-height: 1.2; }
+.e-stat b { display: block; font-size: 25px; font-weight: 700; color: var(--e-orange-2); line-height: 1.2; }
 .e-stat span { font-size: 11.5px; color: var(--e-text-3); }
 
 table.e-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }

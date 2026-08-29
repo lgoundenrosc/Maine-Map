@@ -19,7 +19,7 @@ town. Four surfaces, reached from the dock on the right.
 | --- | --- | --- |
 | Entry | `index.html` | `ecosystem.html` |
 | Shape | nine tabs, chain diagram | map, municipality drill-down, index, help |
-| Theme | light, print first | dark, screen first |
+| Theme | light, Rosc navy and rust, print first | light, purple and orange, screen first |
 | Records | all of `data/` | organizations and places only |
 | Personnel | included | excluded, see below |
 | Print | 45 pages at Letter | not a print document |
@@ -50,6 +50,25 @@ The source `location.town` strings were written for a reading document, not for 
    the map at a coordinate made up to satisfy a renderer.
 3. One record is in New Hampshire. It stays on the map because the test route matters, but it is not
    a Maine community and does not count as one.
+
+## The ecosystem map's palette
+
+`css/ecosystem.css` is light, not dark, purple as the primary accent and orange reserved for a short,
+deliberate list: the brand mark's gradient, the two buttons that take the reader somewhere (`View
+index`, `Visit [site]`), the defense corridor line, the top bubble tier, and the home view's stat
+numbers. Everywhere else in the interface, purple carries the accent. White is a surface color, used
+on cards, the drawer and the map's land polygons, not just as text on a dark ground.
+
+This was built for a specific brief: purple, orange and white, no black as a primary color, judged
+against `firstlightworks.com`, a site this document may end up published alongside. The domain was not
+reachable from this environment when the palette was built, so the specific values are a considered
+design against that brief rather than a color pick from the live site. Revisit them if the two need to
+match more closely once the site can be seen directly.
+
+Confidence badges and the by-type bubble legend use hues chosen to sit outside the purple and orange
+family on purpose, `--e-amber` and `--e-red` for status, a separate five-hue set for anchor, institution,
+company, test asset and capital, so a status color or a data category is never mistaken for the brand
+accent.
 
 ## The basemap
 
