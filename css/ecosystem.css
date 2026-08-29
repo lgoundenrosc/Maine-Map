@@ -189,6 +189,27 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
   color: var(--e-rust); font-weight: 700;
 }
 
+/* Independent toggles, not a radio group. Any combination of these plus the
+   sector select can be active at once. */
+.e-facets { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.e-facets button {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  width: 100%; padding: 8px 10px; font-size: 12.5px; text-align: left;
+  background: var(--e-inset); border: 1px solid var(--e-line-2);
+  border-radius: var(--e-radius-sm); color: var(--e-text-2); cursor: pointer;
+}
+.e-facets button .e-count {
+  font-size: 11px; font-weight: 700; color: var(--e-text-3);
+  background: var(--e-grey-dim); padding: 1px 7px; border-radius: 20px;
+}
+.e-facets button[aria-pressed="true"] {
+  background: var(--e-purple-dim); border-color: var(--e-purple);
+  color: var(--e-purple); font-weight: 700;
+}
+.e-facets button[aria-pressed="true"] .e-count {
+  background: rgba(155, 111, 224, 0.22); color: var(--e-purple);
+}
+
 .e-legend-row {
   display: flex; align-items: center; gap: 9px;
   padding: 4px 0; font-size: 12.5px; color: var(--e-text-2);

@@ -26,9 +26,22 @@
 
   /* ---------------------------------------------------------- state ----- */
   var ALL = E.build();
+
+  /* Facets, not a second sector. Sector narrows by cluster and stays a
+     single choice, because a record sits in one place on the formation
+     chain. Startup and major defense company describe the same record from
+     an orthogonal angle, so both switch on together, sector still applies,
+     and toggling both reads as either rather than narrowing to records that
+     are somehow both at once. */
+  var FACETS = [
+    { key: 'startup', label: 'Startups' },
+    { key: 'majorDefenseCompany', label: 'Major defense companies' }
+  ];
+
   var state = {
     view: 'map',
     sector: 'all',
+    facets: { startup: false, majorDefenseCompany: false },
     mode: 'count',
     community: null,
     entity: null,
@@ -40,9 +53,16 @@
     return (D.clusters.items || []).filter(function (c) { return c.id === id; })[0] || null;
   }
 
+  function activeFacetKeys() {
+    return FACETS.map(function (f) { return f.key; }).filter(function (k) { return state.facets[k]; });
+  }
+
   function filtered() {
-    if (state.sector === 'all') return ALL;
-    return ALL.filter(function (e) { return e.clusters.indexOf(state.sector) !== -1; });
+    var out = state.sector === 'all' ? ALL
+      : ALL.filter(function (e) { return e.clusters.indexOf(state.sector) !== -1; });
+    var active = activeFacetKeys();
+    if (!active.length) return out;
+    return out.filter(function (e) { return active.some(function (k) { return e[k]; }); });
   }
 
   /* Initials for the avatar tile. Two letters where the name gives two words. */
@@ -117,9 +137,21 @@
       '<div class="e-card-body" style="padding-top:14px">' +
         '<span class="e-label" style="display:flex;align-items:center;gap:7px">' + I.filter + 'Sector</span>' +
         '<select class="e-select" id="e-sector" aria-label="Filter by sector" style="margin-top:8px">' + sectorOpts + '</select>' +
-        '<div class="e-mode" role="group" aria-label="Colour bubbles by">' +
+        '<div class="e-mode" role="group" aria-label="Color bubbles by">' +
           '<button type="button" data-mode="count" aria-pressed="' + (state.mode === 'count') + '">by count</button>' +
           '<button type="button" data-mode="type" aria-pressed="' + (state.mode === 'type') + '">by type</button>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="e-card">' +
+      '<div class="e-card-body" style="padding-top:14px">' +
+        '<span class="e-label" style="display:flex;align-items:center;gap:7px">' + I.filter + 'Also show only</span>' +
+        '<div class="e-facets" role="group" aria-label="Additional filters, combine freely with sector and with each other">' +
+          FACETS.map(function (fct) {
+            var n = ALL.filter(function (e) { return e[fct.key]; }).length;
+            return '<button type="button" data-facet="' + attr(fct.key) + '" aria-pressed="' + state.facets[fct.key] + '">' +
+              esc(fct.label) + ' <span class="e-count">' + n + '</span></button>';
+          }).join('') +
         '</div>' +
       '</div>' +
     '</div>' +
@@ -462,6 +494,15 @@
 
       var mode = t.closest('.e-mode button');
       if (mode) { state.mode = mode.dataset.mode; paint(); return; }
+
+      var facet = t.closest('[data-facet]');
+      if (facet) {
+        var fk = facet.dataset.facet;
+        state.facets[fk] = !state.facets[fk];
+        state.community = null; state.entity = null;
+        paint();
+        return;
+      }
 
       var acc = t.closest('[data-acc]');
       if (acc) {

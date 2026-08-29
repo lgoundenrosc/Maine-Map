@@ -51,6 +51,18 @@ The source `location.town` strings were written for a reading document, not for 
 3. One record is in New Hampshire. It stays on the map because the test route matters, but it is not
    a Maine community and does not count as one.
 
+### Sector and the two facets
+
+The sector dropdown is a single choice, one cluster or all of them, because a record sits at one place
+on the formation chain. `Startups` and `Major defense companies` in the card below it are a different
+kind of filter, two independent facets rather than a second sector: either can be on, both can be on
+together, and both combine with whatever sector is selected. `data/companies.js` and `data/anchorNodes.js`
+carry `startup` and `majorDefenseCompany` as explicit booleans set record by record, from ventureBacked
+status, incubator or spinout language already in the record's own text, or, for major defense companies,
+a name on the scale of the two the request that added this named, General Dynamics and Bath Iron Works.
+Neither flag is inferred from company size or age at render time. `js/entities.js` carries both through unchanged,
+`js/ecosystem.js` ORs the two facets together and ANDs the result against the sector filter.
+
 ## The ecosystem map's palette
 
 `css/ecosystem.css` is dark, purple as the primary accent and orange reserved for a short, deliberate

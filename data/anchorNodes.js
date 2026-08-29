@@ -11,11 +11,12 @@ window.RoscData.anchorNodes = {
     'programs, so the question a Rosc portfolio company should ask of each node is what it is short of, ' +
     'not what it is selling.',
 
-  filterCodes: ['All', 'BIW', 'PNSY', 'P&W', 'GD-OTS', 'TXT', 'TDY', 'ANG'],
+  filterCodes: ['All', 'BIW', 'PNSY', 'P&W', 'GD-OTS', 'TXT', 'TDY', 'ANG', 'SERE'],
 
   nodes: [
     {
       id: 'anchor-biw',
+      majorDefenseCompany: true,
       code: 'BIW',
       tileColor: '#1d3f6e',
       name: 'General Dynamics Bath Iron Works',
@@ -96,6 +97,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-pw',
+      majorDefenseCompany: true,
       code: 'P&W',
       tileColor: '#4b4f63',
       name: 'Pratt & Whitney North Berwick',
@@ -126,6 +128,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-gdots',
+      majorDefenseCompany: true,
       code: 'GD-OTS',
       tileColor: '#8f4a1c',
       name: 'General Dynamics Ordnance and Tactical Systems, Saco',
@@ -157,6 +160,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-txt',
+      majorDefenseCompany: true,
       code: 'TXT',
       tileColor: '#2f6b3c',
       name: 'Howe & Howe Inc. (Textron Systems)',
@@ -192,6 +196,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-tdy',
+      majorDefenseCompany: true,
       code: 'TDY',
       tileColor: '#5b3f7a',
       name: 'Teledyne e2v, Brunswick Landing',
@@ -247,6 +252,37 @@ window.RoscData.anchorNodes = {
         'GIUK-gap operations are the operational context for cold-weather energy, high-latitude sensing ' +
         'and long-endurance UAS work that Loring can host physically. Treat Bangor as the mission ' +
         'rationale and Loring as the test venue.',
+      entryPoints: []
+    },
+    {
+      id: 'anchor-sere',
+      code: 'SERE',
+      tileColor: '#5c4a2e',
+      name: 'Navy SERE School',
+      category: 'anchor',
+      cluster: ['space-high-latitude'],
+      value: '12,000 acres',
+      valueNote: 'Redington Township field training site',
+      location: { town: 'Redington Township', lat: 45.0151, lng: -70.4503, precision: 'approximate' },
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-86', 'src-87', 'src-88'],
+      openness: 'LOW',
+      summary:
+        'The Navy’s only cold-weather Survival, Evasion, Resistance and Escape school, established 1961, ' +
+        'field training on 12,000 acres near Rangeley.',
+      facts: [
+        { label: 'Established', value: '1961', confidence: 'verified' },
+        { label: 'Program', value: 'SERE and Cold Weather Environmental Survival Training (CWEST), classroom instruction at Portsmouth Naval Shipyard in Kittery and field training in Redington Township', confidence: 'verified' },
+        { label: 'Personnel trained', value: 'Almost 50,000 since 1962', confidence: 'stale', note: 'From a 2015 source. Confirm the current figure.' }
+      ],
+      programsAndDeals: [
+        { text: '12-day cold-weather SERE and CWEST program, field training on 12,000 acres near Rangeley, classroom component at Portsmouth Naval Shipyard.', confidence: 'verified' }
+      ],
+      vcRead:
+        'Not a demand signal. Included for completeness as a federal military presence on the corridor, ' +
+        'not because it buys anything or hosts a formation-chain stage. If it has an angle at all it is ' +
+        'adjacent to Bangor ANG’s cold-weather and high-latitude mission, not to any cluster in this map.',
       entryPoints: []
     }
   ]

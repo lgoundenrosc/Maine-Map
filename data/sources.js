@@ -95,5 +95,10 @@ window.RoscData.sources = [
   { id: 'src-82', n: 82, title: 'Industrial Engineering and Department of Technology program pages', publisher: 'University of Southern Maine', date: '2026', locator: 'usm.maine.edu', quality: 'primary' },
   { id: 'src-83', n: 83, title: 'Maine Cybersecurity Center and NSA Center of Academic Excellence designation', publisher: 'University of Maine at Augusta', date: '2026', locator: 'uma.edu', quality: 'primary' },
   { id: 'src-84', n: 84, title: 'UMaine Augusta and Maine Department of Labor to launch cybersecurity apprenticeship program', publisher: 'Portland Press Herald', date: '2023-09-27', locator: '', quality: 'press' },
-  { id: 'src-85', n: 85, title: 'Marine Design Short-Term Training, in partnership with General Dynamics Bath Iron Works', publisher: 'Southern Maine Community College', date: '2026', locator: 'smccme.edu', quality: 'primary' }
+  { id: 'src-85', n: 85, title: 'Marine Design Short-Term Training, in partnership with General Dynamics Bath Iron Works', publisher: 'Southern Maine Community College', date: '2026', locator: 'smccme.edu', quality: 'primary' },
+
+  /* Navy SERE School, added on request. */
+  { id: 'src-86', n: 86, title: 'How "not to get eaten" taught at Navy course near Rangeley', publisher: 'Sun Journal', date: '2015-04-04', locator: '', quality: 'press' },
+  { id: 'src-87', n: 87, title: 'Lost and Abandoned Sites, US Navy SERE School, Redington Twp', publisher: 'Century Maine (blog)', date: '2015-07', locator: '', quality: 'secondary, blog' },
+  { id: 'src-88', n: 88, title: 'Survival, Evasion, Resistance and Escape', publisher: 'Wikipedia', date: '2026', locator: '', quality: 'tertiary, treat as needing confirmation' }
 ];
