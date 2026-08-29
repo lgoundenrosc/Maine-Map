@@ -58,9 +58,6 @@ window.RoscData.sources = [
   { id: 'src-49', n: 49, title: 'Campus and program pages', publisher: 'University of Maine', date: '2026', locator: 'umaine.edu', quality: 'primary' },
   { id: 'src-50', n: 50, title: 'Campus and program pages', publisher: 'University of Southern Maine', date: '2026', locator: 'usm.maine.edu', quality: 'primary' },
   { id: 'src-51', n: 51, title: 'Campus and program pages', publisher: 'University of Maine at Augusta', date: '2026', locator: 'uma.edu', quality: 'primary' },
-  { id: 'src-52', n: 52, title: 'Campus and program pages', publisher: 'University of Maine at Fort Kent', date: '2026', locator: 'umfk.edu', quality: 'primary' },
-  { id: 'src-53', n: 53, title: 'Campus and program pages', publisher: 'University of Maine at Presque Isle', date: '2026', locator: 'umpi.edu', quality: 'primary' },
-  { id: 'src-54', n: 54, title: 'Campus and program pages', publisher: 'University of Maine at Machias', date: '2026', locator: 'machias.edu', quality: 'primary' },
   { id: 'src-55', n: 55, title: 'Campus and program pages', publisher: 'Bates College', date: '2026', locator: 'bates.edu', quality: 'primary' },
   { id: 'src-56', n: 56, title: 'Campus and program pages', publisher: 'Colby College', date: '2026', locator: 'colby.edu', quality: 'primary' },
   { id: 'src-57', n: 57, title: 'Campus and program pages', publisher: 'Central Maine Community College', date: '2026', locator: 'cmcc.edu', quality: 'primary' },
@@ -91,5 +88,12 @@ window.RoscData.sources = [
   { id: 'src-78', n: 78, title: 'Company site', publisher: 'Lattice Materials', date: '2026', locator: 'latticematerials.com', quality: 'primary' },
   { id: 'src-79', n: 79, title: 'Company site', publisher: 'Greisen Aerospace', date: '2026', locator: 'greisenaerospace.com', quality: 'primary' },
   { id: 'src-80', n: 80, title: 'Company site', publisher: 'Promin Aerospace', date: '2026', locator: 'prominaerospace.com', quality: 'primary' },
-  { id: 'src-81', n: 81, title: 'Ukrainian small launcher finds refuge in the US', publisher: 'Payload Space', date: '2026', locator: '', quality: 'trade press' }
+  { id: 'src-81', n: 81, title: 'Ukrainian small launcher finds refuge in the US', publisher: 'Payload Space', date: '2026', locator: '', quality: 'trade press' },
+
+  /* Manufacturing and defense relevant workforce programs, added when the
+     education cluster was pruned to the campuses that have one. */
+  { id: 'src-82', n: 82, title: 'Industrial Engineering and Department of Technology program pages', publisher: 'University of Southern Maine', date: '2026', locator: 'usm.maine.edu', quality: 'primary' },
+  { id: 'src-83', n: 83, title: 'Maine Cybersecurity Center and NSA Center of Academic Excellence designation', publisher: 'University of Maine at Augusta', date: '2026', locator: 'uma.edu', quality: 'primary' },
+  { id: 'src-84', n: 84, title: 'UMaine Augusta and Maine Department of Labor to launch cybersecurity apprenticeship program', publisher: 'Portland Press Herald', date: '2023-09-27', locator: '', quality: 'press' },
+  { id: 'src-85', n: 85, title: 'Marine Design Short-Term Training, in partnership with General Dynamics Bath Iron Works', publisher: 'Southern Maine Community College', date: '2026', locator: 'smccme.edu', quality: 'primary' }
 ];

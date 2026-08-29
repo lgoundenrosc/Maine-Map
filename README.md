@@ -154,7 +154,7 @@ enforcement point, not this paragraph. The source brief supplied `mainetechnolog
 and the Maine SBDC number `207-780-4420`, tagged unverified because it came from a secondary source. The
 education and workforce records added afterward, on request, extend the allowlist with each
 institution's own domain, checked the same way: `smccme.edu`, `yccc.edu`, `mainemaritime.edu`,
-`bowdoin.edu`, `umaine.edu`, `usm.maine.edu`, `uma.edu`, `umfk.edu`, `umpi.edu`, `machias.edu`,
+`bowdoin.edu`, `umaine.edu`, `usm.maine.edu`, `uma.edu`,
 `bates.edu`, `colby.edu`, `cmcc.edu`, `emcc.edu`, `kvcc.me.edu`, `nmcc.edu`, `wccc.me.edu`,
 `educatemaine.org`, `liveandworkinmaine.com`, `apprenticeship.maine.gov`. Every other entry point
 renders the empty state and appears in the verification gaps table. There is an audit script note at the

@@ -19,7 +19,7 @@
     /* Education and workforce pipeline, added on request. Each domain was
        checked against the official site it names before being added here. */
     'smccme.edu', 'yccc.edu', 'mainemaritime.edu', 'bowdoin.edu',
-    'usm.maine.edu', 'uma.edu', 'umfk.edu', 'umpi.edu', 'machias.edu',
+    'usm.maine.edu', 'uma.edu',
     'bates.edu', 'colby.edu', 'cmcc.edu', 'emcc.edu', 'kvcc.me.edu',
     'nmcc.edu', 'wccc.me.edu', 'educatemaine.org', 'liveandworkinmaine.com',
     'apprenticeship.maine.gov'

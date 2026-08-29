@@ -260,46 +260,48 @@ window.RoscData.clusters = {
       confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-41', 'src-65'],
-      flag: 'Added on request. Not one of the original seven clusters, and not a target for a portfolio company in the way the others are, it is the labor supply behind all of them.',
+      flag: 'Added on request. Not one of the original seven clusters, and not a target for a portfolio company in the way the others are, it is the labor supply behind all of them. Pruned to the campuses that carry a specific manufacturing or defense relevant program rather than every UMaine System location.',
       summary:
         'Every other cluster in this map assumes a workforce exists to staff it. This is that workforce, ' +
-        'and where it is trained.',
+        'and where it is trained, limited to the institutions with a named program rather than a general ' +
+        'degree.',
       assets: [
-        'University of Maine System, eight campuses statewide',
-        'Maine Community College System, seven colleges within 25 miles of 92 percent of the population',
+        'Maine Community College System, all seven colleges carry a manufacturing, welding or machining program',
+        'University of Maine, Orono, the flagship campus and the Advanced Structures and Composites Center graduate pipeline',
+        'University of Southern Maine, ABET-accredited mechanical and industrial engineering, and the Composite Engineering Research Laboratory',
+        'University of Maine at Augusta, an NSA-designated Center of Academic Excellence in Cyber Defense Education',
         'Maine Maritime Academy, licensed mariners and marine engineers',
-        'UMaine Advanced Structures and Composites Center, graduate research capacity feeding the same pipeline, listed separately under Anchor demand nodes',
-        'Private colleges with relevant programs, Bowdoin, Bates, Colby',
+        'Bowdoin, Bates and Colby, the Colby-Bates-Bowdoin consortium',
         'The Maine Apprenticeship Program, registered apprenticeships across trades and technical occupations',
         'Educate Maine and Live + Work in Maine, advocacy and talent attraction rather than training providers themselves'
       ],
       whoIsThere: [
         { name: 'University of Maine', ref: 'inst-umaine' },
-        { name: 'University of Southern Maine', ref: 'inst-usm' },
-        { name: 'University of Maine at Augusta', ref: 'inst-uma' },
-        { name: 'University of Maine at Fort Kent', ref: 'inst-umfk' },
-        { name: 'University of Maine at Presque Isle', ref: 'inst-umpi' },
-        { name: 'University of Maine at Machias', ref: 'inst-umm' },
+        { name: 'University of Southern Maine', note: 'ABET mechanical and industrial engineering, Composite Engineering Research Laboratory', ref: 'inst-usm' },
+        { name: 'University of Maine at Augusta', note: 'NSA-designated cyber defense center, Department of Labor apprenticeship', ref: 'inst-uma' },
         { name: 'Maine Maritime Academy', ref: 'inst-mma' },
         { name: 'Bates College', ref: 'inst-bates' },
         { name: 'Colby College', ref: 'inst-colby' },
         { name: 'Bowdoin College', ref: 'inst-bowdoin' },
-        { name: 'Southern Maine Community College', ref: 'inst-smcc' },
-        { name: 'York County Community College', note: 'BlueForge-funded welding lab, the one program in this cluster built for a specific defense customer', ref: 'inst-yccc' },
-        { name: 'Central Maine Community College', ref: 'inst-cmcc' },
-        { name: 'Eastern Maine Community College', ref: 'inst-emcc' },
-        { name: 'Kennebec Valley Community College', ref: 'inst-kvcc' },
-        { name: 'Northern Maine Community College', ref: 'inst-nmcc' },
-        { name: 'Washington County Community College', ref: 'inst-wccc' },
+        { name: 'Southern Maine Community College', note: 'Marine Design Short-Term Training with Bath Iron Works, MATEC composites program', ref: 'inst-smcc' },
+        { name: 'York County Community College', note: 'BlueForge-funded welding lab for the submarine industrial base', ref: 'inst-yccc' },
+        { name: 'Central Maine Community College', note: 'Precision Machining Technology', ref: 'inst-cmcc' },
+        { name: 'Eastern Maine Community College', note: 'Welding Technology, Precision Machining', ref: 'inst-emcc' },
+        { name: 'Kennebec Valley Community College', note: 'Precision Machining Technology', ref: 'inst-kvcc' },
+        { name: 'Northern Maine Community College', note: 'Precision Machining, Tool, Die and Mold Making', ref: 'inst-nmcc' },
+        { name: 'Washington County Community College', note: 'Welding Technology, AWS certified', ref: 'inst-wccc' },
         { name: 'Educate Maine', ref: 'inst-educatemaine' },
         { name: 'Live + Work in Maine', ref: 'inst-livework' },
         { name: 'Maine Apprenticeship Program', ref: 'inst-apprenticeship' }
       ],
       whiteSpace:
-        'The capacity is broad and none of it is defense-specialized. YCCC’s welding lab, funded through ' +
-        'MDIA and BlueForge Alliance for the submarine industrial base, is the one program in the entire ' +
-        'system built for a named defense customer. Nothing in the source material documents a security ' +
-        'clearance pathway, a structured internship pipeline into BIW, PNSY or GD-OTS, or a curriculum ' +
+        'Once the general-education campuses are set aside, the manufacturing and defense relevant capacity ' +
+        'is real rather than theoretical. YCCC’s welding lab is funded through MDIA and BlueForge Alliance ' +
+        'specifically for the submarine industrial base, and SMCC runs a marine design program in direct ' +
+        'partnership with Bath Iron Works. UMA holds an NSA cyber defense designation. What is not ' +
+        'confirmed anywhere in the source material is whether the precision machining and welding output of ' +
+        'the other five community colleges specifically feeds BIW, PNSY or GD-OTS rather than general ' +
+        'manufacturing, or whether any of these programs carries a security clearance pathway or a ' +
         'track built around a defense program of record. That absence, not a shortage of colleges, is the ' +
         'finding.'
     }

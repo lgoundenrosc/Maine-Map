@@ -631,10 +631,14 @@ window.RoscData.institutions = {
       openness: 'HIGH',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-45'],
+      sourceIds: ['src-45', 'src-85'],
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'Community college with a campus at Brunswick Landing, part of the seven-college Maine Community College System.',
+      cluster: ['maritime-autonomy', 'composites-am', 'workforce-education'],
+      what:
+        'Community college with a Midcoast campus at Brunswick Landing, part of the seven-college Maine ' +
+        'Community College System. Runs a Marine Design Short-Term Training program in partnership with ' +
+        'General Dynamics Bath Iron Works, and hosts the Composite Science and Manufacturing program at ' +
+        'the Maine Advanced Technology and Engineering Center on the same campus.',
       facts: [],
       entryPoints: [
         { value: 'smccme.edu', confidence: 'verified' }
@@ -799,10 +803,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-50'],
+      sourceIds: ['src-50', 'src-82'],
       location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'University of Maine System campus with locations in Portland, Gorham and Lewiston.',
+      cluster: ['composites-am', 'workforce-education'],
+      what:
+        'University of Maine System campus with locations in Portland, Gorham and Lewiston. ABET-accredited ' +
+        'mechanical and industrial engineering on the Gorham campus, and host to the Composite Engineering ' +
+        'Research Laboratory, a Maine Composites Alliance collaboration doing applied manufacturing and ' +
+        'process work for the state’s composites industry.',
       facts: [],
       entryPoints: [
         { value: 'usm.maine.edu', confidence: 'verified' }
@@ -818,70 +826,17 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-51'],
+      sourceIds: ['src-51', 'src-83', 'src-84'],
       location: { town: 'Augusta', lat: 44.3106, lng: -69.7795, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'University of Maine System campus in the state capital, with a second location in Bangor.',
+      cluster: ['cyber-software', 'workforce-education'],
+      what:
+        'University of Maine System campus in the state capital, with a second location in Bangor. Its ' +
+        'cybersecurity program has held the NSA Center of Academic Excellence in Cyber Defense Education ' +
+        'designation since 2014, and it launched a cybersecurity apprenticeship with the Maine Department ' +
+        'of Labor in 2023.',
       facts: [],
       entryPoints: [
         { value: 'uma.edu', confidence: 'verified' }
-      ],
-      entryGap: 'No named workforce or admissions contact confirmed.'
-    },
-    {
-      id: 'inst-umfk',
-      name: 'University of Maine at Fort Kent',
-      short: 'UMFK',
-      category: 'institution',
-      chainStage: 5,
-      openness: 'MED',
-      confidence: 'verified',
-      asOf: '2026-08',
-      sourceIds: ['src-52'],
-      location: { town: 'Fort Kent', lat: 47.2597, lng: -68.5956, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'University of Maine System campus in the far north of Aroostook County.',
-      facts: [],
-      entryPoints: [
-        { value: 'umfk.edu', confidence: 'verified' }
-      ],
-      entryGap: 'No named workforce or admissions contact confirmed.'
-    },
-    {
-      id: 'inst-umpi',
-      name: 'University of Maine at Presque Isle',
-      short: 'UMPI',
-      category: 'institution',
-      chainStage: 5,
-      openness: 'MED',
-      confidence: 'verified',
-      asOf: '2026-08',
-      sourceIds: ['src-53'],
-      location: { town: 'Presque Isle', lat: 46.6812, lng: -68.0159, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'University of Maine System campus serving Aroostook County.',
-      facts: [],
-      entryPoints: [
-        { value: 'umpi.edu', confidence: 'verified' }
-      ],
-      entryGap: 'No named workforce or admissions contact confirmed.'
-    },
-    {
-      id: 'inst-umm',
-      name: 'University of Maine at Machias',
-      short: 'UMM',
-      category: 'institution',
-      chainStage: 5,
-      openness: 'MED',
-      confidence: 'verified',
-      asOf: '2026-08',
-      sourceIds: ['src-54'],
-      location: { town: 'Machias', lat: 44.7148, lng: -67.4602, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'University of Maine System campus, the downeast regional campus.',
-      facts: [],
-      entryPoints: [
-        { value: 'machias.edu', confidence: 'verified' }
       ],
       entryGap: 'No named workforce or admissions contact confirmed.'
     },
@@ -934,8 +889,11 @@ window.RoscData.institutions = {
       asOf: '2026-08',
       sourceIds: ['src-57'],
       location: { town: 'Auburn', lat: 44.0979, lng: -70.2312, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'Community college in Auburn, part of the Maine Community College System.',
+      cluster: ['composites-am', 'workforce-education'],
+      what:
+        'Community college in Auburn, part of the Maine Community College System. Runs a Precision ' +
+        'Machining Technology program, manual and CNC lathes, mills and grinders, through an associate ' +
+        'degree and an advanced certificate.',
       facts: [],
       entryPoints: [
         { value: 'cmcc.edu', confidence: 'verified' }
@@ -953,8 +911,11 @@ window.RoscData.institutions = {
       asOf: '2026-08',
       sourceIds: ['src-58'],
       location: { town: 'Bangor', lat: 44.8016, lng: -68.7712, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'Community college in Bangor, part of the Maine Community College System.',
+      cluster: ['composites-am', 'workforce-education'],
+      what:
+        'Community college in Bangor, part of the Maine Community College System. Runs Welding ' +
+        'Technology and Precision Machining programs covering manual and CNC machining and manufacturing ' +
+        'processes.',
       facts: [],
       entryPoints: [
         { value: 'emcc.edu', confidence: 'verified' }
@@ -972,8 +933,11 @@ window.RoscData.institutions = {
       asOf: '2026-08',
       sourceIds: ['src-59'],
       location: { town: 'Fairfield', lat: 44.5887, lng: -69.5978, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'Community college with campuses in Fairfield and Hinckley, part of the Maine Community College System.',
+      cluster: ['composites-am', 'workforce-education'],
+      what:
+        'Community college with campuses in Fairfield and Hinckley, part of the Maine Community College ' +
+        'System. Runs a Precision Machining Technology program with stackable Machinist and CNC Operator ' +
+        'certificates.',
       facts: [],
       entryPoints: [
         { value: 'kvcc.me.edu', confidence: 'verified' }
@@ -991,9 +955,14 @@ window.RoscData.institutions = {
       asOf: '2026-08',
       sourceIds: ['src-60'],
       location: { town: 'Presque Isle', lat: 46.6812, lng: -68.0159, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'Community college in Presque Isle, part of the Maine Community College System.',
-      facts: [],
+      cluster: ['composites-am', 'workforce-education'],
+      what:
+        'Community college in Presque Isle, on the grounds of the former Presque Isle Air Force Base, ' +
+        'part of the Maine Community College System. Runs a nine-month Precision Machining and Tool, Die ' +
+        'and Mold Making program built around CNC programming.',
+      facts: [
+        { label: 'Completion employment rate', value: '100 percent, per a vendor case study', confidence: 'unverified', note: 'Sourced to a GibbsCAM customer-story page, not to the college. Treat as marketing, not as the college’s own reporting.' }
+      ],
       entryPoints: [
         { value: 'nmcc.edu', confidence: 'verified' }
       ],
@@ -1010,8 +979,11 @@ window.RoscData.institutions = {
       asOf: '2026-08',
       sourceIds: ['src-61'],
       location: { town: 'Calais', lat: 45.1809, lng: -67.2778, precision: 'approximate' },
-      cluster: ['workforce-education'],
-      what: 'Community college in Calais, part of the Maine Community College System.',
+      cluster: ['maritime-autonomy', 'workforce-education'],
+      what:
+        'Community college in Calais, part of the Maine Community College System. Runs a Welding ' +
+        'Technology program with AWS structural and pipe certifications, naming shipbuilding among its ' +
+        'graduates’ typical employers.',
       facts: [],
       entryPoints: [
         { value: 'wccc.me.edu', confidence: 'verified' }
