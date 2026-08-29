@@ -53,7 +53,7 @@
 
   function typeFill(t) {
     var c = B.colors.type[t];
-    return c ? c.fill : '#8f6bc9';
+    return c ? c.fill : '#7c4fc7';
   }
 
   function confBadge(e) {

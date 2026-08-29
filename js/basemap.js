@@ -7,22 +7,22 @@
 
   var D = global.RoscData;
 
-  /* Purple carries the sequential by-count scale, orange marks only the top
-     tier, the one place a bubble's color is meant to say "look here" rather
-     than just "more". */
+  /* Purple carries the sequential by-count scale, darkest at the low end and
+     brightest at the top before orange takes over for the top tier, the one
+     place a bubble's color is meant to say "look here" rather than "more". */
   var COLORS = {
     count: [
-      { min: 12, fill: '#e0721f', label: '12 or more' },
-      { min: 6,  fill: '#472285', label: '6 to 11' },
-      { min: 3,  fill: '#5b2a9e', label: '3 to 5' },
-      { min: 1,  fill: '#8f6bc9', label: '1 or 2' }
+      { min: 12, fill: '#f0924a', label: '12 or more' },
+      { min: 6,  fill: '#9b6fe0', label: '6 to 11' },
+      { min: 3,  fill: '#7c4fc7', label: '3 to 5' },
+      { min: 1,  fill: '#5a3f8a', label: '1 or 2' }
     ],
     type: {
-      anchor:      { fill: '#2f5aa8', label: 'Anchor demand node' },
-      institution: { fill: '#5b2a9e', label: 'Institution' },
-      company:     { fill: '#e0721f', label: 'Company' },
-      'test-asset':{ fill: '#1f8a8c', label: 'Test asset' },
-      capital:     { fill: '#a13f88', label: 'Capital instrument' }
+      anchor:      { fill: '#5b8fd6', label: 'Anchor demand node' },
+      institution: { fill: '#9b6fe0', label: 'Institution' },
+      company:     { fill: '#f0924a', label: 'Company' },
+      'test-asset':{ fill: '#3fb8ba', label: 'Test asset' },
+      capital:     { fill: '#d1609f', label: 'Capital instrument' }
     }
   };
 
@@ -41,7 +41,7 @@
     Object.keys(COLORS.type).forEach(function (t) {
       if ((tally[t] || 0) > bestN) { bestN = tally[t]; best = t; }
     });
-    return COLORS.type[best] ? COLORS.type[best].fill : '#8f6bc9';
+    return COLORS.type[best] ? COLORS.type[best].fill : '#7c4fc7';
   }
 
   /* Area, not diameter, tracks the count. Kept small enough that the dense
@@ -79,15 +79,15 @@
     geo.land.forEach(function (ring) {
       L.polygon(ring.map(function (p) { return [p[1], p[0]]; }), {
         renderer: base, interactive: false,
-        fillColor: '#fbf9fe', fillOpacity: 1,
-        color: '#b9a6de', weight: 0.7, lineJoin: 'round'
+        fillColor: '#1f1830', fillOpacity: 1,
+        color: '#5b3f8a', weight: 0.7, lineJoin: 'round'
       }).addTo(map);
     });
 
     geo.borders.forEach(function (ring) {
       L.polyline(ring.map(function (p) { return [p[1], p[0]]; }), {
         renderer: base, interactive: false,
-        color: '#9c82c7', weight: 1, opacity: 0.6, dashArray: '4 5'
+        color: '#4a3570', weight: 1, opacity: 0.6, dashArray: '4 5'
       }).addTo(map);
     });
 
@@ -96,7 +96,7 @@
        purple, so it reads as a route rather than as more data. */
     corridorLine = L.polyline(D.meta.corridorPath, {
       renderer: base, interactive: false,
-      color: '#e0721f', weight: 2.5, opacity: 0.78, dashArray: '9 7'
+      color: '#f0924a', weight: 2.5, opacity: 0.8, dashArray: '9 7'
     }).addTo(map);
 
     layer = L.layerGroup().addTo(map);

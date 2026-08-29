@@ -19,7 +19,7 @@ town. Four surfaces, reached from the dock on the right.
 | --- | --- | --- |
 | Entry | `index.html` | `ecosystem.html` |
 | Shape | nine tabs, chain diagram | map, municipality drill-down, index, help |
-| Theme | light, Rosc navy and rust, print first | light, purple and orange, screen first |
+| Theme | light, Rosc navy and rust, print first | dark, purple and orange, screen first |
 | Records | all of `data/` | organizations and places only |
 | Personnel | included | excluded, see below |
 | Print | 45 pages at Letter | not a print document |
@@ -53,17 +53,21 @@ The source `location.town` strings were written for a reading document, not for 
 
 ## The ecosystem map's palette
 
-`css/ecosystem.css` is light, not dark, purple as the primary accent and orange reserved for a short,
-deliberate list: the brand mark's gradient, the two buttons that take the reader somewhere (`View
-index`, `Visit [site]`), the defense corridor line, the top bubble tier, and the home view's stat
-numbers. Everywhere else in the interface, purple carries the accent. White is a surface color, used
-on cards, the drawer and the map's land polygons, not just as text on a dark ground.
+`css/ecosystem.css` is dark, purple as the primary accent and orange reserved for a short, deliberate
+list: the brand mark's gradient, the two buttons that take the reader somewhere (`View index`, `Visit
+[site]`), the defense corridor line, the top bubble tier, and the home view's stat numbers. Everywhere
+else in the interface, purple carries the accent. Text is white, not the ground.
 
-This was built for a specific brief: purple, orange and white, no black as a primary color, judged
-against `firstlightworks.com`, a site this document may end up published alongside. The domain was not
-reachable from this environment when the palette was built, so the specific values are a considered
-design against that brief rather than a color pick from the live site. Revisit them if the two need to
-match more closely once the site can be seen directly.
+The first pass at this went light instead, white as a surface color rather than just text on dark, and
+came back too bright. The purple and orange accent system carried over unchanged, only the ground and
+ink direction flipped, along with the handful of values (bubble fill opacity, the drill-down scrim's
+fade direction, shadow color) that only make sense relative to one direction or the other.
+
+Both passes were built for a specific brief: purple, orange and white, professional and defense tech
+focused, judged against `firstlightworks.com`, a site this document may end up published alongside. The
+domain was not reachable from this environment when either was built, so the specific values are a
+considered design against that brief rather than a color pick from the live site. Revisit them if the
+two need to match more closely once the site can be seen directly.
 
 Confidence badges and the by-type bubble legend use hues chosen to sit outside the purple and orange
 family on purpose, `--e-amber` and `--e-red` for status, a separate five-hue set for anchor, institution,
