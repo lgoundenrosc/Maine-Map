@@ -230,6 +230,14 @@
       }).addTo(insetMap);
     });
 
+    /* The same corridor line the main map draws, from the same coordinates,
+       so the inset reads as a magnification of that line rather than a
+       different view that happens to cover the same towns. */
+    L.polyline(D.meta.corridorPath, {
+      renderer: base, interactive: false,
+      color: '#f0924a', weight: 2.5, opacity: 0.8, dashArray: '9 7'
+    }).addTo(insetMap);
+
     insetLayer = L.layerGroup().addTo(insetMap);
     return insetMap;
   }
