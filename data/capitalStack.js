@@ -77,7 +77,7 @@ window.RoscData.capitalStack = {
       type: 'Federal non-dilutive',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-19', 'src-39'],
+      sourceIds: ['src-19', 'src-39', 'src-118'],
       summary: 'The backbone of stage 3 and the cleanest measure of Maine’s federal R&D pipeline.',
       detail:
         'Phase I up to $150,000 (SBIR) or $200,000 (STTR), Phase II up to $1,000,000. Roughly $3.5B to ' +
@@ -85,7 +85,10 @@ window.RoscData.capitalStack = {
         'free application assistance and the Central Maine Growth Council FAST award.',
       gap:
         'Maine’s annual SBIR and STTR award volume in dollars is a known gap and should be obtained, ' +
-        'since it is the cleanest single measure of the state’s federal R&D pipeline.'
+        'since it is the cleanest single measure of the state’s federal R&D pipeline.',
+      entryPoints: [
+        { value: 'sbir.gov', confidence: 'verified' }
+      ]
     },
     {
       id: 'cap-mti-instruments',
@@ -102,7 +105,10 @@ window.RoscData.capitalStack = {
         'assessed on the VIRAL scale across eight areas. Development Loans up to $500,000 with a 1:1 ' +
         'match. MTAF 3.0 interest-free loans to for-profits with partial forgiveness up to 50 percent of ' +
         'the original amount, awarded incrementally, on a 5-year repayment term starting from planned ' +
-        'project completion, with initial funds anticipated Q1 2026.'
+        'project completion, with initial funds anticipated Q1 2026.',
+      entryPoints: [
+        { value: 'mainetechnology.org', confidence: 'verified' }
+      ]
     },
     {
       id: 'cap-mvf',
@@ -117,7 +123,10 @@ window.RoscData.capitalStack = {
         'Evergreen structure with returns recycled. $3.3M deployed across 13 new portfolio companies in ' +
         '2025. Typical position roughly $400,000 over time. More than 365 co-investors leveraging $196.6 ' +
         'million. Capitalization is reported inconsistently across three sources, from $13 million in ' +
-        'state contributions to $25.2M in fund investment.'
+        'state contributions to $25.2M in fund investment.',
+      entryPoints: [
+        { value: 'maineventurefund.com', confidence: 'verified' }
+      ]
     }
   ],
 

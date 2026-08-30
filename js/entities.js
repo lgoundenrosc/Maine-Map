@@ -22,7 +22,17 @@
     'usm.maine.edu', 'uma.edu',
     'bates.edu', 'colby.edu', 'cmcc.edu', 'emcc.edu', 'kvcc.me.edu',
     'nmcc.edu', 'wccc.me.edu', 'educatemaine.org', 'liveandworkinmaine.com',
-    'apprenticeship.maine.gov'
+    'apprenticeship.maine.gov',
+    /* Website links, added on request. Each domain was checked against the
+       organization's own site before being added here. */
+    'gdbiw.com', 'prattwhitney.com', 'gd-ots.com', 'howeandhowe.com',
+    'teledyne-e2v.com', 'idexx.com', 'onsemi.com', 'oceanrenewablepower.com',
+    'highbyte.com', 'defendify.com', 'tilsontech.com', 'elmettechnologies.com',
+    'maineangels.org', 'ceimaine.org', 'mainespacecorp.org',
+    'mainedefenseindustryalliance.com', 'mainemep.org', 'maineco.org',
+    'dirigolabs.org', 'mainemfg.com', 'loring.org', 'mced.biz', 'emdc.org',
+    'nmdc.org', 'msgc.org', 'gmri.org', 'islandinstitute.org', 'mdibl.org',
+    'dmc.umaine.edu', 'sbir.gov'
   ];
 
   var DOMAIN_RE = /^[a-z0-9][a-z0-9.-]*\.(org|com|mil|edu|us|gov|net)(\/[\w\-/]*)?$/i;

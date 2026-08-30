@@ -27,7 +27,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'Bath', lat: 43.9109, lng: -69.8133, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-30', 'src-31', 'src-32'],
+      sourceIds: ['src-10', 'src-30', 'src-31', 'src-32', 'src-89'],
       openness: 'MED',
       summary:
         'Surface combatant construction for the US Navy and the largest single concentration of defense ' +
@@ -51,7 +51,9 @@ window.RoscData.anchorNodes = {
         'The commercial openings are in production efficiency rather than ship design, which General ' +
         'Dynamics owns. Watch the housing and parking spend as a signal of how hard the labor ' +
         'constraint is biting.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'gdbiw.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-pnsy',
@@ -108,7 +110,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'North Berwick', lat: 43.3037, lng: -70.7328, precision: 'approximate' },
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-32'],
+      sourceIds: ['src-10', 'src-32', 'src-90'],
       openness: 'LOW',
       summary:
         'Roughly 1 million-plus square feet machining flight-critical jet engine components.',
@@ -124,7 +126,9 @@ window.RoscData.anchorNodes = {
         'Precision machining at scale with an aerospace quality system already in place. The relevance to ' +
         'a venture portfolio is as a contract manufacturing base rather than as a customer. Note the ' +
         'connection to DIU’s Blue Manufacturing initiative on the engagement and routing tab.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'prattwhitney.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-gdots',
@@ -139,7 +143,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'Saco', lat: 43.5009, lng: -70.4428, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-27', 'src-33', 'src-11'],
+      sourceIds: ['src-27', 'src-33', 'src-11', 'src-91'],
       openness: 'LOW',
       summary:
         'Gun systems, machine gun barrels and weapon protection systems. Precision gun-barrel machining ' +
@@ -156,7 +160,9 @@ window.RoscData.anchorNodes = {
         'A deep precision machining capability that is invisible in most Maine economic development ' +
         'material. Relevant as a manufacturing partner for weapons-adjacent hardware, and as evidence ' +
         'that the state’s machining base is not limited to marine work.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'gd-ots.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-txt',
@@ -171,7 +177,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'Waterboro', lat: 43.6023, lng: -70.7286, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-12', 'src-13'],
+      sourceIds: ['src-12', 'src-13', 'src-92'],
       openness: 'MED',
       summary:
         'Maine’s only uncrewed ground vehicle producer, tied to an Army program of record and a Marine ' +
@@ -192,7 +198,9 @@ window.RoscData.anchorNodes = {
         'modules, autonomy software and power systems for the MOSA-designed Ripsaw family are the ' +
         'obvious adjacency, and the MOSA design is what makes third-party modules commercially possible. ' +
         'Cross-reference the SOCOM map’s white space on man-portable counter-UAS and autonomous resupply.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'howeandhowe.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-tdy',
@@ -207,7 +215,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
       confidence: 'gap',
       asOf: '2026-08',
-      sourceIds: ['src-34'],
+      sourceIds: ['src-34', 'src-93'],
       openness: 'LOW',
       summary: 'Anchor tenant at Brunswick Landing. Defense electronics.',
       facts: [
@@ -222,7 +230,9 @@ window.RoscData.anchorNodes = {
         'Included because a defense electronics anchor tenant on the proposed hub site is materially ' +
         'relevant if the scope is real. Until the scope is confirmed, treat this node as a research ' +
         'task rather than a demand signal.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'teledyne-e2v.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-ang',

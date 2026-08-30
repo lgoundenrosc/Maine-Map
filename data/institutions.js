@@ -266,7 +266,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-17'],
+      sourceIds: ['src-17', 'src-101'],
       location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
       cluster: [],
       what:
@@ -276,7 +276,9 @@ window.RoscData.institutions = {
       vcAngle:
         'The practical bridge between MTI grants and any institutional round, and a fast way to read ' +
         'whether a Maine company has local conviction behind it.',
-      entryPoints: [],
+      entryPoints: [
+        { value: 'maineangels.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -288,7 +290,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10'],
+      sourceIds: ['src-10', 'src-102'],
       location: { town: 'Brunswick', lat: 43.9145, lng: -69.9653, precision: 'approximate' },
       cluster: [],
       what:
@@ -298,7 +300,9 @@ window.RoscData.institutions = {
       vcAngle:
         'A CDFI-affiliated fund carries mandate constraints that a defense hardware company may not ' +
         'satisfy. Worth a conversation on mission-aligned dual-use, not on weapons-adjacent hardware.',
-      entryPoints: [],
+      entryPoints: [
+        { value: 'ceimaine.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -339,7 +343,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-25'],
+      sourceIds: ['src-25', 'src-103'],
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
       cluster: ['space-high-latitude'],
       what:
@@ -357,7 +361,9 @@ window.RoscData.institutions = {
         'any hardware company, and the 50-plus organization NSF Engines coalition list is a ready-made ' +
         'letters-of-support roster for an OnRamp Hub bid or a federal proposal. The organization itself ' +
         'is thinly funded and newly incorporated, so treat it as a partner, not a backer.',
-      entryPoints: [],
+      entryPoints: [
+        { value: 'mainespacecorp.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -398,7 +404,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-41'],
+      sourceIds: ['src-41', 'src-104'],
       location: { town: 'Statewide', lat: 44.3, lng: -69.6, precision: 'approximate' },
       cluster: [],
       what:
@@ -419,7 +425,9 @@ window.RoscData.institutions = {
         'Useful as a coalition partner and as the counterparty for any thesis that adds labor demand. ' +
         'A venture case that increases hiring pressure without addressing supply will meet resistance ' +
         'here and at the community colleges.',
-      entryPoints: [],
+      entryPoints: [
+        { value: 'mainedefenseindustryalliance.com', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed. Executive Director not confirmed.'
     },
     {
@@ -431,7 +439,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: ['src-32'],
+      sourceIds: ['src-32', 'src-105'],
       location: { town: 'Statewide', lat: 44.5, lng: -69.7, precision: 'approximate' },
       cluster: ['shipyard-ai'],
       what:
@@ -444,7 +452,9 @@ window.RoscData.institutions = {
         'The supplier survey is the interesting asset. It is the closest thing Maine has to a mapped ' +
         'industrial base and it is the natural starting dataset for any shipyard sustainment or ' +
         'industrial AI company looking for design partners.',
-      entryPoints: [],
+      entryPoints: [
+        { value: 'mainemep.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed. Director not confirmed.'
     },
     {
@@ -457,7 +467,7 @@ window.RoscData.institutions = {
       opennessNote: 'Undeveloped, not closed',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-25'],
+      sourceIds: ['src-10', 'src-25', 'src-109'],
       location: { town: 'Limestone', lat: 46.95, lng: -67.8858, precision: 'approximate' },
       cluster: ['space-high-latitude'],
       what:
@@ -473,7 +483,9 @@ window.RoscData.institutions = {
         'For long-endurance UAS, hypersonic test and cold-weather trials, Loring offers uncongested ' +
         'airspace and runway length Brunswick cannot. It also sits in Maine’s second congressional ' +
         'district, which matters politically. Currently unbuilt as an innovation node.',
-      entryPoints: [],
+      entryPoints: [
+        { value: 'loring.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -485,7 +497,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10'],
+      sourceIds: ['src-10', 'src-106'],
       location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
       cluster: [],
       what:
@@ -500,7 +512,9 @@ window.RoscData.institutions = {
         'The single point of contact into Maine’s corporate and public leadership, and it is free and ' +
         'confidential. Use it for the relocation or expansion conversation rather than for capital. ' +
         'Note the Brian Whitney interlock, since he also sits here.',
-      entryPoints: [],
+      entryPoints: [
+        { value: 'maineco.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -512,12 +526,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: ['src-39'],
+      sourceIds: ['src-39', 'src-107'],
       location: { town: 'Waterville', lat: 44.5521, lng: -69.6317, precision: 'approximate' },
       cluster: [],
       what: 'Accelerator in Waterville. Record is thin in the material reviewed for this build.',
       facts: [],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'dirigolabs.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -529,12 +545,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-110'],
       location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
       cluster: [],
       what: 'Runs the Top Gun founder program. Record is thin in the material reviewed for this build.',
       facts: [],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'mced.biz', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -546,12 +564,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-108'],
       location: { town: 'Statewide', lat: 44.4, lng: -69.5, precision: 'approximate' },
       cluster: [],
       what: 'Industry association for Maine manufacturers. Record is thin in the material reviewed for this build.',
       facts: [],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'mainemfg.com', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -563,12 +583,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-114'],
       location: { town: 'Portland', lat: 43.6489, lng: -70.2496, precision: 'approximate' },
       cluster: ['maritime-autonomy', 'food-water-bio'],
       what: 'Ocean science and marine resource research in Portland.',
       facts: [{ label: 'President', value: '', confidence: 'gap' }],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'gmri.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed. President not confirmed.'
     },
     {
@@ -580,12 +602,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-115'],
       location: { town: 'Rockland', lat: 44.1037, lng: -69.1089, precision: 'approximate' },
       cluster: ['food-water-bio'],
       what: 'Community and coastal resilience organization working across Maine’s island and coastal communities.',
       facts: [],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'islandinstitute.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -597,12 +621,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-116'],
       location: { town: 'Bar Harbor', lat: 44.4262, lng: -68.3095, precision: 'approximate' },
       cluster: ['food-water-bio'],
       what: 'Biomedical research institute with regeneration and aging programs.',
       facts: [],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'mdibl.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -614,12 +640,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-117'],
       location: { town: 'Walpole', lat: 43.9356, lng: -69.5786, precision: 'approximate' },
       cluster: ['maritime-autonomy', 'food-water-bio'],
       what: 'UMaine’s marine laboratory on the Damariscotta River.',
       facts: [],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'dmc.umaine.edu', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -715,14 +743,16 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-25'],
+      sourceIds: ['src-25', 'src-113'],
       location: { town: 'Augusta', lat: 44.3106, lng: -69.7795, precision: 'approximate' },
       cluster: ['space-high-latitude'],
       what:
         'NASA Space Grant consortium for Maine. Provided $29,000 alongside the two-year $426,000 MTI ' +
         'grant that funds the Maine Space Corporation.',
       facts: [{ label: 'Director', value: '', confidence: 'gap' }],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'msgc.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed. Director not confirmed.'
     },
     {
@@ -734,12 +764,14 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'unverified',
       asOf: '2026-08',
-      sourceIds: [],
+      sourceIds: ['src-111'],
       location: { town: 'Bangor', lat: 44.8016, lng: -68.7712, precision: 'approximate' },
       cluster: [],
       what: 'Regional economic development organization for eastern Maine.',
       facts: [],
-      entryPoints: [],
+      entryPoints: [
+        { value: 'emdc.org', confidence: 'verified' }
+      ],
       entryGap: 'No entry point confirmed.'
     },
     {
@@ -751,7 +783,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-36'],
+      sourceIds: ['src-36', 'src-112'],
       location: { town: 'Caribou', lat: 46.8606, lng: -68.0117, precision: 'approximate' },
       cluster: [],
       what:
@@ -761,6 +793,7 @@ window.RoscData.institutions = {
         { label: 'APEX counselor', value: 'Dana Delano, Aroostook', confidence: 'verified' }
       ],
       entryPoints: [
+        { value: 'nmdc.org', confidence: 'verified' },
         { value: 'Dana Delano, APEX counselor, Aroostook', confidence: 'verified' }
       ]
     },

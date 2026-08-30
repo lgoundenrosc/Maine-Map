@@ -404,10 +404,16 @@ select.e-select option { background: var(--e-panel-2); color: var(--e-text); }
 .e-section .e-label { display: block; margin-bottom: 7px; }
 .e-section p { margin: 0; font-size: 14px; color: var(--e-text-2); line-height: 1.6; }
 .e-kv { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-bottom: 13px; }
-.e-kv > div {
+.e-kv > div, .e-kv-link {
   background: var(--e-inset); border: 1px solid var(--e-line);
   border-radius: var(--e-radius-sm); padding: 12px 14px;
 }
+.e-kv-link {
+  display: block; text-decoration: none; cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.e-kv-link:hover { border-color: var(--e-orange); background: var(--e-orange-dim); }
+.e-kv-link:hover .e-kv-val { color: var(--e-orange-2); }
 .e-kv-val { display: block; margin-top: 4px; font-size: 14px; font-weight: 600; color: var(--e-text); }
 
 .e-cta {

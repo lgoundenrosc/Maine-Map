@@ -100,5 +100,39 @@ window.RoscData.sources = [
   /* Navy SERE School, added on request. */
   { id: 'src-86', n: 86, title: 'How "not to get eaten" taught at Navy course near Rangeley', publisher: 'Sun Journal', date: '2015-04-04', locator: '', quality: 'press' },
   { id: 'src-87', n: 87, title: 'Lost and Abandoned Sites, US Navy SERE School, Redington Twp', publisher: 'Century Maine (blog)', date: '2015-07', locator: '', quality: 'secondary, blog' },
-  { id: 'src-88', n: 88, title: 'Survival, Evasion, Resistance and Escape', publisher: 'Wikipedia', date: '2026', locator: '', quality: 'tertiary, treat as needing confirmation' }
+  { id: 'src-88', n: 88, title: 'Survival, Evasion, Resistance and Escape', publisher: 'Wikipedia', date: '2026', locator: '', quality: 'tertiary, treat as needing confirmation' },
+
+  /* Website links, added on request. Each is the organization's own site,
+     checked before being added. Where an anchor and a company record cover
+     the same organization, both cite the same row. */
+  { id: 'src-89', n: 89, title: 'Company site', publisher: 'General Dynamics Bath Iron Works', date: '2026', locator: 'gdbiw.com', quality: 'primary' },
+  { id: 'src-90', n: 90, title: 'Company site', publisher: 'Pratt & Whitney', date: '2026', locator: 'prattwhitney.com', quality: 'primary' },
+  { id: 'src-91', n: 91, title: 'Company site', publisher: 'General Dynamics Ordnance and Tactical Systems', date: '2026', locator: 'gd-ots.com', quality: 'primary' },
+  { id: 'src-92', n: 92, title: 'Company site', publisher: 'Howe & Howe Technologies', date: '2026', locator: 'howeandhowe.com', quality: 'primary' },
+  { id: 'src-93', n: 93, title: 'Company site', publisher: 'Teledyne e2v', date: '2026', locator: 'teledyne-e2v.com', quality: 'primary' },
+  { id: 'src-94', n: 94, title: 'Company site', publisher: 'IDEXX Laboratories', date: '2026', locator: 'idexx.com', quality: 'primary' },
+  { id: 'src-95', n: 95, title: 'Company site', publisher: 'onsemi', date: '2026', locator: 'onsemi.com', quality: 'primary' },
+  { id: 'src-96', n: 96, title: 'Company site', publisher: 'Ocean Renewable Power Company', date: '2026', locator: 'oceanrenewablepower.com', quality: 'primary' },
+  { id: 'src-97', n: 97, title: 'Company site', publisher: 'HighByte', date: '2026', locator: 'highbyte.com', quality: 'primary' },
+  { id: 'src-98', n: 98, title: 'Company site', publisher: 'Defendify', date: '2026', locator: 'defendify.com', quality: 'primary' },
+  { id: 'src-99', n: 99, title: 'Company site', publisher: 'Tilson Technology Management', date: '2026', locator: 'tilsontech.com', quality: 'primary' },
+  { id: 'src-100', n: 100, title: 'Company site', publisher: 'Elmet Technologies', date: '2026', locator: 'elmettechnologies.com', quality: 'primary' },
+  { id: 'src-101', n: 101, title: 'Organization site', publisher: 'Maine Angels', date: '2026', locator: 'maineangels.org', quality: 'primary' },
+  { id: 'src-102', n: 102, title: 'Organization site', publisher: 'CEI Ventures, Coastal Enterprises', date: '2026', locator: 'ceimaine.org', quality: 'primary' },
+  { id: 'src-103', n: 103, title: 'Organization site', publisher: 'Maine Space Corporation', date: '2026', locator: 'mainespacecorp.org', quality: 'primary' },
+  { id: 'src-104', n: 104, title: 'Organization site', publisher: 'Maine Defense Industry Alliance', date: '2026', locator: 'mainedefenseindustryalliance.com', quality: 'primary' },
+  { id: 'src-105', n: 105, title: 'Organization site', publisher: 'Maine Manufacturing Extension Partnership', date: '2026', locator: 'mainemep.org', quality: 'primary' },
+  { id: 'src-106', n: 106, title: 'Organization site', publisher: 'Maine & Co', date: '2026', locator: 'maineco.org', quality: 'primary' },
+  { id: 'src-107', n: 107, title: 'Organization site', publisher: 'Dirigo Labs', date: '2026', locator: 'dirigolabs.org', quality: 'primary' },
+  { id: 'src-108', n: 108, title: 'Organization site', publisher: 'Manufacturers Association of Maine', date: '2026', locator: 'mainemfg.com', quality: 'primary' },
+  { id: 'src-109', n: 109, title: 'Organization site', publisher: 'Loring Development Authority', date: '2026', locator: 'loring.org', quality: 'primary' },
+  { id: 'src-110', n: 110, title: 'Organization site', publisher: 'Maine Center for Entrepreneurs', date: '2026', locator: 'mced.biz', quality: 'primary' },
+  { id: 'src-111', n: 111, title: 'Organization site', publisher: 'Eastern Maine Development Corporation', date: '2026', locator: 'emdc.org', quality: 'primary' },
+  { id: 'src-112', n: 112, title: 'Organization site', publisher: 'Northern Maine Development Commission', date: '2026', locator: 'nmdc.org', quality: 'primary' },
+  { id: 'src-113', n: 113, title: 'Organization site', publisher: 'Maine Space Grant Consortium', date: '2026', locator: 'msgc.org', quality: 'primary' },
+  { id: 'src-114', n: 114, title: 'Organization site', publisher: 'Gulf of Maine Research Institute', date: '2026', locator: 'gmri.org', quality: 'primary' },
+  { id: 'src-115', n: 115, title: 'Organization site', publisher: 'Island Institute', date: '2026', locator: 'islandinstitute.org', quality: 'primary' },
+  { id: 'src-116', n: 116, title: 'Organization site', publisher: 'MDI Biological Laboratory', date: '2026', locator: 'mdibl.org', quality: 'primary' },
+  { id: 'src-117', n: 117, title: 'Organization site', publisher: 'Darling Marine Center, University of Maine', date: '2026', locator: 'dmc.umaine.edu', quality: 'primary' },
+  { id: 'src-118', n: 118, title: 'SBIR and STTR program site', publisher: 'US Small Business Administration', date: '2026', locator: 'sbir.gov', quality: 'primary' }
 ];

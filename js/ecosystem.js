@@ -256,9 +256,10 @@
           '<div><span class="e-label">Confidence</span><span class="e-kv-val">' + esc(e.confidence) + '</span></div>' +
           '<div><span class="e-label">As of</span><span class="e-kv-val">' + esc(e.asOf || 'not recorded') + '</span></div>' +
         '</div>' +
-        (e.ventureBacked !== null
-          ? '<div class="e-kv"><div style="grid-column:1/-1"><span class="e-label">Venture backed</span>' +
-            '<span class="e-kv-val">' + (e.ventureBacked ? 'Yes' : 'No') + '</span></div></div>' : '') +
+        (e.website
+          ? '<div class="e-kv"><a class="e-kv-link" style="grid-column:1/-1" href="https://' + attr(e.website.value) +
+            '" target="_blank" rel="noopener noreferrer"><span class="e-label">Website</span>' +
+            '<span class="e-kv-val">' + esc(e.website.host) + I.ext + '</span></a></div>' : '') +
         (srcs.length ? '<div class="e-section"><span class="e-label">Sources</span><p>' +
           srcs.map(esc).join('<br>') + '</p></div>' : '') +
         (e.entryGap ? '<div class="e-section"><span class="e-label">Verification gap</span><p>' + esc(e.entryGap) + '</p></div>' : '') +
