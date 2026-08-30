@@ -148,5 +148,6 @@ window.RoscData.sources = [
   { id: 'src-129', n: 129, title: 'Company site', publisher: 'Bluesonde Technologies', date: '2026', locator: 'bluesonde.com', quality: 'primary' },
   { id: 'src-130', n: 130, title: 'Company site', publisher: 'VividCloud', date: '2026', locator: 'vividcloud.com', quality: 'primary' },
   { id: 'src-131', n: 131, title: 'Company site', publisher: 'Evergreen Additive', date: '2026', locator: 'evergreenadditive.com', quality: 'primary' },
-  { id: 'src-132', n: 132, title: 'Company site', publisher: 'SubCom', date: '2026', locator: 'subcom.com', quality: 'primary' }
+  { id: 'src-132', n: 132, title: 'Company site', publisher: 'SubCom', date: '2026', locator: 'subcom.com', quality: 'primary' },
+  { id: 'src-133', n: 133, title: 'Jere A. Chase Ocean Engineering Laboratory facility pages', publisher: 'UNH School of Marine Science and Ocean Engineering', date: '2026', locator: 'marine.unh.edu', quality: 'primary' }
 ];

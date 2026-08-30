@@ -44,7 +44,11 @@
     'odatmachine.com', 'downeastinnovation.com', 'starcsystems.com',
     'blushiftaerospace.com', 'poseidonaero.com', 'valt-ent.com',
     'kelsonmarine.com', 'bluesonde.com', 'vividcloud.com',
-    'evergreenadditive.com', 'subcom.com'
+    'evergreenadditive.com', 'subcom.com',
+    /* Test-asset website links. Six of these reuse a domain already
+       verified for that asset's parent organization; marine.unh.edu is
+       the one genuinely new domain, checked against UNH's own site. */
+    'marine.unh.edu'
   ];
 
   var DOMAIN_RE = /^[a-z0-9][a-z0-9.-]*\.(org|com|mil|edu|us|gov|net|biz)(\/[\w\-/]*)?$/i;

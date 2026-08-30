@@ -28,6 +28,7 @@ window.RoscData.testAssets = {
       confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-35', 'src-22'],
+      entryPoints: [ { value: 'umaine.edu', confidence: 'verified' } ],
       ref: 'inst-ascc',
       detail:
         'The only ISO 17025 accredited test capability in the state and the only one whose data will be ' +
@@ -50,7 +51,8 @@ window.RoscData.testAssets = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-25'],
+      sourceIds: ['src-25', 'src-103'],
+      entryPoints: [ { value: 'mainespacecorp.org', confidence: 'verified' } ],
       ref: 'inst-msc',
       detail:
         'Maine’s first space qualification testing facility, opened 2025. Sited in Hangar 5 at Brunswick ' +
@@ -73,6 +75,7 @@ window.RoscData.testAssets = {
       confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-34'],
+      entryPoints: [ { value: 'brunswicklanding.us', confidence: 'verified' } ],
       ref: 'inst-techplace',
       detail:
         'Two 8,000-foot former Navy runways, one active and one closed. 650,000 square feet of hangar ' +
@@ -113,7 +116,8 @@ window.RoscData.testAssets = {
       openness: 'LOW',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-25'],
+      sourceIds: ['src-10', 'src-25', 'src-109'],
+      entryPoints: [ { value: 'loring.org', confidence: 'verified' } ],
       ref: 'inst-loring',
       detail:
         'Two 12,100-foot runways, the longest in Maine, on 3,800 acres of former Air Force base with ' +
@@ -135,6 +139,7 @@ window.RoscData.testAssets = {
       confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-34'],
+      entryPoints: [ { value: 'brunswicklanding.us', confidence: 'verified' } ],
       ref: 'inst-techplace',
       detail:
         'An independent renewable-powered microgrid with its own fiber network. This is a live testbed ' +
@@ -154,7 +159,8 @@ window.RoscData.testAssets = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-32'],
+      sourceIds: ['src-32', 'src-47'],
+      entryPoints: [ { value: 'mainemaritime.edu', confidence: 'verified' } ],
       ref: 'inst-mma',
       detail:
         'Simulators and research vessels usable for concept-of-operations work, plus the licensed ' +
@@ -175,7 +181,8 @@ window.RoscData.testAssets = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-32'],
+      sourceIds: ['src-32', 'src-133'],
+      entryPoints: [ { value: 'marine.unh.edu', confidence: 'verified' } ],
       ref: null,
       detail:
         'Outside Maine and inside 100 miles, which matters because the OnRamp Hub criteria and any ' +
@@ -198,7 +205,8 @@ window.RoscData.testAssets = {
       'a known gap.',
     confidence: 'verified',
     asOf: '2026-08',
-    sourceIds: ['src-26'],
+    sourceIds: ['src-26', 'src-133'],
+    entryPoints: [ { value: 'marine.unh.edu', confidence: 'verified' } ],
     affected: ['test-msc', 'test-bxm', 'test-microgrid']
   }
 };
