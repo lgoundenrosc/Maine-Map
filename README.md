@@ -131,6 +131,7 @@ npm run geo          # rebake data/geo.js after changing the viewport
 npm run vendor       # recopy Leaflet after a version bump
 npm run artifact     # bundle ecosystem.html into one self-contained file
 npm run standalone   # the same for index.html
+npm run validate     # load every data file and check ids, sources and website links
 ```
 
 `tools/build-artifact.js` folds every stylesheet and script inline and drops the document wrapper, for
@@ -273,3 +274,10 @@ The two checks worth repeating before any publish are a scan of every string lit
 `js/` for em dashes and prose semicolons, and a scan of the same strings for email addresses, phone
 numbers and domains that are not on the allowlist above. Both are simple regex passes over the string
 literals in `data/*.js`, `js/*.js` and `index.html`.
+
+`npm run validate` covers what a regex pass cannot: it loads every data file in the order
+`ecosystem.html` does, so a syntax error surfaces at the file and line Node reports, and then checks
+what only makes sense once everything is loaded together, duplicate entity ids, duplicate source
+definitions, a `sourceIds` entry that points at a source that does not exist, and how many entities
+resolve a website. It exits non-zero on any failure, so it is safe to run before a commit as well as
+before a publish.
