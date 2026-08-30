@@ -74,6 +74,24 @@
      one blob. */
   function radius(n) { return 12 + 4.4 * Math.sqrt(n); }
 
+  /* The defense corridor, Bath through Portland to Kittery, drawn in its own
+     pane above the marker pane (600) and below the tooltip pane (650), so
+     it visibly crosses a bubble instead of running underneath it, which is
+     otherwise most of its length: Brunswick and Bath alone sit three miles
+     apart. Pointer events pass through so it never blocks a bubble click.
+     Shared by the main map and the corridor inset, which draw the same line
+     from the same coordinates at two different weights. */
+  function drawCorridor(mapInstance, weight, opacity, dashArray) {
+    mapInstance.createPane('corridorPane');
+    mapInstance.getPane('corridorPane').style.zIndex = 620;
+    mapInstance.getPane('corridorPane').style.pointerEvents = 'none';
+    var renderer = L.canvas({ pane: 'corridorPane', padding: 0.5 });
+    return L.polyline(D.meta.corridorPath, {
+      renderer: renderer, interactive: false,
+      color: '#f0924a', weight: weight, opacity: opacity, dashArray: dashArray
+    }).addTo(mapInstance);
+  }
+
   var map = null, layer = null, corridorLine = null, frameBounds = null;
 
   function init(el) {
@@ -116,13 +134,7 @@
       }).addTo(map);
     });
 
-    /* The defense corridor, Bath through Portland to Kittery. Same three
-       points the VC map draws. Orange, the one line on the map that isn't
-       purple, so it reads as a route rather than as more data. */
-    corridorLine = L.polyline(D.meta.corridorPath, {
-      renderer: base, interactive: false,
-      color: '#f0924a', weight: 2.5, opacity: 0.8, dashArray: '9 7'
-    }).addTo(map);
+    corridorLine = drawCorridor(map, 2.5, 0.85, '9 7');
 
     layer = L.layerGroup().addTo(map);
 
@@ -230,23 +242,11 @@
       }).addTo(insetMap);
     });
 
-    /* The same corridor line the main map draws, from the same coordinates,
-       so the inset reads as a magnification of that line rather than a
-       different view that happens to cover the same towns. Drawn in its own
-       pane above the marker pane: this inset exists because the towns on
-       this line sit close enough to overlap, so on the default overlay pane
-       the line all but disappears under the bubbles it is meant to connect.
-       Above them, it visibly threads through instead. */
-    insetMap.createPane('corridorPane');
-    /* Above the marker pane (600) so it visibly crosses the bubbles, below
-       the tooltip pane (650) so a hover tooltip still lands on top of it. */
-    insetMap.getPane('corridorPane').style.zIndex = 620;
-    insetMap.getPane('corridorPane').style.pointerEvents = 'none';
-    var corridorRenderer = L.canvas({ pane: 'corridorPane', padding: 0.5 });
-    L.polyline(D.meta.corridorPath, {
-      renderer: corridorRenderer, interactive: false,
-      color: '#f0924a', weight: 3, opacity: 0.95, dashArray: '8 6'
-    }).addTo(insetMap);
+    /* Same line, same coordinates, so the inset reads as a magnification of
+       the main map's corridor rather than a different view that happens to
+       cover the same towns. Slightly heavier weight since it has to read at
+       a smaller overall panel size. */
+    drawCorridor(insetMap, 3, 0.95, '8 6');
 
     insetLayer = L.layerGroup().addTo(insetMap);
     return insetMap;

@@ -47,6 +47,7 @@
     sector: 'all',
     facets: { startup: false, establishedCompany: false, majorDefenseCompany: false },
     mode: 'count',
+    corridorOn: true,
     community: null,
     entity: null,
     query: '',
@@ -152,6 +153,10 @@
         '<div class="e-mode" role="group" aria-label="Color bubbles by">' +
           '<button type="button" data-mode="count" aria-pressed="' + (state.mode === 'count') + '">by count</button>' +
           '<button type="button" data-mode="role" aria-pressed="' + (state.mode === 'role') + '">by role</button>' +
+        '</div>' +
+        '<div class="e-facets" style="margin-top:8px">' +
+          '<button type="button" data-corridor-toggle aria-pressed="' + state.corridorOn + '">' +
+            'Kittery-Bath corridor inset <span class="e-count">' + (state.corridorOn ? 'on' : 'off') + '</span></button>' +
         '</div>' +
       '</div>' +
     '</div>' +
@@ -429,7 +434,7 @@
        the corridor inset stands down: the sheet it would otherwise sit under
        already covers that corner of the screen. */
     el.rail.hidden = state.view !== 'map' || !!state.community;
-    el.corridor.hidden = state.view !== 'map' || !!state.community;
+    el.corridor.hidden = state.view !== 'map' || !!state.community || !state.corridorOn;
 
     el.dock.querySelectorAll('button').forEach(function (b) {
       b.setAttribute('aria-current', String(b.dataset.view === state.view));
@@ -538,6 +543,9 @@
 
       var mode = t.closest('.e-mode button');
       if (mode) { state.mode = mode.dataset.mode; paint(); return; }
+
+      var corridorToggle = t.closest('[data-corridor-toggle]');
+      if (corridorToggle) { state.corridorOn = !state.corridorOn; paint(); return; }
 
       var facet = t.closest('[data-facet]');
       if (facet) {
