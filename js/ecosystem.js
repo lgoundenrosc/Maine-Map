@@ -338,7 +338,8 @@
     var rows = filtered().filter(function (e) {
       if (!state.query) return true;
       var q = state.query.toLowerCase();
-      return (e.name + ' ' + e.blurb + ' ' + (e.place.town || '')).toLowerCase().indexOf(q) !== -1;
+      return (e.name + ' ' + e.blurb + ' ' + (e.place.town || '') + ' ' + cellOf(e, 'cluster'))
+        .toLowerCase().indexOf(q) !== -1;
     });
     rows = rows.slice().sort(function (a, b) {
       var k = state.sort.key;
