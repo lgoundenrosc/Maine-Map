@@ -110,11 +110,12 @@
           website: website(r),
           openness: r.openness || null,
           ventureBacked: typeof r.ventureBacked === 'boolean' ? r.ventureBacked : null,
-          /* Two independent facets, not a third value of type or cluster. A
-             record can be a startup or a major defense company or neither,
-             set explicitly in data/companies.js and data/anchorNodes.js
-             rather than guessed from name, size or age. */
+          /* Three independent facets, not a value of type or cluster. A
+             record is a startup, an established company or a major defense
+             company, set explicitly in data/companies.js and
+             data/anchorNodes.js rather than guessed from name, size or age. */
           startup: r.startup === true,
+          establishedCompany: r.establishedCompany === true,
           majorDefenseCompany: r.majorDefenseCompany === true,
           entryGap: r.entryGap || null,
           place: resolvePlace(r)

@@ -29,19 +29,23 @@
 
   /* Facets, not a second sector. Sector narrows by cluster and stays a
      single choice, because a record sits in one place on the formation
-     chain. Startup and major defense company describe the same record from
-     an orthogonal angle, so both switch on together, sector still applies,
-     and toggling both reads as either rather than narrowing to records that
-     are somehow both at once. */
+     chain. Startup, established company and major defense company describe
+     the same record from an orthogonal angle, so any combination switches on
+     together, sector still applies, and toggling more than one reads as
+     either rather than narrowing to records that are somehow both at once.
+     Every company carries exactly one of the three in the source, so the
+     three together cover the full company list rather than leaving the
+     mid-size, non-major companies with no facet at all. */
   var FACETS = [
     { key: 'startup', label: 'Startups' },
+    { key: 'establishedCompany', label: 'Established companies' },
     { key: 'majorDefenseCompany', label: 'Major defense companies' }
   ];
 
   var state = {
     view: 'map',
     sector: 'all',
-    facets: { startup: false, majorDefenseCompany: false },
+    facets: { startup: false, establishedCompany: false, majorDefenseCompany: false },
     mode: 'count',
     community: null,
     entity: null,
