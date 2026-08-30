@@ -198,9 +198,90 @@
 
   function invalidate() { if (map) map.invalidateSize(); }
 
+  /* ---------------------------------------------------- corridor inset --- */
+  /* Bath through Portland to Kittery draws as one line on the main map, at a
+     scale where a dozen communities compress into a few hundred pixels. This
+     is the same map machinery pointed at just that stretch, non-interactive
+     (no drag, no scroll zoom, since it is a detail view rather than a second
+     place to navigate) but still clickable, so a bubble here opens the same
+     sheet a bubble on the main map would. */
+  var insetMap = null, insetLayer = null;
+
+  function initInset(el) {
+    var geo = D.geo;
+    insetMap = L.map(el, {
+      zoomControl: false, attributionControl: false,
+      dragging: false, scrollWheelZoom: false, doubleClickZoom: false,
+      boxZoom: false, touchZoom: false, keyboard: false, zoomSnap: 0.25
+    });
+
+    var base = L.canvas({ padding: 0.45 });
+    geo.land.forEach(function (ring) {
+      L.polygon(ring.map(function (p) { return [p[1], p[0]]; }), {
+        renderer: base, interactive: false,
+        fillColor: '#1f1830', fillOpacity: 1,
+        color: '#5b3f8a', weight: 0.7, lineJoin: 'round'
+      }).addTo(insetMap);
+    });
+    geo.borders.forEach(function (ring) {
+      L.polyline(ring.map(function (p) { return [p[1], p[0]]; }), {
+        renderer: base, interactive: false,
+        color: '#4a3570', weight: 1, opacity: 0.6, dashArray: '4 5'
+      }).addTo(insetMap);
+    });
+
+    insetLayer = L.layerGroup().addTo(insetMap);
+    return insetMap;
+  }
+
+  /* Framed once, from the fixed corridor town list rather than whatever a
+     filter currently leaves, so toggling a sector or facet updates the
+     bubbles without the view itself jumping around. */
+  function frameInset(communities) {
+    if (!insetMap || !communities.length) return;
+    var pts = communities.map(function (c) { return [c.lat, c.lng]; });
+    insetMap.fitBounds(L.latLngBounds(pts).pad(0.22));
+  }
+
+  /* Same draw as render(), except small bubbles sit below large ones here,
+     the reverse of the main map. The inset exists because this one stretch
+     is too dense to read at state scale; a big neighbor smothering a small
+     one is exactly the failure it is meant to fix, so the ordering that
+     protects a lone record everywhere else would defeat the point here. */
+  function renderInset(communities, mode, onPick) {
+    if (!insetMap) return;
+    insetLayer.clearLayers();
+    communities.forEach(function (c) {
+      var n = c.items.length;
+      var r = radius(n);
+      var fill = mode === 'role' ? roleColor(c.items) : countColor(n);
+      var icon = L.divIcon({
+        className: '',
+        iconSize: [r * 2, r * 2],
+        iconAnchor: [r, r],
+        html: '<div class="e-bubble" style="width:' + (r * 2) + 'px;height:' + (r * 2) +
+          'px;border-radius:50%;background:' + fill + 'e8;border:2px solid ' + fill +
+          ';display:grid;place-items:center"><span class="e-bubble-label" style="stroke:none">' +
+          n + '</span></div>'
+      });
+      var m = L.marker([c.lat, c.lng], {
+        icon: icon, keyboard: true, title: c.town, zIndexOffset: n
+      })
+        .bindTooltip(c.town + '<b>' + n + (n === 1 ? ' organization' : ' organizations') + '</b>',
+          { className: 'e-tip', direction: 'top', offset: [0, -r] })
+        .on('click', function () { onPick(c); })
+        .on('keypress', function (ev) { if (ev.originalEvent.key === 'Enter') onPick(c); });
+      m.addTo(insetLayer);
+    });
+  }
+
+  function invalidateInset() { if (insetMap) insetMap.invalidateSize(); }
+
   global.RoscBasemap = {
     init: init, render: render, frame: frame, focus: focus, reset: reset,
     invalidate: invalidate, colors: COLORS, countColor: countColor, typeColor: typeColor,
-    roleColor: roleColor
+    roleColor: roleColor,
+    initInset: initInset, frameInset: frameInset, renderInset: renderInset,
+    invalidateInset: invalidateInset
   };
 })(window);

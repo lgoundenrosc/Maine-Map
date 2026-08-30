@@ -133,6 +133,26 @@ button { font: inherit; color: inherit; }
 .e-brand p { margin: 1px 0 0; font-size: 11.5px; color: var(--e-text-3); font-family: var(--e-mono); }
 .e-brand p b { color: var(--e-text-2); font-weight: 600; }
 
+/* =================================================== corridor inset ====== */
+
+.e-corridor {
+  position: absolute; left: 18px; bottom: 18px; z-index: 820; width: 300px;
+  background: var(--e-panel); border: 1px solid var(--e-line);
+  border-radius: var(--e-radius); box-shadow: var(--e-shadow);
+  overflow: hidden; backdrop-filter: blur(9px);
+}
+.e-corridor[hidden] { display: none; }
+.e-corridor-head {
+  height: 34px; display: flex; align-items: center; gap: 8px; padding: 0 13px;
+  border-bottom: 1px solid var(--e-line); color: var(--e-text-2);
+}
+.e-corridor-head svg { flex: none; color: var(--e-rust); }
+.e-corridor-head .e-count {
+  font-family: var(--e-mono); font-size: 11px; color: var(--e-text-3);
+}
+#e-corridor-map { width: 300px; height: 250px; }
+#e-corridor-map .leaflet-control-attribution { display: none; }
+
 /* ============================================================ rail ======= */
 
 .e-rail {
@@ -524,6 +544,10 @@ table.e-table .e-td-name { font-weight: 600; }
 /* ====================================================== small screens ==== */
 
 @media (max-width: 900px) {
+  /* No room left once the rail stacks above the dock; the corridor inset is
+     a supplement to the main map, not a replacement for it, so it stands
+     down rather than compete for the same strip of screen. */
+  .e-corridor { display: none; }
   /* The rail stacks above the dock rather than under it. */
   .e-rail { right: 14px; top: auto; bottom: 76px; width: calc(100vw - 28px); max-height: 44vh; }
   .e-dock { top: auto; bottom: 14px; right: 14px; transform: none; flex-direction: row; }

@@ -425,8 +425,11 @@
     el.app.classList.toggle('has-drawer', !!state.entity);
 
     /* The rail would sit on top of the card grid, so it stands down while a
-       municipality is open. The dock stays, it is the way back. */
+       municipality is open. The dock stays, it is the way back. Same reason
+       the corridor inset stands down: the sheet it would otherwise sit under
+       already covers that corner of the screen. */
     el.rail.hidden = state.view !== 'map' || !!state.community;
+    el.corridor.hidden = state.view !== 'map' || !!state.community;
 
     el.dock.querySelectorAll('button').forEach(function (b) {
       b.setAttribute('aria-current', String(b.dataset.view === state.view));
@@ -434,11 +437,24 @@
 
     if (state.view === 'map') {
       var comms = E.communities(filtered());
-      B.render(comms, state.mode, function (c) {
-        state.community = c; state.entity = null; paint(); B.focus(c);
-      });
+      var pick = function (c) { state.community = c; state.entity = null; paint(); B.focus(c); };
+      B.render(comms, state.mode, pick);
       B.invalidate();
       if (!framed) { B.frame(comms, false); framed = true; }
+
+      if (!el.corridor.hidden) {
+        var corridorComms = comms.filter(function (c) {
+          return D.meta.corridorTowns.indexOf(c.town) !== -1;
+        });
+        if (corridorComms.length) {
+          B.renderInset(corridorComms, state.mode, pick);
+          B.invalidateInset();
+          var n = corridorComms.reduce(function (a, c) { return a + c.items.length; }, 0);
+          el.corridorCount.textContent = n + (n === 1 ? ' org' : ' orgs');
+        } else {
+          el.corridor.hidden = true;
+        }
+      }
     }
 
     var counts = D.meta.ecosystem;
@@ -463,6 +479,13 @@
     root.innerHTML =
       '<div class="e-app">' +
         '<div id="e-map"></div>' +
+        '<div class="e-corridor" id="e-corridor">' +
+          '<div class="e-corridor-head">' + I.pin +
+            '<span class="e-grow">Kittery-Bath corridor</span>' +
+            '<span class="e-count" id="e-corridor-count"></span>' +
+          '</div>' +
+          '<div id="e-corridor-map"></div>' +
+        '</div>' +
         '<div class="e-brand">' +
           '<span class="e-brand-mark">' + I.compass + '</span>' +
           '<div><h1>' + esc(D.meta.ecosystem.shortTitle) + '</h1><p></p></div>' +
@@ -490,10 +513,17 @@
       drawer: document.getElementById('e-drawer'),
       home: document.getElementById('e-home'),
       index: document.getElementById('e-index'),
-      help: document.getElementById('e-help')
+      help: document.getElementById('e-help'),
+      corridor: document.getElementById('e-corridor'),
+      corridorCount: document.getElementById('e-corridor-count')
     };
 
     B.init(document.getElementById('e-map'));
+
+    B.initInset(document.getElementById('e-corridor-map'));
+    B.frameInset(E.communities(ALL).filter(function (c) {
+      return D.meta.corridorTowns.indexOf(c.town) !== -1;
+    }));
 
     document.addEventListener('click', function (ev) {
       var t = ev.target;

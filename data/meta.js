@@ -77,6 +77,18 @@ window.RoscData.meta = {
      draw the same line from the same source. Bath, Portland, Kittery. */
   corridorPath: [[43.9109, -69.8133], [43.6591, -70.2568], [43.0793, -70.7420]],
 
+  /* Every municipality the ecosystem map's communities() function can
+     produce along that arc, canonical names as resolved by data/places.js.
+     Drives the corridor inset: the main map draws this whole stretch into
+     a stretch of a few hundred pixels, so the inset re-renders just these
+     towns on their own, deeper zoom. Brunswick is included even though the
+     corridor is named for Bath, since it sits three miles off Bath and
+     carries more records than anywhere else on the arc. */
+  corridorTowns: [
+    'Kittery', 'North Berwick', 'Wells', 'Saco', 'South Portland',
+    'Westbrook', 'Portland', 'Waterboro', 'Brunswick', 'Bath'
+  ],
+
   /* The ecosystem map is a second document over the same records. It carries
      no internal marking and no personnel layer, it maps organizations and the
      places they sit in. */
