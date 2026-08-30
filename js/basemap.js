@@ -35,7 +35,7 @@
       innovation:          { fill: '#f0924a', label: 'Innovation' },
       capital:             { fill: '#d1609f', label: 'Capital' },
       'human-capital':     { fill: '#4ecb86', label: 'Human capital' },
-      resources:           { fill: '#c2793f', label: 'Resources' },
+      resources:           { fill: '#c9a227', label: 'Resources' },
       'community-building':{ fill: '#3fb8ba', label: 'Community building' },
       policy:              { fill: '#9b6fe0', label: 'Policy' }
     }
