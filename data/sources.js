@@ -149,5 +149,10 @@ window.RoscData.sources = [
   { id: 'src-130', n: 130, title: 'Company site', publisher: 'VividCloud', date: '2026', locator: 'vividcloud.com', quality: 'primary' },
   { id: 'src-131', n: 131, title: 'Company site', publisher: 'Evergreen Additive', date: '2026', locator: 'evergreenadditive.com', quality: 'primary' },
   { id: 'src-132', n: 132, title: 'Company site', publisher: 'SubCom', date: '2026', locator: 'subcom.com', quality: 'primary' },
-  { id: 'src-133', n: 133, title: 'Jere A. Chase Ocean Engineering Laboratory facility pages', publisher: 'UNH School of Marine Science and Ocean Engineering', date: '2026', locator: 'marine.unh.edu', quality: 'primary' }
+  { id: 'src-133', n: 133, title: 'Jere A. Chase Ocean Engineering Laboratory facility pages', publisher: 'UNH School of Marine Science and Ocean Engineering', date: '2026', locator: 'marine.unh.edu', quality: 'primary' },
+  { id: 'src-134', n: 134, title: 'Precision manufacturer Elmet raises $125M in IPO', publisher: 'Mainebiz', date: '2026-04', locator: 'mainebiz.biz', quality: 'trade press' },
+  { id: 'src-135', n: 135, title: 'Exclusive: Poseidon snags $11 million to build unmanned cargo aircraft', publisher: 'Axios', date: '2025-11-05', locator: 'axios.com', quality: 'press' },
+  { id: 'src-136', n: 136, title: 'Diodes Incorporated Completes Acquisition of onsemi’s South Portland, Maine Wafer Fabrication Facility and Operations', publisher: 'Diodes Incorporated', date: '2022', locator: 'diodes.com', quality: 'primary' },
+  { id: 'src-137', n: 137, title: 'Semiconductor maker ON is leaving Maine and laying off dozens as part of sweeping reorg', publisher: 'Mainebiz', date: '2024-06', locator: 'mainebiz.biz', quality: 'trade press' },
+  { id: 'src-138', n: 138, title: 'Lattice Materials breaks ground on advanced manufacturing facility', publisher: 'Aerospace Manufacturing and Design', date: '2026', locator: '', quality: 'trade press' }
 ];
