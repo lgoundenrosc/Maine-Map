@@ -134,5 +134,19 @@ window.RoscData.sources = [
   { id: 'src-115', n: 115, title: 'Organization site', publisher: 'Island Institute', date: '2026', locator: 'islandinstitute.org', quality: 'primary' },
   { id: 'src-116', n: 116, title: 'Organization site', publisher: 'MDI Biological Laboratory', date: '2026', locator: 'mdibl.org', quality: 'primary' },
   { id: 'src-117', n: 117, title: 'Organization site', publisher: 'Darling Marine Center, University of Maine', date: '2026', locator: 'dmc.umaine.edu', quality: 'primary' },
-  { id: 'src-118', n: 118, title: 'SBIR and STTR program site', publisher: 'US Small Business Administration', date: '2026', locator: 'sbir.gov', quality: 'primary' }
+  { id: 'src-118', n: 118, title: 'SBIR and STTR program site', publisher: 'US Small Business Administration', date: '2026', locator: 'sbir.gov', quality: 'primary' },
+  { id: 'src-119', n: 119, title: 'Company site', publisher: 'Compotech', date: '2026', locator: 'compotechinc.com', quality: 'primary' },
+  { id: 'src-120', n: 120, title: 'Company site', publisher: 'Hodgdon Yachts', date: '2026', locator: 'hodgdonyachts.com', quality: 'primary' },
+  { id: 'src-121', n: 121, title: 'Company site', publisher: 'Howell Laboratories', date: '2026', locator: 'howelllabs.com', quality: 'primary' },
+  { id: 'src-122', n: 122, title: 'Company site', publisher: 'ODAT Machine', date: '2026', locator: 'odatmachine.com', quality: 'primary' },
+  { id: 'src-123', n: 123, title: 'Company site', publisher: 'Down East Innovation', date: '2026', locator: 'downeastinnovation.com', quality: 'primary' },
+  { id: 'src-124', n: 124, title: 'Company site', publisher: 'STARC Systems', date: '2026', locator: 'starcsystems.com', quality: 'primary' },
+  { id: 'src-125', n: 125, title: 'Company site', publisher: 'bluShift Aerospace', date: '2026', locator: 'blushiftaerospace.com', quality: 'primary' },
+  { id: 'src-126', n: 126, title: 'Company site', publisher: 'Poseidon Aerospace', date: '2026', locator: 'poseidonaero.com', quality: 'primary' },
+  { id: 'src-127', n: 127, title: 'Company site', publisher: 'VALT Enterprizes', date: '2026', locator: 'valt-ent.com', quality: 'primary' },
+  { id: 'src-128', n: 128, title: 'Company site', publisher: 'Kelson Marine', date: '2026', locator: 'kelsonmarine.com', quality: 'primary' },
+  { id: 'src-129', n: 129, title: 'Company site', publisher: 'Bluesonde Technologies', date: '2026', locator: 'bluesonde.com', quality: 'primary' },
+  { id: 'src-130', n: 130, title: 'Company site', publisher: 'VividCloud', date: '2026', locator: 'vividcloud.com', quality: 'primary' },
+  { id: 'src-131', n: 131, title: 'Company site', publisher: 'Evergreen Additive', date: '2026', locator: 'evergreenadditive.com', quality: 'primary' },
+  { id: 'src-132', n: 132, title: 'Company site', publisher: 'SubCom', date: '2026', locator: 'subcom.com', quality: 'primary' }
 ];

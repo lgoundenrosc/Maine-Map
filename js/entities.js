@@ -32,7 +32,19 @@
     'mainedefenseindustryalliance.com', 'mainemep.org', 'maineco.org',
     'dirigolabs.org', 'mainemfg.com', 'loring.org', 'mced.biz', 'emdc.org',
     'nmdc.org', 'msgc.org', 'gmri.org', 'islandinstitute.org', 'mdibl.org',
-    'dmc.umaine.edu', 'sbir.gov'
+    'dmc.umaine.edu', 'sbir.gov',
+    /* More company website links, added on request. Each domain was checked
+       against the organization's own site before being added here; nine of
+       these were already sitting in an entryPoints value from an earlier
+       pass but had never been added here, so they rendered as a gap. */
+    'creativecompositesgroup.com', 'customcomposite.com', 'lymanmorse.com',
+    'frontstreetshipyard.com', 'washburndoughty.com', 'cianbro.com',
+    'latticematerials.com', 'greisenaerospace.com', 'prominaerospace.com',
+    'compotechinc.com', 'hodgdonyachts.com', 'howelllabs.com',
+    'odatmachine.com', 'downeastinnovation.com', 'starcsystems.com',
+    'blushiftaerospace.com', 'poseidonaero.com', 'valt-ent.com',
+    'kelsonmarine.com', 'bluesonde.com', 'vividcloud.com',
+    'evergreenadditive.com', 'subcom.com'
   ];
 
   var DOMAIN_RE = /^[a-z0-9][a-z0-9.-]*\.(org|com|mil|edu|us|gov|net|biz)(\/[\w\-/]*)?$/i;
