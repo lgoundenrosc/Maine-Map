@@ -232,10 +232,20 @@
 
     /* The same corridor line the main map draws, from the same coordinates,
        so the inset reads as a magnification of that line rather than a
-       different view that happens to cover the same towns. */
+       different view that happens to cover the same towns. Drawn in its own
+       pane above the marker pane: this inset exists because the towns on
+       this line sit close enough to overlap, so on the default overlay pane
+       the line all but disappears under the bubbles it is meant to connect.
+       Above them, it visibly threads through instead. */
+    insetMap.createPane('corridorPane');
+    /* Above the marker pane (600) so it visibly crosses the bubbles, below
+       the tooltip pane (650) so a hover tooltip still lands on top of it. */
+    insetMap.getPane('corridorPane').style.zIndex = 620;
+    insetMap.getPane('corridorPane').style.pointerEvents = 'none';
+    var corridorRenderer = L.canvas({ pane: 'corridorPane', padding: 0.5 });
     L.polyline(D.meta.corridorPath, {
-      renderer: base, interactive: false,
-      color: '#f0924a', weight: 2.5, opacity: 0.8, dashArray: '9 7'
+      renderer: corridorRenderer, interactive: false,
+      color: '#f0924a', weight: 3, opacity: 0.95, dashArray: '8 6'
     }).addTo(insetMap);
 
     insetLayer = L.layerGroup().addTo(insetMap);
