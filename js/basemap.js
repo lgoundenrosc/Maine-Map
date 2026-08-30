@@ -23,6 +23,21 @@
       company:     { fill: '#f0924a', label: 'Company' },
       'test-asset':{ fill: '#3fb8ba', label: 'Test asset' },
       capital:     { fill: '#d1609f', label: 'Capital instrument' }
+    },
+    /* The seven-category ecosystem wheel a reader supplied, adapted from a
+       generic "around one founder" framing to the mix of record types this
+       map actually carries: demand-side anchors and market-facing companies
+       read as Market Access, dual-use and venture-backed companies read as
+       Innovation alongside the research centers, and so on. Order here is
+       the order the legend renders in. */
+    role: {
+      'market-access':     { fill: '#5b8fd6', label: 'Market access' },
+      innovation:          { fill: '#f0924a', label: 'Innovation' },
+      capital:             { fill: '#d1609f', label: 'Capital' },
+      'human-capital':     { fill: '#4ecb86', label: 'Human capital' },
+      resources:           { fill: '#c2793f', label: 'Resources' },
+      'community-building':{ fill: '#3fb8ba', label: 'Community building' },
+      policy:              { fill: '#9b6fe0', label: 'Policy' }
     }
   };
 
@@ -42,6 +57,16 @@
       if ((tally[t] || 0) > bestN) { bestN = tally[t]; best = t; }
     });
     return COLORS.type[best] ? COLORS.type[best].fill : '#7c4fc7';
+  }
+
+  /* Same rule, for ecosystem role instead of record type. */
+  function roleColor(items) {
+    var tally = {}, best = null, bestN = 0;
+    items.forEach(function (e) { tally[e.ecoRole] = (tally[e.ecoRole] || 0) + 1; });
+    Object.keys(COLORS.role).forEach(function (k) {
+      if ((tally[k] || 0) > bestN) { bestN = tally[k]; best = k; }
+    });
+    return COLORS.role[best] ? COLORS.role[best].fill : '#7c4fc7';
   }
 
   /* Area, not diameter, tracks the count. Kept small enough that the dense
@@ -122,7 +147,7 @@
     communities.forEach(function (c) {
       var n = c.items.length;
       var r = radius(n);
-      var fill = mode === 'type' ? typeColor(c.items) : countColor(n);
+      var fill = mode === 'role' ? roleColor(c.items) : countColor(n);
       var icon = L.divIcon({
         className: '',
         iconSize: [r * 2, r * 2],
@@ -175,6 +200,7 @@
 
   global.RoscBasemap = {
     init: init, render: render, frame: frame, focus: focus, reset: reset,
-    invalidate: invalidate, colors: COLORS, countColor: countColor, typeColor: typeColor
+    invalidate: invalidate, colors: COLORS, countColor: countColor, typeColor: typeColor,
+    roleColor: roleColor
   };
 })(window);

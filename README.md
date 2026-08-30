@@ -86,10 +86,37 @@ domain was not reachable from this environment when either was built, so the spe
 considered design against that brief rather than a color pick from the live site. Revisit them if the
 two need to match more closely once the site can be seen directly.
 
-Confidence badges and the by-type bubble legend use hues chosen to sit outside the purple and orange
-family on purpose, `--e-amber` and `--e-red` for status, a separate five-hue set for anchor, institution,
-company, test asset and capital, so a status color or a data category is never mistaken for the brand
-accent.
+Confidence badges and the by-role bubble legend use hues chosen to sit outside the purple and orange
+family on purpose, `--e-amber` for status and a separate seven-hue set for the ecosystem-wheel roles
+described below, so a status color or a data category is never mistaken for the brand accent.
+
+### The seven-category "by role" legend
+
+The map's "by role" bubble coloring replaced an earlier "by type" scheme that colored a bubble by
+record type (anchor, institution, company, test asset, capital), a distinction that still exists as
+the `type` field and the drawer's Type chip, but says nothing about an organization's function in the
+ecosystem. `ecoRole` is a second, explicit field set per record in `data/`, one of seven values adapted
+from a standard entrepreneurial-ecosystem wheel (Market Access, Capital, Community Building, Policy,
+Resources, Human Capital, Innovation) to the mix of record types this map actually carries:
+
+- **Market access**: the eight anchor demand nodes, plus companies and institutions whose role is
+  routing to a buyer, a prime or a market, established shipyards and manufacturers included.
+- **Innovation**: startups, dual-use and venture-backed companies, university research centers and
+  founder accelerators, the record's R&D or novel-technology content rather than its size or age.
+- **Capital**: the four capital instruments plus the institutions that provide or broker financing.
+- **Human capital**: colleges, community colleges, workforce and apprenticeship programs, talent
+  attraction, and MDIA, whose own scope note names it workforce-only.
+- **Resources**: the eight test assets plus incubator space and manufacturing technical assistance,
+  physical or advisory infrastructure a company draws on rather than a market or a research output.
+- **Community building**: industry associations and regional development organizations whose role is
+  convening rather than funding, training or routing to market.
+- **Policy**: the two quasi-state or legislatively created governance bodies, Loring Development
+  Authority and Maine Space Corporation, distinct from the physical assets or funding programs they
+  administer, which are classified by that function instead.
+
+Every record was placed by hand against this rubric rather than derived from `type` or `cluster`, so a
+reader who disagrees with a placement should treat it the same as any other judgment call in this
+document, worth a second look rather than a bug.
 
 ## The basemap
 

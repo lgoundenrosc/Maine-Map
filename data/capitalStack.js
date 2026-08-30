@@ -56,6 +56,7 @@ window.RoscData.capitalStack = {
   instruments: [
     {
       id: 'cap-nmcip',
+      ecoRole: 'capital',
       name: 'Maine New Markets Capital Investment Program (NMCIP)',
       category: 'capital',
       type: 'State tax credit',
@@ -72,6 +73,7 @@ window.RoscData.capitalStack = {
     },
     {
       id: 'cap-sbir',
+      ecoRole: 'capital',
       name: 'SBIR and STTR',
       category: 'capital',
       type: 'Federal non-dilutive',
@@ -92,6 +94,7 @@ window.RoscData.capitalStack = {
     },
     {
       id: 'cap-mti-instruments',
+      ecoRole: 'capital',
       name: 'MTI instruments',
       category: 'capital',
       type: 'State non-dilutive and debt',
@@ -112,6 +115,7 @@ window.RoscData.capitalStack = {
     },
     {
       id: 'cap-mvf',
+      ecoRole: 'capital',
       name: 'Maine Venture Fund',
       category: 'capital',
       type: 'State equity',

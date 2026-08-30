@@ -15,6 +15,7 @@ window.RoscData.testAssets = {
   assets: [
     {
       id: 'test-ascc',
+      ecoRole: 'resources',
       name: 'UMaine ASCC',
       category: 'test-asset',
       cluster: ['composites-am', 'maritime-autonomy'],
@@ -35,6 +36,7 @@ window.RoscData.testAssets = {
     },
     {
       id: 'test-msc',
+      ecoRole: 'resources',
       name: 'Maine Space Corporation test lab',
       category: 'test-asset',
       cluster: ['space-high-latitude'],
@@ -58,6 +60,7 @@ window.RoscData.testAssets = {
     },
     {
       id: 'test-bxm',
+      ecoRole: 'resources',
       name: 'Brunswick Executive Airport',
       category: 'test-asset',
       cluster: ['space-high-latitude', 'ugs', 'maritime-autonomy'],
@@ -79,6 +82,7 @@ window.RoscData.testAssets = {
     },
     {
       id: 'test-gom',
+      ecoRole: 'resources',
       name: 'Gulf of Maine littorals',
       category: 'test-asset',
       cluster: ['maritime-autonomy', 'food-water-bio'],
@@ -98,6 +102,7 @@ window.RoscData.testAssets = {
     },
     {
       id: 'test-loring',
+      ecoRole: 'resources',
       name: 'Loring runways',
       category: 'test-asset',
       cluster: ['space-high-latitude', 'ugs'],
@@ -117,6 +122,7 @@ window.RoscData.testAssets = {
     },
     {
       id: 'test-microgrid',
+      ecoRole: 'resources',
       name: 'Brunswick Landing microgrid',
       category: 'test-asset',
       cluster: ['space-high-latitude', 'food-water-bio'],
@@ -137,6 +143,7 @@ window.RoscData.testAssets = {
     },
     {
       id: 'test-mma',
+      ecoRole: 'resources',
       name: 'Maine Maritime Academy',
       category: 'test-asset',
       cluster: ['maritime-autonomy'],
@@ -155,6 +162,7 @@ window.RoscData.testAssets = {
     },
     {
       id: 'test-unh',
+      ecoRole: 'resources',
       name: 'UNH deep-water engineering tank and wave tank',
       category: 'test-asset',
       cluster: ['maritime-autonomy'],

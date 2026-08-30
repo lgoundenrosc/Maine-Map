@@ -16,6 +16,7 @@ window.RoscData.anchorNodes = {
   nodes: [
     {
       id: 'anchor-biw',
+      ecoRole: 'market-access',
       majorDefenseCompany: true,
       code: 'BIW',
       tileColor: '#1d3f6e',
@@ -57,6 +58,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-pnsy',
+      ecoRole: 'market-access',
       code: 'PNSY',
       tileColor: '#155e5b',
       name: 'Portsmouth Naval Shipyard',
@@ -99,6 +101,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-pw',
+      ecoRole: 'market-access',
       majorDefenseCompany: true,
       code: 'P&W',
       tileColor: '#4b4f63',
@@ -132,6 +135,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-gdots',
+      ecoRole: 'market-access',
       majorDefenseCompany: true,
       code: 'GD-OTS',
       tileColor: '#8f4a1c',
@@ -166,6 +170,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-txt',
+      ecoRole: 'market-access',
       majorDefenseCompany: true,
       code: 'TXT',
       tileColor: '#2f6b3c',
@@ -204,6 +209,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-tdy',
+      ecoRole: 'market-access',
       majorDefenseCompany: true,
       code: 'TDY',
       tileColor: '#5b3f7a',
@@ -236,6 +242,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-ang',
+      ecoRole: 'market-access',
       code: 'ANG',
       tileColor: '#2c5d82',
       name: 'Bangor Air National Guard, 101st Air Refueling Wing',
@@ -266,6 +273,7 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-sere',
+      ecoRole: 'market-access',
       code: 'SERE',
       tileColor: '#5c4a2e',
       name: 'Navy SERE School',

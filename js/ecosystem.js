@@ -94,6 +94,14 @@
     return c ? c.label : t;
   }
 
+  function roleChip(e) {
+    if (!e.ecoRole) return '';
+    var c = B.colors.role[e.ecoRole];
+    if (!c) return '';
+    return '<span class="e-chip" style="background:' + c.fill + '22;color:' + c.fill +
+      ';border-color:' + c.fill + '55">' + esc(c.label) + '</span>';
+  }
+
   /* ----------------------------------------------------------- rail ----- */
 
   function railHtml() {
@@ -125,9 +133,9 @@
             '<i style="background:' + r.fill + '99"></i>' +
             '<span style="margin-left:0;color:var(--e-text-2)">' + esc(r.label) + '</span></div>';
         }).join('')
-      : Object.keys(B.colors.type).map(function (k) {
-          var c = B.colors.type[k];
-          var n = f.filter(function (e) { return e.type === k; }).length;
+      : Object.keys(B.colors.role).map(function (k) {
+          var c = B.colors.role[k];
+          var n = f.filter(function (e) { return e.ecoRole === k; }).length;
           return '<div class="e-legend-row" style="color:' + c.fill + '">' +
             '<i style="background:' + c.fill + '99"></i>' +
             '<span style="margin-left:0;color:var(--e-text-2)">' + esc(c.label) + '</span>' +
@@ -143,7 +151,7 @@
         '<select class="e-select" id="e-sector" aria-label="Filter by sector" style="margin-top:8px">' + sectorOpts + '</select>' +
         '<div class="e-mode" role="group" aria-label="Color bubbles by">' +
           '<button type="button" data-mode="count" aria-pressed="' + (state.mode === 'count') + '">by count</button>' +
-          '<button type="button" data-mode="type" aria-pressed="' + (state.mode === 'type') + '">by type</button>' +
+          '<button type="button" data-mode="role" aria-pressed="' + (state.mode === 'role') + '">by role</button>' +
         '</div>' +
       '</div>' +
     '</div>' +
@@ -179,7 +187,7 @@
       '</button>' +
       '<div class="e-card-body" id="e-comm" style="padding-left:8px;padding-right:8px">' +
         '<div class="e-comm">' + (comms.length ? comms.map(function (c) {
-          var fill = state.mode === 'type' ? B.typeColor(c.items) : B.countColor(c.items.length);
+          var fill = state.mode === 'role' ? B.roleColor(c.items) : B.countColor(c.items.length);
           return '<button type="button" data-town="' + attr(c.town) + '">' +
             '<i style="background:' + fill + '"></i>' +
             '<span class="e-grow">' + esc(c.town) + '</span>' +
@@ -250,6 +258,7 @@
         '</div>' +
         '<div class="e-drawer-chips">' +
           '<span class="e-chip e-chip-type">' + esc(typeLabel(e.type)) + '</span>' +
+          roleChip(e) +
           cls.map(function (c) { return '<span class="e-chip">' + esc(c.short || c.name) + '</span>'; }).join('') +
           (e.openness ? '<span class="e-chip">openness ' + esc(e.openness) + '</span>' : '') +
           confBadge(e) +

@@ -100,6 +100,11 @@
           shortName: r.short || r.shortName || r.name,
           type: type,
           category: r.category || type,
+          /* Where the record sits on the seven-category ecosystem wheel,
+             set explicitly per record rather than derived from type or
+             cluster. Drives the map's "by role" coloring; the "Type" chip
+             elsewhere still reads the record type above, unchanged. */
+          ecoRole: r.ecoRole || null,
           /* A record can belong to several capability clusters, and the source
              stores that as an array. Nine of them do. */
           clusters: Array.isArray(r.cluster) ? r.cluster : (r.cluster ? [r.cluster] : []),

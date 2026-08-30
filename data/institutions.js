@@ -28,6 +28,7 @@ window.RoscData.institutions = {
   items: [
     {
       id: 'inst-mti',
+      ecoRole: 'capital',
       name: 'Maine Technology Institute (MTI)',
       short: 'MTI',
       category: 'institution',
@@ -72,6 +73,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-techplace',
+      ecoRole: 'resources',
       name: 'TechPlace at Brunswick Landing (MRRA)',
       short: 'TechPlace',
       category: 'institution',
@@ -103,6 +105,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-ascc',
+      ecoRole: 'innovation',
       name: 'UMaine Advanced Structures and Composites Center (ASCC)',
       short: 'ASCC',
       category: 'institution',
@@ -139,6 +142,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-roux',
+      ecoRole: 'innovation',
       name: 'Roux Institute at Northeastern',
       short: 'Roux',
       category: 'institution',
@@ -168,6 +172,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-apex',
+      ecoRole: 'market-access',
       name: 'Maine APEX Accelerator',
       short: 'APEX',
       category: 'institution',
@@ -199,6 +204,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-cmgc',
+      ecoRole: 'innovation',
       name: 'Central Maine Growth Council',
       short: 'CMGC',
       category: 'institution',
@@ -225,6 +231,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-mvf',
+      ecoRole: 'capital',
       name: 'Maine Venture Fund',
       short: 'MVF',
       category: 'capital',
@@ -259,6 +266,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-angels',
+      ecoRole: 'capital',
       name: 'Maine Angels',
       short: 'Maine Angels',
       category: 'capital',
@@ -282,6 +290,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-cei',
+      ecoRole: 'capital',
       name: 'CEI Ventures',
       short: 'CEI Ventures',
       category: 'capital',
@@ -305,6 +314,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-bigelow',
+      ecoRole: 'innovation',
       name: 'Bigelow Laboratory for Ocean Sciences',
       short: 'Bigelow',
       category: 'institution',
@@ -334,6 +344,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-msc',
+      ecoRole: 'policy',
       name: 'Maine Space Corporation',
       short: 'Maine Space Corp',
       category: 'institution',
@@ -365,6 +376,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-mma',
+      ecoRole: 'human-capital',
       name: 'Maine Maritime Academy',
       short: 'MMA',
       category: 'institution',
@@ -394,6 +406,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-mdia',
+      ecoRole: 'human-capital',
       name: 'Maine Defense Industry Alliance (MDIA)',
       short: 'MDIA',
       category: 'institution',
@@ -429,6 +442,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-mep',
+      ecoRole: 'resources',
       name: 'Maine Manufacturing Extension Partnership (Maine MEP)',
       short: 'Maine MEP',
       category: 'institution',
@@ -456,6 +470,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-loring',
+      ecoRole: 'policy',
       name: 'Loring Development Authority / Loring Commerce Centre',
       short: 'Loring',
       category: 'institution',
@@ -486,6 +501,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-maineco',
+      ecoRole: 'market-access',
       name: 'Maine & Co',
       short: 'Maine & Co',
       category: 'institution',
@@ -514,6 +530,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-dirigo',
+      ecoRole: 'innovation',
       name: 'Dirigo Labs',
       short: 'Dirigo Labs',
       category: 'institution',
@@ -532,6 +549,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-mce',
+      ecoRole: 'innovation',
       name: 'Maine Center for Entrepreneurs (Top Gun program)',
       short: 'MCE Top Gun',
       category: 'institution',
@@ -550,6 +568,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-mam',
+      ecoRole: 'community-building',
       name: 'Manufacturers Association of Maine',
       short: 'MAME',
       category: 'institution',
@@ -568,6 +587,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-gmri',
+      ecoRole: 'innovation',
       name: 'Gulf of Maine Research Institute',
       short: 'GMRI',
       category: 'institution',
@@ -587,6 +607,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-island',
+      ecoRole: 'community-building',
       name: 'Island Institute',
       short: 'Island Institute',
       category: 'institution',
@@ -605,6 +626,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-mdibl',
+      ecoRole: 'innovation',
       name: 'MDI Biological Laboratory',
       short: 'MDIBL',
       category: 'institution',
@@ -623,6 +645,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-darling',
+      ecoRole: 'innovation',
       name: 'Darling Marine Center',
       short: 'Darling',
       category: 'institution',
@@ -641,6 +664,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-smcc',
+      ecoRole: 'human-capital',
       name: 'Southern Maine Community College',
       short: 'SMCC',
       category: 'institution',
@@ -664,6 +688,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-yccc',
+      ecoRole: 'human-capital',
       name: 'York County Community College',
       short: 'YCCC',
       category: 'institution',
@@ -686,6 +711,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-bowdoin',
+      ecoRole: 'human-capital',
       name: 'Bowdoin College',
       short: 'Bowdoin',
       category: 'institution',
@@ -705,6 +731,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-sbdc',
+      ecoRole: 'resources',
       name: 'Maine SBDC',
       short: 'Maine SBDC',
       category: 'institution',
@@ -725,6 +752,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-msgc',
+      ecoRole: 'innovation',
       name: 'Maine Space Grant Consortium',
       short: 'MSGC',
       category: 'institution',
@@ -746,6 +774,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-emdc',
+      ecoRole: 'community-building',
       name: 'Eastern Maine Development Corporation',
       short: 'EMDC',
       category: 'institution',
@@ -764,6 +793,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-nmdc',
+      ecoRole: 'community-building',
       name: 'Northern Maine Development Commission',
       short: 'NMDC',
       category: 'institution',
@@ -795,6 +825,7 @@ window.RoscData.institutions = {
        confirmed against the institution's own site. */
     {
       id: 'inst-umaine',
+      ecoRole: 'human-capital',
       name: 'University of Maine',
       short: 'UMaine',
       category: 'institution',
@@ -817,6 +848,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-usm',
+      ecoRole: 'human-capital',
       name: 'University of Southern Maine',
       short: 'USM',
       category: 'institution',
@@ -840,6 +872,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-uma',
+      ecoRole: 'human-capital',
       name: 'University of Maine at Augusta',
       short: 'UMA',
       category: 'institution',
@@ -863,6 +896,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-bates',
+      ecoRole: 'human-capital',
       name: 'Bates College',
       short: 'Bates',
       category: 'institution',
@@ -882,6 +916,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-colby',
+      ecoRole: 'human-capital',
       name: 'Colby College',
       short: 'Colby',
       category: 'institution',
@@ -901,6 +936,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-cmcc',
+      ecoRole: 'human-capital',
       name: 'Central Maine Community College',
       short: 'CMCC',
       category: 'institution',
@@ -923,6 +959,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-emcc',
+      ecoRole: 'human-capital',
       name: 'Eastern Maine Community College',
       short: 'EMCC',
       category: 'institution',
@@ -945,6 +982,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-kvcc',
+      ecoRole: 'human-capital',
       name: 'Kennebec Valley Community College',
       short: 'KVCC',
       category: 'institution',
@@ -967,6 +1005,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-nmcc',
+      ecoRole: 'human-capital',
       name: 'Northern Maine Community College',
       short: 'NMCC',
       category: 'institution',
@@ -991,6 +1030,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-wccc',
+      ecoRole: 'human-capital',
       name: 'Washington County Community College',
       short: 'WCCC',
       category: 'institution',
@@ -1013,6 +1053,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-educatemaine',
+      ecoRole: 'human-capital',
       name: 'Educate Maine',
       short: 'Educate Maine',
       category: 'institution',
@@ -1034,6 +1075,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-livework',
+      ecoRole: 'human-capital',
       name: 'Live + Work in Maine',
       short: 'Live + Work',
       category: 'institution',
@@ -1055,6 +1097,7 @@ window.RoscData.institutions = {
     },
     {
       id: 'inst-apprenticeship',
+      ecoRole: 'human-capital',
       name: 'Maine Apprenticeship Program',
       short: 'Apprenticeship ME',
       category: 'institution',
