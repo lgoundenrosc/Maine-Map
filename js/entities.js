@@ -35,7 +35,7 @@
     'dmc.umaine.edu', 'sbir.gov'
   ];
 
-  var DOMAIN_RE = /^[a-z0-9][a-z0-9.-]*\.(org|com|mil|edu|us|gov|net)(\/[\w\-/]*)?$/i;
+  var DOMAIN_RE = /^[a-z0-9][a-z0-9.-]*\.(org|com|mil|edu|us|gov|net|biz)(\/[\w\-/]*)?$/i;
 
   function website(record) {
     var eps = record.entryPoints || [];

@@ -45,10 +45,15 @@ The source `location.town` strings were written for a reading document, not for 
 
 1. Brunswick is spelled three ways. `Brunswick`, `Brunswick Landing` and `Hangar 5, Brunswick Landing`
    are one municipality with 16 records, not three places with 5, 5 and 1.
-2. Fifteen records are not in a town. `Maine`, `Statewide` and `Coastal` carry coordinates that were
-   invented so the old renderer could draw a dot. They are listed rather than plotted. Nothing sits on
-   the map at a coordinate made up to satisfy a renderer.
-3. One record is in New Hampshire. It stays on the map because the test route matters, but it is not
+2. `Statewide` is a real fact about an organization's scope, not a gap. Those four records are plotted
+   at Augusta, the state capital, reusing the coordinate the source already carries for its own
+   Augusta-based entries. Each still shows its original `Statewide` chip, so a reader is never told the
+   organization is headquartered there.
+3. Nine records are not in a town at all. `Maine` and `Coastal` carry coordinates that were invented so
+   the old renderer could draw a dot, and four capital instruments carry no location because they are
+   programs rather than places. All nine are listed rather than plotted. Nothing sits on the map at a
+   coordinate made up to satisfy a renderer.
+4. One record is in New Hampshire. It stays on the map because the test route matters, but it is not
    a Maine community and does not count as one.
 
 ### Sector and the two facets

@@ -278,8 +278,7 @@ window.RoscData.institutions = {
         'whether a Maine company has local conviction behind it.',
       entryPoints: [
         { value: 'maineangels.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-cei',
@@ -302,8 +301,7 @@ window.RoscData.institutions = {
         'satisfy. Worth a conversation on mission-aligned dual-use, not on weapons-adjacent hardware.',
       entryPoints: [
         { value: 'ceimaine.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-bigelow',
@@ -363,8 +361,7 @@ window.RoscData.institutions = {
         'is thinly funded and newly incorporated, so treat it as a partner, not a backer.',
       entryPoints: [
         { value: 'mainespacecorp.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-mma',
@@ -428,7 +425,7 @@ window.RoscData.institutions = {
       entryPoints: [
         { value: 'mainedefenseindustryalliance.com', confidence: 'verified' }
       ],
-      entryGap: 'No entry point confirmed. Executive Director not confirmed.'
+      entryGap: 'Executive Director not confirmed.'
     },
     {
       id: 'inst-mep',
@@ -455,7 +452,7 @@ window.RoscData.institutions = {
       entryPoints: [
         { value: 'mainemep.org', confidence: 'verified' }
       ],
-      entryGap: 'No entry point confirmed. Director not confirmed.'
+      entryGap: 'Director not confirmed.'
     },
     {
       id: 'inst-loring',
@@ -485,8 +482,7 @@ window.RoscData.institutions = {
         'district, which matters politically. Currently unbuilt as an innovation node.',
       entryPoints: [
         { value: 'loring.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-maineco',
@@ -514,8 +510,7 @@ window.RoscData.institutions = {
         'Note the Brian Whitney interlock, since he also sits here.',
       entryPoints: [
         { value: 'maineco.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-dirigo',
@@ -533,8 +528,7 @@ window.RoscData.institutions = {
       facts: [],
       entryPoints: [
         { value: 'dirigolabs.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-mce',
@@ -552,8 +546,7 @@ window.RoscData.institutions = {
       facts: [],
       entryPoints: [
         { value: 'mced.biz', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-mam',
@@ -571,8 +564,7 @@ window.RoscData.institutions = {
       facts: [],
       entryPoints: [
         { value: 'mainemfg.com', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-gmri',
@@ -591,7 +583,7 @@ window.RoscData.institutions = {
       entryPoints: [
         { value: 'gmri.org', confidence: 'verified' }
       ],
-      entryGap: 'No entry point confirmed. President not confirmed.'
+      entryGap: 'President not confirmed.'
     },
     {
       id: 'inst-island',
@@ -609,8 +601,7 @@ window.RoscData.institutions = {
       facts: [],
       entryPoints: [
         { value: 'islandinstitute.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-mdibl',
@@ -628,8 +619,7 @@ window.RoscData.institutions = {
       facts: [],
       entryPoints: [
         { value: 'mdibl.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-darling',
@@ -647,8 +637,7 @@ window.RoscData.institutions = {
       facts: [],
       entryPoints: [
         { value: 'dmc.umaine.edu', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-smcc',
@@ -753,7 +742,7 @@ window.RoscData.institutions = {
       entryPoints: [
         { value: 'msgc.org', confidence: 'verified' }
       ],
-      entryGap: 'No entry point confirmed. Director not confirmed.'
+      entryGap: 'Director not confirmed.'
     },
     {
       id: 'inst-emdc',
@@ -771,8 +760,7 @@ window.RoscData.institutions = {
       facts: [],
       entryPoints: [
         { value: 'emdc.org', confidence: 'verified' }
-      ],
-      entryGap: 'No entry point confirmed.'
+      ]
     },
     {
       id: 'inst-nmdc',
