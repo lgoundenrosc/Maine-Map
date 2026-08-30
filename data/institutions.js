@@ -253,7 +253,7 @@ window.RoscData.institutions = {
         { label: '2025 activity', value: '$3.3M deployed across 13 new portfolio companies', confidence: 'verified' },
         { label: 'Typical position', value: 'Roughly $400,000 over time', confidence: 'verified', note: 'This figure is the reason stage 6 of the formation chain breaks.' },
         { label: 'Portfolio', value: 'Sea Bags, Gelato Fiasco, MedRhythms, Defendify, HighByte, Hyperlite, Maine Craft Distilling, R.E.D.D., Cerahelix', confidence: 'verified' },
-        { label: 'Board interlock', value: 'Brian Whitney, MTI President, sits on the MVF board', confidence: 'verified' }
+        { label: 'Board interlock', value: 'Brian Whitney, MTI President, sits on the Maine Venture Fund (MVF) board', confidence: 'verified' }
       ],
       vcAngle:
         'A useful co-investor and an excellent source of local diligence, and not a lead for a hardware ' +
