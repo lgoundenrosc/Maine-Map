@@ -141,7 +141,6 @@
           startup: r.startup === true,
           establishedCompany: r.establishedCompany === true,
           majorDefenseCompany: r.majorDefenseCompany === true,
-          entryGap: r.entryGap || null,
           place: resolvePlace(r)
         });
       });

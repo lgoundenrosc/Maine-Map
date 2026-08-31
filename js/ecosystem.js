@@ -320,7 +320,6 @@
             '<span class="e-kv-val">' + esc(e.website.host) + I.ext + '</span></a></div>' : '') +
         (srcs.length ? '<div class="e-section"><span class="e-label">Sources</span><p>' +
           srcs.map(esc).join('<br>') + '</p></div>' : '') +
-        (e.entryGap ? '<div class="e-section"><span class="e-label">Verification gap</span><p>' + esc(e.entryGap) + '</p></div>' : '') +
         (e.website
           ? '<a class="e-cta" href="https://' + attr(e.website.value) + '" target="_blank" rel="noopener noreferrer">' +
             I.ext + 'Visit ' + esc(e.website.host) + '</a>'
