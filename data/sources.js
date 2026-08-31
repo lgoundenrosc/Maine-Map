@@ -185,5 +185,12 @@ window.RoscData.sources = [
   { id: 'src-168', n: 168, title: 'University of Maine joins NSF Seafood Engine initiative to advance New England fisheries and aquaculture', publisher: 'University of Maine / MAFES', date: '2026-07-17', locator: 'umaine.edu', quality: 'primary' },
   { id: 'src-169', n: 169, title: 'New state entity to promote Maine’s marine economy', publisher: 'Bangor Daily News', date: '2026-06-19', locator: '', quality: 'press' },
   { id: 'src-170', n: 170, title: 'DOD awards $9M for snowpack and meltwater research and Arctic training program in Alaska and New England', publisher: 'University of Maine News', date: '2024-09', locator: 'umaine.edu', quality: 'primary' },
-  { id: 'src-171', n: 171, title: 'Interest in Maine’s New Space industry will skyrocket', publisher: 'Mainebiz', date: '2026', locator: '', quality: 'trade press' }
+  { id: 'src-171', n: 171, title: 'Interest in Maine’s New Space industry will skyrocket', publisher: 'Mainebiz', date: '2026', locator: '', quality: 'trade press' },
+  { id: 'src-172', n: 172, title: 'Daniel B. Stevenson appointed as next Executive Director', publisher: 'Midcoast Regional Redevelopment Authority', date: '2025-03', locator: 'brunswicklanding.us', quality: 'primary' },
+  { id: 'src-173', n: 173, title: 'BIW machinists union votes to ratify 5-year contract', publisher: 'Maine Morning Star', date: '2026-08-24', locator: '', quality: 'press' },
+  { id: 'src-174', n: 174, title: 'Executive profile, Peter DelGreco', publisher: 'LinkedIn / The Org', date: '2026', locator: '', quality: 'directory aggregator, org site unreachable' },
+  { id: 'src-175', n: 175, title: 'Golden won’t seek reelection in 2026', publisher: 'Maine Morning Star', date: '2025-11-05', locator: '', quality: 'press' },
+  { id: 'src-176', n: 176, title: 'Testimony by Joe Powers, Managing Director, in support of LD legislation', publisher: 'Maine Legislature', date: '2026', locator: 'legislature.maine.gov', quality: 'primary' },
+  { id: 'src-177', n: 177, title: 'Staff page, Beth Orcutt', publisher: 'Bigelow Laboratory for Ocean Sciences', date: '2026', locator: 'bigelow.org', quality: 'primary' },
+  { id: 'src-178', n: 178, title: 'Amid efforts to restore jobs, US cuts funding for Maine’s Manufacturing Extension Partnership', publisher: 'Mainebiz', date: '2025-04', locator: '', quality: 'trade press' }
 ];

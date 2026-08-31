@@ -82,7 +82,7 @@ window.RoscData.institutions = {
       openness: 'HIGH',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-34', 'src-156'],
+      sourceIds: ['src-34', 'src-156', 'src-172'],
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
       cluster: ['composites-am', 'food-water-bio'],
       what:
@@ -91,7 +91,7 @@ window.RoscData.institutions = {
         'composites layup and bioproduction.',
       facts: [
         { label: 'Parent', value: 'Midcoast Regional Redevelopment Authority, a public municipal corporation created by the Maine Legislature in 2007, governed by 11 trustees appointed by the Governor and confirmed by the Legislature', confidence: 'verified' },
-        { label: 'Executive Director', value: 'Kristine Logan', confidence: 'unverified', note: 'MRRA opened a search for a new executive director in November 2024. Confirm before outreach.' },
+        { label: 'Executive Director', value: 'Daniel B. Stevenson', confidence: 'verified', note: 'Appointed effective March 3, 2025, succeeding Kristine Logan, who resigned after the August 2024 AFFF release and is now Executive Director of the Kennebec Regional Development Authority.' },
         { label: 'Board Chair', value: 'Barry Woods', confidence: 'verified', note: '2026 board of trustees; Herman A. Nichols is vice chair, Barry Valentine is secretary.' },
         { label: 'Site', value: 'Roughly 3,200 acres, close to 2 million square feet of commercial and industrial space, more than 150 business entities, just under 3,000 jobs', confidence: 'verified' }
       ],
@@ -250,7 +250,7 @@ window.RoscData.institutions = {
         '117th Maine Legislature in 1995-96 and investing since 1997. Evergreen structure with returns ' +
         'recycled. This is the state’s only institutional venture vehicle.',
       facts: [
-        { label: 'Managing Director', value: 'Joe Powers, who took over from John Burns', confidence: 'unverified', note: 'Confirm Powers is still in seat. Powers is a Middlebury graduate with a Tuck MBA, previously founder of Ripso LLC, senior manager of operations at Zoox, and director of business development at Clean Marine Energy, and worked on Tesla’s first electric vehicle. Burns continues as a strategic advisor.' },
+        { label: 'Senior Managing Director', value: 'Joe Powers, who took over from John Burns', confidence: 'verified', note: 'Confirmed via 2026 legislative testimony and MVF’s own 2025 year-in-review; title upgraded from Managing Director (2021-2026). Powers is a Middlebury graduate with a Tuck MBA, previously founder of Ripso LLC, senior manager of operations at Zoox, and director of business development at Clean Marine Energy, and worked on Tesla’s first electric vehicle. Burns continues as a strategic advisor.' },
         { label: 'Capitalization', value: '$19.5 million in state capital contributions', confidence: 'verified', note: 'Legislative testimony and Maine Venture Fund’s own 2025 year-in-review post converge on $19.5M. Two outlying figures found earlier ($13M and $25.2M) are not reflected here and may describe a different point in time or a different accounting basis (e.g. cumulative fund investment rather than state contributions).' },
         { label: 'Scale', value: 'More than 365 co-investors leveraging $196.6 million. 11-member board. More than 900 applications.', confidence: 'verified' },
         { label: '2025 activity', value: '$3.3M deployed across 13 new portfolio companies in 2025, driven partly by access to FAME’s federal Grow Maine program, which is likely to sunset in 2026. Total portfolio stood at 69 companies as of the 2025 year-in-review.', confidence: 'verified' },
@@ -326,7 +326,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-23'],
+      sourceIds: ['src-23', 'src-177'],
       location: { town: 'East Boothbay', lat: 43.8459, lng: -69.6072, precision: 'approximate' },
       cluster: ['food-water-bio', 'maritime-autonomy'],
       what:
@@ -335,7 +335,7 @@ window.RoscData.institutions = {
         'Ecosystem in October 2025 with MTI seed funding, Hatch Blue and Ocean House Consulting.',
       facts: [
         { label: 'President, CEO and senior research scientist', value: 'Deborah Bronk', confidence: 'verified' },
-        { label: 'VP for Research', value: 'Beth Orcutt', confidence: 'unverified' }
+        { label: 'VP for Research', value: 'Beth Orcutt', confidence: 'verified', note: 'In the role since 2022, confirmed on Bigelow’s own staff page. Oversees over $15M annually in sponsored and contracted research.' }
       ],
       vcAngle:
         'The origin point for the most differentiated cluster on the map and the one with essentially no ' +
@@ -364,7 +364,7 @@ window.RoscData.institutions = {
         'Landing. Operates the state’s first space qualification testing facility, opened 2025, with ' +
         'vibration, shock, environmental and electronics testing equipment.',
       facts: [
-        { label: 'Executive Director', value: 'Terry Shehata', confidence: 'unverified' },
+        { label: 'Executive Director', value: 'Terry Shehata', confidence: 'verified', note: 'Also Executive Director of the Maine Space Grant Consortium and Director of the Maine NASA EPSCoR Program. Quoted in 2026 Mainebiz coverage discussing Maine Space Corp’s work in his role.' },
         { label: 'Coalition', value: 'Led a 50-plus organization NSF Regional Innovation Engines proposal with New Hampshire, targeting the small satellite and Earth observation value chain. The application advanced within NSF’s second Engines competition; final award status is unconfirmed.', confidence: 'unverified', note: 'A separate, unrelated NSF Engines proposal, the Seafood Engine in New England (University of Maine partner, fisheries and aquaculture focus, not led by Maine Space Corporation), won a confirmed $15M NSF Engines award in 2026. That coalition list is still a ready-made letters-of-support roster.' },
         { label: 'Funding', value: 'A two-year $426,000 MTI grant plus $29,000 from the Maine Space Grant Consortium. Recently filed for 501(c)(3) status.', confidence: 'verified' },
         { label: 'Site note', value: 'Headquartered in Hangar 5, which is the hangar complex covered by the AFFF constraint on the test infrastructure tab', confidence: 'verified' },
@@ -454,14 +454,17 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-32', 'src-105'],
+      sourceIds: ['src-32', 'src-105', 'src-178'],
       location: { town: 'Statewide', lat: 44.5, lng: -69.7, precision: 'approximate' },
       cluster: ['shipyard-ai'],
       what:
-        'NIST MEP affiliate. Roughly $1.16M per year, serving roughly 1,000 manufacturers. Previously ' +
+        'NIST MEP affiliate. $1,161,000 per year, serving roughly 1,000 manufacturers per one source and ' +
+        'more than 300 since 1995 per another. Previously ' +
         'conducted a defense industrial base supplier survey for the state.',
       facts: [
-        { label: 'Budget and reach', value: 'Roughly $1.16M per year, serving roughly 1,000 manufacturers', confidence: 'unverified', note: 'From the First Light Works bid.' },
+        { label: 'Budget', value: '$1,161,000 per year, unchanged for at least three years as of an April 2025 report', confidence: 'verified', note: 'The First Light Works bid figure of roughly $1.16M is now corroborated by independent trade press.' },
+        { label: 'Reach', value: 'More than 300 Maine companies served since the center opened in 1995', confidence: 'unverified', note: 'This is a different, and lower, figure than the roughly 1,000 manufacturers cited in the First Light Works bid, which may describe active or annual reach rather than a cumulative count.' },
+        { label: 'Federal funding risk', value: 'US Commerce Department funding cuts affecting the MEP national network were reported in an April 2025 article covering Maine MEP specifically', confidence: 'verified' },
         { label: 'Executive Director', value: 'Rod Rodrigue', confidence: 'verified', note: 'President of Maine MEP since 1997.' }
       ],
       vcAngle:

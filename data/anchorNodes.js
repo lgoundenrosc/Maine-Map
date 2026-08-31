@@ -28,13 +28,13 @@ window.RoscData.anchorNodes = {
       location: { town: 'Bath', lat: 43.9109, lng: -69.8133, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-30', 'src-31', 'src-32', 'src-89', 'src-159'],
+      sourceIds: ['src-10', 'src-30', 'src-31', 'src-32', 'src-89', 'src-159', 'src-173'],
       openness: 'MED',
       summary:
         'Surface combatant construction for the US Navy and the largest single concentration of defense ' +
         'manufacturing demand in New England.',
       facts: [
-        { label: 'President', value: 'Charles F. Krugh', confidence: 'unverified', note: 'From Wikipedia. Treat as needing confirmation.' },
+        { label: 'President', value: 'Charles F. Krugh', confidence: 'verified', note: 'Confirmed by a direct quote as BIW president in August 2026 coverage of the ratified 5-year union contract, in the seat since May 2022.' },
         { label: 'Employees', value: '6,001 to 6,500 (Wikipedia, 2025) · 7,400 (IndustrySelect) · 6,800 (First Light Works bid)', confidence: 'verified', note: 'Independent March 2026 press covering a Bath Marine Draftsmen’s Association strike converges on “about 6,800” to “almost 7,000,” consistent with the higher end of the range. Rendered as a range rather than a single figure since sources still vary.' },
         { label: 'Distance to Brunswick Landing', value: 'approximately 11 miles', confidence: 'verified' },
         { label: 'Labor action', value: 'Bath Marine Draftsmen’s Association (600-plus workers) went on strike in March 2026 over wages and benefits', confidence: 'verified' }

@@ -16,8 +16,7 @@ window.RoscData.gaps = {
       title: 'Leadership',
       kind: 'leadership',
       items: [
-        { id: 'gap-l-13', item: 'TechPlace manager', ref: 'inst-techplace' },
-        { id: 'gap-l-14', item: 'MRRA executive director, given a November 2024 search for a replacement and conflicting current sources', ref: 'inst-techplace' }
+        { id: 'gap-l-13', item: 'TechPlace manager', ref: 'inst-techplace' }
       ]
     },
     {
