@@ -51,14 +51,17 @@ window.RoscData.testAssets = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-25', 'src-103'],
+      sourceIds: ['src-25', 'src-103', 'src-163', 'src-164', 'src-165'],
       entryPoints: [ { value: 'mainespacecorp.org', confidence: 'verified' } ],
       ref: 'inst-msc',
       detail:
         'Maine’s first space qualification testing facility, opened 2025. Sited in Hangar 5 at Brunswick ' +
-        'Landing. AFFF concentrate reportedly remained in Hangars 5 and 6 after the August 2024 release ' +
-        'and the current remediation status is unconfirmed. Both the accreditation status and the access ' +
-        'route are open gaps.'
+        'Landing. Of roughly 6,300 gallons of AFFF concentrate found across the hangar complex after the ' +
+        'August 2024 release (Hangar 5 alone held about 3,200 gallons, the most of any hangar), Hangars ' +
+        '6 and 7 were cleared and retrofitted with non-PFAS suppression by April 2025. A state law signed ' +
+        'May 2025 requires all AFFF use and storage at Brunswick Landing to end by January 1, 2026. ' +
+        'Whether Hangar 5 itself, which houses this test lab, has been cleared is not independently ' +
+        'confirmed. Both the accreditation status and the access route remain open gaps.'
     },
     {
       id: 'test-bxm',

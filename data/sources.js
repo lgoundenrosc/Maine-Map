@@ -172,5 +172,18 @@ window.RoscData.sources = [
   { id: 'src-155', n: 155, title: 'Governor Mills Announces Nomination of Michael Duguay as Commissioner of Maine Department of Economic and Community Development', publisher: 'Office of Governor Janet T. Mills', date: '2026', locator: '', quality: 'primary' },
   { id: 'src-156', n: 156, title: '2026 MRRA Committee Schedule Matrix', publisher: 'Midcoast Regional Redevelopment Authority', date: '2026', locator: 'brunswicklanding.us', quality: 'primary' },
   { id: 'src-157', n: 157, title: 'Staff page, Jeremy Qualls', publisher: 'Maine Space Grant Consortium', date: '2026', locator: 'msgc.org', quality: 'primary' },
-  { id: 'src-158', n: 158, title: 'New aerospace, maritime industry facilities open on Brunswick Landing', publisher: 'Portland Press Herald', date: '2025-10-27', locator: '', quality: 'press' }
+  { id: 'src-158', n: 158, title: 'New aerospace, maritime industry facilities open on Brunswick Landing', publisher: 'Portland Press Herald', date: '2025-10-27', locator: '', quality: 'press' },
+  { id: 'src-159', n: 159, title: 'Hundreds go on strike at major Navy shipbuilder in Maine over wages and benefits', publisher: 'Boston.com / Washington Times (AP)', date: '2026-03-23', locator: '', quality: 'press' },
+  { id: 'src-160', n: 160, title: 'TBED Works: MTI delivers on economic growth by supporting early-stage companies in targeted sectors', publisher: 'SSTI', date: '2026', locator: '', quality: 'trade press' },
+  { id: 'src-161', n: 161, title: 'Startup Building Autonomous Amphibious Logistics Aircraft', publisher: 'National Defense Magazine', date: '2026-03-18', locator: 'nationaldefensemagazine.org', quality: 'trade press' },
+  { id: 'src-162', n: 162, title: '2025 Year in Review', publisher: 'Maine Venture Fund', date: '2025', locator: 'maineventurefund.com', quality: 'primary' },
+  { id: 'src-163', n: 163, title: 'Brunswick Landing removes toxic foam from airport hangar', publisher: 'Sun Journal', date: '2025-04-15', locator: '', quality: 'press' },
+  { id: 'src-164', n: 164, title: 'Mills signs bill to shut off fire suppression systems with forever chemicals at Brunswick Landing', publisher: 'Portland Press Herald', date: '2025-05-28', locator: '', quality: 'press' },
+  { id: 'src-165', n: 165, title: 'For 8 years, Brunswick Landing hangar inspections often found deficiencies', publisher: 'Central Maine / Portland Press Herald', date: '2024-10-08', locator: '', quality: 'press' },
+  { id: 'src-166', n: 166, title: 'Starlink building or expanding more than 20 US ground station sites to operate in E-band', publisher: 'Data Center Dynamics', date: '2026', locator: 'datacenterdynamics.com', quality: 'trade press' },
+  { id: 'src-167', n: 167, title: 'NSF selects 15 finalists to advance to the next round of its second Regional Innovation Engines competition', publisher: 'National Science Foundation', date: '2025', locator: 'nsf.gov', quality: 'primary' },
+  { id: 'src-168', n: 168, title: 'University of Maine joins NSF Seafood Engine initiative to advance New England fisheries and aquaculture', publisher: 'University of Maine / MAFES', date: '2026-07-17', locator: 'umaine.edu', quality: 'primary' },
+  { id: 'src-169', n: 169, title: 'New state entity to promote Maine’s marine economy', publisher: 'Bangor Daily News', date: '2026-06-19', locator: '', quality: 'press' },
+  { id: 'src-170', n: 170, title: 'DOD awards $9M for snowpack and meltwater research and Arctic training program in Alaska and New England', publisher: 'University of Maine News', date: '2024-09', locator: 'umaine.edu', quality: 'primary' },
+  { id: 'src-171', n: 171, title: 'Interest in Maine’s New Space industry will skyrocket', publisher: 'Mainebiz', date: '2026', locator: '', quality: 'trade press' }
 ];

@@ -36,7 +36,7 @@ window.RoscData.institutions = {
       openness: 'HIGH',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-19', 'src-20'],
+      sourceIds: ['src-19', 'src-20', 'src-160'],
       location: { town: 'Brunswick', lat: 43.9145, lng: -69.9653, precision: 'approximate' },
       cluster: [],
       badge: 'START HERE',
@@ -48,6 +48,7 @@ window.RoscData.institutions = {
         { label: 'President', value: 'Brian Whitney', confidence: 'verified', note: 'More than 30 years in economic development and legislative work, has overseen deployment of more than $200M during his tenure.' },
         { label: 'Board interlock', value: 'Whitney also sits on the Maine Venture Fund board, Maine & Company, and the Maine Space Corporation', confidence: 'verified', note: 'This interlock is rendered in the chain view. It is the highest-leverage single relationship in the state.' },
         { label: 'Lifetime awards', value: '$372 million across more than 4,000 projects since founding', confidence: 'verified' },
+        { label: 'FY25 core funding', value: '307 awards totaling $8.04 million, matched by $12.7 million from recipients', confidence: 'verified' },
         { label: 'Seven targeted sectors', value: 'Biotechnology, advanced composites and materials, environmental technology, marine and aquaculture, forestry and agriculture, precision manufacturing, information technology', confidence: 'verified' },
         { label: 'Location note', value: 'MTI opened a presence at Cloudport Coworking in Portland and has been seeking a northern Maine hub', confidence: 'verified' }
       ],
@@ -241,7 +242,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-17', 'src-18', 'src-21', 'src-37'],
+      sourceIds: ['src-17', 'src-18', 'src-21', 'src-37', 'src-162'],
       location: { town: 'Newport', lat: 44.8362, lng: -69.2745, precision: 'approximate' },
       cluster: [],
       what:
@@ -250,9 +251,10 @@ window.RoscData.institutions = {
         'recycled. This is the state’s only institutional venture vehicle.',
       facts: [
         { label: 'Managing Director', value: 'Joe Powers, who took over from John Burns', confidence: 'unverified', note: 'Confirm Powers is still in seat. Powers is a Middlebury graduate with a Tuck MBA, previously founder of Ripso LLC, senior manager of operations at Zoox, and director of business development at Clean Marine Energy, and worked on Tesla’s first electric vehicle. Burns continues as a strategic advisor.' },
-        { label: 'Capitalization', value: '$13 million in capital contributions from the State of Maine per one source, $19.5M to $20M capitalization per legislative testimony, $25.2M fund investment per a later profile', confidence: 'unverified', note: 'Three sources disagree. The range is rendered rather than a single figure.' },
+        { label: 'Capitalization', value: '$19.5 million in state capital contributions', confidence: 'verified', note: 'Legislative testimony and Maine Venture Fund’s own 2025 year-in-review post converge on $19.5M. Two outlying figures found earlier ($13M and $25.2M) are not reflected here and may describe a different point in time or a different accounting basis (e.g. cumulative fund investment rather than state contributions).' },
         { label: 'Scale', value: 'More than 365 co-investors leveraging $196.6 million. 11-member board. More than 900 applications.', confidence: 'verified' },
-        { label: '2025 activity', value: '$3.3M deployed across 13 new portfolio companies', confidence: 'verified' },
+        { label: '2025 activity', value: '$3.3M deployed across 13 new portfolio companies in 2025, driven partly by access to FAME’s federal Grow Maine program, which is likely to sunset in 2026. Total portfolio stood at 69 companies as of the 2025 year-in-review.', confidence: 'verified' },
+        { label: 'Growth goal', value: 'Aims to grow assets under management to $100 million by May 2034', confidence: 'verified' },
         { label: 'Typical position', value: 'Roughly $400,000 over time', confidence: 'verified', note: 'This figure is the reason stage 6 of the formation chain breaks.' },
         { label: 'Portfolio', value: 'Sea Bags, Gelato Fiasco, MedRhythms, Defendify, HighByte, Hyperlite, Maine Craft Distilling, R.E.D.D., Cerahelix', confidence: 'verified' },
         { label: 'Board interlock', value: 'Brian Whitney, MTI President, sits on the Maine Venture Fund (MVF) board', confidence: 'verified' }
@@ -354,7 +356,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-25', 'src-103'],
+      sourceIds: ['src-25', 'src-103', 'src-166', 'src-167', 'src-168', 'src-171'],
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
       cluster: ['space-high-latitude'],
       what:
@@ -363,9 +365,10 @@ window.RoscData.institutions = {
         'vibration, shock, environmental and electronics testing equipment.',
       facts: [
         { label: 'Executive Director', value: 'Terry Shehata', confidence: 'unverified' },
-        { label: 'Coalition', value: 'Led a 50-plus organization NSF Regional Innovation Engines proposal across Maine and New Hampshire', confidence: 'verified', note: 'That coalition list is a ready-made letters-of-support roster and should be obtained.' },
+        { label: 'Coalition', value: 'Led a 50-plus organization NSF Regional Innovation Engines proposal with New Hampshire, targeting the small satellite and Earth observation value chain. The application advanced within NSF’s second Engines competition; final award status is unconfirmed.', confidence: 'unverified', note: 'A separate, unrelated NSF Engines proposal, the Seafood Engine in New England (University of Maine partner, fisheries and aquaculture focus, not led by Maine Space Corporation), won a confirmed $15M NSF Engines award in 2026. That coalition list is still a ready-made letters-of-support roster.' },
         { label: 'Funding', value: 'A two-year $426,000 MTI grant plus $29,000 from the Maine Space Grant Consortium. Recently filed for 501(c)(3) status.', confidence: 'verified' },
-        { label: 'Site note', value: 'Headquartered in Hangar 5, which is the hangar complex covered by the AFFF constraint on the test infrastructure tab', confidence: 'verified' }
+        { label: 'Site note', value: 'Headquartered in Hangar 5, which is the hangar complex covered by the AFFF constraint on the test infrastructure tab', confidence: 'verified' },
+        { label: 'Ground station interest', value: 'SpaceX has filed with the FCC to build or upgrade Starlink E-band gateway capability at roughly 21 US sites, including one in Brunswick, Maine', confidence: 'verified', note: 'Confirmed by trade press covering the FCC filing. Not confirmed to be affiliated with Maine Space Corporation specifically; included here as the closest space-sector entity on the map.' }
       ],
       vcAngle:
         'Two things worth having, and neither is launch. The qualification test lab is a real asset for ' +
