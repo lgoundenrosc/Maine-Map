@@ -48,7 +48,10 @@
     /* Test-asset website links. Six of these reuse a domain already
        verified for that asset's parent organization; marine.unh.edu is
        the one genuinely new domain, checked against UNH's own site. */
-    'marine.unh.edu'
+    'marine.unh.edu',
+    /* Added during the round-1 unverified-record pass, replacing an
+       unverified phone number entryPoint for Maine SBDC. */
+    'mainesbdc.org'
   ];
 
   var DOMAIN_RE = /^[a-z0-9][a-z0-9.-]*\.(org|com|mil|edu|us|gov|net|biz)(\/[\w\-/]*)?$/i;

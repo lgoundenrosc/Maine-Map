@@ -108,22 +108,23 @@ window.RoscData.anchorNodes = {
       name: 'Pratt & Whitney North Berwick',
       category: 'anchor',
       cluster: ['composites-am'],
-      value: '2,000 to 2,300 workers',
-      valueNote: 'Sources vary',
+      value: 'more than 2,100 workers',
+      valueNote: 'AME tour page; other sources give a 2,000 to 2,300 range',
       location: { town: 'North Berwick', lat: 43.3037, lng: -70.7328, precision: 'approximate' },
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-32', 'src-90'],
+      sourceIds: ['src-10', 'src-32', 'src-90', 'src-142', 'src-143'],
       openness: 'LOW',
       summary:
-        'Roughly 1 million-plus square feet machining flight-critical jet engine components.',
+        'Operating as North Berwick Aero Systems (NBAS), the largest manufacturing plant in Maine under ' +
+        'one roof at more than 1 million square feet, machining flight-critical jet engine components.',
       facts: [
-        { label: 'Site', value: 'Roughly 1 million-plus square feet', confidence: 'unverified' },
-        { label: 'Workforce', value: '2,000 to 2,300 workers', confidence: 'unverified', note: 'Sources vary. The range is rendered rather than a single figure.' },
-        { label: 'Specific programs', value: '', confidence: 'gap', note: 'Do not assert F135 or any other program without confirmation.' }
+        { label: 'Site', value: 'More than 1 million square feet, four business units: Repair Operations, Parts Center, Modular Assembly and Engineering Center', confidence: 'verified' },
+        { label: 'Workforce', value: 'More than 2,100 workers', confidence: 'verified', note: 'Other sources give 2,000 to 2,300.' },
+        { label: 'Specific programs', value: 'Roughly 1,200 part types across five classes (compressor stators, outer air seals, low pressure turbine blades, brush seals, bearing compartments); F135 engine (F-35) work is roughly 25 percent of production, alongside PurePower engine modules', confidence: 'verified' }
       ],
       programsAndDeals: [
-        { text: 'Program specifics are a known gap. Nothing is asserted here.', confidence: 'gap' }
+        { text: '$216 million F-35 contract announced by Senator Collins’ office', confidence: 'verified' }
       ],
       vcRead:
         'Precision machining at scale with an aerospace quality system already in place. The relevance to ' +
@@ -216,26 +217,30 @@ window.RoscData.anchorNodes = {
       name: 'Teledyne e2v, Brunswick Landing',
       category: 'anchor',
       cluster: ['space-high-latitude', 'cyber-software'],
-      value: 'scope not confirmed',
-      valueNote: 'Headcount, programs and site scope all unconfirmed',
+      value: 'part-time office, not a manufacturing site',
+      valueNote: 'Rents space from Maine Space Corporation; not an operating or manufacturing footprint',
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
-      confidence: 'gap',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-34', 'src-93'],
+      sourceIds: ['src-34', 'src-93', 'src-144'],
       openness: 'LOW',
-      summary: 'Anchor tenant at Brunswick Landing. Defense electronics.',
+      summary:
+        'Rents a part-time office from the Maine Space Corporation at Brunswick Landing, focused on ' +
+        'networking with higher education, R&D and commercial space-related entities, not manufacturing ' +
+        'or operations.',
       facts: [
         { label: 'Headcount', value: '', confidence: 'gap' },
-        { label: 'Programs', value: '', confidence: 'gap' },
-        { label: 'Site scope', value: '', confidence: 'gap' }
+        { label: 'Footprint', value: 'Part-time office rented from Maine Space Corporation', confidence: 'verified' },
+        { label: 'Purpose', value: 'Networking with higher education, R&D and commercial space-related entities', confidence: 'verified' }
       ],
       programsAndDeals: [
-        { text: 'Detail is a known gap. Headcount, programs and site scope are all unconfirmed and are listed in the verification gaps table.', confidence: 'gap' }
+        { text: 'No manufacturing or operational program identified at this site; the footprint is an office presence rather than a demand signal.', confidence: 'verified' }
       ],
       vcRead:
-        'Included because a defense electronics anchor tenant on the proposed hub site is materially ' +
-        'relevant if the scope is real. Until the scope is confirmed, treat this node as a research ' +
-        'task rather than a demand signal.',
+        'The parent company is a genuine major defense electronics manufacturer, but this specific site is ' +
+        'a small networking office, not a manufacturing or operational anchor. Its inclusion alongside ' +
+        'Bath Iron Works, Pratt & Whitney, GD-OTS and Textron as an equally weighted "major defense ' +
+        'company" anchor is worth revisiting now that the scope is confirmed rather than unknown.',
       entryPoints: [
         { value: 'teledyne-e2v.com', confidence: 'verified' }
       ]

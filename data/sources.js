@@ -154,5 +154,11 @@ window.RoscData.sources = [
   { id: 'src-135', n: 135, title: 'Exclusive: Poseidon snags $11 million to build unmanned cargo aircraft', publisher: 'Axios', date: '2025-11-05', locator: 'axios.com', quality: 'press' },
   { id: 'src-136', n: 136, title: 'Diodes Incorporated Completes Acquisition of onsemi’s South Portland, Maine Wafer Fabrication Facility and Operations', publisher: 'Diodes Incorporated', date: '2022', locator: 'diodes.com', quality: 'primary' },
   { id: 'src-137', n: 137, title: 'Semiconductor maker ON is leaving Maine and laying off dozens as part of sweeping reorg', publisher: 'Mainebiz', date: '2024-06', locator: 'mainebiz.biz', quality: 'trade press' },
-  { id: 'src-138', n: 138, title: 'Lattice Materials breaks ground on advanced manufacturing facility', publisher: 'Aerospace Manufacturing and Design', date: '2026', locator: '', quality: 'trade press' }
+  { id: 'src-138', n: 138, title: 'Lattice Materials breaks ground on advanced manufacturing facility', publisher: 'Aerospace Manufacturing and Design', date: '2026', locator: '', quality: 'trade press' },
+  { id: 'src-139', n: 139, title: 'About', publisher: 'Maine Small Business Development Centers', date: '2026', locator: 'mainesbdc.org', quality: 'primary' },
+  { id: 'src-140', n: 140, title: 'Waterville accelerator picks lineup of 12 startups', publisher: 'Mainebiz', date: '2026', locator: '', quality: 'trade press' },
+  { id: 'src-141', n: 141, title: 'Entrepreneurs critical to Maine’s economic future, says Top Gun’s top gun', publisher: 'Mainebiz', date: '2026', locator: '', quality: 'trade press' },
+  { id: 'src-142', n: 142, title: 'Largest manufacturing facility in Maine, under one roof', publisher: 'Association for Manufacturing Excellence', date: '2026', locator: 'ame.org', quality: 'trade press' },
+  { id: 'src-143', n: 143, title: 'Senator Collins announces $216 million F-35 contract for Pratt and Whitney', publisher: 'Office of Senator Susan Collins', date: '2026', locator: 'collins.senate.gov', quality: 'primary' },
+  { id: 'src-144', n: 144, title: 'With eye on Maine’s space industry, $5.5B global tech company opens Brunswick office', publisher: 'Mainebiz', date: '2026', locator: '', quality: 'trade press' }
 ];

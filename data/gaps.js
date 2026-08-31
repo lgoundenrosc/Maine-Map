@@ -19,8 +19,6 @@ window.RoscData.gaps = {
         { id: 'gap-l-01', item: 'Maine Defense Industry Alliance executive director', ref: 'inst-mdia' },
         { id: 'gap-l-02', item: 'Roux Institute entrepreneurship lead', ref: 'inst-roux' },
         { id: 'gap-l-03', item: 'Maine APEX statewide director', ref: 'inst-apex' },
-        { id: 'gap-l-04', item: 'Maine MEP director', ref: 'inst-mep' },
-        { id: 'gap-l-05', item: 'Gulf of Maine Research Institute president', ref: 'inst-gmri' },
         { id: 'gap-l-06', item: 'Maine Maritime Academy president', ref: 'inst-mma' },
         { id: 'gap-l-07', item: 'Loring Development Authority lead', ref: 'inst-loring' },
         { id: 'gap-l-08', item: 'SUPSHIP Bath commanding officer', ref: null },
@@ -40,14 +38,12 @@ window.RoscData.gaps = {
         { id: 'gap-f-02', item: 'MTI’s current annual appropriation', ref: 'inst-mti' },
         { id: 'gap-f-03', item: 'Maine Venture Fund’s current fund size, given three conflicting sources', ref: 'inst-mvf' },
         { id: 'gap-f-04', item: 'BIW current headcount, given two conflicting sources', ref: 'anchor-biw' },
-        { id: 'gap-f-05', item: 'Pratt & Whitney North Berwick program specifics', ref: 'anchor-pw' },
-        { id: 'gap-f-06', item: 'Teledyne e2v Brunswick Landing scope', ref: 'anchor-tdy' },
-        { id: 'gap-f-07', item: 'Poseidon Aerospace’s reported $11M seed', ref: 'co-poseidon' },
-        { id: 'gap-f-08', item: 'Elmet Technologies IPO status', ref: 'co-elmet' },
         { id: 'gap-f-09', item: 'Maine Maritime Academy Brunswick Landing workforce center opening and square footage', ref: 'inst-mma' },
         { id: 'gap-f-10', item: 'The reported $9.5M ONR contract to UMaine and $9M DoD Arctic snowpack contract', ref: 'inst-ascc' },
         { id: 'gap-f-11', item: 'Reported $150M private and $100M Navy investment into Brunswick Landing', ref: 'inst-techplace' },
-        { id: 'gap-f-12', item: 'Reported SpaceX Starlink ground station in Maine', ref: null }
+        { id: 'gap-f-12', item: 'Reported SpaceX Starlink ground station in Maine', ref: null },
+        { id: 'gap-f-13', item: 'Poseidon Aerospace’s two-ton payload and 1,500-mile range claims, company-supplied and independent of the now-confirmed $11M seed', ref: 'co-poseidon' },
+        { id: 'gap-f-14', item: 'Whether Lattice Materials operates any actual Maine facility, given the company’s 2026 announcements describe an expansion exclusively in Bozeman, Montana', ref: 'co-lattice' }
       ]
     },
     {

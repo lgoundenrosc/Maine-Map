@@ -448,7 +448,7 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 5,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-32', 'src-105'],
       location: { town: 'Statewide', lat: 44.5, lng: -69.7, precision: 'approximate' },
@@ -457,7 +457,8 @@ window.RoscData.institutions = {
         'NIST MEP affiliate. Roughly $1.16M per year, serving roughly 1,000 manufacturers. Previously ' +
         'conducted a defense industrial base supplier survey for the state.',
       facts: [
-        { label: 'Budget and reach', value: 'Roughly $1.16M per year, serving roughly 1,000 manufacturers', confidence: 'unverified', note: 'From the First Light Works bid.' }
+        { label: 'Budget and reach', value: 'Roughly $1.16M per year, serving roughly 1,000 manufacturers', confidence: 'unverified', note: 'From the First Light Works bid.' },
+        { label: 'Executive Director', value: 'Rod Rodrigue', confidence: 'verified', note: 'President of Maine MEP since 1997.' }
       ],
       vcAngle:
         'The supplier survey is the interesting asset. It is the closest thing Maine has to a mapped ' +
@@ -465,8 +466,7 @@ window.RoscData.institutions = {
         'industrial AI company looking for design partners.',
       entryPoints: [
         { value: 'mainemep.org', confidence: 'verified' }
-      ],
-      entryGap: 'Director not confirmed.'
+      ]
     },
     {
       id: 'inst-loring',
@@ -536,13 +536,19 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 2,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-39', 'src-107'],
+      sourceIds: ['src-39', 'src-107', 'src-140'],
       location: { town: 'Waterville', lat: 44.5521, lng: -69.6317, precision: 'approximate' },
       cluster: [],
-      what: 'Accelerator in Waterville. Record is thin in the material reviewed for this build.',
-      facts: [],
+      what:
+        'Regional startup accelerator operated by the Central Maine Growth Council, opened its inaugural ' +
+        'cohort in February 2022. A 12-week accelerator plus the Dirigo Launch Incubator, an 8-week ' +
+        'virtual program for ideation-stage startups.',
+      facts: [
+        { label: 'Track record', value: '$14.6 million in total alumni sales and more than $21 million in capital raised by alumni companies over its first four years, plus 150 jobs created', confidence: 'verified' },
+        { label: 'Operator', value: 'Central Maine Growth Council, which also holds the FAST award described elsewhere in this document', confidence: 'verified' }
+      ],
       entryPoints: [
         { value: 'dirigolabs.org', confidence: 'verified' }
       ]
@@ -555,13 +561,20 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 2,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-110'],
+      sourceIds: ['src-110', 'src-141'],
       location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
       cluster: [],
-      what: 'Runs the Top Gun founder program. Record is thin in the material reviewed for this build.',
-      facts: [],
+      what:
+        'Runs the 15-week Top Gun founder training program, begun in 2009 with a single Portland cohort ' +
+        'of 12 entrepreneurs. Matches founders with volunteer mentors and ends in a showcase pitch event ' +
+        'in front of more than 200 business leaders and potential investors.',
+      facts: [
+        { label: 'Track record', value: 'More than 370 Maine entrepreneurs served since 2009', confidence: 'verified' },
+        { label: 'Reach', value: 'Cohorts have run in Portland, Lewiston Auburn, Waterville, Brunswick, Rockland and Bangor', confidence: 'verified' },
+        { label: '2026 partner', value: 'Northern Maine Development Commission co-announced the 2026 Top Gun class', confidence: 'verified', note: 'NMDC also hosts a Maine APEX Accelerator counselor, covered elsewhere in this document.' }
+      ],
       entryPoints: [
         { value: 'mced.biz', confidence: 'verified' }
       ]
@@ -574,13 +587,19 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 5,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-108'],
       location: { town: 'Statewide', lat: 44.4, lng: -69.5, precision: 'approximate' },
       cluster: [],
-      what: 'Industry association for Maine manufacturers. Record is thin in the material reviewed for this build.',
-      facts: [],
+      what:
+        'Nonpartisan 501(c)(6) trade association serving more than 200 Maine manufacturers, originally a ' +
+        'small group of metal products companies that traveled New England together for contract work. ' +
+        'Renamed from that narrower identity after an early-2000s Maine Department of Labor analysis found ' +
+        'the membership had diversified well beyond metal products.',
+      facts: [
+        { label: 'Advocacy focus', value: 'Workforce development, taxation, human resources and wage and hour rules, and energy', confidence: 'verified' }
+      ],
       entryPoints: [
         { value: 'mainemfg.com', confidence: 'verified' }
       ]
@@ -593,17 +612,22 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 1,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-114'],
       location: { town: 'Portland', lat: 43.6489, lng: -70.2496, precision: 'approximate' },
       cluster: ['maritime-autonomy', 'food-water-bio'],
-      what: 'Ocean science and marine resource research in Portland.',
-      facts: [{ label: 'President', value: '', confidence: 'gap' }],
+      what:
+        'Ocean science and marine resource research at a 44,000 square foot facility at Union Wharf, ' +
+        'opened 2005. Its Sam L. Cohen Center for Interactive Learning, opened 2006, runs LabVenture, a ' +
+        'hands-on marine science program that has reached more than 170,000 Maine 5th and 6th graders ' +
+        'since launch, free of charge to every school in the state.',
+      facts: [
+        { label: 'President and CEO', value: 'Glenn Prickett', confidence: 'verified', note: 'Joined September 2023.' }
+      ],
       entryPoints: [
         { value: 'gmri.org', confidence: 'verified' }
-      ],
-      entryGap: 'President not confirmed.'
+      ]
     },
     {
       id: 'inst-island',
@@ -613,13 +637,19 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 1,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-115'],
       location: { town: 'Rockland', lat: 44.1037, lng: -69.1089, precision: 'approximate' },
       cluster: ['food-water-bio'],
-      what: 'Community and coastal resilience organization working across Maine’s island and coastal communities.',
-      facts: [],
+      what:
+        '41-year-old nonprofit building the resilience of Maine’s island and remote coastal communities ' +
+        'through education, employment access, and infrastructure support for broadband, transportation ' +
+        'and climate adaptation.',
+      facts: [
+        { label: 'Fellowship program', value: 'More than 158 fellows placed across 35 communities over 25 years, contributing over 500,000 hours of direct community support', confidence: 'verified' },
+        { label: 'Community Impact Fund', value: 'More than $2 million invested in island and coastal communities since 2017', confidence: 'verified' }
+      ],
       entryPoints: [
         { value: 'islandinstitute.org', confidence: 'verified' }
       ]
@@ -632,13 +662,19 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 1,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-116'],
       location: { town: 'Bar Harbor', lat: 44.4262, lng: -68.3095, precision: 'approximate' },
       cluster: ['food-water-bio'],
-      what: 'Biomedical research institute with regeneration and aging programs.',
-      facts: [],
+      what:
+        'Independent biomedical research institute founded in 1898, one of the oldest in the country. ' +
+        'Ten year-round research labs plus visiting summer scientists study tissue regeneration and aging ' +
+        'using non-mammalian models (Drosophila, C. elegans, axolotl, zebrafish, killifish), aimed at heart ' +
+        'disease, diabetes, cancer and neurodegenerative disease.',
+      facts: [
+        { label: 'Recognition', value: 'NIH-designated Center of Biomedical Research Excellence since 2013', confidence: 'verified' }
+      ],
       entryPoints: [
         { value: 'mdibl.org', confidence: 'verified' }
       ]
@@ -651,13 +687,18 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 1,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-117'],
       location: { town: 'Walpole', lat: 43.9356, lng: -69.5786, precision: 'approximate' },
       cluster: ['maritime-autonomy', 'food-water-bio'],
-      what: 'UMaine’s marine laboratory on the Damariscotta River.',
-      facts: [],
+      what:
+        'UMaine’s marine laboratory on the Damariscotta River, founded 1965 on a 127-acre farm donated by ' +
+        'Ira C. Darling. Now 170 acres with 2 kilometers of river frontage, a 64-bed dormitory and a ' +
+        'shellfish hatchery.',
+      facts: [
+        { label: 'Population', value: 'About 50 year-round, growing past 100 in summer with interns, course participants and visiting scientists', confidence: 'verified' }
+      ],
       entryPoints: [
         { value: 'dmc.umaine.edu', confidence: 'verified' }
       ]
@@ -737,17 +778,19 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 2,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-40'],
+      sourceIds: ['src-40', 'src-139'],
       location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
       cluster: [],
-      what: 'Small Business Development Centers providing free business advising statewide.',
-      facts: [
-        { label: 'Phone', value: '207-780-4420', confidence: 'unverified', note: 'From a secondary source. Confirm before use.' }
-      ],
+      what:
+        'Small Business Development Centers providing free business advising statewide, an SBA program ' +
+        'run jointly with Maine DECD. Hosted by the University of Southern Maine and the Androscoggin ' +
+        'Valley Council of Governments, plus the Northern Maine Development Commission, already covered ' +
+        'elsewhere in this document.',
+      facts: [],
       entryPoints: [
-        { value: '207-780-4420', confidence: 'unverified' }
+        { value: 'mainesbdc.org', confidence: 'verified' }
       ]
     },
     {
@@ -780,13 +823,18 @@ window.RoscData.institutions = {
       category: 'institution',
       chainStage: 2,
       openness: 'MED',
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
       sourceIds: ['src-111'],
       location: { town: 'Bangor', lat: 44.8016, lng: -68.7712, precision: 'approximate' },
       cluster: [],
-      what: 'Regional economic development organization for eastern Maine.',
-      facts: [],
+      what:
+        'Private nonprofit economic development organization founded 1967, serving Hancock, Penobscot and ' +
+        'Piscataquis Counties plus part of Waldo County, almost 11,000 square miles and Maine’s largest ' +
+        'economic development district.',
+      facts: [
+        { label: 'Programs', value: 'SBA 7(a) Community Advantage loans up to $250,000, SBA 504 loans up to $5 million, and WIOA-funded workforce development including career navigation and apprenticeships', confidence: 'verified' }
+      ],
       entryPoints: [
         { value: 'emdc.org', confidence: 'verified' }
       ]
