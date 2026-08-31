@@ -81,7 +81,7 @@ window.RoscData.institutions = {
       openness: 'HIGH',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-34'],
+      sourceIds: ['src-34', 'src-156'],
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
       cluster: ['composites-am', 'food-water-bio'],
       what:
@@ -90,7 +90,8 @@ window.RoscData.institutions = {
         'composites layup and bioproduction.',
       facts: [
         { label: 'Parent', value: 'Midcoast Regional Redevelopment Authority, a public municipal corporation created by the Maine Legislature in 2007, governed by 11 trustees appointed by the Governor and confirmed by the Legislature', confidence: 'verified' },
-        { label: 'Executive Director', value: 'Kristine Logan', confidence: 'unverified', note: 'Confirm before outreach.' },
+        { label: 'Executive Director', value: 'Kristine Logan', confidence: 'unverified', note: 'MRRA opened a search for a new executive director in November 2024. Confirm before outreach.' },
+        { label: 'Board Chair', value: 'Barry Woods', confidence: 'verified', note: '2026 board of trustees; Herman A. Nichols is vice chair, Barry Valentine is secretary.' },
         { label: 'Site', value: 'Roughly 3,200 acres, close to 2 million square feet of commercial and industrial space, more than 150 business entities, just under 3,000 jobs', confidence: 'verified' }
       ],
       vcAngle:
@@ -150,7 +151,7 @@ window.RoscData.institutions = {
       openness: 'HIGH',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-38'],
+      sourceIds: ['src-38', 'src-149'],
       location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
       cluster: ['cyber-software', 'maritime-autonomy'],
       what:
@@ -159,7 +160,8 @@ window.RoscData.institutions = {
         'a Future of Healthcare residency.',
       facts: [
         { label: 'Focus areas', value: 'AI, digital engineering, advanced manufacturing, blue economy and climate', confidence: 'verified' },
-        { label: 'Program history', value: 'Ended its Techstars partnership in 2023 and brought programming in house', confidence: 'verified' }
+        { label: 'Program history', value: 'Ended its Techstars partnership in 2023 and brought programming in house', confidence: 'verified' },
+        { label: 'Director of Entrepreneurship', value: 'Chris Torina', confidence: 'verified', note: 'Also leads the Roux Institute’s National Security Innovation Hub.' }
       ],
       vcAngle:
         'The only accelerator in the state running a repeatable cohort with a defense-adjacent focus ' +
@@ -167,8 +169,7 @@ window.RoscData.institutions = {
         'cheap deal-flow subscription rather than a competitive process to win.',
       entryPoints: [
         { value: 'roux.northeastern.edu', confidence: 'verified' }
-      ],
-      entryGap: 'Entrepreneurship leadership not confirmed.'
+      ]
     },
     {
       id: 'inst-apex',
@@ -180,15 +181,17 @@ window.RoscData.institutions = {
       openness: 'HIGH',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-36'],
+      sourceIds: ['src-36', 'src-150'],
       location: { town: 'Statewide', lat: 44.6939, lng: -69.3819, precision: 'approximate' },
       cluster: [],
       what:
         'DLA-funded procurement technical assistance, with statewide counselors hosted across regional ' +
-        'development organizations including NMDC (Aroostook), AVCOG and Sunrise County Economic Council.',
+        'development organizations including NMDC (Aroostook), AVCOG and Sunrise County Economic Council. ' +
+        'The program itself is run by EMDC, already covered elsewhere in this document.',
       facts: [
         { label: 'Services', value: 'SAM registration, solicitation analysis, certification guidance (HUBZone, WOSB), bid preparation, post-award contract management, and help exploring SBIR and DoD R&D opportunities', confidence: 'verified' },
-        { label: 'Claimed reach', value: 'Over 100 free workshops and more than $3.02 billion in assistance', confidence: 'unverified', note: 'Self-reported.' }
+        { label: 'Claimed reach', value: 'Over 100 free workshops and more than $3.02 billion in assistance', confidence: 'unverified', note: 'Self-reported.' },
+        { label: 'Director', value: 'Miranda Pelkey', confidence: 'verified', note: 'In the role since May 2025; joined Maine APEX in 2020.' }
       ],
       vcAngle:
         'Free, and it does the unglamorous registration and compliance work that kills first-time ' +
@@ -199,8 +202,7 @@ window.RoscData.institutions = {
         { value: 'maineapex.com', confidence: 'verified' },
         { value: 'Dana Delano, Aroostook, via NMDC', confidence: 'verified' },
         { value: 'Peter Wilkens, via AVCOG', confidence: 'verified' }
-      ],
-      entryGap: 'Statewide director not confirmed.'
+      ]
     },
     {
       id: 'inst-cmgc',
@@ -384,7 +386,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-32', 'src-47'],
+      sourceIds: ['src-32', 'src-47', 'src-151', 'src-158'],
       location: { town: 'Castine', lat: 44.3873, lng: -68.7998, precision: 'approximate' },
       cluster: ['maritime-autonomy', 'workforce-education'],
       what:
@@ -392,8 +394,8 @@ window.RoscData.institutions = {
         'vessels, marine science and engineering laboratories, power-plant and navigation simulators, a ' +
         'diesel-engine laboratory, and liquid-cargo simulation.',
       facts: [
-        { label: 'Brunswick Landing presence', value: 'Opened a 50,000 square foot workforce training center at Brunswick Landing in 2025', confidence: 'unverified', note: 'From the First Light Works bid. Confirm the opening and the square footage.' },
-        { label: 'President', value: '', confidence: 'gap' }
+        { label: 'Brunswick Landing presence', value: 'The 50,000 square foot Maritime Industrial Workforce Training Center, in the former Wayfair building, opened with an event on October 24, 2025 alongside Maine Space Corporation. Will house the Bath Iron Works Apprentice School and the Region 10 Technical High School engineering and architectural design program.', confidence: 'verified' },
+        { label: 'President', value: 'Craig Johnson', confidence: 'verified', note: 'MMA class of 1991, named the Academy’s 16th president, effective March 19, 2025.' }
       ],
       vcAngle:
         'The crewed-operations counterpart to any uncrewed maritime thesis. Simulators and research ' +
@@ -401,8 +403,7 @@ window.RoscData.institutions = {
         'concept of operations a USV has to satisfy.',
       entryPoints: [
         { value: 'mainemaritime.edu', confidence: 'verified' }
-      ],
-      entryGap: 'President not confirmed.'
+      ]
     },
     {
       id: 'inst-mdia',
@@ -414,7 +415,7 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-41', 'src-104'],
+      sourceIds: ['src-41', 'src-104', 'src-148'],
       location: { town: 'Statewide', lat: 44.3, lng: -69.6, precision: 'approximate' },
       cluster: [],
       what:
@@ -425,7 +426,8 @@ window.RoscData.institutions = {
       facts: [
         { label: 'Funding raised', value: '$5M from the Navy’s submarine industrial base program, executed via BlueForge Alliance, which went to York County Community College for a 10,000 square foot welding lab and trades expansion', confidence: 'verified' },
         { label: 'Workforce need addressed', value: '1,200 to 1,700 skilled workers annually, more than 7,500 openings across the big three over five years', confidence: 'verified' },
-        { label: 'Executive Director', value: '', confidence: 'gap' }
+        { label: 'Executive Director', value: 'Andy Roy', confidence: 'verified' },
+        { label: 'Program Director', value: 'Mark Winter', confidence: 'verified', note: 'MDIA’s first program director. Retired US Navy Captain (30 years), previously Commandant of Midshipmen and Vice President of Student Affairs at Maine Maritime Academy.' }
       ],
       scopeNote:
         'MDIA is workforce only. It does no technology scouting and no transition work. That distinction ' +
@@ -437,8 +439,7 @@ window.RoscData.institutions = {
         'here and at the community colleges.',
       entryPoints: [
         { value: 'mainedefenseindustryalliance.com', confidence: 'verified' }
-      ],
-      entryGap: 'Executive Director not confirmed.'
+      ]
     },
     {
       id: 'inst-mep',
@@ -479,7 +480,7 @@ window.RoscData.institutions = {
       opennessNote: 'Undeveloped, not closed',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-25', 'src-109'],
+      sourceIds: ['src-10', 'src-25', 'src-109', 'src-152'],
       location: { town: 'Limestone', lat: 46.95, lng: -67.8858, precision: 'approximate' },
       cluster: ['space-high-latitude'],
       what:
@@ -489,7 +490,8 @@ window.RoscData.institutions = {
       facts: [
         { label: 'Planning funding', value: '$740,000 DoD grant matched by $85,000 from Maine DECD for airport master planning, energy resiliency and workforce assessment', confidence: 'verified' },
         { label: 'Flight heritage', value: 'bluShift launched Stardust 1.0 from here in January 2021', confidence: 'verified' },
-        { label: 'Contact', value: '', confidence: 'gap' }
+        { label: 'President and CEO', value: 'Jonathan Judkins', confidence: 'verified', note: 'In the role since January 1, 2024, succeeding longtime president Carl Flora.' },
+        { label: 'Recent use', value: 'Hosted Operation Northern Phoenix, a National Guard exercise, in June 2026', confidence: 'verified' }
       ],
       vcAngle:
         'For long-endurance UAS, hypersonic test and cold-weather trials, Loring offers uncongested ' +
@@ -509,16 +511,16 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-106'],
+      sourceIds: ['src-10', 'src-106', 'src-155'],
       location: { town: 'Portland', lat: 43.6591, lng: -70.2568, precision: 'approximate' },
       cluster: [],
       what:
         'Private nonprofit corporate attraction organization with three decades of confidential no-cost ' +
         'site selection and expansion services. Its board and membership are drawn from senior ' +
-        'executives of Maine companies, the Maine State Chamber, the DECD Commissioner and university ' +
-        'presidents.',
+        'executives of Maine companies, the Maine State Chamber, the DECD Commissioner (Michael Duguay ' +
+        'as of 2026) and university presidents.',
       facts: [
-        { label: 'President and CEO', value: 'Peter DelGreco', confidence: 'unverified' }
+        { label: 'President and CEO', value: 'Peter DelGreco', confidence: 'verified', note: 'President since 2012, joined Maine & Co. in 2004.' }
       ],
       vcAngle:
         'The single point of contact into Maine’s corporate and public leadership, and it is free and ' +
@@ -803,17 +805,16 @@ window.RoscData.institutions = {
       openness: 'MED',
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-25', 'src-113'],
+      sourceIds: ['src-25', 'src-113', 'src-157'],
       location: { town: 'Augusta', lat: 44.3106, lng: -69.7795, precision: 'approximate' },
       cluster: ['space-high-latitude'],
       what:
         'NASA Space Grant consortium for Maine. Provided $29,000 alongside the two-year $426,000 MTI ' +
         'grant that funds the Maine Space Corporation.',
-      facts: [{ label: 'Director', value: '', confidence: 'gap' }],
+      facts: [{ label: 'Executive Director', value: 'Dr. Jeremy Qualls', confidence: 'verified', note: 'Also directs NASA Maine EPSCoR.' }],
       entryPoints: [
         { value: 'msgc.org', confidence: 'verified' }
-      ],
-      entryGap: 'Director not confirmed.'
+      ]
     },
     {
       id: 'inst-emdc',

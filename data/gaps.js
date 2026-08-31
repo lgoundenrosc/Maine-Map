@@ -13,20 +13,11 @@ window.RoscData.gaps = {
   groups: [
     {
       id: 'gap-leadership',
-      title: 'Leadership, all unconfirmed',
+      title: 'Leadership',
       kind: 'leadership',
       items: [
-        { id: 'gap-l-01', item: 'Maine Defense Industry Alliance executive director', ref: 'inst-mdia' },
-        { id: 'gap-l-02', item: 'Roux Institute entrepreneurship lead', ref: 'inst-roux' },
-        { id: 'gap-l-03', item: 'Maine APEX statewide director', ref: 'inst-apex' },
-        { id: 'gap-l-06', item: 'Maine Maritime Academy president', ref: 'inst-mma' },
-        { id: 'gap-l-07', item: 'Loring Development Authority lead', ref: 'inst-loring' },
-        { id: 'gap-l-08', item: 'SUPSHIP Bath commanding officer', ref: null },
-        { id: 'gap-l-09', item: 'PNSY shipyard commander', ref: 'anchor-pnsy' },
-        { id: 'gap-l-10', item: 'MRRA board chair', ref: 'inst-techplace' },
-        { id: 'gap-l-11', item: 'Maine DECD commissioner', ref: null },
-        { id: 'gap-l-12', item: 'Maine Space Grant Consortium director', ref: 'inst-msgc' },
-        { id: 'gap-l-13', item: 'TechPlace manager', ref: 'inst-techplace' }
+        { id: 'gap-l-13', item: 'TechPlace manager', ref: 'inst-techplace' },
+        { id: 'gap-l-14', item: 'MRRA executive director, given a November 2024 search for a replacement and conflicting current sources', ref: 'inst-techplace' }
       ]
     },
     {

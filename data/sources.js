@@ -161,5 +161,16 @@ window.RoscData.sources = [
   { id: 'src-144', n: 144, title: 'With eye on Maine’s space industry, $5.5B global tech company opens Brunswick office', publisher: 'Mainebiz', date: '2026', locator: '', quality: 'trade press' },
   { id: 'src-145', n: 145, title: 'Bio-Materials Startup Latis Materials Wins $20,000 Top Prize at Central Maine Growth Council’s Dirigo Labs Accelerator Pitch Competition', publisher: 'Dirigo Labs', date: '2026-06', locator: 'dirigolabs.org', quality: 'primary' },
   { id: 'src-146', n: 146, title: 'Saco startup steals the show at Dirigo pitch competition', publisher: 'Mainebiz', date: '2026-06', locator: '', quality: 'trade press' },
-  { id: 'src-147', n: 147, title: 'Company site', publisher: 'Latis Materials', date: '2026', locator: 'latismaterials.com', quality: 'primary' }
+  { id: 'src-147', n: 147, title: 'Company site', publisher: 'Latis Materials', date: '2026', locator: 'latismaterials.com', quality: 'primary' },
+  { id: 'src-148', n: 148, title: 'How Maine’s economy benefits from billion-dollar defense contracts', publisher: 'Central Maine / Portland Press Herald', date: '2026-07-05', locator: '', quality: 'press' },
+  { id: 'src-149', n: 149, title: 'Staff page, Chris Torina', publisher: 'Roux Institute at Northeastern University', date: '2026', locator: 'roux.northeastern.edu', quality: 'primary' },
+  { id: 'src-150', n: 150, title: 'Team page, Miranda Pelkey', publisher: 'Maine APEX Accelerator', date: '2026', locator: 'maineapex.com', quality: 'primary' },
+  { id: 'src-151', n: 151, title: 'Office of the President', publisher: 'Maine Maritime Academy', date: '2026', locator: 'mainemaritime.edu', quality: 'primary' },
+  { id: 'src-152', n: 152, title: 'Inside the National Guard operation at the former Loring Air Force Base', publisher: 'Bangor Daily News', date: '2026-06-12', locator: '', quality: 'press' },
+  { id: 'src-153', n: 153, title: 'Captain Nice Assumes Command of Portsmouth Naval Shipyard', publisher: 'DVIDS / Naval Sea Systems Command', date: '2025-06-13', locator: '', quality: 'primary' },
+  { id: 'src-154', n: 154, title: 'Fields Assumes Command of Supervisor of Shipbuilding, Bath', publisher: 'Naval Sea Systems Command', date: '2025-04-25', locator: 'navsea.navy.mil', quality: 'primary' },
+  { id: 'src-155', n: 155, title: 'Governor Mills Announces Nomination of Michael Duguay as Commissioner of Maine Department of Economic and Community Development', publisher: 'Office of Governor Janet T. Mills', date: '2026', locator: '', quality: 'primary' },
+  { id: 'src-156', n: 156, title: '2026 MRRA Committee Schedule Matrix', publisher: 'Midcoast Regional Redevelopment Authority', date: '2026', locator: 'brunswicklanding.us', quality: 'primary' },
+  { id: 'src-157', n: 157, title: 'Staff page, Jeremy Qualls', publisher: 'Maine Space Grant Consortium', date: '2026', locator: 'msgc.org', quality: 'primary' },
+  { id: 'src-158', n: 158, title: 'New aerospace, maritime industry facilities open on Brunswick Landing', publisher: 'Portland Press Herald', date: '2025-10-27', locator: '', quality: 'press' }
 ];

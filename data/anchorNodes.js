@@ -69,7 +69,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'Kittery', lat: 43.0793, lng: -70.742, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-07', 'src-08', 'src-09', 'src-05'],
+      sourceIds: ['src-07', 'src-08', 'src-09', 'src-05', 'src-153'],
       openness: 'HIGH',
       summary:
         'Overhaul and modernization of Los Angeles and Virginia class attack submarines. The Navy’s ' +
@@ -78,7 +78,8 @@ window.RoscData.anchorNodes = {
         { label: 'Civilian employment', value: '7,721, up from 7,469 the prior year', confidence: 'verified', note: '2024 Seacoast Shipyard Association report.' },
         { label: 'Regional economic impact', value: '$1.6 billion, up from $1.54B in 2023 and $1.46B in 2022', confidence: 'verified', note: 'This is a Maine plus New Hampshire plus Massachusetts figure from a booster association, not a Navy Maine-only number.' },
         { label: 'Infrastructure', value: 'The $1.7B-plus Multi-Mission Dry Dock, the largest project to date under the Shipyard Infrastructure Optimization Program', confidence: 'verified' },
-        { label: 'Policy position', value: 'Named in America’s Maritime Action Plan (February 2026) as a target for digital shipyard infrastructure investment', confidence: 'verified' }
+        { label: 'Policy position', value: 'Named in America’s Maritime Action Plan (February 2026) as a target for digital shipyard infrastructure investment', confidence: 'verified' },
+        { label: 'Shipyard Commander', value: 'Capt. Jesse Nice', confidence: 'verified', note: '88th shipyard commander in PNSY’s 225-year history, relieved Capt. Michael Oberdorf on June 13, 2025.' }
       ],
       caveat:
         'The $1.6 billion regional impact figure covers Maine, New Hampshire and Massachusetts and comes ' +
