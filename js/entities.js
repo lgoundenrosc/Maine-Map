@@ -39,7 +39,7 @@
        pass but had never been added here, so they rendered as a gap. */
     'creativecompositesgroup.com', 'customcomposite.com', 'lymanmorse.com',
     'frontstreetshipyard.com', 'washburndoughty.com', 'cianbro.com',
-    'latticematerials.com', 'greisenaerospace.com', 'prominaerospace.com',
+    'latismaterials.com', 'greisenaerospace.com', 'prominaerospace.com',
     'compotechinc.com', 'hodgdonyachts.com', 'howelllabs.com',
     'odatmachine.com', 'downeastinnovation.com', 'starcsystems.com',
     'blushiftaerospace.com', 'poseidonaero.com', 'valt-ent.com',

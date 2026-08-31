@@ -763,7 +763,7 @@ window.RoscData.institutions = {
       sourceIds: ['src-48'],
       location: { town: 'Brunswick', lat: 43.9075, lng: -69.9628, precision: 'approximate' },
       cluster: ['cyber-software', 'workforce-education'],
-      what: 'Liberal arts college adjacent to Brunswick Landing, with a computer science department.',
+      what: 'Liberal arts college adjacent to Brunswick Landing.',
       facts: [],
       entryPoints: [
         { value: 'bowdoin.edu', confidence: 'verified' }

@@ -42,8 +42,7 @@ window.RoscData.gaps = {
         { id: 'gap-f-10', item: 'The reported $9.5M ONR contract to UMaine and $9M DoD Arctic snowpack contract', ref: 'inst-ascc' },
         { id: 'gap-f-11', item: 'Reported $150M private and $100M Navy investment into Brunswick Landing', ref: 'inst-techplace' },
         { id: 'gap-f-12', item: 'Reported SpaceX Starlink ground station in Maine', ref: null },
-        { id: 'gap-f-13', item: 'Poseidon Aerospace’s two-ton payload and 1,500-mile range claims, company-supplied and independent of the now-confirmed $11M seed', ref: 'co-poseidon' },
-        { id: 'gap-f-14', item: 'Whether Lattice Materials operates any actual Maine facility, given the company’s 2026 announcements describe an expansion exclusively in Bozeman, Montana', ref: 'co-lattice' }
+        { id: 'gap-f-13', item: 'Poseidon Aerospace’s two-ton payload and 1,500-mile range claims, company-supplied and independent of the now-confirmed $11M seed', ref: 'co-poseidon' }
       ]
     },
     {
