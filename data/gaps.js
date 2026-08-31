@@ -37,7 +37,7 @@ window.RoscData.gaps = {
       items: [
         { id: 'gap-s-01', item: 'Whether Hangar 5 specifically has had its AFFF concentrate removed, given a January 1, 2026 legal deadline. Hangars 6 and 7 are confirmed cleared as of April 2025.', ref: 'test-msc', priority: 'high', why: 'Material to any lease or test-siting decision on the hangar complex.' },
         { id: 'gap-s-02', item: 'Final award status of Maine Space Corporation’s own NSF Regional Innovation Engines proposal (small satellite and Earth observation, with New Hampshire), which advanced within the competition but is not confirmed as an award winner. Not to be confused with the separate Seafood Engine in New England, which won a confirmed $15M NSF Engines award in 2026.', ref: 'inst-msc' },
-        { id: 'gap-s-04', item: 'Whether the DIU OnRamp Hub sources-sought solicitation, open July 7-31, 2026, has produced hub location selections or awards', ref: null, priority: 'high', why: 'Determines whether the stage 7 break is about to be addressed by someone else.' },
+        { id: 'gap-s-04', item: 'The July 2026 DIU OnRamp Hub solicitation has produced three new hub selections (Kentucky, Minnesota, Montana), none in New England, alongside the five existing hubs (Phoenix, Dayton, Honolulu, Seattle, Wichita). Whether a further expansion round could still reach Maine is unconfirmed.', ref: null, priority: 'high', why: 'Determines whether the stage 7 break is about to be addressed by someone else.' },
         { id: 'gap-s-05', item: 'Whether any Maine entity holds a Partnership Intermediary Agreement with a DoW component', ref: null }
       ]
     },
@@ -46,7 +46,12 @@ window.RoscData.gaps = {
       title: 'Contacts',
       kind: 'contact',
       items: [
-        { id: 'gap-c-01', item: 'Every institutional email and phone not explicitly listed in the institution playbook. Do not generate these.', ref: null, priority: 'high' }
+        { id: 'gap-c-01', item: 'Every institutional email and phone not explicitly listed in the institution playbook. Do not generate these.', ref: null, priority: 'high' },
+        { id: 'gap-c-02', item: 'MTI named individual contacts beyond Brian Whitney and Tom Kittredge', ref: 'inst-mti' },
+        { id: 'gap-c-03', item: 'UMaine ASCC industry engagement contact', ref: 'inst-ascc' },
+        { id: 'gap-c-04', item: 'Central Maine Growth Council named contact', ref: 'inst-cmgc' },
+        { id: 'gap-c-05', item: 'No named workforce or admissions contact confirmed for SMCC, YCCC, Bowdoin, UMaine, USM, UMA, Bates, Colby, CMCC, EMCC, KVCC, NMCC, or WCCC', ref: null },
+        { id: 'gap-c-06', item: 'No named contact confirmed for Educate Maine, Live + Work in Maine, or the Maine Apprenticeship Program', ref: null }
       ]
     }
   ]
