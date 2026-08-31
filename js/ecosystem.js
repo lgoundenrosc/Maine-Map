@@ -51,6 +51,7 @@
     community: null,
     entity: null,
     query: '',
+    mapSearch: '',
     sort: { key: 'name', dir: 1 }
   };
 
@@ -60,6 +61,22 @@
 
   function activeFacetKeys() {
     return FACETS.map(function (f) { return f.key; }).filter(function (k) { return state.facets[k]; });
+  }
+
+  /* Quick-jump search for the map view. Separate from the Index tab's
+     state.query, which drives a full table filter rather than a pick list.
+     Matches earlier in the name sort first, so a prefix match beats a
+     mid-name one. */
+  function mapSearchMatches() {
+    var q = state.mapSearch.trim().toLowerCase();
+    if (!q) return [];
+    return ALL
+      .filter(function (e) { return e.name.toLowerCase().indexOf(q) !== -1; })
+      .sort(function (a, b) {
+        var ai = a.name.toLowerCase().indexOf(q), bi = b.name.toLowerCase().indexOf(q);
+        return ai !== bi ? ai - bi : a.name.localeCompare(b.name);
+      })
+      .slice(0, 8);
   }
 
   function filtered() {
@@ -145,7 +162,28 @@
 
     var unpl = E.unplaced(f);
 
-    return '' +
+    var searchHits = mapSearchMatches();
+    var searchCard = '' +
+    '<div class="e-card">' +
+      '<div class="e-card-body" style="padding-top:14px">' +
+        '<span class="e-label" style="display:flex;align-items:center;gap:7px">' + I.filter + 'Find an organization</span>' +
+        '<input class="e-search" id="e-map-search" type="search" placeholder="Search by name" ' +
+          'value="' + attr(state.mapSearch) + '" aria-label="Search organizations by name" ' +
+          'style="margin-top:8px;margin-bottom:0;max-width:none" autocomplete="off">' +
+        (state.mapSearch.trim()
+          ? (searchHits.length
+              ? '<div class="e-unplaced" style="margin-top:10px">' +
+                  searchHits.map(function (e) {
+                    return '<button type="button" data-search-id="' + attr(e.id) + '"><b>' + esc(e.name) + '</b>' +
+                      (e.place.town ? '<span>' + esc(e.place.town) + '</span>' : '') + '</button>';
+                  }).join('') +
+                '</div>'
+              : '<p class="e-empty" style="margin-top:10px">No organizations match that search.</p>')
+          : '') +
+      '</div>' +
+    '</div>';
+
+    return searchCard +
     '<div class="e-card">' +
       '<div class="e-card-body" style="padding-top:14px">' +
         '<span class="e-label" style="display:flex;align-items:center;gap:7px">' + I.filter + 'Sector</span>' +
@@ -578,6 +616,16 @@
       if (t.closest('#e-sheet-close')) { state.community = null; paint(); B.reset(); return; }
       if (t.closest('#e-drawer-close')) { state.entity = null; paint(); return; }
 
+      var searchPick = t.closest('[data-search-id]');
+      if (searchPick) {
+        var sid = searchPick.dataset.searchId;
+        state.mapSearch = '';
+        openEntity(sid);
+        var se = byId(sid);
+        if (se && se.place && typeof se.place.lat === 'number') B.focus({ lat: se.place.lat, lng: se.place.lng });
+        return;
+      }
+
       var pick = t.closest('[data-id]');
       if (pick) { openEntity(pick.dataset.id); return; }
 
@@ -606,10 +654,18 @@
         var again = document.getElementById('e-search');
         if (again) { again.focus(); again.setSelectionRange(box.value.length, box.value.length); }
       }
+      if (ev.target.id === 'e-map-search') {
+        state.mapSearch = ev.target.value;
+        var mbox = ev.target;
+        paint();
+        var mgain = document.getElementById('e-map-search');
+        if (mgain) { mgain.focus(); mgain.setSelectionRange(mbox.value.length, mbox.value.length); }
+      }
     });
 
     document.addEventListener('keydown', function (ev) {
       if (ev.key !== 'Escape') return;
+      if (state.mapSearch) { state.mapSearch = ''; paint(); return; }
       if (state.entity) { state.entity = null; paint(); }
       else if (state.community) { state.community = null; paint(); B.reset(); }
     });
