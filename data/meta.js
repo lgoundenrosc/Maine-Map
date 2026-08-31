@@ -30,7 +30,8 @@ window.RoscData.meta = {
   title: 'Maine Defense Innovation Ecosystem — VC Landscape Map',
   shortTitle: 'Maine Defense Innovation Ecosystem',
   subtitle:
-    'August 2026 · For internal Rosc use · Personnel unverified, confirm before outreach. ' +
+    'August 2026 · For internal Rosc use · 19 of 20 named contacts confirmed to a dated source; see the ' +
+    'verification gaps table (Section 5.12) for what remains open, and confirm any seat before outreach. ' +
     'Maine builds and tests for other people’s programs and holds no acquisition authority of its own.',
   badge: 'ROSC INTERNAL',
   date: 'August 2026',
@@ -40,7 +41,7 @@ window.RoscData.meta = {
   runningHeader:
     'Maine Defense Innovation Ecosystem — VC Landscape Map · Rosc Capital · August 2026 · INTERNAL',
   runningFooter:
-    'For internal Rosc Capital use only, personnel unverified, confirm before any outreach',
+    'For internal Rosc Capital use only, see Section 5.12 for open verification gaps, confirm any seat before outreach',
   structuralNote: {
     label: 'Structural note:',
     body:

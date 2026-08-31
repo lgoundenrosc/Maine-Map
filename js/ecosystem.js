@@ -271,7 +271,9 @@
         (e.blurb ? '<div class="e-section"><span class="e-label">Overview</span><p>' + esc(e.blurb) + '</p></div>'
                  : '<div class="e-section"><span class="e-label">Overview</span><p class="e-empty">No summary recorded in the source.</p></div>') +
         '<div class="e-kv">' +
-          '<div><span class="e-label">Confidence</span><span class="e-kv-val">' + esc(e.confidence) + '</span></div>' +
+          (e.confidence !== 'verified'
+            ? '<div><span class="e-label">Confidence</span><span class="e-kv-val">' + esc(e.confidence) + '</span></div>'
+            : '') +
           '<div><span class="e-label">As of</span><span class="e-kv-val">' + esc(e.asOf || 'not recorded') + '</span></div>' +
         '</div>' +
         (e.website
