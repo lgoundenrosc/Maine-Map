@@ -1,6 +1,6 @@
 /**
  * Integrity checks for the ecosystem map's data layer: every data/*.js and
- * js/*.js file ecosystem.html loads, in the order it loads them, so a
+ * js/*.js file index.html (the ecosystem map) loads, in the order it loads them, so a
  * syntax error surfaces at the file and line Node reports rather than only
  * inside a browser. Requiring each file already is the syntax check; this
  * adds cross-file checks a syntax pass alone can't catch: duplicate ids,
@@ -20,7 +20,7 @@ var path = require('path');
 
 var root = path.join(__dirname, '..');
 
-var html = fs.readFileSync(path.join(root, 'ecosystem.html'), 'utf8');
+var html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 var scripts = [];
 html.replace(/<script src="\.\/([^"]+)"><\/script>/g, function (_, src) {
   scripts.push(src);

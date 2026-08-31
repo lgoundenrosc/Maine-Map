@@ -9,15 +9,16 @@ that runs from research origin to mission partner, and it visibly breaks at stag
 
 ## Two documents
 
-`index.html` is the VC landscape map: nine tabs, a formation chain, a print stylesheet, the personnel
+`vc-map.html` is the VC landscape map: nine tabs, a formation chain, a print stylesheet, the personnel
 and routing layers. It is the analytic document.
 
-`ecosystem.html` is the ecosystem map: the same records plotted on a real map of Maine, browsable by
-town. Four surfaces, reached from the dock on the right.
+`index.html` is the ecosystem map: the same records plotted on a real map of Maine, browsable by
+town. Four surfaces, reached from the dock on the right. It is the site's homepage, since it's the
+document meant for general viewing.
 
 | | VC landscape map | Ecosystem map |
 | --- | --- | --- |
-| Entry | `index.html` | `ecosystem.html` |
+| Entry | `vc-map.html` | `index.html` |
 | Shape | nine tabs, chain diagram | map, municipality drill-down, index, help |
 | Theme | light, Rosc navy and rust, print first | dark, purple and orange, screen first |
 | Records | all of `data/` | organizations and places only |
@@ -129,8 +130,8 @@ scroll zoom, tooltip anchoring and marker management over the baked geometry.
 npm install          # build-time only, the documents have no runtime dependencies
 npm run geo          # rebake data/geo.js after changing the viewport
 npm run vendor       # recopy Leaflet after a version bump
-npm run artifact     # bundle ecosystem.html into one self-contained file
-npm run standalone   # the same for index.html
+npm run artifact     # bundle index.html (the ecosystem map) into one self-contained file
+npm run standalone   # the same for vc-map.html
 npm run validate     # load every data file and check ids, sources and website links
 ```
 
@@ -174,8 +175,8 @@ requirement. Classic scripts assigning into a `window.RoscData` namespace load e
 ## Layout
 
 ```
-index.html            VC landscape map shell, loads data before the application
-ecosystem.html        ecosystem map shell, same data layer
+index.html            ecosystem map shell, site homepage, loads data before the application
+vc-map.html           VC landscape map shell, same data layer
 css/styles.css        light design system, derived from the SOCOM map
 css/print.css         @media print, see below
 css/ecosystem.css     dark treatment of the same palette, screen first
@@ -273,10 +274,10 @@ worse of the two options, but it is a one-line change in `data/meta.js` if the c
 The two checks worth repeating before any publish are a scan of every string literal in `data/` and
 `js/` for em dashes and prose semicolons, and a scan of the same strings for email addresses, phone
 numbers and domains that are not on the allowlist above. Both are simple regex passes over the string
-literals in `data/*.js`, `js/*.js` and `index.html`.
+literals in `data/*.js`, `js/*.js`, `index.html` and `vc-map.html`.
 
 `npm run validate` covers what a regex pass cannot: it loads every data file in the order
-`ecosystem.html` does, so a syntax error surfaces at the file and line Node reports, and then checks
+`index.html` does, so a syntax error surfaces at the file and line Node reports, and then checks
 what only makes sense once everything is loaded together, duplicate entity ids, duplicate source
 definitions, a `sourceIds` entry that points at a source that does not exist, and how many entities
 resolve a website. It exits non-zero on any failure, so it is safe to run before a commit as well as

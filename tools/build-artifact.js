@@ -1,6 +1,6 @@
 /**
- * Bundles ecosystem.html into a single self-contained fragment for publishing
- * as a hosted page.
+ * Bundles index.html (the ecosystem map) into a single self-contained
+ * fragment for publishing as a hosted page.
  *
  * The multi-file version in this repository is the one to edit. This script
  * folds every stylesheet and script inline and drops the document wrapper,
@@ -24,7 +24,7 @@ function read(p) { return fs.readFileSync(path.join(root, p), 'utf8'); }
 /* A closing script tag inside a JS string would end the block early. */
 function safe(js) { return js.replace(/<\/script/gi, '<\\/script'); }
 
-var src = read('ecosystem.html');
+var src = read('index.html');
 
 var title = (src.match(/<title>([^<]*)<\/title>/) || [])[1] || 'Ecosystem Map';
 
@@ -45,8 +45,8 @@ var body = (src.match(/<main id="app">[\s\S]*?<\/main>/) || ['<main id="app"></m
 
 var doc =
   '<title>' + title + '</title>\n' +
-  '<!-- Self-contained build of ecosystem.html. Every stylesheet and script is\n' +
-  '     inlined below, the basemap included. Nothing is fetched at runtime.\n' +
+  '<!-- Self-contained build of index.html, the ecosystem map. Every stylesheet\n' +
+  '     and script is inlined below, the basemap included. Nothing is fetched at runtime.\n' +
   '     Coastline data from OpenStreetMap contributors, ODbL.\n' +
   '     Edit the multi-file version in the repository, not this file. -->\n' +
   '<style>\n' + styles.join('\n\n') + '\n</style>\n\n' +

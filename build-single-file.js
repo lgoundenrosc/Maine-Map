@@ -22,7 +22,7 @@ const read = (p) => fs.readFileSync(path.join(root, p), 'utf8');
 // A closing script tag inside a JS string would end the block early.
 const safe = (js) => js.replace(/<\/script/gi, '<\\/script');
 
-let html = read('index.html');
+let html = read('vc-map.html');
 
 html = html.replace(/<link rel="stylesheet" href="\.\/([^"]+)">/g, (_, href) =>
   '<style>\n/* ' + href + ' */\n' + read(href) + '\n</style>'
