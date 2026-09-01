@@ -112,6 +112,18 @@ button { font: inherit; color: inherit; }
 .leaflet-control-attribution a { color: var(--e-text-3); }
 .leaflet-control-zoom { display: none; }
 
+/* The floating panels over the map (.e-brand, .e-card, .e-corridor) all use
+   backdrop-filter: blur() at rest. Re-sampling that blur every frame while
+   the map underneath is animating is the main cause of choppy zoom, so it
+   is dropped for the duration of a zoom or pan. --e-panel is already 92%
+   opaque, so the panels look effectively identical without the blur, this
+   only matters while the map itself is moving. */
+body.e-map-moving .e-brand,
+body.e-map-moving .e-card,
+body.e-map-moving .e-corridor {
+  backdrop-filter: none;
+}
+
 /* ======================================================= brand card ====== */
 
 .e-brand {

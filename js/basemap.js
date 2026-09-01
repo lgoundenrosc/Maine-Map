@@ -149,6 +149,13 @@
     floor();
     map.on('resize', floor);
 
+    /* Backdrop-blur on the floating panels is expensive to re-sample every
+       frame while the map underneath is animating, which is what reads as
+       choppy zoom. Drop it for the duration of a zoom or pan; see the
+       matching rule in ecosystem.css. */
+    map.on('zoomstart movestart', function () { document.body.classList.add('e-map-moving'); });
+    map.on('zoomend moveend', function () { document.body.classList.remove('e-map-moving'); });
+
     map.setView(viewBounds.getCenter(), map.getMinZoom());
     return map;
   }
