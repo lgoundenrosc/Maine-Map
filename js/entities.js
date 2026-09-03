@@ -51,7 +51,9 @@
     'marine.unh.edu',
     /* Added during the round-1 unverified-record pass, replacing an
        unverified phone number entryPoint for Maine SBDC. */
-    'mainesbdc.org'
+    'mainesbdc.org',
+    /* Added on request. Checked against the company's own site. */
+    'flexcon.com'
   ];
 
   var DOMAIN_RE = /^[a-z0-9][a-z0-9.-]*\.(org|com|mil|edu|us|gov|net|biz)(\/[\w\-/]*)?$/i;

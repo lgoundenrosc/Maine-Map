@@ -193,5 +193,6 @@ window.RoscData.sources = [
   { id: 'src-176', n: 176, title: 'Testimony by Joe Powers, Managing Director, in support of LD legislation', publisher: 'Maine Legislature', date: '2026', locator: 'legislature.maine.gov', quality: 'primary' },
   { id: 'src-177', n: 177, title: 'Staff page, Beth Orcutt', publisher: 'Bigelow Laboratory for Ocean Sciences', date: '2026', locator: 'bigelow.org', quality: 'primary' },
   { id: 'src-178', n: 178, title: 'Amid efforts to restore jobs, US cuts funding for Maine’s Manufacturing Extension Partnership', publisher: 'Mainebiz', date: '2025-04', locator: '', quality: 'trade press' },
-  { id: 'src-179', n: 179, title: 'DIU sets roadmap for expanding regional innovation hubs', publisher: 'Inside Defense', date: '2026', locator: 'insidedefense.com', quality: 'trade press' }
+  { id: 'src-179', n: 179, title: 'DIU sets roadmap for expanding regional innovation hubs', publisher: 'Inside Defense', date: '2026', locator: 'insidedefense.com', quality: 'trade press' },
+  { id: 'src-180', n: 180, title: 'Industrial markets page', publisher: 'FLEXcon', date: '2026', locator: 'flexcon.com/markets/industrial', quality: 'primary' }
 ];
