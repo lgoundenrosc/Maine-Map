@@ -30,7 +30,8 @@ window.RoscData.meta = {
   title: 'Maine Defense Innovation Ecosystem — VC Landscape Map',
   shortTitle: 'Maine Defense Innovation Ecosystem',
   subtitle:
-    'August 2026 · For internal Rosc use · Personnel unverified, confirm before outreach. ' +
+    'August 2026 · For internal Rosc use · 19 of 20 named contacts confirmed to a dated source; see the ' +
+    'verification gaps table (Section 5.12) for what remains open, and confirm any seat before outreach. ' +
     'Maine builds and tests for other people’s programs and holds no acquisition authority of its own.',
   badge: 'ROSC INTERNAL',
   date: 'August 2026',
@@ -40,7 +41,7 @@ window.RoscData.meta = {
   runningHeader:
     'Maine Defense Innovation Ecosystem — VC Landscape Map · Rosc Capital · August 2026 · INTERNAL',
   runningFooter:
-    'For internal Rosc Capital use only, personnel unverified, confirm before any outreach',
+    'For internal Rosc Capital use only, see Section 5.12 for open verification gaps, confirm any seat before outreach',
   structuralNote: {
     label: 'Structural note:',
     body:
@@ -73,6 +74,36 @@ window.RoscData.meta = {
       'Brunswick Landing sits about 11 miles from Bath Iron Works, Portland roughly 35 miles from Bath ' +
       'and roughly 50 miles from Kittery. Treat these distances as approximate road miles.'
   },
+  /* The corridor as coordinates, so the chain diagram and the ecosystem map
+     draw the same line from the same source. Bath, Portland, Kittery. */
+  corridorPath: [[43.9109, -69.8133], [43.6591, -70.2568], [43.0793, -70.7420]],
+
+  /* Every municipality the ecosystem map's communities() function can
+     produce along that arc, canonical names as resolved by data/places.js.
+     Drives the corridor inset: the main map draws this whole stretch into
+     a stretch of a few hundred pixels, so the inset re-renders just these
+     towns on their own, deeper zoom. Brunswick is included even though the
+     corridor is named for Bath, since it sits three miles off Bath and
+     carries more records than anywhere else on the arc. */
+  corridorTowns: [
+    'Kittery', 'North Berwick', 'Wells', 'Saco', 'South Portland',
+    'Westbrook', 'Portland', 'Waterboro', 'Brunswick', 'Bath'
+  ],
+
+  /* The ecosystem map is a second document over the same records. It carries
+     no internal marking and no personnel layer, it maps organizations and the
+     places they sit in. */
+  ecosystem: {
+    title: 'Maine Defense Innovation Ecosystem Map',
+    shortTitle: 'Ecosystem Map',
+    description:
+      'Organizations in Maine\u2019s defense innovation ecosystem, plotted by the town they sit in. ' +
+      'Companion to the Maine Defense Innovation Ecosystem VC Landscape Map.',
+    scopeNote:
+      'This map shows organizations and places. Named individuals, routing contacts and the ' +
+      'engagement playbook stay in the VC landscape map, which is the document built to carry them.'
+  },
+
   siblingMaps: [
     { id: 'socom', label: 'Rosc US SOCOM Map (June 2026)', url: 'https://scremling.github.io/Rosc-US-SOCOM-Map/' },
     { id: 'ussf', label: 'Rosc US Space Force Map (May 2026)', url: 'https://scremling.github.io/Rosc-US-Space-Force/' }
@@ -81,7 +112,7 @@ window.RoscData.meta = {
   legend: [
     { tag: 'verified', meaning: 'Sourced to a named publication or primary document, dated', treatment: 'Normal, no badge' },
     { tag: 'unverified', meaning: 'Believed accurate, no source confirmed', treatment: 'Amber badge, tooltip reads unconfirmed' },
-    { tag: 'stale', meaning: 'Sourced but the source is old enough that it may have changed', treatment: 'Grey italic badge with the source year' },
-    { tag: 'gap', meaning: 'Known missing, listed in the verification gaps table', treatment: 'Grey empty state reading not yet confirmed' }
+    { tag: 'stale', meaning: 'Sourced but the source is old enough that it may have changed', treatment: 'Gray italic badge with the source year' },
+    { tag: 'gap', meaning: 'Known missing, listed in the verification gaps table', treatment: 'Gray empty state reading not yet confirmed' }
   ]
 };

@@ -78,16 +78,12 @@
   function whiteSpace(text) { return text ? inset('white', 'VC WHITE SPACE', '<p>' + esc(text) + '</p>') : ''; }
   function constraint(text) { return text ? inset('constraint', 'MAINE CONSTRAINT', '<p>' + esc(text) + '</p>') : ''; }
 
-  function entryPoints(list, gapNote) {
+  function entryPoints(list) {
     var html = '';
     if (list && list.length) {
       html += '<div class="entry-list">' + list.map(function (e) {
         return esc(e.value) + (e.confidence && e.confidence !== 'verified' ? ' ' + confidenceChip(e.confidence, e.note) : '');
       }).join('<span class="sep">·</span>') + '</div>';
-    }
-    if (gapNote) {
-      html += '<div style="margin-top:8px">' + emptyState('not yet confirmed') +
-        ' <span style="font-size:12.5px;color:#64748b">' + esc(gapNote) + '</span></div>';
     }
     if (!html) html = emptyState('not yet confirmed');
     return inset('entry', 'Entry points', html);

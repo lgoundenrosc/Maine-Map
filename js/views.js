@@ -135,7 +135,7 @@
         '" r="' + r + '" fill="' + c + '"><title>' + U.attr(e.name + ' · ' + e.location.town + ' (approximate)') + '</title></circle>';
     }).join('');
 
-    /* Anchors and test assets are labelled. Several sit on top of each other at
+    /* Anchors and test assets are labeled. Several sit on top of each other at
        Brunswick Landing, so labels are nudged down until they stop colliding. */
     var placed = [];
     var labels = pts.filter(function (e) { return e.type === 'anchor' || e.type === 'test-asset'; })

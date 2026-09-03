@@ -11,11 +11,13 @@ window.RoscData.anchorNodes = {
     'programs, so the question a Rosc portfolio company should ask of each node is what it is short of, ' +
     'not what it is selling.',
 
-  filterCodes: ['All', 'BIW', 'PNSY', 'P&W', 'GD-OTS', 'TXT', 'TDY', 'ANG'],
+  filterCodes: ['All', 'BIW', 'PNSY', 'P&W', 'GD-OTS', 'TXT', 'TDY', 'ANG', 'SERE'],
 
   nodes: [
     {
       id: 'anchor-biw',
+      ecoRole: 'market-access',
+      majorDefenseCompany: true,
       code: 'BIW',
       tileColor: '#1d3f6e',
       name: 'General Dynamics Bath Iron Works',
@@ -26,15 +28,16 @@ window.RoscData.anchorNodes = {
       location: { town: 'Bath', lat: 43.9109, lng: -69.8133, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-30', 'src-31', 'src-32'],
+      sourceIds: ['src-10', 'src-30', 'src-31', 'src-32', 'src-89', 'src-159', 'src-173'],
       openness: 'MED',
       summary:
         'Surface combatant construction for the US Navy and the largest single concentration of defense ' +
         'manufacturing demand in New England.',
       facts: [
-        { label: 'President', value: 'Charles F. Krugh', confidence: 'unverified', note: 'From Wikipedia. Treat as needing confirmation.' },
-        { label: 'Employees', value: '6,001 to 6,500 (Wikipedia, 2025) · 7,400 (IndustrySelect) · 6,800 (First Light Works bid)', confidence: 'unverified', note: 'Sources conflict. The range is rendered rather than a single figure.' },
-        { label: 'Distance to Brunswick Landing', value: 'approximately 11 miles', confidence: 'verified' }
+        { label: 'President', value: 'Charles F. Krugh', confidence: 'verified', note: 'Confirmed by a direct quote as BIW president in August 2026 coverage of the ratified 5-year union contract, in the seat since May 2022.' },
+        { label: 'Employees', value: '6,001 to 6,500 (Wikipedia, 2025) · 7,400 (IndustrySelect) · 6,800 (First Light Works bid)', confidence: 'verified', note: 'Independent March 2026 press covering a Bath Marine Draftsmen’s Association strike converges on “about 6,800” to “almost 7,000,” consistent with the higher end of the range. Rendered as a range rather than a single figure since sources still vary.' },
+        { label: 'Distance to Brunswick Landing', value: 'approximately 11 miles', confidence: 'verified' },
+        { label: 'Labor action', value: 'Bath Marine Draftsmen’s Association (600-plus workers) went on strike in March 2026 over wages and benefits', confidence: 'verified' }
       ],
       programsAndDeals: [
         { text: 'DDG-51 Arleigh Burke class and DDG-1000 Zumwalt class', confidence: 'verified' },
@@ -50,10 +53,13 @@ window.RoscData.anchorNodes = {
         'The commercial openings are in production efficiency rather than ship design, which General ' +
         'Dynamics owns. Watch the housing and parking spend as a signal of how hard the labor ' +
         'constraint is biting.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'gdbiw.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-pnsy',
+      ecoRole: 'market-access',
       code: 'PNSY',
       tileColor: '#155e5b',
       name: 'Portsmouth Naval Shipyard',
@@ -64,7 +70,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'Kittery', lat: 43.0793, lng: -70.742, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-07', 'src-08', 'src-09', 'src-05'],
+      sourceIds: ['src-07', 'src-08', 'src-09', 'src-05', 'src-153'],
       openness: 'HIGH',
       summary:
         'Overhaul and modernization of Los Angeles and Virginia class attack submarines. The Navy’s ' +
@@ -73,7 +79,8 @@ window.RoscData.anchorNodes = {
         { label: 'Civilian employment', value: '7,721, up from 7,469 the prior year', confidence: 'verified', note: '2024 Seacoast Shipyard Association report.' },
         { label: 'Regional economic impact', value: '$1.6 billion, up from $1.54B in 2023 and $1.46B in 2022', confidence: 'verified', note: 'This is a Maine plus New Hampshire plus Massachusetts figure from a booster association, not a Navy Maine-only number.' },
         { label: 'Infrastructure', value: 'The $1.7B-plus Multi-Mission Dry Dock, the largest project to date under the Shipyard Infrastructure Optimization Program', confidence: 'verified' },
-        { label: 'Policy position', value: 'Named in America’s Maritime Action Plan (February 2026) as a target for digital shipyard infrastructure investment', confidence: 'verified' }
+        { label: 'Policy position', value: 'Named in America’s Maritime Action Plan (February 2026) as a target for digital shipyard infrastructure investment', confidence: 'verified' },
+        { label: 'Shipyard Commander', value: 'Capt. Jesse Nice', confidence: 'verified', note: '88th shipyard commander in PNSY’s 225-year history, relieved Capt. Michael Oberdorf on June 13, 2025.' }
       ],
       caveat:
         'The $1.6 billion regional impact figure covers Maine, New Hampshire and Massachusetts and comes ' +
@@ -96,36 +103,43 @@ window.RoscData.anchorNodes = {
     },
     {
       id: 'anchor-pw',
+      ecoRole: 'market-access',
+      majorDefenseCompany: true,
       code: 'P&W',
       tileColor: '#4b4f63',
       name: 'Pratt & Whitney North Berwick',
       category: 'anchor',
       cluster: ['composites-am'],
-      value: '2,000 to 2,300 workers',
-      valueNote: 'Sources vary',
+      value: 'more than 2,100 workers',
+      valueNote: 'AME tour page; other sources give a 2,000 to 2,300 range',
       location: { town: 'North Berwick', lat: 43.3037, lng: -70.7328, precision: 'approximate' },
-      confidence: 'unverified',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-10', 'src-32'],
+      sourceIds: ['src-10', 'src-32', 'src-90', 'src-142', 'src-143'],
       openness: 'LOW',
       summary:
-        'Roughly 1 million-plus square feet machining flight-critical jet engine components.',
+        'Operating as North Berwick Aero Systems (NBAS), the largest manufacturing plant in Maine under ' +
+        'one roof at more than 1 million square feet, machining flight-critical jet engine components.',
       facts: [
-        { label: 'Site', value: 'Roughly 1 million-plus square feet', confidence: 'unverified' },
-        { label: 'Workforce', value: '2,000 to 2,300 workers', confidence: 'unverified', note: 'Sources vary. The range is rendered rather than a single figure.' },
-        { label: 'Specific programs', value: '', confidence: 'gap', note: 'Do not assert F135 or any other program without confirmation.' }
+        { label: 'Site', value: 'More than 1 million square feet, four business units: Repair Operations, Parts Center, Modular Assembly and Engineering Center', confidence: 'verified' },
+        { label: 'Workforce', value: 'More than 2,100 workers', confidence: 'verified', note: 'Other sources give 2,000 to 2,300.' },
+        { label: 'Specific programs', value: 'Roughly 1,200 part types across five classes (compressor stators, outer air seals, low pressure turbine blades, brush seals, bearing compartments); F135 engine (F-35) work is roughly 25 percent of production, alongside PurePower engine modules', confidence: 'verified' }
       ],
       programsAndDeals: [
-        { text: 'Program specifics are a known gap. Nothing is asserted here.', confidence: 'gap' }
+        { text: '$216 million F-35 contract announced by Senator Collins’ office', confidence: 'verified' }
       ],
       vcRead:
         'Precision machining at scale with an aerospace quality system already in place. The relevance to ' +
         'a venture portfolio is as a contract manufacturing base rather than as a customer. Note the ' +
         'connection to DIU’s Blue Manufacturing initiative on the engagement and routing tab.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'prattwhitney.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-gdots',
+      ecoRole: 'market-access',
+      majorDefenseCompany: true,
       code: 'GD-OTS',
       tileColor: '#8f4a1c',
       name: 'General Dynamics Ordnance and Tactical Systems, Saco',
@@ -136,7 +150,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'Saco', lat: 43.5009, lng: -70.4428, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-27', 'src-33', 'src-11'],
+      sourceIds: ['src-27', 'src-33', 'src-11', 'src-91'],
       openness: 'LOW',
       summary:
         'Gun systems, machine gun barrels and weapon protection systems. Precision gun-barrel machining ' +
@@ -153,10 +167,14 @@ window.RoscData.anchorNodes = {
         'A deep precision machining capability that is invisible in most Maine economic development ' +
         'material. Relevant as a manufacturing partner for weapons-adjacent hardware, and as evidence ' +
         'that the state’s machining base is not limited to marine work.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'gd-ots.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-txt',
+      ecoRole: 'market-access',
+      majorDefenseCompany: true,
       code: 'TXT',
       tileColor: '#2f6b3c',
       name: 'Howe & Howe Inc. (Textron Systems)',
@@ -167,7 +185,7 @@ window.RoscData.anchorNodes = {
       location: { town: 'Waterboro', lat: 43.6023, lng: -70.7286, precision: 'approximate' },
       confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-12', 'src-13'],
+      sourceIds: ['src-12', 'src-13', 'src-92'],
       openness: 'MED',
       summary:
         'Maine’s only uncrewed ground vehicle producer, tied to an Army program of record and a Marine ' +
@@ -188,39 +206,50 @@ window.RoscData.anchorNodes = {
         'modules, autonomy software and power systems for the MOSA-designed Ripsaw family are the ' +
         'obvious adjacency, and the MOSA design is what makes third-party modules commercially possible. ' +
         'Cross-reference the SOCOM map’s white space on man-portable counter-UAS and autonomous resupply.',
-      entryPoints: []
+      entryPoints: [
+        { value: 'howeandhowe.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-tdy',
+      ecoRole: 'market-access',
+      majorDefenseCompany: true,
       code: 'TDY',
       tileColor: '#5b3f7a',
       name: 'Teledyne e2v, Brunswick Landing',
       category: 'anchor',
       cluster: ['space-high-latitude', 'cyber-software'],
-      value: 'scope not confirmed',
-      valueNote: 'Headcount, programs and site scope all unconfirmed',
+      value: 'part-time office, not a manufacturing site',
+      valueNote: 'Rents space from Maine Space Corporation; not an operating or manufacturing footprint',
       location: { town: 'Brunswick', lat: 43.8923, lng: -69.9386, precision: 'approximate' },
-      confidence: 'gap',
+      confidence: 'verified',
       asOf: '2026-08',
-      sourceIds: ['src-34'],
+      sourceIds: ['src-34', 'src-93', 'src-144'],
       openness: 'LOW',
-      summary: 'Anchor tenant at Brunswick Landing. Defense electronics.',
+      summary:
+        'Rents a part-time office from the Maine Space Corporation at Brunswick Landing, focused on ' +
+        'networking with higher education, R&D and commercial space-related entities, not manufacturing ' +
+        'or operations.',
       facts: [
         { label: 'Headcount', value: '', confidence: 'gap' },
-        { label: 'Programs', value: '', confidence: 'gap' },
-        { label: 'Site scope', value: '', confidence: 'gap' }
+        { label: 'Footprint', value: 'Part-time office rented from Maine Space Corporation', confidence: 'verified' },
+        { label: 'Purpose', value: 'Networking with higher education, R&D and commercial space-related entities', confidence: 'verified' }
       ],
       programsAndDeals: [
-        { text: 'Detail is a known gap. Headcount, programs and site scope are all unconfirmed and are listed in the verification gaps table.', confidence: 'gap' }
+        { text: 'No manufacturing or operational program identified at this site; the footprint is an office presence rather than a demand signal.', confidence: 'verified' }
       ],
       vcRead:
-        'Included because a defense electronics anchor tenant on the proposed hub site is materially ' +
-        'relevant if the scope is real. Until the scope is confirmed, treat this node as a research ' +
-        'task rather than a demand signal.',
-      entryPoints: []
+        'The parent company is a genuine major defense electronics manufacturer, but this specific site is ' +
+        'a small networking office, not a manufacturing or operational anchor. Its inclusion alongside ' +
+        'Bath Iron Works, Pratt & Whitney, GD-OTS and Textron as an equally weighted "major defense ' +
+        'company" anchor is worth revisiting now that the scope is confirmed rather than unknown.',
+      entryPoints: [
+        { value: 'teledyne-e2v.com', confidence: 'verified' }
+      ]
     },
     {
       id: 'anchor-ang',
+      ecoRole: 'market-access',
       code: 'ANG',
       tileColor: '#2c5d82',
       name: 'Bangor Air National Guard, 101st Air Refueling Wing',
@@ -247,6 +276,38 @@ window.RoscData.anchorNodes = {
         'GIUK-gap operations are the operational context for cold-weather energy, high-latitude sensing ' +
         'and long-endurance UAS work that Loring can host physically. Treat Bangor as the mission ' +
         'rationale and Loring as the test venue.',
+      entryPoints: []
+    },
+    {
+      id: 'anchor-sere',
+      ecoRole: 'market-access',
+      code: 'SERE',
+      tileColor: '#5c4a2e',
+      name: 'Navy SERE School',
+      category: 'anchor',
+      cluster: ['space-high-latitude'],
+      value: '12,000 acres',
+      valueNote: 'Redington Township field training site',
+      location: { town: 'Redington Township', lat: 45.0151, lng: -70.4503, precision: 'approximate' },
+      confidence: 'verified',
+      asOf: '2026-08',
+      sourceIds: ['src-86', 'src-87', 'src-88'],
+      openness: 'LOW',
+      summary:
+        'The Navy’s only cold-weather Survival, Evasion, Resistance and Escape school, established 1961, ' +
+        'field training on 12,000 acres near Rangeley.',
+      facts: [
+        { label: 'Established', value: '1961', confidence: 'verified' },
+        { label: 'Program', value: 'SERE and Cold Weather Environmental Survival Training (CWEST), classroom instruction at Portsmouth Naval Shipyard in Kittery and field training in Redington Township', confidence: 'verified' },
+        { label: 'Personnel trained', value: 'Almost 50,000 since 1962', confidence: 'stale', note: 'From a 2015 source. Confirm the current figure.' }
+      ],
+      programsAndDeals: [
+        { text: '12-day cold-weather SERE and CWEST program, field training on 12,000 acres near Rangeley, classroom component at Portsmouth Naval Shipyard.', confidence: 'verified' }
+      ],
+      vcRead:
+        'Not a demand signal. Included for completeness as a federal military presence on the corridor, ' +
+        'not because it buys anything or hosts a formation-chain stage. If it has an angle at all it is ' +
+        'adjacent to Bangor ANG’s cold-weather and high-latitude mission, not to any cluster in this map.',
       entryPoints: []
     }
   ]

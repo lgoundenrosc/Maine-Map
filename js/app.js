@@ -35,7 +35,7 @@
         id: i.id, name: i.name, shortName: i.short, type: i.category === 'capital' ? 'capital' : 'institution',
         cluster: i.cluster || [], openness: i.openness, confidence: i.confidence,
         location: i.location, description: i.what, vc: i.vcAngle, vcLabel: 'VC ANGLE',
-        entryPoints: i.entryPoints, entryGap: i.entryGap, sourceIds: i.sourceIds, asOf: i.asOf, raw: i
+        entryPoints: i.entryPoints, sourceIds: i.sourceIds, asOf: i.asOf, raw: i
       });
     });
     D.testAssets.assets.forEach(function (t) {
@@ -157,9 +157,7 @@
     if (e.vc) html += (e.vcLabel === 'VC READ' ? U.vcRead(e.vc) : U.vcAngle(e.vc));
     if (r.constraint) html += U.constraint(r.constraint);
     if (e.type === 'institution' || e.type === 'capital' || e.type === 'anchor') {
-      html += U.entryPoints(e.entryPoints, e.entryGap ||
-        (e.type === 'anchor' && (!e.entryPoints || !e.entryPoints.length)
-          ? 'No published entry point for an outside company. Route via the institution playbook.' : ''));
+      html += U.entryPoints(e.entryPoints);
     }
     html += U.sourceRefs(e.sourceIds);
     el.innerHTML = html;
@@ -222,7 +220,7 @@
         U.factRows(n.facts) +
         U.programsAndDeals(n.programsAndDeals) +
         U.vcRead(n.vcRead) +
-        U.entryPoints(n.entryPoints, 'No published entry point for an outside company. Route via the institution playbook.') +
+        U.entryPoints(n.entryPoints) +
         '<p style="font-size:12px;color:#64748b">' + U.locLine(n.location) + '</p>' +
         U.sourceRefs(n.sourceIds);
 
@@ -329,7 +327,7 @@
         programs +
         (i.scopeNote ? U.inset('scope', 'SCOPE NOTE', '<p>' + U.esc(i.scopeNote) + '</p>') : '') +
         U.vcAngle(i.vcAngle) +
-        U.entryPoints(i.entryPoints, i.entryGap) +
+        U.entryPoints(i.entryPoints) +
         '<p style="font-size:12px;color:#64748b">' + U.locLine(i.location) + '</p>' +
         U.sourceRefs(i.sourceIds);
 

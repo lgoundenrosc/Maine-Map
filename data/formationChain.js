@@ -194,7 +194,7 @@ window.RoscData.formationChain = {
     }
   ],
 
-  /** Grey monospace rail labels between stages, in the SOCOM rail voice. */
+  /** Gray monospace rail labels between stages, in the SOCOM rail voice. */
   rails: [
     { from: 1, to: 2, label: 'Lab or shop floor result finds space, tooling and a first customer', broken: false },
     { from: 2, to: 3, label: 'Incubated company draws grants and federal R&D dollars, 1:1 match required', broken: false },
